@@ -77,7 +77,7 @@ export default function Home() {
   return (
     <div className="font-body antialiased">
       {/* Video de fondo para toda la landing page */}
-      <div className="fixed inset-0 w-full h-full z-0 overflow-hidden">
+      <div className="fixed inset-0 w-full h-full z-[-1] overflow-hidden">
         <video 
           autoPlay
           muted
@@ -112,7 +112,7 @@ export default function Home() {
       </div>
 
       {/* Hero Section */}
-      <section className="pt-16 min-h-screen relative z-10 flex items-center" data-testid="hero-section">
+      <section className="pt-16 min-h-screen relative z-[1] flex items-center" data-testid="hero-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
           <div className="text-center">
             <AnimatedSection>
@@ -153,7 +153,7 @@ export default function Home() {
       </section>
 
       {/* Doctor Section */}
-      <section className="py-20 bg-white" data-testid="doctor-section">
+      <section className="py-20 bg-white relative z-[1]" data-testid="doctor-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
@@ -211,7 +211,7 @@ export default function Home() {
       </section>
 
       {/* Method Section */}
-      <section className="py-20 bg-pearl" data-testid="method-section">
+      <section className="py-20 bg-pearl relative z-[1]" data-testid="method-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
@@ -264,7 +264,7 @@ export default function Home() {
       </section>
 
       {/* Treatments Section */}
-      <section className="py-20 bg-white" data-testid="treatments-section">
+      <section className="py-20 bg-white relative z-[1]" data-testid="treatments-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
@@ -316,7 +316,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-beige" data-testid="testimonials-section">
+      <section className="py-20 bg-beige relative z-[1]" data-testid="testimonials-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
@@ -374,7 +374,7 @@ export default function Home() {
       </section>
 
       {/* Locations Section */}
-      <section className="py-20 bg-pearl" data-testid="locations-section">
+      <section className="py-20 bg-pearl relative z-[1]" data-testid="locations-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
@@ -486,7 +486,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-white" data-testid="final-cta-section">
+      <section className="py-20 bg-white relative z-[1]" data-testid="final-cta-section">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <h2 className="text-4xl lg:text-5xl font-title gold-accent mb-6">
