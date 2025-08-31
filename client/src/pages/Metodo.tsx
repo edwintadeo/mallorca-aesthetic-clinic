@@ -91,7 +91,8 @@ export default function Metodo() {
         "Trabajo sincronizado con especialistas si tu caso lo requiere"
       ],
       benefit: "resultados visibles, naturales y sostenibles en tu cuerpo, mente y energía.",
-      image: spaDeviceTreatment
+      image: spaDeviceTreatment,
+      video: "/public-objects/maestro perfumero.mp4"
     },
     {
       icon: TrendingUp,
