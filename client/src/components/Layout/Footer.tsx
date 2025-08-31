@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import macLogo from "@assets/logo mallorca aesthetic_1756658404427.png";
 
 export default function Footer() {
   return (
@@ -6,7 +7,12 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <div className="text-3xl font-title font-semibold gold-accent mb-4">MAC</div>
+            <img 
+              src={macLogo} 
+              alt="Mallorca Aesthetic Clinic" 
+              className="h-12 w-auto mb-4 hover-lift"
+              data-testid="footer-mac-logo"
+            />
             <div className="text-sm text-background/70 mb-4">Mallorca Aesthetic Clinic</div>
             <p className="text-background/80 leading-relaxed mb-6">
               El arte de ganar tiempo a través de la medicina estética integral y el bienestar personalizado.

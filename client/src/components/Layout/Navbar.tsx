@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import macLogo from "@assets/logo mallorca aesthetic_1756658404427.png";
 
 export default function Navbar() {
   const [location] = useLocation();
@@ -37,8 +38,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center" data-testid="logo-link">
-            <div className="text-2xl font-title font-semibold gold-accent">MAC</div>
-            <div className="hidden sm:block ml-2 text-sm text-muted-foreground">
+            <img 
+              src={macLogo} 
+              alt="Mallorca Aesthetic Clinic" 
+              className="h-10 w-auto hover-lift"
+              data-testid="mac-logo"
+            />
+            <div className="hidden sm:block ml-3 text-sm text-muted-foreground">
               Mallorca Aesthetic Clinic
             </div>
           </Link>
