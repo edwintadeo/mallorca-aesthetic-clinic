@@ -14,6 +14,7 @@ import facialMaskTreatment from "@assets/facial-mask-treatment.jpg";
 import perfectSkinPortrait from "@assets/perfect-skin-portrait.jpg";
 import spaDeviceTreatment from "@assets/spa-device-treatment.jpg";
 import whiteFacialMask from "@assets/white-facial-mask.jpg";
+import wellAgingWoman from "@assets/mujer joven ropa deportiva_1756669322157.jpg";
 import macLogoBlack from "@assets/mac-logo@2x_1756658468399.png";
 
 export default function Home() {
@@ -76,7 +77,7 @@ export default function Home() {
     {
       title: "Well-Aging",
       description: "Longevidad, optimización hormonal, terapias regenerativas",
-      image: spaDeviceTreatment,
+      image: wellAgingWoman,
     },
     {
       title: "Tecnología Láser",
