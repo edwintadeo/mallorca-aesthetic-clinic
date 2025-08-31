@@ -90,12 +90,13 @@ export default function Contacto() {
   };
 
   const treatments = [
-    { value: "facial", label: "Estética Facial" },
-    { value: "corporal", label: "Estética Corporal" },
-    { value: "cirugia", label: "Cirugía Estética" },
-    { value: "nutricion", label: "Nutrición Integral" },
-    { value: "wellaging", label: "Well-Aging" },
-    { value: "laser", label: "Tecnología Láser" },
+    { value: "medicina-estetica-facial", label: "Medicina Estética Facial" },
+    { value: "medicina-estetica-corporal", label: "Medicina Estética Corporal" },
+    { value: "cirugia-estetica-facial", label: "Cirugía Estética Facial" },
+    { value: "cirugia-estetica-corporal", label: "Cirugía Estética Corporal" },
+    { value: "nutricion-obesidad-endocrinologia", label: "Nutrición y Obesidad/ Endocrinología" },
+    { value: "well-aging-biohacking-medicina-interna-cardiologia", label: "Well Aging y Biohacking/ Medicina interna / Cardiología" },
+    { value: "riesgo-cardiovascular", label: "Riesgo Cardiovascular" },
   ];
 
   const timeSlots = [
@@ -112,18 +113,26 @@ export default function Contacto() {
   const fallbackLocations = [
     {
       id: "1",
-      name: "MAC Palma Centro",
-      address: "Passeig del Born, 15, 07012 Palma",
-      phone: "+34 971 123 456",
-      hours: "Lun-Vie: 9:00-19:00 | Sáb: 9:00-14:00",
+      name: "Clínica en Palma",
+      address: "Pg. del Born, 15, Centre, 07012 Palma, Illes Balears",
+      phone: "+34 669 938 585",
+      hours: "Lunes a viernes de 10:00h a 18:00h",
       imageUrl: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=300"
     },
     {
       id: "2",
-      name: "MAC Puerto Portals",
-      address: "Local 45, Puerto Portals, 07181 Calvià",
-      phone: "+34 971 654 321",
-      hours: "Lun-Vie: 10:00-20:00 | Sáb: 10:00-15:00",
+      name: "Clínica en Cala Millor",
+      address: "Carrer Sol Naixent 24, Cala Millor",
+      phone: "+34 638 617 650",
+      hours: "Lunes a viernes de 10:00h a 18:00h",
+      imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=300"
+    },
+    {
+      id: "3",
+      name: "Clínica en Manacor",
+      address: "Instalaciones de Rafa Nadal Club",
+      phone: "+34 619 392 675",
+      hours: "Lunes a viernes de 10:00h a 18:00h",
       imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=300"
     }
   ];
@@ -136,15 +145,14 @@ export default function Contacto() {
       <section className="py-20 hero-gradient" data-testid="contacto-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
-            <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
+            <div className="text-sm uppercase tracking-wider text-white/70 font-medium mb-4">
               Contacto
             </div>
-            <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6">
-              Reserva tu Consulta
+            <h1 className="text-5xl lg:text-7xl font-title text-gold-light mb-6">
+              Empieza hoy el arte de ganar tiempo.
             </h1>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Da el primer paso hacia tu transformación. Nuestro equipo está listo para diseñar 
-              tu plan personalizado con el Método MAC.
+            <p className="text-lg text-white/90 max-w-3xl mx-auto leading-relaxed">
+              Haz tu consulta, cuéntanos tu historia y descubre cómo podemos ayudarte a revelar tu mejor versión.
             </p>
           </AnimatedSection>
         </div>
@@ -157,12 +165,11 @@ export default function Contacto() {
             {/* Contact Form */}
             <AnimatedSection>
               <div>
-                <h2 className="text-3xl font-title gold-accent mb-6">
-                  Agenda tu consulta gratuita
+                <h2 className="text-4xl font-title gold-accent mb-6">
+                  ¿Quieres saber más?
                 </h2>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
-                  Completa el formulario y nos pondremos en contacto contigo para agendar 
-                  tu consulta inicial sin costo.
+                  Solicita más información. Te haremos un plan de tratamiento según tus necesidades y un presupuesto a medida.
                 </p>
 
                 <Form {...form}>
@@ -173,7 +180,7 @@ export default function Contacto() {
                         name="name"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Nombre completo *</FormLabel>
+                            <FormLabel>Nombre y apellidos *</FormLabel>
                             <FormControl>
                               <Input 
                                 placeholder="Tu nombre completo" 
@@ -191,7 +198,7 @@ export default function Contacto() {
                         name="age"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Edad</FormLabel>
+                            <FormLabel>Edad *</FormLabel>
                             <FormControl>
                               <Input 
                                 type="number" 
@@ -252,7 +259,7 @@ export default function Contacto() {
                       name="treatment"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Tratamiento de interés</FormLabel>
+                          <FormLabel>Tratamientos</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
                               <SelectTrigger data-testid="select-treatment">
@@ -272,50 +279,100 @@ export default function Contacto() {
                       )}
                     />
 
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <FormField
-                        control={form.control}
-                        name="preferredDate"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Fecha preferida</FormLabel>
-                            <FormControl>
-                              <Input 
-                                type="date" 
-                                {...field} 
-                                min={new Date().toISOString().split('T')[0]}
-                                data-testid="input-date"
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="preferredTime"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Hora preferida</FormLabel>
-                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    {/* Date and Time Section */}
+                    <div className="space-y-6">
+                      <h3 className="text-2xl font-title text-foreground">
+                        Fecha y horario preferidos
+                      </h3>
+                      
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <FormField
+                          control={form.control}
+                          name="preferredDate"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="flex items-center gap-2">
+                                <span className="inline-block w-6 h-6 bg-gold-light rounded-sm flex items-center justify-center text-white text-sm">📅</span>
+                                Fecha
+                              </FormLabel>
                               <FormControl>
-                                <SelectTrigger data-testid="select-time">
-                                  <SelectValue placeholder="Selecciona horario" />
-                                </SelectTrigger>
+                                <Input 
+                                  type="date" 
+                                  {...field} 
+                                  min={new Date().toISOString().split('T')[0]}
+                                  data-testid="input-date"
+                                />
                               </FormControl>
-                              <SelectContent>
-                                {timeSlots.map((slot) => (
-                                  <SelectItem key={slot.value} value={slot.value}>
-                                    {slot.label}
-                                  </SelectItem>
-                                ))}
-                              </SelectContent>
-                            </Select>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+
+                        <FormField
+                          control={form.control}
+                          name="preferredTime"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="flex items-center gap-2">
+                                <span className="inline-block w-6 h-6 bg-gold-light rounded-sm flex items-center justify-center text-white text-sm">🕐</span>
+                                Tiempo
+                              </FormLabel>
+                              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                <FormControl>
+                                  <SelectTrigger data-testid="select-time">
+                                    <SelectValue placeholder="Selecciona horario" />
+                                  </SelectTrigger>
+                                </FormControl>
+                                <SelectContent>
+                                  {timeSlots.map((slot) => (
+                                    <SelectItem key={slot.value} value={slot.value}>
+                                      {slot.label}
+                                    </SelectItem>
+                                  ))}
+                                </SelectContent>
+                              </Select>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
+                    </div>
+
+                    {/* Visit Type Section */}
+                    <div className="space-y-6">
+                      <h3 className="text-2xl font-title text-foreground">
+                        ¿Quieres una visita informativa?
+                      </h3>
+                      
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <div className="flex items-start space-x-3">
+                          <Checkbox id="si" />
+                          <label htmlFor="si" className="text-sm font-normal cursor-pointer">
+                            Si
+                          </label>
+                        </div>
+                        
+                        <div className="flex items-start space-x-3">
+                          <Checkbox id="directamente-tratamiento" />
+                          <label htmlFor="directamente-tratamiento" className="text-sm font-normal cursor-pointer">
+                            Directamente tratamiento porque ya he sido informado previamente
+                          </label>
+                        </div>
+                        
+                        <div className="flex items-start space-x-3">
+                          <Checkbox id="si-y-ademas" />
+                          <label htmlFor="si-y-ademas" className="text-sm font-normal cursor-pointer">
+                            Si, y además me gustaría realizar a continuación el tratamiento que me recomiende el especialista
+                          </label>
+                        </div>
+                        
+                        <div className="flex items-start space-x-3">
+                          <Checkbox id="solamente-presupuesto" />
+                          <label htmlFor="solamente-presupuesto" className="text-sm font-normal cursor-pointer">
+                            Solamente quiero el presupuesto
+                          </label>
+                        </div>
+                      </div>
                     </div>
 
                     <FormField
@@ -323,10 +380,10 @@ export default function Contacto() {
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Mensaje adicional</FormLabel>
+                          <FormLabel>¿Qué tratamientos quieres realizar específicamente?</FormLabel>
                           <FormControl>
                             <Textarea
-                              placeholder="Cuéntanos sobre tus objetivos y expectativas..."
+                              placeholder="Describe los tratamientos específicos que te interesan..."
                               rows={4}
                               {...field}
                               data-testid="textarea-message"
@@ -350,13 +407,21 @@ export default function Contacto() {
                             />
                           </FormControl>
                           <div className="space-y-1 leading-none">
-                            <FormLabel className="text-sm font-normal">
-                              Acepto la{" "}
-                              <a href="#" className="text-turquoise hover:underline">
-                                política de privacidad
-                              </a>{" "}
-                              y el tratamiento de mis datos *
-                            </FormLabel>
+                            <div className="space-y-2">
+                              <div className="flex items-start space-x-3">
+                                <Checkbox id="primera-visita" />
+                                <label htmlFor="primera-visita" className="text-sm font-normal cursor-pointer">
+                                  Marca la casilla es tu primera visita
+                                </label>
+                              </div>
+                              
+                              <FormLabel className="text-sm font-normal flex items-start space-x-3">
+                                <span>He leído y acepto la</span>
+                                <a href="#" className="text-turquoise hover:underline">
+                                  política de privacidad
+                                </a>
+                              </FormLabel>
+                            </div>
                             <FormMessage />
                           </div>
                         </FormItem>
@@ -370,7 +435,7 @@ export default function Contacto() {
                         className="flex-1 bg-turquoise text-white border-2 border-gold-light hover:bg-gold-light hover:text-gold-deep transition-all duration-300 py-3"
                         data-testid="button-submit-form"
                       >
-                        {isSubmitting ? "Enviando..." : "Enviar consulta"}
+                        {isSubmitting ? "Enviando..." : "ENVIAR"}
                       </Button>
                       <a 
                         href={whatsappUrl}
@@ -384,7 +449,7 @@ export default function Contacto() {
                           data-testid="button-whatsapp-direct"
                         >
                           <i className="fab fa-whatsapp mr-2"></i>
-                          WhatsApp directo
+                          Contactar por WhatsApp
                         </Button>
                       </a>
                     </div>
@@ -469,15 +534,12 @@ export default function Contacto() {
           <AnimatedSection>
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-title gold-accent mb-6">
-                Nuestras Ubicaciones
+                Visítanos:
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Visítanos en cualquiera de nuestras clínicas en Mallorca
-              </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-3 gap-8">
             {Array.isArray(displayLocations) && displayLocations.map((location: any, index: number) => (
               <AnimatedSection key={location.id} delay={index * 0.2}>
                 <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300" data-testid={`location-${index}`}>
@@ -532,55 +594,24 @@ export default function Contacto() {
       <section className="py-16 bg-white" data-testid="contact-info">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
-            <h3 className="text-2xl font-title gold-accent mb-6">
-              Otros medios de contacto
+            <h3 className="text-4xl font-title gold-accent mb-8">
+              Horario
             </h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="flex flex-col items-center">
-                <div className="w-16 h-16 bg-turquoise rounded-full flex items-center justify-center mb-4">
-                  <Phone className="text-white w-6 h-6" />
-                </div>
-                <h4 className="font-subtitle font-semibold mb-2">Teléfono</h4>
-                <p className="text-muted-foreground text-sm mb-2">Llámanos directamente</p>
-                <a 
-                  href="tel:+34971123456" 
-                  className="text-turquoise hover:underline"
-                  data-testid="phone-main"
-                >
-                  +34 971 123 456
-                </a>
-              </div>
-
-              <div className="flex flex-col items-center">
-                <div className="w-16 h-16 bg-turquoise rounded-full flex items-center justify-center mb-4">
-                  <Mail className="text-white w-6 h-6" />
-                </div>
-                <h4 className="font-subtitle font-semibold mb-2">Email</h4>
-                <p className="text-muted-foreground text-sm mb-2">Escríbenos un mensaje</p>
-                <a 
-                  href="mailto:info@mac-mallorca.com" 
-                  className="text-turquoise hover:underline"
-                  data-testid="email-main"
-                >
-                  info@mac-mallorca.com
-                </a>
-              </div>
-
-              <div className="flex flex-col items-center">
-                <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mb-4">
-                  <i className="fab fa-whatsapp text-white text-2xl"></i>
-                </div>
-                <h4 className="font-subtitle font-semibold mb-2">WhatsApp</h4>
-                <p className="text-muted-foreground text-sm mb-2">Respuesta inmediata</p>
-                <a 
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-green-600 hover:underline"
-                  data-testid="whatsapp-main"
-                >
-                  Enviar mensaje
-                </a>
+            <div className="text-center space-y-4">
+              <p className="text-lg text-muted-foreground">
+                Lunes a viernes de 10:00h a 18:00h
+              </p>
+              <p className="text-lg text-muted-foreground">
+                Sábado y domingo: Cerrado
+              </p>
+              
+              <div className="mt-8 space-y-2">
+                <p className="text-lg text-muted-foreground">
+                  T. +34 971 76 37 87 | 620 44 92 71
+                </p>
+                <p className="text-lg text-muted-foreground">
+                  mallorcaaestheticc@gmail.com
+                </p>
               </div>
             </div>
           </AnimatedSection>
