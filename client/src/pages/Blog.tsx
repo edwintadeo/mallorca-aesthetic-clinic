@@ -7,6 +7,9 @@ import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 import { Calendar, User, ArrowRight, Clock } from "lucide-react";
 
+// Import video for hero background
+import heroVideo from "@assets/Bold Brush Strokes_simple_compose_01k40ny60dfpka9sghp6zqaakq_1756669574524.mp4";
+
 export default function Blog() {
   const { data: posts, isLoading, error } = useQuery({
     queryKey: ["/api/posts"],
@@ -85,8 +88,23 @@ export default function Blog() {
   return (
     <div className="pt-16 font-body antialiased">
       {/* Hero Section */}
-      <section className="py-20 hero-gradient" data-testid="blog-hero">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative py-20 overflow-hidden" data-testid="blog-hero">
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-20"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+        
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 hero-gradient"></div>
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
               Educación y Bienestar
