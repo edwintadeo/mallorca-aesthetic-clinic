@@ -108,10 +108,10 @@ export default function Metodo() {
             <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
               Metodología Exclusiva
             </div>
-            <h1 className="text-5xl lg:text-7xl title-luxury gold-accent-prominent mb-6">
+            <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6">
               Método MAC
             </h1>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto body-refined leading-relaxed mb-4">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-4">
               Un enfoque revolucionario de 4 fases que combina diagnóstico científico avanzado, planificación personalizada, 
               ejecución experta y seguimiento estratégico para garantizar tu transformación integral.
             </p>
@@ -149,10 +149,10 @@ export default function Metodo() {
               <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
                 Base Científica
               </div>
-              <h2 className="text-4xl lg:text-6xl title-luxury gold-accent-prominent mb-6">
+              <h2 className="text-4xl lg:text-6xl font-title gold-accent mb-6">
                 Fundamento del Método MAC
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto body-refined">
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Nuestro enfoque se basa en investigación científica avanzada y 15 años de experiencia clínica
               </p>
             </div>
@@ -165,8 +165,8 @@ export default function Metodo() {
                   <div className="w-16 h-16 bg-gradient-to-br from-turquoise to-turquoise-medium rounded-full flex items-center justify-center mb-6 mx-auto">
                     <Search className="text-white text-2xl" />
                   </div>
-                  <h3 className="text-2xl title-luxury gold-accent-prominent mb-4">Medicina Basada en Evidencia</h3>
-                  <p className="text-muted-foreground body-refined leading-relaxed">
+                  <h3 className="text-2xl font-subtitle gold-accent mb-4">Medicina Basada en Evidencia</h3>
+                  <p className="text-muted-foreground leading-relaxed">
                     Cada protocolo se fundamenta en estudios clínicos publicados en revistas médicas internacionales de prestigio.
                   </p>
                 </CardContent>
@@ -179,8 +179,8 @@ export default function Metodo() {
                   <div className="w-16 h-16 bg-gradient-to-br from-gold-deep to-gold-light rounded-full flex items-center justify-center mb-6 mx-auto">
                     <Users className="text-white text-2xl" />
                   </div>
-                  <h3 className="text-2xl title-luxury gold-accent-prominent mb-4">Enfoque Multidisciplinario</h3>
-                  <p className="text-muted-foreground body-refined leading-relaxed">
+                  <h3 className="text-2xl font-subtitle gold-accent mb-4">Enfoque Multidisciplinario</h3>
+                  <p className="text-muted-foreground leading-relaxed">
                     Integración de dermatología, medicina anti-aging, nutrición y psicología para resultados holísticos.
                   </p>
                 </CardContent>
@@ -193,8 +193,8 @@ export default function Metodo() {
                   <div className="w-16 h-16 bg-gradient-to-br from-turquoise-medium to-gold-champagne rounded-full flex items-center justify-center mb-6 mx-auto">
                     <TrendingUp className="text-white text-2xl" />
                   </div>
-                  <h3 className="text-2xl title-luxury gold-accent-prominent mb-4">Tecnología Avanzada</h3>
-                  <p className="text-muted-foreground body-refined leading-relaxed">
+                  <h3 className="text-2xl font-subtitle gold-accent mb-4">Tecnología Avanzada</h3>
+                  <p className="text-muted-foreground leading-relaxed">
                     Equipos de última generación certificados FDA y CE para máxima seguridad y eficacia comprobada.
                   </p>
                 </CardContent>
@@ -217,11 +217,11 @@ export default function Metodo() {
                         <div className="w-20 h-20 bg-gradient-to-br from-turquoise to-turquoise-medium rounded-full flex items-center justify-center mr-6 shadow-lg">
                           <phase.icon className="text-white text-3xl" />
                         </div>
-                        <div className="text-4xl title-luxury gold-accent-prominent font-bold">{phase.number}</div>
+                        <div className="text-4xl font-title gold-accent font-bold">{phase.number}</div>
                       </div>
                       
-                      <h2 className="text-3xl lg:text-4xl title-luxury text-foreground mb-4">{phase.title}</h2>
-                      <p className="text-lg text-muted-foreground mb-6 body-refined leading-relaxed">
+                      <h2 className="text-3xl lg:text-4xl font-title text-foreground mb-4">{phase.title}</h2>
+                      <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                         {phase.description}
                       </p>
                     
@@ -264,10 +264,10 @@ export default function Metodo() {
               <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
                 Ventajas Exclusivas
               </div>
-              <h2 className="text-4xl lg:text-6xl title-luxury gold-accent-prominent mb-6">
+              <h2 className="text-4xl lg:text-6xl font-title gold-accent mb-6">
                 ¿Por qué elegir el Método MAC?
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto body-refined">
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Nuestro enfoque integral garantiza resultados excepcionales, seguros y duraderos con el respaldo de la ciencia.
               </p>
             </div>
@@ -281,8 +281,8 @@ export default function Metodo() {
                     <div className="w-16 h-16 bg-gradient-to-br from-turquoise to-turquoise-medium rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                       <benefit.icon className="text-white text-2xl" />
                     </div>
-                    <h3 className="text-xl title-luxury gold-accent-prominent font-semibold mb-4">{benefit.title}</h3>
-                    <p className="text-muted-foreground body-refined leading-relaxed">{benefit.description}</p>
+                    <h3 className="text-xl font-subtitle font-semibold mb-4">{benefit.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
                   </CardContent>
                 </Card>
               </AnimatedSection>
@@ -299,10 +299,10 @@ export default function Metodo() {
               <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
                 Cronograma Detallado
               </div>
-              <h2 className="text-4xl lg:text-6xl title-luxury gold-accent-prominent mb-6">
+              <h2 className="text-4xl lg:text-6xl font-title gold-accent mb-6">
                 Tu Cronograma de Transformación
               </h2>
-              <p className="text-xl text-muted-foreground body-refined leading-relaxed">
+              <p className="text-xl text-muted-foreground leading-relaxed">
                 Un viaje estructurado desde la primera consulta hasta los resultados definitivos y su mantenimiento
               </p>
             </div>
@@ -372,10 +372,10 @@ export default function Metodo() {
             <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
               Primera Consulta Gratuita
             </div>
-            <h2 className="text-4xl lg:text-6xl title-luxury gold-accent-prominent mb-6">
+            <h2 className="text-4xl lg:text-6xl font-title gold-accent mb-6">
               Comienza tu transformación hoy
             </h2>
-            <p className="text-xl text-muted-foreground mb-4 body-refined leading-relaxed">
+            <p className="text-xl text-muted-foreground mb-4 leading-relaxed">
               La primera consulta es completamente gratuita e incluye tu diagnóstico integral 360° y propuesta personalizada.
             </p>
             <div className="flex justify-center items-center space-x-6 mb-8 text-sm text-turquoise">
