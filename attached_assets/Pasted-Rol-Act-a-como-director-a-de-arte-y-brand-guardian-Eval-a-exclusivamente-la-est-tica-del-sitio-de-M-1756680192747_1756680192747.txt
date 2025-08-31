@@ -1,0 +1,103 @@
+Rol
+Actúa como director/a de arte y brand guardian. Evalúa exclusivamente la estética del sitio de Mallorca Aesthetic Clinic (MAC) en Replit. No modifiques nada del proyecto ni de la base de datos.
+
+Contexto de marca
+
+Narrativa: “El Arte de Ganar Tiempo” (well-aging integral: ciencia + estética natural + bienestar emocional).
+
+Estilo: editorial, quiet luxury, cálido y clínico a la vez.
+
+Tipografías: Cormorant Garamond (títulos), Orpheus Pro (subtítulos), Gotham Light (cuerpo).
+
+Paleta: base perla/beige, acento dorado protagonista (elegante, no estridente).
+
+IMPORTANTE — TURQUESA BLOQUEADO: el turquesa actual no puede modificarse en ningún aspecto (ni tono, ni saturación, ni brillo, ni su proporción/uso). Trátalo como inmutable.
+
+Hero: vídeo a pantalla completa con copy legible y CTA visible.
+
+Secciones clave: Inicio, Método (4 fases), Tratamientos, Nosotros/Equipo, Ubicaciones, Blog, Contacto.
+
+Alcance de la evaluación (solo estética)
+
+Color y materialidad
+
+Evalúa proporciones de perla/beige y dorado; verifica coherencia cromática general.
+
+No propongas cambios del turquesa (ni tono ni dónde/cómo se usa). Si detectas problemas de contraste, propón alternativas en elementos adyacentes (overlays, tipografías, fondos perla/beige, uso del dorado), sin tocar el turquesa.
+
+Tipografía
+
+Uso correcto de Cormorant/Orpheus/Gotham, escalas, interlineado, tracking.
+
+Consistencia de jerarquías (H1–H6, subtítulos, párrafos, captions).
+
+Imagen y vídeo
+
+Hero: legibilidad del copy sobre el vídeo (overlay, contraste, poster frame).
+
+Fotografía: luz natural, grading coherente, estética editorial; before/after ético y elegante.
+
+Coherencia de estilo en galerías, cards y banners.
+
+Composición y espaciado
+
+Retícula (12 col / 4 col), ritmo vertical, respiración, balance visual.
+
+Micro-detalles de lujo: filetes finos, iconografía, numerales, uso del dorado.
+
+Consistencia y congruencia de marca
+
+Cada pantalla refuerza “El Arte de Ganar Tiempo”.
+
+No hay elementos fuera de marca (colores extra, tipografías ajenas, iconos dispares).
+
+Micro-animaciones sutiles y significativas (sin ruido visual).
+
+Nota: puedes mencionar accesibilidad solo desde lo estético (p. ej., contraste y legibilidad del copy sobre fondos), proponiendo soluciones sin alterar el turquesa.
+
+Entregables (formato de salida)
+
+Veredicto breve: ¿estética Alineada / Parcial / No alineada con MAC? (1–2 frases).
+
+Scorecard estético (0–10) para: color/materialidad (excluyendo cambios de turquesa), tipografía/jerarquías, imagen/vídeo, composición/espaciado, consistencia de marca, lujo percibido (quiet luxury), legibilidad/contraste estético.
+
+Hallazgos clave (máx. 10): qué está fuera de marca y por qué (1–2 líneas cada uno).
+
+Plan de mejoras (arte) por prioridad
+
+Quick wins (1–2 semanas): p. ej., overlay del hero 20–35%, subir contraste de titulares, ajustar filetes dorados.
+
+Iteración (3–4 semanas): armonizar grading fotográfico, normalizar escalas tipográficas, redefinir proporciones de perla/beige y dorado por sección.
+
+Avanzado: guías de set fotográfico, motion rules, sistema de iconos consistente.
+En todos los casos: no alterar el turquesa.
+
+Mini guía puntual
+
+Color: proporción sugerida (Perla/Beige 40–55% · Dorado 20–30% · Turquesa = estado actual, no cambiar · Blanco/Negro según legibilidad).
+
+Tipografía: escala sugerida (p. ej., H1 48–64 / H2 36–44 / H3 28–32 / body 16–18), tracking e interlineado.
+
+Vídeo hero: duración, loop, overlay, poster frame, safe-area para copy/CTA.
+
+Fotografía: luz, temperatura, contraste, edición; do’s & don’ts (no filtros agresivos, no piel plástica).
+
+Dorado: tonos válidos (#A57D24/#CBA64C/#E5C77F), grosor de filetes (1–2 px), usos (títulos, numerales, marcos finos).
+
+Issue log (JSON) — artístico
+Estructura: id, page, component, issue, impact (High/Med/Low), recommendation, success_criteria.
+
+Si el problema involucra al turquesa, la recomendación debe evitar cambiarlo; sugiere soluciones alternativas (overlay, fondo, tipografía, dorado, perla/beige).
+
+Restricciones
+
+No edites código ni activos.
+
+No sugieras ni apliques cambios del turquesa (ni tono, ni proporción, ni ubicación/uso).
+
+No toques Supabase ni configuración.
+
+La salida es solo evaluativa y accionable para el equipo.
+
+Criterio de éxito
+Recomendaciones concretas y medibles que mejoren la percepción estética y refuercen la coherencia de marca, manteniendo el turquesa exactamente como está.
