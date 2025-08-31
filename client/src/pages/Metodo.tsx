@@ -12,6 +12,9 @@ import heroBeautyModel from "@assets/ojo mujer verde_1756671431969.jpg";
 import spaDeviceTreatment from "@assets/laser piel_1756671407999.jpg";
 import whiteFacialMask from "@assets/mascarilla perla_1756671424839.jpg";
 
+// Import video for dynamic content
+import boldBrushVideo from "@assets/Bold Brush Strokes_simple_compose_01k40ny60dfpka9sghp6zqaakq_1756669574524.mp4";
+
 export default function Metodo() {
   const methodPhases = [
     {
@@ -185,12 +188,27 @@ export default function Metodo() {
               <AnimatedSection delay={index * 0.1}>
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                   <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                    <img 
-                      src={phase.image} 
-                      alt={phase.title}
-                      className="rounded-2xl shadow-lg w-full h-auto object-cover hover-lift transition-all duration-300"
-                      data-testid={`img-phase-${phase.number}`}
-                    />
+                    {index === 0 ? (
+                      <video 
+                        className="rounded-2xl shadow-lg w-full h-auto object-cover hover-lift transition-all duration-300"
+                        autoPlay 
+                        muted 
+                        loop 
+                        playsInline
+                        poster={phase.image}
+                        data-testid={`video-phase-${phase.number}`}
+                      >
+                        <source src={boldBrushVideo} type="video/mp4" />
+                        Tu navegador no soporta videos HTML5.
+                      </video>
+                    ) : (
+                      <img 
+                        src={phase.image} 
+                        alt={phase.title}
+                        className="rounded-2xl shadow-lg w-full h-auto object-cover hover-lift transition-all duration-300"
+                        data-testid={`img-phase-${phase.number}`}
+                      />
+                    )}
                   </div>
 
                   <div className={index % 2 === 1 ? 'lg:order-1' : ''}>

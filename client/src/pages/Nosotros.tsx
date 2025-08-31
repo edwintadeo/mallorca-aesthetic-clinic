@@ -10,8 +10,7 @@ import heroBeautyModel from "@assets/ojo mujer verde_1756671431969.jpg";
 import facialMaskTreatment from "@assets/mascarilla verde_1756671415152.jpg";
 import spaTreatment from "@assets/masal toalla turquesa grande_1756671403149.jpg";
 
-// Import video
-import boldBrushVideo from "@assets/Bold Brush Strokes_simple_compose_01k40ny60dfpka9sghp6zqaakq_1756669574524.mp4";
+// El video de Tramuntana está en object storage
 
 export default function Nosotros() {
   const values = [
@@ -153,7 +152,7 @@ export default function Nosotros() {
               e.currentTarget.parentElement?.appendChild(fallbackDiv);
             }}
           >
-            <source src={boldBrushVideo} type="video/mp4" />
+            <source src="/public-objects/tramuntana.mp4" type="video/mp4" />
             Tu navegador no soporta videos HTML5.
           </video>
           
