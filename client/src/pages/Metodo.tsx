@@ -201,6 +201,19 @@ export default function Metodo() {
                         <source src={boldBrushVideo} type="video/mp4" />
                         Tu navegador no soporta videos HTML5.
                       </video>
+                    ) : index === 1 ? (
+                      <video 
+                        className="rounded-2xl shadow-lg w-full h-auto object-cover hover-lift transition-all duration-300"
+                        autoPlay 
+                        muted 
+                        loop 
+                        playsInline
+                        poster={phase.image}
+                        data-testid={`video-phase-${phase.number}`}
+                      >
+                        <source src="/public-objects/gotas de perfumista.mp4" type="video/mp4" />
+                        Tu navegador no soporta videos HTML5.
+                      </video>
                     ) : (
                       <img 
                         src={phase.image} 
