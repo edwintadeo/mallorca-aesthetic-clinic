@@ -5,6 +5,9 @@ import { Badge } from "@/components/ui/badge";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 import { Crown, Gift, Calendar, Star, Users, Sparkles, Heart, Shield } from "lucide-react";
 
+// Import video for hero background
+import heroVideo from "@assets/primed_cotton_canvas_1756676868691.mp4";
+
 export default function ClubMAC() {
   const [selectedPlan, setSelectedPlan] = useState("premium");
 
@@ -102,9 +105,24 @@ export default function ClubMAC() {
   return (
     <div className="pt-16 font-body antialiased">
       {/* Hero Section */}
-      <section className="py-20 hero-gradient relative overflow-hidden" data-testid="club-mac-hero">
+      <section className="relative py-20 overflow-hidden" data-testid="club-mac-hero">
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+        
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 hero-gradient"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-gold-deep/20 to-turquoise/20"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
               Membresía Exclusiva
