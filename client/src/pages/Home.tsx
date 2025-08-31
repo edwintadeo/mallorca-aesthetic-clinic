@@ -3,6 +3,8 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import AnimatedSection from "@/components/UI/AnimatedSection";
+import WhatsAppButton from "@/components/UI/WhatsAppButton";
+import NewsletterSection from "@/components/UI/NewsletterSection";
 import { Search, ClipboardList, Wand2, TrendingUp, Star } from "lucide-react";
 
 // Import new images
@@ -124,21 +126,21 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
           <div className="text-center">
             <AnimatedSection>
-              <h1 className="text-5xl lg:text-7xl font-title font-light mb-6 text-white drop-shadow-lg">
-                <span className="text-gold-light">El Arte de</span><br />
+              <h1 className="text-5xl lg:text-7xl title-luxury mb-6 text-white drop-shadow-lg">
+                <span className="gold-accent-prominent">El Arte de</span><br />
                 <span className="text-white">Ganar Tiempo</span>
               </h1>
-              <h2 className="text-2xl lg:text-3xl font-subtitle italic text-white/90 mb-8 drop-shadow-md">
+              <h2 className="text-2xl lg:text-3xl subtitle-elegant text-white/90 mb-8 drop-shadow-md">
                 Donde el tiempo se convierte en arte y tu bienestar en una obra maestra
               </h2>
-              <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-4xl mx-auto drop-shadow-md">
+              <p className="text-lg text-white/80 mb-8 body-refined max-w-4xl mx-auto drop-shadow-md">
                 En un mundo obsesionado con detener el reloj, hemos descubierto algo extraordinario: el arte de convertir el tiempo en tu aliado. No se trata solo de lucir más joven, sino de experimentar una transformación integral donde la belleza auténtica emerge naturalmente desde el bienestar más profundo.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contacto">
                   <Button 
                     size="lg" 
-                    className="bg-turquoise-medium/90 text-white border-2 border-gold-light hover:bg-gold-light hover:text-gold-deep transition-all duration-300 px-8 py-4 text-lg backdrop-blur-sm"
+                    className="bg-turquoise-medium/90 text-white border-2 border-gold-light hover:bg-gold-light hover:text-gold-deep button-premium px-8 py-4 text-lg backdrop-blur-sm"
                     data-testid="button-hero-reserva"
                   >
                     Reserva tu consulta
@@ -196,18 +198,21 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="mt-8 grid grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="text-3xl font-title gold-accent font-semibold" data-testid="stat-years">18+</div>
-                  <div className="text-sm text-muted-foreground">Años experiencia</div>
+              <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div className="text-center hover-lift p-6 rounded-lg bg-white/10 backdrop-blur-sm border border-gold-light/30">
+                  <div className="text-5xl stats-emphasis mb-2" data-testid="stat-years">18+</div>
+                  <div className="text-sm text-white/80 uppercase tracking-wide">Años de Experiencia</div>
+                  <div className="text-xs text-white/60 mt-1">Medicina Estética Integral</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-title gold-accent font-semibold" data-testid="stat-patients">10K+</div>
-                  <div className="text-sm text-muted-foreground">Pacientes transformados</div>
+                <div className="text-center hover-lift p-6 rounded-lg bg-white/10 backdrop-blur-sm border border-gold-light/30">
+                  <div className="text-5xl stats-emphasis mb-2" data-testid="stat-patients">10K+</div>
+                  <div className="text-sm text-white/80 uppercase tracking-wide">Pacientes Transformados</div>
+                  <div className="text-xs text-white/60 mt-1">Resultados Naturales</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-title gold-accent font-semibold" data-testid="stat-treatments">90</div>
-                  <div className="text-sm text-muted-foreground">Días transformación visible</div>
+                <div className="text-center hover-lift p-6 rounded-lg bg-white/10 backdrop-blur-sm border border-gold-light/30">
+                  <div className="text-5xl stats-emphasis mb-2" data-testid="stat-treatments">90</div>
+                  <div className="text-sm text-white/80 uppercase tracking-wide">Días Transformación</div>
+                  <div className="text-xs text-white/60 mt-1">Resultados Visibles</div>
                 </div>
               </div>
             </AnimatedSection>
@@ -490,21 +495,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Newsletter Section */}
+      <NewsletterSection />
+
       {/* Final CTA Section */}
       <section className="py-20 bg-white/90 backdrop-blur-sm relative z-[1]" data-testid="final-cta-section">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
-            <h2 className="text-4xl lg:text-5xl font-title gold-accent mb-6">
-              ¿Listo para reescribir tu tiempo?
+            <h2 className="text-4xl lg:text-5xl title-luxury gold-accent-prominent mb-6">
+              ¿Estás listo para dominar el arte de ganar tiempo?
             </h2>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Da el primer paso hacia tu transformación. Nuestro equipo está listo para diseñar tu plan personalizado.
+            <p className="text-xl text-muted-foreground mb-8 body-refined">
+              Bienvenido a MAC, el estudio donde el tiempo se transforma en arte, y donde cada instante cuenta para esculpir tu verdadera obra maestra.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contacto">
                 <Button 
                   size="lg" 
-                  className="bg-turquoise text-white border-2 border-gold-light hover:bg-gold-light hover:text-gold-deep transition-all duration-300 px-8 py-4 text-lg"
+                  className="bg-turquoise text-white border-2 border-gold-light hover:bg-gold-light hover:text-gold-deep button-premium px-8 py-4 text-lg"
                   data-testid="button-final-cta-contact"
                 >
                   Agenda tu consulta personalizada
@@ -522,6 +530,9 @@ export default function Home() {
           </AnimatedSection>
         </div>
       </section>
+
+      {/* WhatsApp Button */}
+      <WhatsAppButton />
     </div>
   );
 }
