@@ -116,6 +116,7 @@ export default function Home() {
 
             <AnimatedSection delay={0.2}>
               <div className="relative rounded-2xl shadow-2xl overflow-hidden">
+                {/* Intentamos cargar el video primero */}
                 <video 
                   src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4"
                   autoPlay
@@ -125,10 +126,27 @@ export default function Home() {
                   className="w-full h-auto object-cover rounded-2xl"
                   data-testid="video-hero"
                   style={{ minHeight: "400px" }}
+                  onError={(e) => {
+                    console.error("Error loading video:", e);
+                    // Si el video no carga, mostrar imagen de respaldo
+                    e.currentTarget.style.display = 'none';
+                    const fallbackImg = e.currentTarget.nextElementSibling;
+                    if (fallbackImg) fallbackImg.style.display = 'block';
+                  }}
                 >
                   <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4" type="video/mp4" />
                   Tu navegador no soporta videos HTML5.
                 </video>
+                
+                {/* Imagen de respaldo si el video no carga */}
+                <img 
+                  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800" 
+                  alt="Vista marina con gaviotas - Mallorca Aesthetic Clinic"
+                  className="w-full h-auto object-cover rounded-2xl"
+                  style={{ display: "none", minHeight: "400px" }}
+                  data-testid="img-hero-fallback"
+                />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
               </div>
             </AnimatedSection>
