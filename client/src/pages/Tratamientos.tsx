@@ -136,8 +136,8 @@ export default function Tratamientos() {
         </div>
       </section>
 
-      {/* Bold Brush Strokes Video Section */}
-      <section className="py-0 bg-white relative overflow-hidden" data-testid="bold-brush-strokes-video">
+      {/* Cotton Canvas Video Section */}
+      <section className="py-0 bg-white relative overflow-hidden" data-testid="cotton-canvas-video">
         <div className="relative w-full h-[60vh] min-h-[400px]">
           <video 
             className="w-full h-full object-cover"
@@ -146,7 +146,7 @@ export default function Tratamientos() {
             loop 
             playsInline
           >
-            <source src="/public-objects/Bold Brush Strokes_simple_compose_01k40ny60dfpka9sghp6zqaakq_1756669574524.mp4" type="video/mp4" />
+            <source src="/public-objects/primet_cotton_canvas.mp4" type="video/mp4" />
           </video>
         </div>
       </section>
