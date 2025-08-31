@@ -115,12 +115,22 @@ export default function Home() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.2}>
-              <img 
-                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800" 
-                alt="Elegant medical spa interior with natural lighting"
-                className="rounded-2xl shadow-2xl w-full h-auto object-cover"
-                data-testid="img-hero"
-              />
+              <div className="relative rounded-2xl shadow-2xl overflow-hidden">
+                <video 
+                  src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-auto object-cover rounded-2xl"
+                  data-testid="video-hero"
+                  style={{ minHeight: "400px" }}
+                >
+                  <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4" type="video/mp4" />
+                  Tu navegador no soporta videos HTML5.
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+              </div>
             </AnimatedSection>
           </div>
         </div>
