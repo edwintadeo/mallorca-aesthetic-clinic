@@ -4,6 +4,12 @@ import { Badge } from "@/components/ui/badge";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 import { Award, Users, Heart, Microscope, Shield, Clock } from "lucide-react";
 
+// Import team images
+import perfectSkinPortrait from "@assets/perfect-skin-portrait.jpg";
+import heroBeautyModel from "@assets/hero-beauty-model.jpg";
+import facialMaskTreatment from "@assets/facial-mask-treatment.jpg";
+import spaTreatment from "@assets/spa-treatment.jpg";
+
 export default function Nosotros() {
   const values = [
     {
@@ -45,7 +51,7 @@ export default function Nosotros() {
       position: "Directora Médica",
       specialty: "Medicina Estética y Well-Aging",
       experience: "18+ años",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
+      image: perfectSkinPortrait,
       description: "Pionera en medicina estética integral con más de 18 años de experiencia. Creadora del revolucionario Método MAC.",
       certifications: ["European Board of Aesthetic Medicine", "International Society of Aesthetic Medicine", "Spanish Society of Aesthetic Medicine"]
     },
@@ -55,7 +61,7 @@ export default function Nosotros() {
       position: "Cirujano Plástico",
       specialty: "Cirugía Reconstructiva y Estética",
       experience: "15+ años",
-      image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
+      image: heroBeautyModel,
       description: "Especialista en cirugía mínimamente invasiva y técnicas de rejuvenecimiento facial avanzadas.",
       certifications: ["Spanish Board of Plastic Surgery", "European Association of Plastic Surgeons", "International Society of Aesthetic Plastic Surgery"]
     },
@@ -65,7 +71,7 @@ export default function Nosotros() {
       position: "Especialista en Nutrición",
       specialty: "Nutrición Clínica y Anti-Aging",
       experience: "12+ años",
-      image: "https://images.unsplash.com/photo-1594824694330-31bade942b54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400", 
+      image: facialMaskTreatment, 
       description: "Experta en nutrición anti-inflamatoria y programas de optimización metabólica para el bienestar integral.",
       certifications: ["Clinical Nutrition Certification", "Anti-Aging Medicine Specialist", "Functional Medicine Practitioner"]
     }

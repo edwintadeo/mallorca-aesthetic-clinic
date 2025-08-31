@@ -5,6 +5,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 import { Search, ClipboardList, Wand2, TrendingUp, Star } from "lucide-react";
 
+// Import new images
+import heroBeautyModel from "@assets/hero-beauty-model.jpg";
+import spaTreatment from "@assets/spa-treatment.jpg";
+import facialMaskTreatment from "@assets/facial-mask-treatment.jpg";
+import perfectSkinPortrait from "@assets/perfect-skin-portrait.jpg";
+
 export default function Home() {
   const { data: testimonials } = useQuery({
     queryKey: ["/api/testimonials"],
@@ -45,22 +51,22 @@ export default function Home() {
     {
       title: "Estética Facial",
       description: "Rejuvenecimiento, hidratación profunda, tratamientos anti-edad",
-      image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      image: spaTreatment,
     },
     {
       title: "Estética Corporal",
       description: "Remodelación, eliminación de grasa, tonificación",
-      image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      image: facialMaskTreatment,
     },
     {
       title: "Cirugía Estética",
       description: "Procedimientos mínimamente invasivos, resultados naturales",
-      image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      image: perfectSkinPortrait,
     },
     {
       title: "Nutrición Integral",
       description: "Planes personalizados, suplementación, bienestar digestivo",
-      image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      image: heroBeautyModel,
     },
     {
       title: "Well-Aging",
@@ -102,7 +108,7 @@ export default function Home() {
         <div 
           className="absolute inset-0 w-full h-full bg-cover bg-center"
           style={{ 
-            backgroundImage: "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')",
+            backgroundImage: `url(${heroBeautyModel})`,
             display: "none"
           }}
         ></div>
@@ -157,7 +163,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
               <img 
-                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                src={perfectSkinPortrait} 
                 alt="Dra. Liliana Ocampo - Directora Médica"
                 className="rounded-2xl shadow-lg w-full h-auto object-cover"
                 data-testid="img-doctor"

@@ -6,6 +6,12 @@ import AnimatedSection from "@/components/UI/AnimatedSection";
 import { Link } from "wouter";
 import { useState } from "react";
 
+// Import treatment images
+import spaTreatment from "@assets/spa-treatment.jpg";
+import facialMaskTreatment from "@assets/facial-mask-treatment.jpg";
+import perfectSkinPortrait from "@assets/perfect-skin-portrait.jpg";
+import heroBeautyModel from "@assets/hero-beauty-model.jpg";
+
 export default function Tratamientos() {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
@@ -31,7 +37,7 @@ export default function Tratamientos() {
       description: "Tratamiento completo que combina múltiples técnicas para revertir los signos del envejecimiento facial.",
       benefits: ["Reducción de arrugas", "Mejora de textura", "Hidratación profunda", "Estimulación de colágeno"],
       technology: "Radiofrecuencia + Ultrasonido microfocalizado + LED",
-      imageUrl: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      imageUrl: spaTreatment,
       featured: true,
     },
     {
@@ -41,7 +47,7 @@ export default function Tratamientos() {
       description: "Eliminación no invasiva de grasa localizada mediante criolipólisis avanzada.",
       benefits: ["Reducción de grasa", "Sin cirugía", "Sin tiempo de recuperación", "Resultados permanentes"],
       technology: "CoolSculpting Elite + CoolTone",
-      imageUrl: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      imageUrl: facialMaskTreatment,
       featured: true,
     },
     {
@@ -51,7 +57,7 @@ export default function Tratamientos() {
       description: "Tensado y elevación facial utilizando hilos tensores PDO de última generación.",
       benefits: ["Efecto lifting inmediato", "Estimulación de colágeno", "Sin cicatrices", "Resultados duraderos"],
       technology: "Hilos PDO + Radiofrecuencia fraccionada",
-      imageUrl: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      imageUrl: perfectSkinPortrait,
       featured: false,
     },
     {
@@ -61,7 +67,7 @@ export default function Tratamientos() {
       description: "Plan personalizado de nutrición y suplementación para optimizar el envejecimiento celular.",
       benefits: ["Optimización hormonal", "Mejora energética", "Reducción inflamación", "Longevidad celular"],
       technology: "Análisis genético + Bioimpedancia + Micronutrientes",
-      imageUrl: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      imageUrl: heroBeautyModel,
       featured: false,
     },
     {
@@ -71,7 +77,7 @@ export default function Tratamientos() {
       description: "Medicina regenerativa con plasma rico en plaquetas para rejuvenecimiento natural.",
       benefits: ["Regeneración celular", "Bioestimulación natural", "Sin efectos secundarios", "Resultados progresivos"],
       technology: "PRP Autólogo + Microagujas + LED terapéutico",
-      imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      imageUrl: spaTreatment,
       featured: true,
     },
     {
@@ -81,7 +87,7 @@ export default function Tratamientos() {
       description: "Eliminación permanente del vello con láser de diodo de última generación.",
       benefits: ["Eliminación permanente", "Para todos los tipos de piel", "Sin dolor", "Resultados rápidos"],
       technology: "Láser Diodo 808nm + Cooling System",
-      imageUrl: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      imageUrl: facialMaskTreatment,
       featured: false,
     },
   ];

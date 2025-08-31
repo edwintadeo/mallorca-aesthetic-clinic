@@ -4,6 +4,12 @@ import AnimatedSection from "@/components/UI/AnimatedSection";
 import { Link } from "wouter";
 import { Search, ClipboardList, Wand2, TrendingUp, CheckCircle, Clock, Users, Award } from "lucide-react";
 
+// Import method images
+import perfectSkinPortrait from "@assets/perfect-skin-portrait.jpg";
+import facialMaskTreatment from "@assets/facial-mask-treatment.jpg";
+import spaTreatment from "@assets/spa-treatment.jpg";
+import heroBeautyModel from "@assets/hero-beauty-model.jpg";
+
 export default function Metodo() {
   const methodPhases = [
     {
@@ -19,7 +25,7 @@ export default function Metodo() {
         "Estudio fotográfico profesional"
       ],
       duration: "60-90 minutos",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+      image: perfectSkinPortrait
     },
     {
       icon: ClipboardList,
@@ -34,7 +40,7 @@ export default function Metodo() {
         "Plan de cuidados en casa"
       ],
       duration: "30 minutos",
-      image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+      image: facialMaskTreatment
     },
     {
       icon: Wand2,
@@ -49,7 +55,7 @@ export default function Metodo() {
         "Resultados documentados fotográficamente"
       ],
       duration: "Variable según tratamiento",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+      image: spaTreatment
     },
     {
       icon: TrendingUp,
