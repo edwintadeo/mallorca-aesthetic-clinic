@@ -196,21 +196,23 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                <div className="text-center hover-lift p-6 rounded-lg bg-white/10 backdrop-blur-sm border border-gold-light/30">
-                  <div className="text-5xl stats-emphasis mb-2" data-testid="stat-years">18+</div>
-                  <div className="text-sm text-white/80 uppercase tracking-wide">Años de Experiencia</div>
-                  <div className="text-xs text-white/60 mt-1">Medicina Estética Integral</div>
-                </div>
-                <div className="text-center hover-lift p-6 rounded-lg bg-white/10 backdrop-blur-sm border border-gold-light/30">
-                  <div className="text-5xl stats-emphasis mb-2" data-testid="stat-patients">10K+</div>
-                  <div className="text-sm text-white/80 uppercase tracking-wide">Pacientes Transformados</div>
-                  <div className="text-xs text-white/60 mt-1">Resultados Naturales</div>
-                </div>
-                <div className="text-center hover-lift p-6 rounded-lg bg-white/10 backdrop-blur-sm border border-gold-light/30">
-                  <div className="text-5xl stats-emphasis mb-2" data-testid="stat-treatments">90</div>
-                  <div className="text-sm text-white/80 uppercase tracking-wide">Días Transformación</div>
-                  <div className="text-xs text-white/60 mt-1">Resultados Visibles</div>
+              <div className="mt-12 text-center max-w-4xl mx-auto">
+                <h3 className="text-3xl lg:text-4xl font-title gold-accent mb-8">
+                  Confianza respaldada por evidencia y excelencia
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                  <div className="text-left">
+                    <div className="text-4xl lg:text-5xl font-title gold-accent mb-4">Más de 18 años de</div>
+                    <p className="text-lg text-white/90 leading-relaxed">
+                      experiencia clínica en medicina estética avanzada y bienestar integral
+                    </p>
+                  </div>
+                  <div className="text-left">
+                    <div className="text-4xl lg:text-5xl font-title gold-accent mb-4">+10.000 pacientes</div>
+                    <p className="text-lg text-white/90 leading-relaxed">
+                      transformados con resultados visibles y sostenibles
+                    </p>
+                  </div>
                 </div>
               </div>
             </AnimatedSection>
