@@ -109,7 +109,7 @@ export default function Blog() {
             <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
               Educación y Bienestar
             </div>
-            <h1 className="text-5xl lg:text-7xl font-title gold-accent-prominent mb-6">
+            <h1 className="hero-main-title gold-accent-prominent mb-6">
               Blog MAC
             </h1>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
@@ -122,7 +122,7 @@ export default function Blog() {
 
       {/* Featured Post */}
       {displayFeatured && (
-        <section className="py-20 section-pearl gold-border-bottom" data-testid="featured-post">
+        <section className="py-20 section-warm-pearl gold-border-bottom" data-testid="featured-post">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection>
               <div className="text-center mb-12">

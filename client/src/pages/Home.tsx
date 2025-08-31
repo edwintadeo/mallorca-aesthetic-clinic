@@ -119,10 +119,10 @@ export default function Home() {
                   data-testid="hero-mac-logo"
                 />
               </div>
-              <h1 className="text-5xl lg:text-7xl hero-main-title mb-6 text-white text-shadow-elegant">
-                <span className="gold-accent">Medicina estética</span><br />
-                <span className="gold-accent">avanzada con</span><br />
-                <span className="gold-accent">visión integral</span>
+              <h1 className="hero-main-title mb-6 text-white text-shadow-elegant">
+                <span className="gold-accent-prominent">Medicina estética</span><br />
+                <span className="gold-accent-prominent">avanzada con</span><br />
+                <span className="gold-accent-prominent">visión integral</span>
               </h1>
               <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto text-shadow-elegant leading-relaxed">
                 Consigue una transformación que se siente y es visible en solo 90 días y revela tu auténtica belleza natural.
@@ -144,7 +144,7 @@ export default function Home() {
       </section>
 
       {/* Doctor Section */}
-      <section className="py-20 section-pearl relative z-[1] gold-border-bottom" data-testid="doctor-section">
+      <section className="py-20 section-warm-pearl relative z-[1] gold-border-bottom" data-testid="doctor-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
@@ -205,7 +205,7 @@ export default function Home() {
       </section>
 
       {/* Pilares de la Clínica */}
-      <section className="py-20 section-beige relative z-[1] gold-border-bottom" data-testid="pilares-section">
+      <section className="py-20 section-soft-beige relative z-[1] gold-border-bottom" data-testid="pilares-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
