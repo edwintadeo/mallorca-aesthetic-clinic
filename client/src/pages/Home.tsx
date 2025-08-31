@@ -153,7 +153,7 @@ export default function Home() {
       </section>
 
       {/* Doctor Section */}
-      <section className="py-20 bg-white relative z-[1]" data-testid="doctor-section">
+      <section className="py-20 bg-white/90 backdrop-blur-sm relative z-[1]" data-testid="doctor-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
@@ -211,17 +211,17 @@ export default function Home() {
       </section>
 
       {/* Method Section */}
-      <section className="py-20 bg-pearl relative z-[1]" data-testid="method-section">
+      <section className="py-20 bg-transparent relative z-[1]" data-testid="method-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
-              <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
+              <div className="text-sm uppercase tracking-wider text-white font-medium mb-4 drop-shadow-lg">
                 Metodología Exclusiva
               </div>
-              <h2 className="text-4xl lg:text-6xl font-title gold-accent mb-6">
+              <h2 className="text-4xl lg:text-6xl font-title text-gold-light mb-6 drop-shadow-lg">
                 Método MAC
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
                 Nuestro protocolo de cuatro fases garantiza resultados excepcionales 
                 mediante un enfoque científico y personalizado.
               </p>
@@ -264,7 +264,7 @@ export default function Home() {
       </section>
 
       {/* Treatments Section */}
-      <section className="py-20 bg-white relative z-[1]" data-testid="treatments-section">
+      <section className="py-20 bg-white/90 backdrop-blur-sm relative z-[1]" data-testid="treatments-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
@@ -316,17 +316,17 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-beige relative z-[1]" data-testid="testimonials-section">
+      <section className="py-20 bg-transparent relative z-[1]" data-testid="testimonials-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
-              <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
+              <div className="text-sm uppercase tracking-wider text-white font-medium mb-4 drop-shadow-lg">
                 Historias Reales
               </div>
-              <h2 className="text-4xl lg:text-6xl font-title gold-accent mb-6">
+              <h2 className="text-4xl lg:text-6xl font-title text-gold-light mb-6 drop-shadow-lg">
                 Testimonios
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
                 Transformaciones auténticas de pacientes que han vivido la experiencia MAC.
               </p>
             </div>
@@ -374,17 +374,17 @@ export default function Home() {
       </section>
 
       {/* Locations Section */}
-      <section className="py-20 bg-pearl relative z-[1]" data-testid="locations-section">
+      <section className="py-20 bg-transparent relative z-[1]" data-testid="locations-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
-              <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
+              <div className="text-sm uppercase tracking-wider text-white font-medium mb-4 drop-shadow-lg">
                 Nuestras Sedes
               </div>
-              <h2 className="text-4xl lg:text-6xl font-title gold-accent mb-6">
+              <h2 className="text-4xl lg:text-6xl font-title text-gold-light mb-6 drop-shadow-lg">
                 Ubicaciones
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
                 Espacios diseñados para tu comodidad y bienestar en las mejores zonas de Mallorca.
               </p>
             </div>
@@ -486,7 +486,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-white relative z-[1]" data-testid="final-cta-section">
+      <section className="py-20 bg-white/90 backdrop-blur-sm relative z-[1]" data-testid="final-cta-section">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <h2 className="text-4xl lg:text-5xl font-title gold-accent mb-6">
