@@ -13,7 +13,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import AnimatedSection from "@/components/UI/AnimatedSection";
-import { MapPin, Phone, Mail, Clock, UserCheck, Heart, Microscope, Shield } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, UserCheck, Heart, Microscope, Shield, CheckCircle, AlertCircle } from "lucide-react";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "El nombre debe tener al menos 2 caracteres").max(100, "El nombre es demasiado largo"),
@@ -216,9 +216,14 @@ export default function Contacto() {
                       <FormField
                         control={form.control}
                         name="name"
-                        render={({ field }) => (
+                        render={({ field, fieldState }) => (
                           <FormItem>
-                            <FormLabel>Nombre y apellidos *</FormLabel>
+                            <FormLabel className="flex items-center gap-2">
+                              Nombre y apellidos *
+                              {fieldState.isDirty && !fieldState.error && (
+                                <CheckCircle className="w-4 h-4 text-green-500" />
+                              )}
+                            </FormLabel>
                             <FormControl>
                               <Input 
                                 placeholder="Tu nombre completo" 
@@ -226,6 +231,7 @@ export default function Contacto() {
                                 data-testid="input-name"
                                 aria-label="Nombre y apellidos"
                                 aria-required="true"
+                                className={fieldState.error ? "border-red-500" : fieldState.isDirty && !fieldState.error ? "border-green-500" : ""}
                               />
                             </FormControl>
                             <FormMessage />
@@ -262,15 +268,23 @@ export default function Contacto() {
                       <FormField
                         control={form.control}
                         name="email"
-                        render={({ field }) => (
+                        render={({ field, fieldState }) => (
                           <FormItem>
-                            <FormLabel>Email *</FormLabel>
+                            <FormLabel className="flex items-center gap-2">
+                              Email *
+                              {fieldState.isDirty && !fieldState.error && (
+                                <CheckCircle className="w-4 h-4 text-green-500" />
+                              )}
+                            </FormLabel>
                             <FormControl>
                               <Input 
                                 type="email" 
                                 placeholder="tu@email.com" 
                                 {...field} 
                                 data-testid="input-email"
+                                aria-label="Email"
+                                aria-required="true"
+                                className={fieldState.error ? "border-red-500" : fieldState.isDirty && !fieldState.error ? "border-green-500" : ""}
                               />
                             </FormControl>
                             <FormMessage />
@@ -281,15 +295,23 @@ export default function Contacto() {
                       <FormField
                         control={form.control}
                         name="phone"
-                        render={({ field }) => (
+                        render={({ field, fieldState }) => (
                           <FormItem>
-                            <FormLabel>Teléfono *</FormLabel>
+                            <FormLabel className="flex items-center gap-2">
+                              Teléfono *
+                              {fieldState.isDirty && !fieldState.error && (
+                                <CheckCircle className="w-4 h-4 text-green-500" />
+                              )}
+                            </FormLabel>
                             <FormControl>
                               <Input 
                                 type="tel" 
                                 placeholder="+34 600 000 000" 
                                 {...field} 
                                 data-testid="input-phone"
+                                aria-label="Teléfono"
+                                aria-required="true"
+                                className={fieldState.error ? "border-red-500" : fieldState.isDirty && !fieldState.error ? "border-green-500" : ""}
                               />
                             </FormControl>
                             <FormMessage />
@@ -476,16 +498,30 @@ export default function Contacto() {
                       <Button 
                         type="submit" 
                         disabled={isSubmitting}
-                        className="flex-1 cta-enhanced text-white hover:text-gold-deep py-3 relative overflow-hidden"
+                        className="flex-1 cta-enhanced text-white hover:text-gold-deep py-3 relative overflow-hidden group"
                         data-testid="button-submit-form"
                       >
                         {isSubmitting ? (
-                          <span className="flex items-center justify-center">
-                            <span className="animate-spin mr-2 h-4 w-4 border-2 border-white border-t-transparent rounded-full" />
-                            Enviando...
-                          </span>
+                          <>
+                            <span className="flex items-center justify-center relative z-10">
+                              <span className="animate-spin mr-2 h-4 w-4 border-2 border-white border-t-transparent rounded-full" />
+                              Enviando...
+                            </span>
+                            <div className="absolute inset-0 bg-turquoise-light animate-pulse" />
+                            <div 
+                              className="absolute bottom-0 left-0 h-1 bg-turquoise animate-[loading_2s_ease-in-out_infinite]"
+                              style={{
+                                animation: "loading 2s ease-in-out infinite",
+                                "@keyframes loading": {
+                                  "0%": { width: "0%" },
+                                  "50%": { width: "100%" },
+                                  "100%": { width: "0%" }
+                                }
+                              }}
+                            />
+                          </>
                         ) : (
-                          "ENVIAR"
+                          <span className="relative z-10 font-semibold tracking-wider">ENVIAR CONSULTA</span>
                         )}
                       </Button>
                       <a 

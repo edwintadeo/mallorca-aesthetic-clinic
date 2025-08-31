@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 import SkeletonCard from "@/components/UI/SkeletonCard";
 import LazyImage from "@/components/UI/LazyImage";
+import { TreatmentCardSkeleton } from "@/components/UI/SkeletonLoader";
 import { Link } from "wouter";
 import { useState } from "react";
 
@@ -119,7 +120,7 @@ export default function Tratamientos() {
             // Si el video no carga, mostrar imagen de respaldo
             e.currentTarget.style.display = 'none';
             const fallbackDiv = e.currentTarget.nextElementSibling;
-            if (fallbackDiv) fallbackDiv.style.display = 'block';
+            if (fallbackDiv) (fallbackDiv as HTMLElement).style.display = 'block';
           }}
         >
           <source src="/public-objects/amanecer mallorca.mp4" type="video/mp4" />
