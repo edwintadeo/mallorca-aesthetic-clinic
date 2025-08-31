@@ -10,6 +10,8 @@ import heroBeautyModel from "@assets/hero-beauty-model.jpg";
 import spaTreatment from "@assets/spa-treatment.jpg";
 import facialMaskTreatment from "@assets/facial-mask-treatment.jpg";
 import perfectSkinPortrait from "@assets/perfect-skin-portrait.jpg";
+import spaDeviceTreatment from "@assets/spa-device-treatment.jpg";
+import whiteFacialMask from "@assets/white-facial-mask.jpg";
 
 export default function Home() {
   const { data: testimonials } = useQuery({
@@ -71,12 +73,12 @@ export default function Home() {
     {
       title: "Well-Aging",
       description: "Longevidad, optimización hormonal, terapias regenerativas",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      image: spaDeviceTreatment,
     },
     {
       title: "Tecnología Láser",
       description: "Equipos de última generación, resultados precisos",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      image: whiteFacialMask,
     },
   ];
 

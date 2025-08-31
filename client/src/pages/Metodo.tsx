@@ -9,6 +9,8 @@ import perfectSkinPortrait from "@assets/perfect-skin-portrait.jpg";
 import facialMaskTreatment from "@assets/facial-mask-treatment.jpg";
 import spaTreatment from "@assets/spa-treatment.jpg";
 import heroBeautyModel from "@assets/hero-beauty-model.jpg";
+import spaDeviceTreatment from "@assets/spa-device-treatment.jpg";
+import whiteFacialMask from "@assets/white-facial-mask.jpg";
 
 export default function Metodo() {
   const methodPhases = [
@@ -55,7 +57,7 @@ export default function Metodo() {
         "Resultados documentados fotográficamente"
       ],
       duration: "Variable según tratamiento",
-      image: spaTreatment
+      image: spaDeviceTreatment
     },
     {
       icon: TrendingUp,

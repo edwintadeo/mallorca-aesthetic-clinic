@@ -11,6 +11,8 @@ import spaTreatment from "@assets/spa-treatment.jpg";
 import facialMaskTreatment from "@assets/facial-mask-treatment.jpg";
 import perfectSkinPortrait from "@assets/perfect-skin-portrait.jpg";
 import heroBeautyModel from "@assets/hero-beauty-model.jpg";
+import spaDeviceTreatment from "@assets/spa-device-treatment.jpg";
+import whiteFacialMask from "@assets/white-facial-mask.jpg";
 
 export default function Tratamientos() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -57,7 +59,7 @@ export default function Tratamientos() {
       description: "Tensado y elevación facial utilizando hilos tensores PDO de última generación.",
       benefits: ["Efecto lifting inmediato", "Estimulación de colágeno", "Sin cicatrices", "Resultados duraderos"],
       technology: "Hilos PDO + Radiofrecuencia fraccionada",
-      imageUrl: perfectSkinPortrait,
+      imageUrl: whiteFacialMask,
       featured: false,
     },
     {
@@ -77,7 +79,7 @@ export default function Tratamientos() {
       description: "Medicina regenerativa con plasma rico en plaquetas para rejuvenecimiento natural.",
       benefits: ["Regeneración celular", "Bioestimulación natural", "Sin efectos secundarios", "Resultados progresivos"],
       technology: "PRP Autólogo + Microagujas + LED terapéutico",
-      imageUrl: spaTreatment,
+      imageUrl: spaDeviceTreatment,
       featured: true,
     },
     {
