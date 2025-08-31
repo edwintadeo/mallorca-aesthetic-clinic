@@ -237,10 +237,10 @@ export default function Home() {
               <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
                 Nuestros Fundamentos
               </div>
-              <h2 className="text-4xl lg:text-6xl title-luxury gold-accent-prominent mb-6">
+              <h2 className="text-4xl lg:text-6xl font-title gold-accent mb-6">
                 Pilares de MAC
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto body-refined">
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Tres pilares fundamentales que definen nuestra filosofía y garantizan resultados excepcionales
               </p>
             </div>
@@ -253,12 +253,11 @@ export default function Home() {
                   <div className="w-20 h-20 bg-gradient-to-br from-turquoise to-turquoise-medium rounded-full flex items-center justify-center mb-6 mx-auto">
                     <Star className="text-white text-3xl fill-current" />
                   </div>
-                  <h3 className="text-2xl title-luxury gold-accent-prominent mb-4">
-                    Belleza que Refleja tu Verdad
+                  <h3 className="text-2xl font-title gold-accent mb-4">
+                    Belleza que refleja tu verdad
                   </h3>
-                  <p className="text-muted-foreground body-refined leading-relaxed">
-                    No creamos belleza artificial, sino que revelamos y potenciamos tu autenticidad natural. 
-                    Cada tratamiento respeta tu esencia única mientras optimiza tu potencial estético.
+                  <p className="text-muted-foreground leading-relaxed">
+                    Armonización estética natural diseñada con tecnologías 3D, IA, genómica y biomarcadores de precisión.
                   </p>
                 </CardContent>
               </Card>
@@ -270,12 +269,11 @@ export default function Home() {
                   <div className="w-20 h-20 bg-gradient-to-br from-gold-deep to-gold-light rounded-full flex items-center justify-center mb-6 mx-auto">
                     <TrendingUp className="text-white text-3xl" />
                   </div>
-                  <h3 className="text-2xl title-luxury gold-accent-prominent mb-4">
-                    Salud Integral como Base
+                  <h3 className="text-2xl font-title gold-accent mb-4">
+                    Salud integral como base del resultado
                   </h3>
-                  <p className="text-muted-foreground body-refined leading-relaxed">
-                    La verdadera belleza nace de la salud óptima. Nuestro enfoque holístico aborda factores internos, 
-                    hormonales y nutricionales para resultados duraderos y naturales.
+                  <p className="text-muted-foreground leading-relaxed">
+                    Análisis médico profundo (cardiología, endocrinología, nutrigenética) que activa tu energía y longevidad.
                   </p>
                 </CardContent>
               </Card>
@@ -287,12 +285,11 @@ export default function Home() {
                   <div className="w-20 h-20 bg-gradient-to-br from-turquoise-medium to-gold-champagne rounded-full flex items-center justify-center mb-6 mx-auto">
                     <Search className="text-white text-3xl" />
                   </div>
-                  <h3 className="text-2xl title-luxury gold-accent-prominent mb-4">
-                    Bienestar Emocional Sostenido
+                  <h3 className="text-2xl font-title gold-accent mb-4">
+                    Bienestar emocional sostenido
                   </h3>
-                  <p className="text-muted-foreground body-refined leading-relaxed">
-                    Entendemos que la transformación física va acompañada de un crecimiento emocional. 
-                    Cuidamos tu bienestar mental como parte integral del proceso.
+                  <p className="text-muted-foreground leading-relaxed">
+                    Métodos de mindfulness y coaching emocional integrados que transforman tu autocuidado en amor propio.
                   </p>
                 </CardContent>
               </Card>
