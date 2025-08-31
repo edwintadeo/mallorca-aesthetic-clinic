@@ -90,14 +90,12 @@ export default function Blog() {
     <div className="pt-16 font-body antialiased">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden gold-border-bottom" data-testid="blog-hero">
-        {/* Video Background */}
-        <LazyVideo
-          sources={[
-            { src: heroVideo, type: "video/mp4" }
-          ]}
-          className="absolute inset-0 w-full h-full opacity-20"
-          priority={true}
-          preload="auto"
+        {/* Background image fallback - video not available in deployment */}
+        <div 
+          className="absolute inset-0 w-full h-full opacity-20 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&h=1080&fit=crop)'
+          }}
         />
         
         {/* Pearl Overlay for luxury contrast */}

@@ -89,18 +89,12 @@ export default function Home() {
 
   return (
     <div className="font-body antialiased">
-      {/* Video de fondo para toda la landing page */}
+      {/* Background image fallback - videos not available in deployment */}
       <div className="fixed inset-0 w-full h-full z-[-1] overflow-hidden">
-        <LazyVideo
-          sources={[
-            { src: "/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4", type: "video/mp4" },
-            { src: "https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4", type: "video/mp4" }
-          ]}
-          poster={heroBeautyModel}
-          fallbackImage={heroBeautyModel}
-          className="absolute inset-0 w-full h-full"
-          priority={true}
-          preload="auto"
+        <img 
+          src={heroBeautyModel}
+          alt="Background"
+          className="absolute inset-0 w-full h-full object-cover"
         />
         
         {/* Pearl Overlay for luxury text contrast */}

@@ -106,20 +106,15 @@ export default function Tratamientos() {
 
   return (
     <div className="font-body antialiased">
-      {/* Video de fondo para toda la página */}
+      {/* Background image fallback - videos not available in deployment */}
       <div className="fixed inset-0 w-full h-full z-[-1] overflow-hidden">
-        <LazyVideo
-          sources={[
-            { src: "/public-objects/amanecer mallorca.mp4", type: "video/mp4" }
-          ]}
-          poster={mascarillaVerde}
-          fallbackImage={mascarillaVerde}
-          className="absolute inset-0 w-full h-full"
-          priority={true}
-          preload="auto"
+        <img 
+          src={mascarillaVerde}
+          alt="Background"
+          className="absolute inset-0 w-full h-full object-cover"
         />
         
-        {/* Overlay muy ligero para mantener visibilidad del vídeo */}
+        {/* Overlay muy ligero para mantener visibilidad del fondo */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/20"></div>
       </div>
       {/* Hero Section */}
