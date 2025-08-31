@@ -135,7 +135,7 @@ export default function Home() {
                   data-testid="hero-mac-logo"
                 />
               </div>
-              <h1 className="text-5xl lg:text-7xl font-title mb-6 text-white drop-shadow-lg">
+              <h1 className="text-5xl lg:text-7xl hero-main-title mb-6 text-white drop-shadow-lg">
                 <span className="gold-accent">Medicina estética</span><br />
                 <span className="gold-accent">avanzada con</span><br />
                 <span className="gold-accent">visión integral</span>

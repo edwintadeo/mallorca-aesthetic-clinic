@@ -170,6 +170,14 @@ html {
     letter-spacing: 0.05em;
     text-transform: uppercase;
   }
+  
+  /* Tipografía especial para hero principal */
+  .hero-main-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
 
   .text-gold-deep {
     color: var(--gold-deep);
