@@ -43,10 +43,10 @@
   --pearl: hsl(45, 15%, 92%);
   --beige: hsl(44, 18%, 90%);
   --turquoise: hsl(168, 100%, 26%);
-  --turquoise-translucent: hsla(168, 100%, 26%, 0.1);
-  --turquoise-light: hsla(168, 100%, 26%, 0.2);
-  --turquoise-medium: hsla(168, 100%, 26%, 0.3);
-  --turquoise-border: hsla(168, 100%, 26%, 0.4);
+  --turquoise-translucent: hsla(168, 100%, 26%, 0.6);
+  --turquoise-light: hsla(168, 100%, 26%, 0.6);
+  --turquoise-medium: hsla(168, 100%, 26%, 0.6);
+  --turquoise-border: hsla(168, 100%, 26%, 0.6);
   --gold-deep: hsl(42, 64%, 40%);
   --gold-light: hsl(42, 50%, 55%);
   --champagne: hsl(42, 57%, 69%);
