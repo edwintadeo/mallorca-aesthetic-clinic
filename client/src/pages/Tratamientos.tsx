@@ -212,7 +212,7 @@ export default function Tratamientos() {
       )}
 
       {/* Category Filter */}
-      <section className="py-8 bg-pearl/50 backdrop-blur-sm relative z-[1]" data-testid="category-filter">
+      <section className="py-8 bg-white/90 backdrop-blur-sm relative z-[1]" data-testid="category-filter">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="flex flex-wrap justify-center gap-4">
@@ -397,7 +397,7 @@ export default function Tratamientos() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-pearl/50 backdrop-blur-sm relative z-[1]" data-testid="treatments-cta">
+      <section className="py-20 bg-white/90 backdrop-blur-sm relative z-[1]" data-testid="treatments-cta">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <h2 className="text-4xl lg:text-5xl font-title gold-accent mb-6">
