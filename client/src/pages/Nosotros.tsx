@@ -130,6 +130,45 @@ export default function Nosotros() {
         </div>
       </section>
 
+      {/* Video Section - Tramuntana */}
+      <section className="py-0 bg-black relative overflow-hidden" data-testid="tramuntana-video">
+        <div className="relative w-full h-[70vh] min-h-[500px]">
+          <video 
+            className="w-full h-full object-cover"
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+            poster="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
+          >
+            <source src="/public-objects/tramuntana.mp4" type="video/mp4" />
+            Tu navegador no soporta videos HTML5.
+          </video>
+          
+          {/* Overlay with content */}
+          <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+            <div className="text-center text-white max-w-4xl mx-auto px-4">
+              <AnimatedSection>
+                <h2 className="text-4xl lg:text-6xl font-title mb-6 text-gold-light">
+                  Inspirados por la belleza natural de Mallorca
+                </h2>
+                <p className="text-xl lg:text-2xl text-white/90 leading-relaxed">
+                  La majestuosidad de la Serra de Tramuntana nos inspira cada día a crear 
+                  tratamientos que respeten y realcen la belleza auténtica de cada persona.
+                </p>
+              </AnimatedSection>
+            </div>
+          </div>
+          
+          {/* Scroll indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+            <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-bounce"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Mission & Vision */}
       <section className="py-20 bg-white" data-testid="mission-vision">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -297,8 +336,22 @@ export default function Nosotros() {
       </section>
 
       {/* Stats */}
-      <section className="py-20 bg-white" data-testid="stats-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 relative overflow-hidden" data-testid="stats-section">
+        {/* Background Video */}
+        <div className="absolute inset-0">
+          <video 
+            className="w-full h-full object-cover"
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+          >
+            <source src="/public-objects/clinica-interior.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-white/85"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <AnimatedSection>
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-title gold-accent mb-6">
@@ -402,6 +455,50 @@ export default function Nosotros() {
                 </CardContent>
               </Card>
             </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Closing Video Section */}
+      <section className="py-0 bg-black relative overflow-hidden" data-testid="closing-video">
+        <div className="relative w-full h-[60vh] min-h-[400px]">
+          <video 
+            className="w-full h-full object-cover"
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+          >
+            <source src="/public-objects/tratamiento-premium.mp4" type="video/mp4" />
+          </video>
+          
+          {/* Overlay with content */}
+          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <div className="text-center text-white max-w-5xl mx-auto px-4">
+              <AnimatedSection>
+                <h2 className="text-3xl lg:text-5xl font-title mb-6 text-gold-light">
+                  Tu transformación comienza ahora
+                </h2>
+                <p className="text-lg lg:text-xl text-white/90 leading-relaxed mb-8">
+                  Únete a miles de personas que han confiado en el Método MAC para 
+                  revelar su mejor versión y ganar tiempo de calidad.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a 
+                    href="/contacto"
+                    className="bg-turquoise text-white px-8 py-4 rounded-lg font-medium hover:bg-gold-light hover:text-gold-deep transition-all duration-300 inline-block"
+                  >
+                    Reservar Consulta
+                  </a>
+                  <a 
+                    href="/metodo"
+                    className="border-2 border-white text-white px-8 py-4 rounded-lg font-medium hover:bg-white hover:text-black transition-all duration-300 inline-block"
+                  >
+                    Conocer Método MAC
+                  </a>
+                </div>
+              </AnimatedSection>
+            </div>
           </div>
         </div>
       </section>
