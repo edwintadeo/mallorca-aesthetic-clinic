@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
-import { Menu, X, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronRight, Search } from "lucide-react";
+import SearchModal from "@/components/UI/SearchModal";
 import macLogo from "@assets/logo mallorca aesthetic_1756658404427.png";
 import macLogoWhite from "@assets/C_1756658464253.png";
 import macLogoBlack from "@assets/mac-logo@2x_1756658468399.png";
@@ -11,6 +12,7 @@ export default function Navbar() {
   const [location] = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +21,19 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Handle keyboard shortcut for search (Cmd/Ctrl + K)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        setIsSearchOpen(true);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   const navItems = [
@@ -71,6 +86,18 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center space-x-4">
+            {/* Search Button */}
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsSearchOpen(true)}
+              className="relative hover:bg-turquoise-light"
+              data-testid="search-button"
+            >
+              <Search className="w-5 h-5 text-muted-foreground hover:text-turquoise" />
+              <span className="sr-only">Buscar</span>
+            </Button>
+            
             <Link href="/contacto">
               <Button 
                 className="cta-enhanced text-white hover:text-gold-deep font-medium"
@@ -184,6 +211,9 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+      
+      {/* Search Modal */}
+      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </nav>
   );
 }
