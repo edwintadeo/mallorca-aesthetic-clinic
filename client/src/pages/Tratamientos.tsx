@@ -114,7 +114,7 @@ export default function Tratamientos() {
           ]}
           poster={mascarillaVerde}
           fallbackImage={mascarillaVerde}
-          className="absolute inset-0 w-full h-full"
+          className="absolute inset-0 w-full h-full object-cover"
           priority={true}
           preload="auto"
         />
