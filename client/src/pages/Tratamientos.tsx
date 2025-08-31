@@ -134,20 +134,20 @@ export default function Tratamientos() {
           }}
         ></div>
         
-        {/* Overlay mejorado con gradiente para mejor legibilidad */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/35 to-black/50"></div>
+        {/* Overlay muy ligero para mantener visibilidad del vídeo */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/20"></div>
       </div>
       {/* Hero Section */}
       <section className="pt-20 pb-16 relative z-[1]" data-testid="tratamientos-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
-            <div className="text-sm uppercase tracking-wider text-white/80 font-medium mb-4 drop-shadow-md">
+            <div className="text-sm uppercase tracking-wider text-white font-bold mb-4 bg-black/30 inline-block px-6 py-2 rounded-full backdrop-blur-sm">
               Nuestros Servicios
             </div>
-            <h1 className="text-5xl lg:text-7xl font-title text-white mb-6 drop-shadow-lg">
+            <h1 className="text-5xl lg:text-7xl font-title text-white mb-6" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
               Tratamientos
             </h1>
-            <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
+            <p className="text-xl text-white max-w-4xl mx-auto leading-relaxed font-medium bg-black/25 backdrop-blur-sm p-6 rounded-lg" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.7)' }}>
               Tecnología de vanguardia y técnicas artesanales para resultados naturales excepcionales. 
               Cada tratamiento se adapta a tus necesidades específicas dentro del Método MAC.
             </p>
@@ -158,7 +158,7 @@ export default function Tratamientos() {
 
       {/* Featured Treatments */}
       {featuredTreatments.length > 0 && (
-        <section className="py-20 bg-white/95 relative z-[1]" data-testid="featured-treatments">
+        <section className="py-20 bg-white/75 backdrop-blur-sm relative z-[1]" data-testid="featured-treatments">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection>
               <div className="text-center mb-16">
@@ -214,7 +214,7 @@ export default function Tratamientos() {
       )}
 
       {/* Category Filter */}
-      <section className="py-8 bg-white/95 relative z-[1]" data-testid="category-filter">
+      <section className="py-8 bg-transparent relative z-[1]" data-testid="category-filter">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="flex flex-wrap justify-center gap-4">
@@ -224,8 +224,8 @@ export default function Tratamientos() {
                   variant={selectedCategory === category.id ? "default" : "outline"}
                   onClick={() => setSelectedCategory(category.id)}
                   className={selectedCategory === category.id 
-                    ? "bg-turquoise-medium text-turquoise hover:bg-turquoise-light" 
-                    : "border-turquoise text-turquoise hover:bg-turquoise-light hover:text-turquoise"
+                    ? "bg-turquoise text-white hover:bg-turquoise-light backdrop-blur-md shadow-lg border-2 border-turquoise" 
+                    : "bg-white/80 backdrop-blur-md border-2 border-turquoise text-turquoise hover:bg-turquoise hover:text-white transition-all"
                   }
                   data-testid={`filter-${category.id}`}
                 >
@@ -243,7 +243,7 @@ export default function Tratamientos() {
       </section>
 
       {/* All Treatments */}
-      <section className="py-20 bg-white/95 relative z-[1]" data-testid="all-treatments">
+      <section className="py-20 bg-white/75 backdrop-blur-sm relative z-[1]" data-testid="all-treatments">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {isLoading ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -400,7 +400,7 @@ export default function Tratamientos() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white/95 relative z-[1]" data-testid="treatments-cta">
+      <section className="py-20 bg-white/80 backdrop-blur-sm relative z-[1]" data-testid="treatments-cta">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <h2 className="text-4xl lg:text-5xl font-title gold-accent mb-6">
