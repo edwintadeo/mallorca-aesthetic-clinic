@@ -14,6 +14,7 @@ import facialMaskTreatment from "@assets/facial-mask-treatment.jpg";
 import perfectSkinPortrait from "@assets/perfect-skin-portrait.jpg";
 import spaDeviceTreatment from "@assets/spa-device-treatment.jpg";
 import whiteFacialMask from "@assets/white-facial-mask.jpg";
+import macLogoBlack from "@assets/mac-logo@2x_1756658468399.png";
 
 export default function Home() {
   const { data: testimonials } = useQuery({
@@ -126,6 +127,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
           <div className="text-center">
             <AnimatedSection>
+              <div className="flex justify-center mb-8">
+                <img 
+                  src={macLogoBlack} 
+                  alt="Mallorca Aesthetic Clinic" 
+                  className="h-16 lg:h-20 w-auto hover-lift opacity-90"
+                  data-testid="hero-mac-logo"
+                />
+              </div>
               <h1 className="text-5xl lg:text-7xl title-luxury mb-6 text-white drop-shadow-lg">
                 <span className="gold-accent-prominent">El Arte de</span><br />
                 <span className="text-white">Ganar Tiempo</span>

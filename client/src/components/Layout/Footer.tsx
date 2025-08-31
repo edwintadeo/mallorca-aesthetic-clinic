@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import macLogo from "@assets/logo mallorca aesthetic_1756658404427.png";
+import macLogoWhite from "@assets/C_1756658464253.png";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <img 
-              src={macLogo} 
+              src={macLogoWhite} 
               alt="Mallorca Aesthetic Clinic" 
               className="h-12 w-auto mb-4 hover-lift"
               data-testid="footer-mac-logo"

@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import macLogo from "@assets/logo mallorca aesthetic_1756658404427.png";
+import macLogoWhite from "@assets/C_1756658464253.png";
+import macLogoBlack from "@assets/mac-logo@2x_1756658468399.png";
 
 export default function Navbar() {
   const [location] = useLocation();
