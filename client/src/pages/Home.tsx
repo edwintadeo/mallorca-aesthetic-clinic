@@ -100,8 +100,8 @@ export default function Home() {
           }}
         >
           <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4" type="video/mp4" />
-          <source src="/public-objects/public/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4" type="video/mp4" />
-          <source src="/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4" type="video/mp4" />
+          <source src="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4" type="video/mp4" />
+          <source src="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4" type="video/mp4" />
         </video>
         
         {/* Imagen de respaldo si el video no carga */}
