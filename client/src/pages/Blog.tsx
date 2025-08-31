@@ -8,7 +8,7 @@ import AnimatedSection from "@/components/UI/AnimatedSection";
 import { Calendar, User, ArrowRight, Clock } from "lucide-react";
 
 // Import video for hero background
-import heroVideo from "@assets/Bold Brush Strokes_simple_compose_01k40ny60dfpka9sghp6zqaakq_1756669574524.mp4";
+import heroVideo from "@assets/ADN convert_1756676832992.mp4";
 
 export default function Blog() {
   const { data: posts, isLoading, error } = useQuery({
