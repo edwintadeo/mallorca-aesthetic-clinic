@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import AnimatedSection from "@/components/UI/AnimatedSection";
+import SkeletonCard from "@/components/UI/SkeletonCard";
 import { Link } from "wouter";
 import { useState } from "react";
 
@@ -109,6 +110,7 @@ export default function Tratamientos() {
           muted
           loop
           playsInline
+          poster={mascarillaVerde}
           className="absolute inset-0 w-full h-full object-cover"
           data-testid="video-background-tratamientos"
           onError={(e) => {
@@ -131,8 +133,8 @@ export default function Tratamientos() {
           }}
         ></div>
         
-        {/* Overlay para mejorar legibilidad del texto */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        {/* Overlay mejorado con gradiente para mejor legibilidad */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/35 to-black/50"></div>
       </div>
       {/* Hero Section */}
       <section className="pt-20 pb-16 relative z-[1]" data-testid="tratamientos-hero">
@@ -155,7 +157,7 @@ export default function Tratamientos() {
 
       {/* Featured Treatments */}
       {featuredTreatments.length > 0 && (
-        <section className="py-20 bg-white/50 backdrop-blur-sm relative z-[1]" data-testid="featured-treatments">
+        <section className="py-20 bg-white/95 relative z-[1]" data-testid="featured-treatments">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection>
               <div className="text-center mb-16">
@@ -211,7 +213,7 @@ export default function Tratamientos() {
       )}
 
       {/* Category Filter */}
-      <section className="py-8 bg-white/50 backdrop-blur-sm relative z-[1]" data-testid="category-filter">
+      <section className="py-8 bg-white/95 relative z-[1]" data-testid="category-filter">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="flex flex-wrap justify-center gap-4">
@@ -240,12 +242,13 @@ export default function Tratamientos() {
       </section>
 
       {/* All Treatments */}
-      <section className="py-20 bg-white/50 backdrop-blur-sm relative z-[1]" data-testid="all-treatments">
+      <section className="py-20 bg-white/95 relative z-[1]" data-testid="all-treatments">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {isLoading ? (
-            <div className="text-center py-12">
-              <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-turquoise"></div>
-              <p className="mt-4 text-muted-foreground">Cargando tratamientos...</p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[...Array(6)].map((_, i) => (
+                <SkeletonCard key={i} />
+              ))}
             </div>
           ) : filteredTreatments.length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -396,7 +399,7 @@ export default function Tratamientos() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white/50 backdrop-blur-sm relative z-[1]" data-testid="treatments-cta">
+      <section className="py-20 bg-white/95 relative z-[1]" data-testid="treatments-cta">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <h2 className="text-4xl lg:text-5xl font-title gold-accent mb-6">

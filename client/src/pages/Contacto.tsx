@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -38,9 +38,22 @@ export default function Contacto() {
     queryKey: ["/api/locations"],
   });
 
+  // Cargar datos del localStorage
+  const loadFormData = () => {
+    const savedData = localStorage.getItem('contactFormData');
+    if (savedData) {
+      try {
+        return JSON.parse(savedData);
+      } catch {
+        return null;
+      }
+    }
+    return null;
+  };
+
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
-    defaultValues: {
+    defaultValues: loadFormData() || {
       name: "",
       email: "",
       phone: "",
@@ -50,6 +63,14 @@ export default function Contacto() {
       acceptsPrivacy: false,
     },
   });
+
+  // Guardar datos en localStorage cuando cambien
+  useEffect(() => {
+    const subscription = form.watch((data) => {
+      localStorage.setItem('contactFormData', JSON.stringify(data));
+    });
+    return () => subscription.unsubscribe();
+  }, [form]);
 
   const submitContactForm = useMutation({
     mutationFn: async (data: ContactFormData) => {
@@ -71,6 +92,7 @@ export default function Contacto() {
         description: "Hemos recibido tu solicitud. Te contactaremos pronto para agendar tu cita.",
       });
       form.reset();
+      localStorage.removeItem('contactFormData'); // Limpiar localStorage después de enviar
       queryClient.invalidateQueries({ queryKey: ["/api/contact-requests"] });
     },
     onError: (error) => {

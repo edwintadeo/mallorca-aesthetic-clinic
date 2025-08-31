@@ -95,6 +95,7 @@ export default function Home() {
           muted
           loop
           playsInline
+          poster={heroBeautyModel}
           className="absolute inset-0 w-full h-full object-cover"
           data-testid="video-background"
           onError={(e) => {
@@ -119,8 +120,8 @@ export default function Home() {
           }}
         ></div>
         
-        {/* Overlay para mejorar legibilidad del texto */}
-        <div className="absolute inset-0 bg-black/30"></div>
+        {/* Overlay mejorado con gradiente para mejor legibilidad */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/50"></div>
       </div>
 
       {/* Hero Section */}
@@ -148,7 +149,7 @@ export default function Home() {
                 <Link href="/contacto">
                   <Button 
                     size="lg" 
-                    className="bg-gold-light text-foreground hover:bg-gold-champagne transition-all duration-300 px-8 py-3 text-base font-medium rounded-none uppercase tracking-wider"
+                    className="bg-turquoise text-white border-2 border-gold-light hover:bg-gold-light hover:text-gold-deep transition-all duration-300 px-8 py-3 text-base font-semibold rounded-none uppercase tracking-wider shadow-xl"
                     data-testid="button-hero-reserva"
                   >
                     Reserva tu cita
@@ -161,7 +162,7 @@ export default function Home() {
       </section>
 
       {/* Doctor Section */}
-      <section className="py-20 bg-white/90 backdrop-blur-sm relative z-[1]" data-testid="doctor-section">
+      <section className="py-20 bg-white relative z-[1]" data-testid="doctor-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
@@ -222,7 +223,7 @@ export default function Home() {
       </section>
 
       {/* Pilares de la Clínica */}
-      <section className="py-20 bg-pearl/50 backdrop-blur-sm relative z-[1]" data-testid="pilares-section">
+      <section className="py-20 bg-pearl/90 relative z-[1]" data-testid="pilares-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
@@ -379,7 +380,7 @@ export default function Home() {
       </section>
 
       {/* Treatments Section */}
-      <section className="py-20 bg-white/90 backdrop-blur-sm relative z-[1]" data-testid="treatments-section">
+      <section className="py-20 bg-white relative z-[1]" data-testid="treatments-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-left max-w-4xl mb-16">
@@ -478,7 +479,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials & Before/After Section */}
-      <section className="py-20 bg-white/95 backdrop-blur-sm relative z-[1]" data-testid="testimonials-section">
+      <section className="py-20 bg-white relative z-[1]" data-testid="testimonials-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
@@ -620,7 +621,7 @@ export default function Home() {
       </section>
 
       {/* Mini-Mapa de Ubicaciones */}
-      <section className="py-20 bg-pearl/50 backdrop-blur-sm relative z-[1]" data-testid="locations-section">
+      <section className="py-20 bg-pearl/90 relative z-[1]" data-testid="locations-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
