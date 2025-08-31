@@ -25,13 +25,13 @@ export default function Tratamientos() {
   });
 
   const categories = [
-    { id: "all", name: "Todos", count: Array.isArray(treatments) ? treatments.length : 0 },
-    { id: "facial", name: "Estética Facial", count: Array.isArray(treatments) ? treatments.filter((t: any) => t.category === "facial").length : 0 },
-    { id: "corporal", name: "Estética Corporal", count: Array.isArray(treatments) ? treatments.filter((t: any) => t.category === "corporal").length : 0 },
-    { id: "cirugia", name: "Cirugía Estética", count: Array.isArray(treatments) ? treatments.filter((t: any) => t.category === "cirugia").length : 0 },
-    { id: "nutricion", name: "Nutrición Integral", count: Array.isArray(treatments) ? treatments.filter((t: any) => t.category === "nutricion").length : 0 },
-    { id: "wellaging", name: "Well-Aging", count: Array.isArray(treatments) ? treatments.filter((t: any) => t.category === "wellaging").length : 0 },
-    { id: "laser", name: "Tecnología Láser", count: Array.isArray(treatments) ? treatments.filter((t: any) => t.category === "laser").length : 0 },
+    { id: "all", name: "Todos", icon: "fas fa-th", count: Array.isArray(treatments) ? treatments.length : 0 },
+    { id: "facial", name: "Estética Facial", icon: "fas fa-spa", count: Array.isArray(treatments) ? treatments.filter((t: any) => t.category === "facial").length : 0 },
+    { id: "corporal", name: "Estética Corporal", icon: "fas fa-user", count: Array.isArray(treatments) ? treatments.filter((t: any) => t.category === "corporal").length : 0 },
+    { id: "cirugia", name: "Cirugía Estética", icon: "fas fa-scalpel", count: Array.isArray(treatments) ? treatments.filter((t: any) => t.category === "cirugia").length : 0 },
+    { id: "nutricion", name: "Nutrición Integral", icon: "fas fa-apple-alt", count: Array.isArray(treatments) ? treatments.filter((t: any) => t.category === "nutricion").length : 0 },
+    { id: "wellaging", name: "Well-Aging", icon: "fas fa-heartbeat", count: Array.isArray(treatments) ? treatments.filter((t: any) => t.category === "wellaging").length : 0 },
+    { id: "laser", name: "Tecnología Láser", icon: "fas fa-bolt", count: Array.isArray(treatments) ? treatments.filter((t: any) => t.category === "laser").length : 0 },
   ];
 
   const fallbackTreatments = [
@@ -201,26 +201,47 @@ export default function Tratamientos() {
       )}
 
       {/* Category Filter */}
-      <section className="py-8 bg-transparent relative z-[1]" data-testid="category-filter">
+      <section className="py-12 bg-transparent relative z-[1]" data-testid="category-filter">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-title gold-accent mb-2">Nuestros Tratamientos</h2>
+              <p className="text-muted-foreground">Selecciona una categoría para explorar nuestros servicios</p>
+            </div>
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
                 <Button
                   key={category.id}
                   variant={selectedCategory === category.id ? "default" : "outline"}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={selectedCategory === category.id 
-                    ? "bg-turquoise text-white hover:bg-turquoise-light backdrop-blur-md shadow-lg border-2 border-turquoise" 
-                    : "bg-white/80 backdrop-blur-md border-2 border-turquoise text-turquoise hover:bg-turquoise hover:text-white transition-all"
-                  }
+                  className={`
+                    relative group px-6 py-3 transition-all duration-300
+                    ${selectedCategory === category.id 
+                      ? "bg-turquoise text-white hover:bg-turquoise-dark backdrop-blur-md shadow-xl border-2 border-turquoise scale-105" 
+                      : "bg-white/90 backdrop-blur-md border-2 border-gold-light/30 text-foreground hover:bg-turquoise hover:text-white hover:border-turquoise hover:scale-105"
+                    }
+                  `}
                   data-testid={`filter-${category.id}`}
                 >
-                  {category.name}
-                  {category.count > 0 && (
-                    <Badge variant="secondary" className="ml-2">
-                      {category.count}
-                    </Badge>
+                  <div className="flex items-center gap-3">
+                    <i className={`${category.icon} text-lg`}></i>
+                    <span className="font-medium">{category.name}</span>
+                    {category.count > 0 && (
+                      <Badge 
+                        variant="secondary" 
+                        className={`
+                          ml-2 transition-colors
+                          ${selectedCategory === category.id 
+                            ? "bg-white/20 text-white border-white/30" 
+                            : "bg-turquoise-light text-turquoise border-turquoise/20"}
+                        `}
+                      >
+                        {category.count}
+                      </Badge>
+                    )}
+                  </div>
+                  {selectedCategory === category.id && (
+                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/50 rounded-full" />
                   )}
                 </Button>
               ))}
@@ -242,12 +263,16 @@ export default function Tratamientos() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredTreatments.map((treatment: any, index: number) => (
                 <AnimatedSection key={treatment.id} delay={index * 0.1}>
-                  <Card className="h-full luxury-card hover:shadow-xl hover-lift transition-all duration-300" data-testid={`treatment-${treatment.id}`}>
-                    <LazyImage
-                      src={treatment.imageUrl}
-                      alt={treatment.name}
-                      className="w-full h-48 object-cover rounded-t-lg"
-                    />
+                  <Card className="h-full luxury-card hover:shadow-xl hover-lift transition-all duration-300 group overflow-hidden" data-testid={`treatment-${treatment.id}`}>
+                    <div className="relative overflow-hidden h-48">
+                      <LazyImage
+                        src={treatment.imageUrl}
+                        alt={treatment.name}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
                     <CardContent className="p-6">
                       <div className="flex items-center justify-between mb-3">
                         <h3 className="text-xl font-subtitle gold-accent-subtle font-semibold">{treatment.name}</h3>

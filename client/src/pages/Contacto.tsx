@@ -212,7 +212,17 @@ export default function Contacto() {
                 </p>
 
                 <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-testid="contact-form">
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8" data-testid="contact-form">
+                    {/* Progress Indicator */}
+                    <div className="flex justify-between mb-8">
+                      <div className="flex-1 h-2 mx-1 rounded-full bg-gold-deep" />
+                      <div className="flex-1 h-2 mx-1 rounded-full bg-gold-light/30" />
+                      <div className="flex-1 h-2 mx-1 rounded-full bg-gold-light/30" />
+                    </div>
+                    
+                    {/* Section 1: Datos Personales */}
+                    <div className="bg-pearl/30 rounded-lg p-6 space-y-6">
+                      <h3 className="text-2xl font-title gold-accent mb-4">Datos Personales</h3>
                     <div className="grid md:grid-cols-2 gap-6">
                       <FormField
                         control={form.control}
@@ -346,6 +356,12 @@ export default function Contacto() {
                       )}
                     />
 
+                    </div>
+                    
+                    {/* Section 2: Preferencias de Cita */}
+                    <div className="bg-white rounded-lg p-6 space-y-6 border border-gold-light/20">
+                      <h3 className="text-2xl font-title gold-accent mb-4">Preferencias de Cita</h3>
+                    
                     {/* Date and Time Section */}
                     <div className="space-y-6">
                       <h3 className="text-2xl font-title text-foreground">
@@ -442,6 +458,12 @@ export default function Contacto() {
                       </div>
                     </div>
 
+                    </div>
+                    
+                    {/* Section 3: Mensaje y Confirmación */}
+                    <div className="bg-pearl/30 rounded-lg p-6 space-y-6">
+                      <h3 className="text-2xl font-title gold-accent mb-4">Mensaje y Confirmación</h3>
+                    
                     <FormField
                       control={form.control}
                       name="message"
@@ -540,6 +562,7 @@ export default function Contacto() {
                           Contactar por WhatsApp
                         </Button>
                       </a>
+                    </div>
                     </div>
                   </form>
                 </Form>

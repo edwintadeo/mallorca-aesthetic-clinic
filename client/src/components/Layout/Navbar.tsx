@@ -22,15 +22,15 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    { href: "/", label: "Inicio" },
-    { href: "/metodo", label: "Método MAC" },
-    { href: "/tratamientos", label: "Tratamientos" },
-    { href: "/nosotros", label: "Nosotros" },
-    { href: "/ubicaciones", label: "Ubicaciones" },
-    { href: "/blog", label: "Blog" },
-    { href: "/contacto", label: "Contacto" },
-    { href: "/carrito", label: "Carrito" },
-    { href: "/club", label: "Club MAC" },
+    { href: "/", label: "Inicio", group: "main" },
+    { href: "/metodo", label: "Método MAC", group: "services" },
+    { href: "/tratamientos", label: "Tratamientos", group: "services" },
+    { href: "/nosotros", label: "Nosotros", group: "about" },
+    { href: "/ubicaciones", label: "Ubicaciones", group: "about" },
+    { href: "/blog", label: "Blog", group: "about" },
+    { href: "/contacto", label: "Contacto", group: "contact" },
+    { href: "/carrito", label: "Carrito", group: "account" },
+    { href: "/club", label: "Club MAC", group: "account" },
   ];
 
   return (
@@ -98,24 +98,75 @@ export default function Navbar() {
                 <SheetHeader className="mb-8">
                   <SheetTitle className="text-2xl font-title gold-accent">Menú</SheetTitle>
                 </SheetHeader>
-                <nav className="flex flex-col space-y-2">
-                  {navItems.map((item, index) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className={`group flex items-center justify-between px-4 py-3 rounded-lg text-lg transition-all duration-200 hover:bg-turquoise-light ${
-                        location === item.href 
-                          ? "bg-turquoise-light text-turquoise font-medium" 
-                          : "text-foreground hover:text-turquoise"
-                      }`}
-                      onClick={() => setIsOpen(false)}
-                      data-testid={`mobile-nav-link-${item.label.toLowerCase()}`}
-                      style={{ animationDelay: `${index * 50}ms` }}
-                    >
-                      <span>{item.label}</span>
-                      <ChevronRight className="w-5 h-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
-                    </Link>
-                  ))}
+                <nav className="flex flex-col space-y-6">
+                  {/* Servicios */}
+                  <div>
+                    <h3 className="text-sm uppercase tracking-wider text-muted-foreground font-medium mb-3 px-4">Servicios</h3>
+                    <div className="space-y-1">
+                      {navItems.filter(item => item.group === 'services').map((item, index) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className={`group flex items-center justify-between px-4 py-3 rounded-lg text-lg transition-all duration-200 hover:bg-pearl ${
+                            location === item.href 
+                              ? "bg-pearl text-turquoise font-medium" 
+                              : "text-foreground hover:text-turquoise"
+                          }`}
+                          onClick={() => setIsOpen(false)}
+                          data-testid={`mobile-nav-link-${item.label.toLowerCase()}`}
+                        >
+                          <span>{item.label}</span>
+                          <ChevronRight className="w-5 h-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Sobre Nosotros */}
+                  <div>
+                    <h3 className="text-sm uppercase tracking-wider text-muted-foreground font-medium mb-3 px-4">Sobre Nosotros</h3>
+                    <div className="space-y-1">
+                      {navItems.filter(item => item.group === 'about').map((item, index) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className={`group flex items-center justify-between px-4 py-3 rounded-lg text-lg transition-all duration-200 hover:bg-pearl ${
+                            location === item.href 
+                              ? "bg-pearl text-turquoise font-medium" 
+                              : "text-foreground hover:text-turquoise"
+                          }`}
+                          onClick={() => setIsOpen(false)}
+                          data-testid={`mobile-nav-link-${item.label.toLowerCase()}`}
+                        >
+                          <span>{item.label}</span>
+                          <ChevronRight className="w-5 h-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Mi Cuenta */}
+                  <div>
+                    <h3 className="text-sm uppercase tracking-wider text-muted-foreground font-medium mb-3 px-4">Mi Cuenta</h3>
+                    <div className="space-y-1">
+                      {navItems.filter(item => item.group === 'account').map((item, index) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className={`group flex items-center justify-between px-4 py-3 rounded-lg text-lg transition-all duration-200 hover:bg-pearl ${
+                            location === item.href 
+                              ? "bg-pearl text-turquoise font-medium" 
+                              : "text-foreground hover:text-turquoise"
+                          }`}
+                          onClick={() => setIsOpen(false)}
+                          data-testid={`mobile-nav-link-${item.label.toLowerCase()}`}
+                        >
+                          <span>{item.label}</span>
+                          <ChevronRight className="w-5 h-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 </nav>
                 <div className="mt-8 pt-8 border-t border-gold-light/20">
                   <Link href="/contacto" onClick={() => setIsOpen(false)}>

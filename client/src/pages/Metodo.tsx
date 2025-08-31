@@ -125,7 +125,8 @@ export default function Metodo() {
             <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
               Metodología Exclusiva
             </div>
-            <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6">
+            <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6 relative">
+              <span className="absolute inset-0 bg-pearl/85 blur-xl -z-10 rounded-lg"></span>
               Las Cuatro Fases del Método MAC
             </h1>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-4">
@@ -212,8 +213,8 @@ export default function Metodo() {
                   </div>
 
                   <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                    <div className="gold-numeral mb-4">{phase.number}</div>
-                    <h2 className="text-3xl lg:text-4xl font-subtitle text-foreground mb-4">{phase.title}</h2>
+                    <div className="text-6xl lg:text-8xl font-title gold-accent mb-4 leading-none opacity-90">{phase.number}</div>
+                    <h2 className="text-3xl lg:text-4xl font-subtitle gold-accent mb-4">{phase.title}</h2>
                     
                     <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                       {phase.subtitle}

@@ -6,6 +6,7 @@ import AnimatedSection from "@/components/UI/AnimatedSection";
 import WhatsAppButton from "@/components/UI/WhatsAppButton";
 import NewsletterSection from "@/components/UI/NewsletterSection";
 import { LazyVideo } from "@/components/UI/LazyVideo";
+import { SkeletonTestimonial } from "@/components/UI/Skeleton";
 import { Search, ClipboardList, Wand2, TrendingUp, Star } from "lucide-react";
 
 // Import new images
@@ -19,11 +20,11 @@ import wellAgingWoman from "@assets/mujer joven ropa deportiva_1756669322157.jpg
 import macLogoBlack from "@assets/mac-logo@2x_1756658468399.png";
 
 export default function Home() {
-  const { data: testimonials } = useQuery({
+  const { data: testimonials, isLoading: testimonialsLoading } = useQuery({
     queryKey: ["/api/testimonials"],
   });
 
-  const { data: locations } = useQuery({
+  const { data: locations, isLoading: locationsLoading } = useQuery({
     queryKey: ["/api/locations"],
   });
 
@@ -485,7 +486,12 @@ export default function Home() {
               <div className="space-y-8">
                 <div className="luxury-divider mb-8"></div>
                 <h3 className="text-2xl font-subtitle gold-accent-subtle text-center mb-8">Experiencias Reales</h3>
-                {testimonials && Array.isArray(testimonials) && testimonials.length > 0 ? (
+                {testimonialsLoading ? (
+                  <>
+                    <SkeletonTestimonial />
+                    <SkeletonTestimonial />
+                  </>
+                ) : testimonials && Array.isArray(testimonials) && testimonials.length > 0 ? (
                   testimonials.slice(0, 2).map((testimonial: any, index: number) => (
                     <Card key={testimonial.id} className="luxury-card shadow-lg hover-lift" data-testid={`testimonial-featured-${index}`}>
                       <CardContent className="p-8">

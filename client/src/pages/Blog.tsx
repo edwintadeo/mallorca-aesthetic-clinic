@@ -6,6 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 import { LazyVideo } from "@/components/UI/LazyVideo";
+import LazyImage from "@/components/UI/LazyImage";
+import { Skeleton } from "@/components/UI/Skeleton";
 import { Calendar, User, ArrowRight, Clock } from "lucide-react";
 
 // Import video for hero background
@@ -208,9 +210,19 @@ export default function Blog() {
       <section className="py-20 bg-white gold-border-bottom" data-testid="blog-posts">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {isLoading ? (
-            <div className="text-center py-12">
-              <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-turquoise"></div>
-              <p className="mt-4 text-muted-foreground">Cargando artículos...</p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[1, 2, 3].map((i) => (
+                <Card key={i} className="overflow-hidden">
+                  <Skeleton className="w-full h-48" />
+                  <CardContent className="p-6">
+                    <Skeleton className="h-4 w-20 mb-3" />
+                    <Skeleton className="h-6 w-full mb-2" />
+                    <Skeleton className="h-6 w-3/4 mb-4" />
+                    <Skeleton className="h-16 w-full mb-4" />
+                    <Skeleton className="h-4 w-24" />
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           ) : error ? (
             <div className="text-center py-12">
@@ -220,24 +232,32 @@ export default function Blog() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {displayRegular.map((post: any, index: number) => (
                 <AnimatedSection key={post.id} delay={index * 0.1}>
-                  <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full" data-testid={`blog-post-${index}`}>
-                    <img 
-                      src={post.imageUrl}
-                      alt={post.title}
-                      className="w-full h-48 object-cover"
-                    />
+                  <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 h-full group hover:-translate-y-1" data-testid={`blog-post-${index}`}>
+                    <div className="relative overflow-hidden h-48">
+                      <LazyImage 
+                        src={post.imageUrl}
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
                     <CardContent className="p-6 flex flex-col h-full">
                       <div className="flex items-center gap-2 mb-3">
                         {post.category && (
-                          <Badge variant="secondary" className="text-xs">
+                          <Badge 
+                            variant="secondary" 
+                            className="text-xs bg-turquoise-light text-turquoise border-turquoise/20"
+                          >
                             {post.category}
                           </Badge>
                         )}
-                        <div className="text-xs text-muted-foreground">
+                        <div className="text-xs text-muted-foreground flex items-center gap-1">
+                          <Calendar className="w-3 h-3" />
                           {formatDate(post.publishedAt)}
                         </div>
                       </div>
-                      <h3 className="text-xl font-subtitle font-semibold mb-3 line-clamp-2">
+                      <h3 className="text-xl font-subtitle font-semibold mb-3 line-clamp-2 group-hover:text-turquoise transition-colors">
                         {post.title}
                       </h3>
                       <p className="text-muted-foreground leading-relaxed mb-4 flex-grow line-clamp-3">
@@ -254,7 +274,7 @@ export default function Blog() {
                           <Button 
                             variant="ghost" 
                             size="sm"
-                            className="text-turquoise hover:text-turquoise hover:bg-turquoise p-0 h-auto group"
+                            className="text-turquoise hover:text-turquoise-dark hover:bg-turquoise-light p-0 h-auto font-semibold"
                             data-testid={`button-read-more-${index}`}
                           >
                             Leer más
