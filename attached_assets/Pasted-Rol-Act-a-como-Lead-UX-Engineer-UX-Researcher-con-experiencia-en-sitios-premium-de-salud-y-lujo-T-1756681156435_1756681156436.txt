@@ -1,0 +1,106 @@
+Rol
+Actúa como Lead UX Engineer & UX Researcher con experiencia en sitios premium de salud y lujo. Tu objetivo es llevar la web de Mallorca Aesthetic Clinic (MAC) al máximo estándar UX actual.
+
+Contexto de marca
+Narrativa: “El Arte de Ganar Tiempo” (well-aging integral). Estética editorial, quiet luxury, ciencia y calidez. Tipografías: Cormorant Garamond (H), Orpheus Pro (SH), Gotham Light (body). Paleta con perla/beige, dorado protagonista y turquesa MAC.
+Restricción de marca: no alteres el valor actual del turquesa (tono, saturación, brillo). Si hay problemas de contraste, resuélvelos con overlays/fondos/tipografía, nunca cambiando el turquesa.
+
+Alcance
+Evalúa y mejora la UX de: Inicio, Método (4 fases), Tratamientos, Nosotros/Equipo, Ubicaciones, Blog, Contacto/Reserva, Legales. Formularios, navegación, búsqueda interna si existe, y performance percibida.
+
+Entrega en 3 fases (sin aplicar cambios directos):
+
+Auditoría UX de alto nivel con evidencias y métricas.
+
+Plan de mejoras priorizado (impacto vs esfuerzo) con criterios de éxito.
+
+Propuestas de implementación: diffs o snippets por componente, listos para PR (pero no los apliques hasta aprobación).
+
+1) Auditoría UX: qué revisar y cómo reportar
+
+Heurísticas y estándares
+– Nielsen Norman (10 heurísticas).
+– Leyes de UX aplicables (Hick, Fitts, Jakob, Doherty, Tesler).
+– Accesibilidad WCAG 2.2 AA (contraste, foco, teclado, aria, reduced-motion).
+– Core Web Vitals: LCP, CLS, INP (usa aproximaciones y recomendaciones si no puedes medir directamente).
+– Mobile-first y “thumb-friendly” (mínimo 44×44 px en objetivos táctiles).
+– Formularios de salud: claridad, feedback inmediato, estados, prevención de errores.
+
+Flujos críticos (defínelos, stress test):
+– Llegar a “Reserva tu cita” en ≤ 2 clics desde Home.
+– Completar el formulario sin fricciones en móvil.
+– Encontrar tratamientos por objetivo en ≤ 2 clics.
+– Identificar sedes y teléfono/WhatsApp al primer scroll.
+– Comprender el Método MAC en ≤ 30 s y abrir detalle con 1 clic.
+
+Performance y percepción
+– Presupuesto de peso por página: imágenes optimizadas (WebP/AVIF), video hero con poster, lazy-load, preloading crítico.
+– JS mínimo y code-splitting por ruta.
+– Sin saltos de layout (dimensiones fijas, fuentes con font-display: swap).
+– Scroll y restauración de foco al cambiar de ruta.
+
+Accesibilidad estética (sin tocar el turquesa):
+– Contrastes AA en copy sobre video/imagen via overlay 20–35%.
+– Estados de foco visibles.
+– Alternativas para “prefers-reduced-motion”.
+
+Informe de Auditoría (formato):
+– Resumen ejecutivo (1–2 párrafos).
+– Hallazgos priorizados (10–20 máximo), cada uno con: evidencia, impacto, esfuerzo estimado, recomendación.
+– Matriz Impacto (Alto/Medio/Bajo) × Esfuerzo (S/M/L).
+– Métricas objetivo sugeridas: LCP < 2.5 s; CLS < 0.1; INP < 200 ms; CTR CTA Home > 3%; tasa envíos formulario > 3%; tiempo a CTA < 5 s.
+
+2) Plan de mejoras priorizado (sin cambios automáticos)
+
+Quick Wins (1–2 semanas)
+– Legibilidad del hero en video con overlay dinámico y safe-area para H1/CTA.
+– Jerarquía tipográfica y espaciado en tarjetas del Método MAC.
+– Estados y microcopys de error en formularios, validación inline, máscaras.
+– Orden de navegación en móvil, sticky CTA “Reserva”.
+– Lazy-load y srcset en imágenes, poster del video, tamaños fijos para evitar CLS.
+– Foco visible y skip-links.
+
+Iteración (3–5 semanas)
+– Rejillas y ritmo vertical por plantilla; consistencia de padding/margins.
+– Desambiguación de categorías de tratamientos con filtros.
+– Micro-interacciones significativas (hover, reveal, skeletons).
+– Búsqueda interna y enlaces relacionados en blog.
+– Guía de componentes accesibles (botones, inputs, radios, modals, toasts).
+
+Estrategia (60–90 días)
+– Test de usabilidad remoto con 5–7 usuarios (guion de tareas y KPIs).
+– A/B de CTAs y copys clave.
+– Diseño de “reserva multietapa” con progreso y guardado de estado.
+– Reglas de motion (duraciones, curvas, reduced-motion).
+– Módulos de fidelización (Club MAC) y onboarding post-cita.
+
+3) Propuestas de implementación (solo proponer, no aplicar)
+
+Entrega snippets o diffs por componente con:
+– Qué archivo tocar.
+– Antes vs Después.
+– Justificación UX.
+– Pruebas manuales y de accesibilidad a realizar.
+
+Incluye pautas técnicas:
+– Imágenes: AVIF/WebP, sizes/srcset, dimensiones fijas.
+– Video hero: poster, peso y bitrate, autoplay muted, overlay, fallback estático.
+– Fuentes: preconnect/preload, font-display: swap.
+– Rutas: split por página, prefetch en hover/viewport.
+– Formularios: autocomplete, inputmode, aria-live, focus management, prevención de doble submit.
+
+Formato adicional requerido
+
+Issue Log (JSON)
+Devuélvelo como lista de objetos con: id, page, component, issue, impact (High/Med/Low), effort (S/M/L), recommendation, success_criteria.
+No propongas cambios al turquesa; si el problema lo involucra, sugiere alternativas con overlay/fondos/tipografía/dorado/perla-beige.
+
+Checklist de QA
+Casos de prueba por ruta (desktop y 320/375/768/1024).
+Navegación, formularios, estados de error/éxito, foco teclado, reducción de motion, fallbacks.
+
+Restricciones
+No aplicar cambios en el repo ni en Supabase. No alterar el valor del turquesa. Las recomendaciones deben ser accionables, medibles y compatibles con React + Tailwind.
+
+Criterio de éxito
+Producir un plan que, si se implementa, lleve el sitio a un top-tier UX: rápido, claro, accesible, deseable y coherente con la marca.
