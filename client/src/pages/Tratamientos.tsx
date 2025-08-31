@@ -6,13 +6,12 @@ import AnimatedSection from "@/components/UI/AnimatedSection";
 import { Link } from "wouter";
 import { useState } from "react";
 
-// Import treatment images
+// Import treatment images - New authentic MAC photos
 import masajeTurquesa from "@assets/masal toalla turquesa grande_1756671403149.jpg";
 import laserPiel from "@assets/laser piel_1756671407999.jpg";
 import mascarillaVerde from "@assets/mascarilla verde_1756671415152.jpg";
 import mascarillaPerla from "@assets/mascarilla perla_1756671424839.jpg";
 import ojoMujerVerde from "@assets/ojo mujer verde_1756671431969.jpg";
-import spaTreatment from "@assets/spa-treatment.jpg";
 
 export default function Tratamientos() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -127,7 +126,7 @@ export default function Tratamientos() {
         <div 
           className="absolute inset-0 w-full h-full bg-cover bg-center"
           style={{ 
-            backgroundImage: `url(${spaTreatment})`,
+            backgroundImage: `url(${mascarillaVerde})`,
             display: "none"
           }}
         ></div>

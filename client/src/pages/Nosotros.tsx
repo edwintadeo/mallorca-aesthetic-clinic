@@ -6,9 +6,9 @@ import { Award, Users, Heart, Microscope, Shield, Clock } from "lucide-react";
 
 // Import team images
 import perfectSkinPortrait from "@assets/perfect-skin-portrait.jpg";
-import heroBeautyModel from "@assets/hero-beauty-model.jpg";
-import facialMaskTreatment from "@assets/facial-mask-treatment.jpg";
-import spaTreatment from "@assets/spa-treatment.jpg";
+import heroBeautyModel from "@assets/ojo mujer verde_1756671431969.jpg";
+import facialMaskTreatment from "@assets/mascarilla verde_1756671415152.jpg";
+import spaTreatment from "@assets/masal toalla turquesa grande_1756671403149.jpg";
 
 export default function Nosotros() {
   const values = [

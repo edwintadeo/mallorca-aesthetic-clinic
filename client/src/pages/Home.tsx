@@ -8,12 +8,12 @@ import NewsletterSection from "@/components/UI/NewsletterSection";
 import { Search, ClipboardList, Wand2, TrendingUp, Star } from "lucide-react";
 
 // Import new images
-import heroBeautyModel from "@assets/hero-beauty-model.jpg";
-import spaTreatment from "@assets/spa-treatment.jpg";
-import facialMaskTreatment from "@assets/facial-mask-treatment.jpg";
+import heroBeautyModel from "@assets/ojo mujer verde_1756671431969.jpg";
+import spaTreatment from "@assets/masal toalla turquesa grande_1756671403149.jpg";
+import facialMaskTreatment from "@assets/mascarilla verde_1756671415152.jpg";
 import perfectSkinPortrait from "@assets/perfect-skin-portrait.jpg";
-import spaDeviceTreatment from "@assets/spa-device-treatment.jpg";
-import whiteFacialMask from "@assets/white-facial-mask.jpg";
+import spaDeviceTreatment from "@assets/laser piel_1756671407999.jpg";
+import whiteFacialMask from "@assets/mascarilla perla_1756671424839.jpg";
 import wellAgingWoman from "@assets/mujer joven ropa deportiva_1756669322157.jpg";
 import macLogoBlack from "@assets/mac-logo@2x_1756658468399.png";
 
