@@ -85,8 +85,11 @@ export default function Home() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
           data-testid="video-background"
+          onLoadStart={() => console.log("Video started loading")}
+          onCanPlay={() => console.log("Video can play")}
           onError={(e) => {
             console.error("Error loading background video:", e);
+            console.log("Trying alternative paths...");
             // Si el video no carga, mostrar imagen de respaldo
             e.currentTarget.style.display = 'none';
             const fallbackDiv = e.currentTarget.nextElementSibling;
@@ -96,6 +99,7 @@ export default function Home() {
           <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4" type="video/mp4" />
           <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.webm" type="video/webm" />
           <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mov" type="video/quicktime" />
+          <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.avi" type="video/avi" />
         </video>
         
         {/* Imagen de respaldo si el video no carga */}
