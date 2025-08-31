@@ -63,7 +63,8 @@ export default function Metodo() {
         }
       ],
       benefit: "un plan tan exclusivo como tu ADN, creado para acompañar tu transformación de forma segura y efectiva.",
-      image: facialMaskTreatment
+      image: facialMaskTreatment,
+      video: "/public-objects/gotas de perfumista.mp4"
     },
     {
       icon: Wand2,
@@ -188,7 +189,7 @@ export default function Metodo() {
               <AnimatedSection delay={index * 0.1}>
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                   <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                    {index === 0 ? (
+                    {(index === 0 || phase.video) ? (
                       <video 
                         className="rounded-2xl shadow-lg w-full h-auto object-cover hover-lift transition-all duration-300"
                         autoPlay 
@@ -198,20 +199,7 @@ export default function Metodo() {
                         poster={phase.image}
                         data-testid={`video-phase-${phase.number}`}
                       >
-                        <source src={boldBrushVideo} type="video/mp4" />
-                        Tu navegador no soporta videos HTML5.
-                      </video>
-                    ) : index === 1 ? (
-                      <video 
-                        className="rounded-2xl shadow-lg w-full h-auto object-cover hover-lift transition-all duration-300"
-                        autoPlay 
-                        muted 
-                        loop 
-                        playsInline
-                        poster={phase.image}
-                        data-testid={`video-phase-${phase.number}`}
-                      >
-                        <source src="/public-objects/gotas de perfumista.mp4" type="video/mp4" />
+                        <source src={index === 0 ? boldBrushVideo : phase.video} type="video/mp4" />
                         Tu navegador no soporta videos HTML5.
                       </video>
                     ) : (

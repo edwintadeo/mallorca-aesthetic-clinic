@@ -164,8 +164,24 @@ export default function Contacto() {
   return (
     <div className="pt-16 font-body antialiased">
       {/* Hero Section */}
-      <section className="py-20 hero-gradient" data-testid="contacto-hero">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden" data-testid="contacto-hero">
+        {/* Background Video */}
+        <video 
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+        >
+          <source src="/public-objects/catedral de mallorca.mp4" type="video/mp4" />
+          Tu navegador no soporta videos HTML5.
+        </video>
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/30"></div>
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <div className="text-sm uppercase tracking-wider text-white/70 font-medium mb-4">
               Contacto
