@@ -18,26 +18,26 @@ export default function Home() {
     {
       icon: Search,
       number: "01",
-      title: "Diagnóstico 360°",
-      description: "Análisis integral de piel, estructura facial, historial médico y objetivos personales.",
+      title: "Diagnóstico 360° - El Lienzo en Blanco",
+      description: "Mapeo facial y corporal 3D, análisis avanzado con IA y evaluación de bienestar mental. No se puede crear una obra maestra sin entender primero el lienzo.",
     },
     {
       icon: ClipboardList,
       number: "02", 
-      title: "Plan Personalizado",
-      description: "Diseño de protocolo único combinando tratamientos y cronograma adaptado a tu estilo de vida.",
+      title: "Plan Personalizado - Boceto Maestro",
+      description: "Análisis sanguíneo de precisión, evaluaciones funcionales y estudio de nutrigenética. Un plan tan único como tu ADN, respaldado por la ciencia.",
     },
     {
       icon: Wand2,
       number: "03",
-      title: "Acción Integrada", 
-      description: "Ejecución de tratamientos con técnicas avanzadas y tecnología de vanguardia.",
+      title: "Acción Integrada - Pinceladas Precisas", 
+      description: "Fusionamos medicina estética, medicina preventiva y técnicas de bienestar integrado. Resultados visibles, naturales y multidimensionales."
     },
     {
       icon: TrendingUp,
       number: "04",
-      title: "Seguimiento Estratégico",
-      description: "Monitoreo continuo por 12 meses para optimizar y mantener resultados duraderos.",
+      title: "Seguimiento Estratégico - Preservando la Obra Maestra",
+      description: "Sistema de evaluación progresiva y ajustes preventivos estratégicos. El tiempo ganado se convierte en un activo permanente en tu vida.",
     },
   ];
 
@@ -121,11 +121,10 @@ export default function Home() {
                 <span className="text-white">Ganar Tiempo</span>
               </h1>
               <h2 className="text-2xl lg:text-3xl font-subtitle italic text-white/90 mb-8 drop-shadow-md">
-                Reescribe el tiempo, vive tu esencia
+                Donde el tiempo se convierte en arte y tu bienestar en una obra maestra
               </h2>
-              <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-3xl mx-auto drop-shadow-md">
-                Transformación visible en 90 días con seguimiento integral de 12 meses. 
-                Combina optimización biológica, armonización estética natural y equilibrio mental-emocional.
+              <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-4xl mx-auto drop-shadow-md">
+                En un mundo obsesionado con detener el reloj, hemos descubierto algo extraordinario: el arte de convertir el tiempo en tu aliado. No se trata solo de lucir más joven, sino de experimentar una transformación integral donde la belleza auténtica emerge naturalmente desde el bienestar más profundo.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contacto">
@@ -178,16 +177,14 @@ export default function Home() {
 
               <div className="space-y-6 text-foreground/80 leading-relaxed">
                 <p>
-                  Con más de 18 años de experiencia en medicina estética, la Dra. Ocampo ha desarrollado 
-                  el revolucionario Método MAC, que integra ciencia, estética y bienestar emocional.
+                  Con más de 18 años de experiencia en medicina estética, la Dra. Liliana Ocampo ha desarrollado 
+                  el revolucionario Método MAC: "El Arte de Ganar Tiempo", fusionando la precisión de la medicina estética avanzada con un enfoque tridimensional del bienestar.
                 </p>
                 <p>
-                  Su enfoque holístico trasciende los tratamientos tradicionales, creando transformaciones 
-                  auténticas que respetan la esencia natural de cada paciente.
+                  Nuestro método exclusivo trabaja simultáneamente en tres dimensiones: optimización biológica interna, armonización estética natural y equilibrio mental-emocional, creando una sinfonía perfecta entre ciencia, belleza y consciencia.
                 </p>
                 <p className="italic">
-                  "Cada tratamiento es una obra de arte personalizada. No solo transformamos la apariencia, 
-                  sino que devolvemos la confianza y el tiempo perdido."
+                  "Cada tratamiento es una obra de arte personalizada. Un maestro pintor no solo ve los colores superficiales, sino que comprende la estructura del lienzo, la química de los pigmentos y la visión completa de la obra."
                 </p>
               </div>
 
@@ -198,11 +195,11 @@ export default function Home() {
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-title gold-accent font-semibold" data-testid="stat-patients">10K+</div>
-                  <div className="text-sm text-muted-foreground">Pacientes</div>
+                  <div className="text-sm text-muted-foreground">Pacientes transformados</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-title gold-accent font-semibold" data-testid="stat-treatments">30+</div>
-                  <div className="text-sm text-muted-foreground">Tratamientos</div>
+                  <div className="text-3xl font-title gold-accent font-semibold" data-testid="stat-treatments">90</div>
+                  <div className="text-sm text-muted-foreground">Días transformación visible</div>
                 </div>
               </div>
             </AnimatedSection>
@@ -255,7 +252,7 @@ export default function Home() {
                   className="bg-turquoise text-white border-2 border-gold-light hover:bg-gold-light hover:text-gold-deep transition-all duration-300 px-8 py-4 text-lg"
                   data-testid="button-method-learn-more"
                 >
-                  Conoce más sobre el Método
+                  Descubre el Método MAC
                 </Button>
               </Link>
             </div>
@@ -502,7 +499,7 @@ export default function Home() {
                   className="bg-turquoise text-white border-2 border-gold-light hover:bg-gold-light hover:text-gold-deep transition-all duration-300 px-8 py-4 text-lg"
                   data-testid="button-final-cta-contact"
                 >
-                  Reserva tu consulta gratuita
+                  Agenda tu consulta personalizada
                 </Button>
               </Link>
               <Button 
