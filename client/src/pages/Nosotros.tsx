@@ -10,6 +10,9 @@ import heroBeautyModel from "@assets/ojo mujer verde_1756671431969.jpg";
 import facialMaskTreatment from "@assets/mascarilla verde_1756671415152.jpg";
 import spaTreatment from "@assets/masal toalla turquesa grande_1756671403149.jpg";
 
+// Import video
+import boldBrushVideo from "@assets/Bold Brush Strokes_simple_compose_01k40ny60dfpka9sghp6zqaakq_1756669574524.mp4";
+
 export default function Nosotros() {
   const values = [
     {
@@ -139,9 +142,18 @@ export default function Nosotros() {
             muted 
             loop 
             playsInline
-            poster="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
+            poster={facialMaskTreatment}
+            onError={(e) => {
+              console.error("Error loading video:", e);
+              // Si el video no carga, mostrar imagen de respaldo
+              e.currentTarget.style.display = 'none';
+              const fallbackDiv = document.createElement('div');
+              fallbackDiv.className = 'w-full h-full bg-cover bg-center';
+              fallbackDiv.style.backgroundImage = `url(${facialMaskTreatment})`;
+              e.currentTarget.parentElement?.appendChild(fallbackDiv);
+            }}
           >
-            <source src="/public-objects/tramuntana.mp4" type="video/mp4" />
+            <source src={boldBrushVideo} type="video/mp4" />
             Tu navegador no soporta videos HTML5.
           </video>
           
