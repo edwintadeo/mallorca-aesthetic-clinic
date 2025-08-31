@@ -23,11 +23,13 @@ export default function Navbar() {
 
   const navItems = [
     { href: "/", label: "Inicio" },
-    { href: "/metodo", label: "Método" },
+    { href: "/metodo", label: "Método MAC" },
     { href: "/tratamientos", label: "Tratamientos" },
     { href: "/nosotros", label: "Nosotros" },
+    { href: "/ubicaciones", label: "Ubicaciones" },
     { href: "/blog", label: "Blog" },
     { href: "/contacto", label: "Contacto" },
+    { href: "/club", label: "Club MAC" },
   ];
 
   return (

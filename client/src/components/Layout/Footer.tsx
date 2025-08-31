@@ -50,8 +50,10 @@ export default function Footer() {
               <li><Link href="/metodo" className="hover:text-champagne transition-colors" data-testid="footer-link-metodo">Método MAC</Link></li>
               <li><Link href="/tratamientos" className="hover:text-champagne transition-colors" data-testid="footer-link-tratamientos">Tratamientos</Link></li>
               <li><Link href="/nosotros" className="hover:text-champagne transition-colors" data-testid="footer-link-nosotros">Nosotros</Link></li>
+              <li><Link href="/ubicaciones" className="hover:text-champagne transition-colors" data-testid="footer-link-ubicaciones">Ubicaciones</Link></li>
               <li><Link href="/blog" className="hover:text-champagne transition-colors" data-testid="footer-link-blog">Blog</Link></li>
               <li><Link href="/contacto" className="hover:text-champagne transition-colors" data-testid="footer-link-contacto">Contacto</Link></li>
+              <li><Link href="/club" className="hover:text-champagne transition-colors" data-testid="footer-link-club">Club MAC</Link></li>
             </ul>
           </div>
 
@@ -72,21 +74,26 @@ export default function Footer() {
             <div className="space-y-3 text-background/80">
               <div>
                 <div className="font-medium text-background">MAC Palma Centro</div>
-                <div className="text-sm">Passeig del Born, 15</div>
-                <div className="text-sm">+34 971 123 456</div>
+                <div className="text-sm">Pg. del Born 15, Centre</div>
+                <div className="text-sm">+34 660 938 585</div>
               </div>
               <div>
-                <div className="font-medium text-background">MAC Puerto Portals</div>
-                <div className="text-sm">Local 45, Puerto Portals</div>
-                <div className="text-sm">+34 971 654 321</div>
+                <div className="font-medium text-background">MAC Cala Millor</div>
+                <div className="text-sm">Carrer Sol Naixent, 24</div>
+                <div className="text-sm">+34 638 617 650</div>
+              </div>
+              <div>
+                <div className="font-medium text-background">MAC Manacor</div>
+                <div className="text-sm">Rafa Nadal Club</div>
+                <div className="text-sm">+34 619 392 675</div>
               </div>
               <div className="mt-4">
                 <a 
-                  href="mailto:info@mac-mallorca.com" 
+                  href="mailto:mallorcaaestheticc@gmail.com" 
                   className="text-champagne hover:underline"
                   data-testid="link-email"
                 >
-                  info@mac-mallorca.com
+                  mallorcaaestheticc@gmail.com
                 </a>
               </div>
             </div>
@@ -98,9 +105,10 @@ export default function Footer() {
             © 2024 Mallorca Aesthetic Clinic. Todos los derechos reservados.
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0 text-sm text-background/60">
-            <a href="#" className="hover:text-champagne transition-colors" data-testid="footer-link-privacy">Política de Privacidad</a>
-            <a href="#" className="hover:text-champagne transition-colors" data-testid="footer-link-terms">Términos de Servicio</a>
-            <a href="#" className="hover:text-champagne transition-colors" data-testid="footer-link-cookies">Cookies</a>
+            <Link href="/aviso-legal" className="hover:text-champagne transition-colors" data-testid="footer-link-legal">Aviso Legal</Link>
+            <Link href="/privacidad" className="hover:text-champagne transition-colors" data-testid="footer-link-privacy">Política de Privacidad</Link>
+            <Link href="/cookies" className="hover:text-champagne transition-colors" data-testid="footer-link-cookies">Cookies</Link>
+            <Link href="/pagos" className="hover:text-champagne transition-colors" data-testid="footer-link-pagos">Pagos</Link>
           </div>
         </div>
       </div>
