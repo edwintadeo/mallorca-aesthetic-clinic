@@ -156,7 +156,7 @@ export default function Tratamientos() {
 
       {/* Featured Treatments */}
       {featuredTreatments.length > 0 && (
-        <section className="py-20 bg-white/95 backdrop-blur-sm relative z-[1]" data-testid="featured-treatments">
+        <section className="py-20 bg-white/90 backdrop-blur-sm relative z-[1]" data-testid="featured-treatments">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection>
               <div className="text-center mb-16">
@@ -172,7 +172,7 @@ export default function Tratamientos() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredTreatments.slice(0, 3).map((treatment: any, index: number) => (
                 <AnimatedSection key={treatment.id} delay={index * 0.1}>
-                  <Card className="group overflow-hidden hover:shadow-xl transition-all duration-300" data-testid={`featured-treatment-${index}`}>
+                  <Card className="group overflow-hidden bg-white/80 backdrop-blur-sm hover:shadow-xl hover-lift transition-all duration-300 h-full border border-gold-light/30" data-testid={`featured-treatment-${index}`}>
                     <div className="relative">
                       <img 
                         src={treatment.imageUrl}
@@ -212,7 +212,7 @@ export default function Tratamientos() {
       )}
 
       {/* Category Filter */}
-      <section className="py-8 bg-white/90 backdrop-blur-sm relative z-[1]" data-testid="category-filter">
+      <section className="py-8 bg-pearl/50 backdrop-blur-sm relative z-[1]" data-testid="category-filter">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="flex flex-wrap justify-center gap-4">
@@ -241,7 +241,7 @@ export default function Tratamientos() {
       </section>
 
       {/* All Treatments */}
-      <section className="py-20 bg-white/95 backdrop-blur-sm relative z-[1]" data-testid="all-treatments">
+      <section className="py-20 bg-white/90 backdrop-blur-sm relative z-[1]" data-testid="all-treatments">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {isLoading ? (
             <div className="text-center py-12">
@@ -252,7 +252,7 @@ export default function Tratamientos() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredTreatments.map((treatment: any, index: number) => (
                 <AnimatedSection key={treatment.id} delay={index * 0.1}>
-                  <Card className="h-full hover:shadow-lg transition-shadow duration-300" data-testid={`treatment-${treatment.id}`}>
+                  <Card className="h-full bg-white/80 backdrop-blur-sm hover:shadow-xl hover-lift transition-all duration-300 border border-gold-light/30" data-testid={`treatment-${treatment.id}`}>
                     <img 
                       src={treatment.imageUrl}
                       alt={treatment.name}
@@ -346,7 +346,7 @@ export default function Tratamientos() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <AnimatedSection delay={0.1}>
-              <Card className="text-center bg-white hover:shadow-lg transition-shadow duration-300" data-testid="tech-coolsculpting">
+              <Card className="text-center bg-white/80 backdrop-blur-sm hover:shadow-xl hover-lift transition-all duration-300 border border-gold-light/30" data-testid="tech-coolsculpting">
                 <CardContent className="p-6">
                   <div className="w-16 h-16 bg-turquoise rounded-full flex items-center justify-center mx-auto mb-4">
                     <i className="fas fa-snowflake text-white text-2xl"></i>
@@ -358,7 +358,7 @@ export default function Tratamientos() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.2}>
-              <Card className="text-center bg-white hover:shadow-lg transition-shadow duration-300" data-testid="tech-ultherapy">
+              <Card className="text-center bg-white/80 backdrop-blur-sm hover:shadow-xl hover-lift transition-all duration-300 border border-gold-light/30" data-testid="tech-ultherapy">
                 <CardContent className="p-6">
                   <div className="w-16 h-16 bg-turquoise rounded-full flex items-center justify-center mx-auto mb-4">
                     <i className="fas fa-wifi text-white text-2xl"></i>
@@ -370,7 +370,7 @@ export default function Tratamientos() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.3}>
-              <Card className="text-center bg-white hover:shadow-lg transition-shadow duration-300" data-testid="tech-morpheus">
+              <Card className="text-center bg-white/80 backdrop-blur-sm hover:shadow-xl hover-lift transition-all duration-300 border border-gold-light/30" data-testid="tech-morpheus">
                 <CardContent className="p-6">
                   <div className="w-16 h-16 bg-turquoise rounded-full flex items-center justify-center mx-auto mb-4">
                     <i className="fas fa-bolt text-white text-2xl"></i>
@@ -382,7 +382,7 @@ export default function Tratamientos() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.4}>
-              <Card className="text-center bg-white hover:shadow-lg transition-shadow duration-300" data-testid="tech-picosure">
+              <Card className="text-center bg-white/80 backdrop-blur-sm hover:shadow-xl hover-lift transition-all duration-300 border border-gold-light/30" data-testid="tech-picosure">
                 <CardContent className="p-6">
                   <div className="w-16 h-16 bg-turquoise rounded-full flex items-center justify-center mx-auto mb-4">
                     <i className="fas fa-laser-pointer text-white text-2xl"></i>
@@ -397,7 +397,7 @@ export default function Tratamientos() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white/95 backdrop-blur-sm relative z-[1]" data-testid="treatments-cta">
+      <section className="py-20 bg-pearl/50 backdrop-blur-sm relative z-[1]" data-testid="treatments-cta">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <h2 className="text-4xl lg:text-5xl font-title gold-accent mb-6">
