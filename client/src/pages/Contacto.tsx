@@ -173,7 +173,7 @@ export default function Contacto() {
           loop 
           playsInline
         >
-          <source src="/public-objects/catedral de mallorca.mp4" type="video/mp4" />
+          <source src="/public-objects/catedral-de-mallorca.mp4" type="video/mp4" />
           Tu navegador no soporta videos HTML5.
         </video>
         

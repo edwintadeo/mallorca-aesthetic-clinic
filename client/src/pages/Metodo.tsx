@@ -64,7 +64,7 @@ export default function Metodo() {
       ],
       benefit: "un plan tan exclusivo como tu ADN, creado para acompañar tu transformación de forma segura y efectiva.",
       image: facialMaskTreatment,
-      video: "/public-objects/gotas de perfumista.mp4"
+      video: "/public-objects/gotas-de-perfumista.mp4"
     },
     {
       icon: Wand2,
