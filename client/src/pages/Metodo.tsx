@@ -152,6 +152,31 @@ export default function Metodo() {
         </div>
       </section>
 
+      {/* Method Introduction */}
+      <section className="py-16 bg-white" data-testid="method-introduction">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <h2 className="text-4xl lg:text-5xl font-title text-foreground mb-8">
+              El Método MAC
+            </h2>
+            
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+              <p>
+                Entendemos que ganar tiempo es un arte que no consiste en detener el reloj, sino en{" "}
+                <strong className="text-foreground">transformar el envejecimiento en una vivencia holística</strong>, donde la salud es el punto de 
+                partida para una belleza auténtica.
+              </p>
+              
+              <p>
+                En consecuencia, en MAC, cada intervención se concibe como una{" "}
+                <strong className="text-foreground">obra de arte personalizada</strong>, uniendo salud integral, bienestar y estética natural para honrar la 
+                singularidad de cada persona.
+              </p>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* Method Phases */}
       <section className="py-20 bg-pearl/30" data-testid="method-phases">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
