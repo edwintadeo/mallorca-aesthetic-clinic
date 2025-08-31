@@ -188,7 +188,7 @@ export default function Nosotros() {
               <AnimatedSection key={value.title} delay={index * 0.1}>
                 <Card className="bg-white text-center h-full hover:shadow-lg transition-shadow duration-300" data-testid={`value-${index}`}>
                   <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-turquoise rounded-full flex items-center justify-center mx-auto mb-6">
+                    <div className="w-16 h-16 bg-turquoise-light rounded-full flex items-center justify-center mx-auto mb-6">
                       <value.icon className="text-white text-2xl" />
                     </div>
                     <h3 className="text-xl font-subtitle font-semibold mb-4">{value.title}</h3>

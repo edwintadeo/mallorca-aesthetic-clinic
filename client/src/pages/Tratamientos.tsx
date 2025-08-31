@@ -156,7 +156,7 @@ export default function Tratamientos() {
                       </div>
                       <Button 
                         variant="outline" 
-                        className="w-full border-turquoise text-turquoise hover:bg-turquoise hover:text-white"
+                        className="w-full border-turquoise text-turquoise hover:bg-turquoise-medium hover:text-turquoise"
                         data-testid={`button-more-info-${index}`}
                       >
                         Más información
@@ -181,8 +181,8 @@ export default function Tratamientos() {
                   variant={selectedCategory === category.id ? "default" : "outline"}
                   onClick={() => setSelectedCategory(category.id)}
                   className={selectedCategory === category.id 
-                    ? "bg-turquoise text-white hover:bg-turquoise/90" 
-                    : "border-turquoise text-turquoise hover:bg-turquoise hover:text-white"
+                    ? "bg-turquoise-medium text-turquoise hover:bg-turquoise-light" 
+                    : "border-turquoise text-turquoise hover:bg-turquoise-light hover:text-turquoise"
                   }
                   data-testid={`filter-${category.id}`}
                 >

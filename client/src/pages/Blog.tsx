@@ -121,7 +121,7 @@ export default function Blog() {
                   />
                   <CardContent className="p-8 lg:p-12 flex flex-col justify-center">
                     <div className="flex items-center gap-4 mb-4">
-                      <Badge className="bg-turquoise text-white">Destacado</Badge>
+                      <Badge className="bg-turquoise-light text-turquoise">Destacado</Badge>
                       {displayFeatured.category && (
                         <Badge variant="secondary">{displayFeatured.category}</Badge>
                       )}
@@ -146,7 +146,7 @@ export default function Blog() {
                     </div>
                     <Link href={`/blog/${displayFeatured.slug}`}>
                       <Button 
-                        className="bg-turquoise text-white hover:bg-turquoise/90 group"
+                        className="bg-turquoise-medium text-turquoise hover:bg-turquoise-light group"
                         data-testid="button-read-featured"
                       >
                         Leer artículo completo
@@ -172,8 +172,8 @@ export default function Blog() {
                   variant={selectedCategory === category ? "default" : "outline"}
                   onClick={() => setSelectedCategory(category)}
                   className={selectedCategory === category 
-                    ? "bg-turquoise text-white hover:bg-turquoise/90" 
-                    : "border-turquoise text-turquoise hover:bg-turquoise hover:text-white"
+                    ? "bg-turquoise-medium text-turquoise hover:bg-turquoise-light" 
+                    : "border-turquoise text-turquoise hover:bg-turquoise-light hover:text-turquoise"
                   }
                   data-testid={`filter-${category.toLowerCase()}`}
                 >
@@ -235,7 +235,7 @@ export default function Blog() {
                           <Button 
                             variant="ghost" 
                             size="sm"
-                            className="text-turquoise hover:text-turquoise hover:bg-turquoise/10 p-0 h-auto group"
+                            className="text-turquoise hover:text-turquoise hover:bg-turquoise p-0 h-auto group"
                             data-testid={`button-read-more-${index}`}
                           >
                             Leer más
@@ -275,7 +275,7 @@ export default function Blog() {
                 data-testid="input-newsletter-email"
               />
               <Button 
-                className="bg-turquoise text-white hover:bg-turquoise/90"
+                className="bg-turquoise-medium text-turquoise hover:bg-turquoise-light"
                 data-testid="button-newsletter-subscribe"
               >
                 Suscribirse

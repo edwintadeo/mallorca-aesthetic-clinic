@@ -105,7 +105,7 @@ export default function Home() {
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-2 border-turquoise text-turquoise hover:bg-turquoise hover:text-white transition-all duration-300 px-8 py-4 text-lg"
+                  className="border-2 border-turquoise text-turquoise hover:bg-turquoise-medium hover:text-turquoise transition-all duration-300 px-8 py-4 text-lg"
                   data-testid="button-hero-whatsapp"
                 >
                   <i className="fab fa-whatsapp mr-2"></i>

@@ -43,6 +43,10 @@
   --pearl: hsl(45, 15%, 92%);
   --beige: hsl(44, 18%, 90%);
   --turquoise: hsl(168, 100%, 26%);
+  --turquoise-translucent: hsla(168, 100%, 26%, 0.1);
+  --turquoise-light: hsla(168, 100%, 26%, 0.2);
+  --turquoise-medium: hsla(168, 100%, 26%, 0.3);
+  --turquoise-border: hsla(168, 100%, 26%, 0.4);
   --gold-deep: hsl(42, 64%, 40%);
   --gold-light: hsl(42, 50%, 55%);
   --champagne: hsl(42, 57%, 69%);
@@ -134,7 +138,19 @@
   }
   
   .bg-turquoise {
+    background-color: var(--turquoise-translucent);
+  }
+  
+  .bg-turquoise-solid {
     background-color: var(--turquoise);
+  }
+  
+  .bg-turquoise-light {
+    background-color: var(--turquoise-light);
+  }
+  
+  .bg-turquoise-medium {
+    background-color: var(--turquoise-medium);
   }
   
   .bg-gold-deep {
@@ -150,6 +166,10 @@
   }
   
   .border-turquoise {
+    border-color: var(--turquoise-border);
+  }
+  
+  .border-turquoise-solid {
     border-color: var(--turquoise);
   }
   

@@ -128,7 +128,7 @@ export default function Metodo() {
                 <div className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
                   <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                     <div className="flex items-center mb-6">
-                      <div className="w-16 h-16 bg-turquoise rounded-full flex items-center justify-center mr-4">
+                      <div className="w-16 h-16 bg-turquoise-light rounded-full flex items-center justify-center mr-4">
                         <phase.icon className="text-white text-2xl" />
                       </div>
                       <div className="text-3xl font-title gold-accent font-semibold">{phase.number}</div>
@@ -188,7 +188,7 @@ export default function Metodo() {
               <AnimatedSection key={benefit.title} delay={index * 0.1}>
                 <Card className="bg-white text-center h-full hover:shadow-lg transition-shadow duration-300" data-testid={`benefit-${index}`}>
                   <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-turquoise rounded-full flex items-center justify-center mx-auto mb-6">
+                    <div className="w-16 h-16 bg-turquoise-light rounded-full flex items-center justify-center mx-auto mb-6">
                       <benefit.icon className="text-white text-2xl" />
                     </div>
                     <h3 className="text-xl font-subtitle font-semibold mb-4">{benefit.title}</h3>
