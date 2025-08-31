@@ -76,27 +76,62 @@ export default function Home() {
 
   return (
     <div className="font-body antialiased">
+      {/* Video de fondo para toda la landing page */}
+      <div className="fixed inset-0 w-full h-full z-0 overflow-hidden">
+        <video 
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          data-testid="video-background"
+          onError={(e) => {
+            console.error("Error loading background video:", e);
+            // Si el video no carga, mostrar imagen de respaldo
+            e.currentTarget.style.display = 'none';
+            const fallbackDiv = e.currentTarget.nextElementSibling;
+            if (fallbackDiv) fallbackDiv.style.display = 'block';
+          }}
+        >
+          <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4" type="video/mp4" />
+          <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.webm" type="video/webm" />
+          <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mov" type="video/quicktime" />
+        </video>
+        
+        {/* Imagen de respaldo si el video no carga */}
+        <div 
+          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          style={{ 
+            backgroundImage: "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')",
+            display: "none"
+          }}
+        ></div>
+        
+        {/* Overlay para mejorar legibilidad del texto */}
+        <div className="absolute inset-0 bg-black/30"></div>
+      </div>
+
       {/* Hero Section */}
-      <section className="pt-16 min-h-screen hero-gradient relative overflow-hidden" data-testid="hero-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="pt-16 min-h-screen relative z-10 flex items-center" data-testid="hero-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+          <div className="text-center">
             <AnimatedSection>
-              <h1 className="text-5xl lg:text-7xl font-title font-light mb-6">
-                <span className="gold-accent">El Arte de</span><br />
-                <span className="text-turquoise">Ganar Tiempo</span>
+              <h1 className="text-5xl lg:text-7xl font-title font-light mb-6 text-white drop-shadow-lg">
+                <span className="text-gold-light">El Arte de</span><br />
+                <span className="text-white">Ganar Tiempo</span>
               </h1>
-              <h2 className="text-2xl lg:text-3xl font-subtitle italic text-muted-foreground mb-8">
+              <h2 className="text-2xl lg:text-3xl font-subtitle italic text-white/90 mb-8 drop-shadow-md">
                 Reescribe el tiempo, vive tu esencia
               </h2>
-              <p className="text-lg text-foreground/80 mb-8 leading-relaxed">
+              <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-3xl mx-auto drop-shadow-md">
                 Transformación visible en 90 días con seguimiento integral de 12 meses. 
                 Combina optimización biológica, armonización estética natural y equilibrio mental-emocional.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contacto">
                   <Button 
                     size="lg" 
-                    className="bg-turquoise text-white border-2 border-gold-light hover:bg-gold-light hover:text-gold-deep transition-all duration-300 px-8 py-4 text-lg"
+                    className="bg-turquoise-medium/90 text-white border-2 border-gold-light hover:bg-gold-light hover:text-gold-deep transition-all duration-300 px-8 py-4 text-lg backdrop-blur-sm"
                     data-testid="button-hero-reserva"
                   >
                     Reserva tu consulta
@@ -105,7 +140,7 @@ export default function Home() {
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-2 border-turquoise text-turquoise hover:bg-turquoise-medium hover:text-turquoise transition-all duration-300 px-8 py-4 text-lg"
+                  className="border-2 border-white/70 text-white hover:bg-white/20 hover:text-white transition-all duration-300 px-8 py-4 text-lg backdrop-blur-sm"
                   data-testid="button-hero-whatsapp"
                 >
                   <i className="fab fa-whatsapp mr-2"></i>
@@ -113,50 +148,8 @@ export default function Home() {
                 </Button>
               </div>
             </AnimatedSection>
-
-            <AnimatedSection delay={0.2}>
-              <div className="relative rounded-2xl shadow-2xl overflow-hidden">
-                {/* Intentamos cargar el video con diferentes rutas posibles */}
-                <video 
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-auto object-cover rounded-2xl"
-                  data-testid="video-hero"
-                  style={{ minHeight: "400px" }}
-                  onError={(e) => {
-                    console.error("Error loading video:", e);
-                    // Si el video no carga, mostrar imagen de respaldo
-                    e.currentTarget.style.display = 'none';
-                    const fallbackImg = e.currentTarget.nextElementSibling;
-                    if (fallbackImg) fallbackImg.style.display = 'block';
-                  }}
-                >
-                  <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4" type="video/mp4" />
-                  <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.webm" type="video/webm" />
-                  <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mov" type="video/quicktime" />
-                  Tu navegador no soporta videos HTML5.
-                </video>
-                
-                {/* Imagen de respaldo si el video no carga */}
-                <img 
-                  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800" 
-                  alt="Vista marina con gaviotas - Mallorca Aesthetic Clinic"
-                  className="w-full h-auto object-cover rounded-2xl"
-                  style={{ display: "none", minHeight: "400px" }}
-                  data-testid="img-hero-fallback"
-                />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
-              </div>
-            </AnimatedSection>
           </div>
         </div>
-
-        {/* Decorative elements */}
-        <div className="absolute top-20 right-10 w-32 h-32 bg-champagne/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-10 w-40 h-40 bg-turquoise/10 rounded-full blur-3xl"></div>
       </section>
 
       {/* Doctor Section */}
