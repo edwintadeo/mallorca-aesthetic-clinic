@@ -289,6 +289,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Quote Section */}
+      <section className="py-20 bg-white relative z-[1]" data-testid="quote-section">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="text-center">
+              <div className="text-sm uppercase tracking-wider text-muted-foreground font-medium mb-8">
+                Una experiencia como una obra de arte
+              </div>
+              
+              <blockquote className="text-3xl lg:text-5xl font-title text-foreground leading-tight mb-12">
+                "Cada tratamiento es como una pincelada maestra. No transformamos, revelamos tu luz."
+              </blockquote>
+              
+              <div className="max-w-3xl mx-auto mb-8">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  En MAC no creemos en moldes. Diseñamos contigo tu protocolo ideal, como quien pinta un 
+                  cuadro único, respetando tu biología, tu historia y tu ritmo.
+                </p>
+              </div>
+              
+              <Link href="/metodo">
+                <Button 
+                  variant="outline"
+                  size="lg" 
+                  className="border-2 border-foreground text-foreground hover:bg-foreground hover:text-white px-8 py-3 text-base font-medium rounded-none uppercase tracking-wider transition-all duration-300"
+                  data-testid="button-quote-discover"
+                >
+                  Descubre Cómo
+                </Button>
+              </Link>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* Method Section */}
       <section className="py-20 bg-transparent relative z-[1]" data-testid="method-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
