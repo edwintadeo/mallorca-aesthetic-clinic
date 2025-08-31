@@ -730,33 +730,43 @@ export default function Home() {
       <NewsletterSection />
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-white/90 backdrop-blur-sm relative z-[1]" data-testid="final-cta-section">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 bg-black text-white relative z-[1]" data-testid="final-cta-section">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <h2 className="text-4xl lg:text-5xl title-luxury gold-accent-prominent mb-6">
-              ¿Estás listo para dominar el arte de ganar tiempo?
-            </h2>
-            <p className="text-xl text-muted-foreground mb-8 body-refined">
-              Bienvenido a MAC, el estudio donde el tiempo se transforma en arte, y donde cada instante cuenta para esculpir tu verdadera obra maestra.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contacto">
+            <div className="text-center mb-12">
+              <div className="text-sm uppercase tracking-wider text-white/70 font-medium mb-8">
+                'El arte de ganar tiempo'
+              </div>
+              
+              <blockquote className="text-2xl lg:text-4xl font-title text-gold-light leading-tight mb-12">
+                "No se trata de cambiar quién eres, sino de revelar lo mejor que ya vive en ti. 
+                Cada tratamiento es una obra de arte hecha con ciencia, respeto y propósito."
+              </blockquote>
+            </div>
+            
+            <div className="mb-12">
+              <p className="text-base lg:text-lg text-white/90 uppercase tracking-wide mb-6 font-medium">
+                CON UNA TRAYECTORIA DE MÁS DE 18 AÑOS EN MEDICINA ESTÉTICA AVANZADA, LA DRA. LILIANA 
+                OCAMPO HA DESARROLLADO UN ENFOQUE ÚNICO QUE VA MÁS ALLÁ DE LO SUPERFICIAL.
+              </p>
+              
+              <p className="text-lg text-white/80 leading-relaxed max-w-4xl mx-auto">
+                Su experiencia clínica, junto con un equipo multidisciplinario de médicos, nutricionistas y terapeutas, 
+                ha permitido a miles de personas experimentar resultados visibles y sostenibles que honran su autenticidad.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <Link href="/nosotros">
                 <Button 
+                  variant="outline"
                   size="lg" 
-                  className="bg-turquoise text-white border-2 border-gold-light hover:bg-gold-light hover:text-gold-deep button-premium px-8 py-4 text-lg"
-                  data-testid="button-final-cta-contact"
+                  className="border-2 border-white text-white hover:bg-white hover:text-black px-12 py-4 text-base font-medium rounded-none uppercase tracking-wider transition-all duration-300"
+                  data-testid="button-final-cta-team"
                 >
-                  Agenda tu consulta personalizada
+                  Ver el Equipo Médico
                 </Button>
               </Link>
-              <Button 
-                size="lg" 
-                className="bg-green-600 text-white hover:bg-green-700 transition-all duration-300 px-8 py-4 text-lg"
-                data-testid="button-final-cta-whatsapp"
-              >
-                <i className="fab fa-whatsapp mr-2"></i>
-                WhatsApp directo
-              </Button>
             </div>
           </AnimatedSection>
         </div>
