@@ -9,6 +9,7 @@ import Home from "@/pages/Home";
 import Metodo from "@/pages/Metodo";
 import Tratamientos from "@/pages/Tratamientos";
 import Nosotros from "@/pages/Nosotros";
+import Ubicaciones from "@/pages/Ubicaciones";
 import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
 import Contacto from "@/pages/Contacto";
@@ -25,6 +26,7 @@ function Router() {
           <Route path="/metodo" component={Metodo} />
           <Route path="/tratamientos" component={Tratamientos} />
           <Route path="/nosotros" component={Nosotros} />
+          <Route path="/ubicaciones" component={Ubicaciones} />
           <Route path="/blog" component={Blog} />
           <Route path="/blog/:slug" component={BlogPost} />
           <Route path="/contacto" component={Contacto} />
