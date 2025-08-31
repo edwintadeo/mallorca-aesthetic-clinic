@@ -108,13 +108,27 @@ export default function Metodo() {
             <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
               Metodología Exclusiva
             </div>
-            <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6">
+            <h1 className="text-5xl lg:text-7xl title-luxury gold-accent-prominent mb-6">
               Método MAC
             </h1>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8">
-              Un enfoque revolucionario que combina diagnóstico científico, planificación personalizada, 
-              ejecución experta y seguimiento estratégico para garantizar tu transformación.
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto body-refined leading-relaxed mb-4">
+              Un enfoque revolucionario de 4 fases que combina diagnóstico científico avanzado, planificación personalizada, 
+              ejecución experta y seguimiento estratégico para garantizar tu transformación integral.
             </p>
+            <div className="flex justify-center items-center space-x-8 mb-8 text-sm text-turquoise">
+              <div className="flex items-center">
+                <CheckCircle className="w-5 h-5 mr-2" />
+                <span>Más de 10,000 pacientes</span>
+              </div>
+              <div className="flex items-center">
+                <Award className="w-5 h-5 mr-2" />
+                <span>97% satisfacción</span>
+              </div>
+              <div className="flex items-center">
+                <Clock className="w-5 h-5 mr-2" />
+                <span>15 años experiencia</span>
+              </div>
+            </div>
             <div className="max-w-2xl mx-auto">
               <img 
                 src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500"
@@ -127,25 +141,89 @@ export default function Metodo() {
         </div>
       </section>
 
+      {/* Fundamento Científico */}
+      <section className="py-20 bg-white/95 backdrop-blur-sm" data-testid="scientific-foundation">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="text-center mb-16">
+              <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
+                Base Científica
+              </div>
+              <h2 className="text-4xl lg:text-6xl title-luxury gold-accent-prominent mb-6">
+                Fundamento del Método MAC
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto body-refined">
+                Nuestro enfoque se basa en investigación científica avanzada y 15 años de experiencia clínica
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <AnimatedSection delay={0.1}>
+              <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover-lift border border-gold-light/30 h-full">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-turquoise to-turquoise-medium rounded-full flex items-center justify-center mb-6 mx-auto">
+                    <Search className="text-white text-2xl" />
+                  </div>
+                  <h3 className="text-2xl title-luxury gold-accent-prominent mb-4">Medicina Basada en Evidencia</h3>
+                  <p className="text-muted-foreground body-refined leading-relaxed">
+                    Cada protocolo se fundamenta en estudios clínicos publicados en revistas médicas internacionales de prestigio.
+                  </p>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.2}>
+              <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover-lift border border-gold-light/30 h-full">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-gold-deep to-gold-light rounded-full flex items-center justify-center mb-6 mx-auto">
+                    <Users className="text-white text-2xl" />
+                  </div>
+                  <h3 className="text-2xl title-luxury gold-accent-prominent mb-4">Enfoque Multidisciplinario</h3>
+                  <p className="text-muted-foreground body-refined leading-relaxed">
+                    Integración de dermatología, medicina anti-aging, nutrición y psicología para resultados holísticos.
+                  </p>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.3}>
+              <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover-lift border border-gold-light/30 h-full">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-turquoise-medium to-gold-champagne rounded-full flex items-center justify-center mb-6 mx-auto">
+                    <TrendingUp className="text-white text-2xl" />
+                  </div>
+                  <h3 className="text-2xl title-luxury gold-accent-prominent mb-4">Tecnología Avanzada</h3>
+                  <p className="text-muted-foreground body-refined leading-relaxed">
+                    Equipos de última generación certificados FDA y CE para máxima seguridad y eficacia comprobada.
+                  </p>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* Method Phases Detail */}
-      <section className="py-20 bg-white" data-testid="method-phases">
+      <section className="py-20 bg-pearl/30 backdrop-blur-sm" data-testid="method-phases">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-20">
             {methodPhases.map((phase, index) => (
               <AnimatedSection key={phase.number} delay={index * 0.1}>
                 <div className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
                   <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                    <div className="flex items-center mb-6">
-                      <div className="w-16 h-16 bg-turquoise-light rounded-full flex items-center justify-center mr-4">
-                        <phase.icon className="text-white text-2xl" />
+                    <Card className="bg-white/90 backdrop-blur-sm shadow-lg border border-gold-light/30 p-8">
+                      <div className="flex items-center mb-6">
+                        <div className="w-20 h-20 bg-gradient-to-br from-turquoise to-turquoise-medium rounded-full flex items-center justify-center mr-6 shadow-lg">
+                          <phase.icon className="text-white text-3xl" />
+                        </div>
+                        <div className="text-4xl title-luxury gold-accent-prominent font-bold">{phase.number}</div>
                       </div>
-                      <div className="text-3xl font-title gold-accent font-semibold">{phase.number}</div>
-                    </div>
-                    
-                    <h2 className="text-3xl lg:text-4xl font-title text-foreground mb-4">{phase.title}</h2>
-                    <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                      {phase.description}
-                    </p>
+                      
+                      <h2 className="text-3xl lg:text-4xl title-luxury text-foreground mb-4">{phase.title}</h2>
+                      <p className="text-lg text-muted-foreground mb-6 body-refined leading-relaxed">
+                        {phase.description}
+                      </p>
                     
                     <div className="space-y-3 mb-6">
                       {phase.details.map((detail, detailIndex) => (
@@ -156,10 +234,11 @@ export default function Metodo() {
                       ))}
                     </div>
                     
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <Clock className="w-4 h-4 mr-2" />
-                      <span>Duración: {phase.duration}</span>
-                    </div>
+                      <div className="flex items-center text-sm text-muted-foreground">
+                        <Clock className="w-4 h-4 mr-2" />
+                        <span>Duración: {phase.duration}</span>
+                      </div>
+                    </Card>
                   </div>
                   
                   <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
@@ -178,15 +257,18 @@ export default function Metodo() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-pearl" data-testid="method-benefits">
+      <section className="py-20 bg-pearl/50 backdrop-blur-sm" data-testid="method-benefits">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-title gold-accent mb-6">
+              <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
+                Ventajas Exclusivas
+              </div>
+              <h2 className="text-4xl lg:text-6xl title-luxury gold-accent-prominent mb-6">
                 ¿Por qué elegir el Método MAC?
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Nuestro enfoque integral garantiza resultados excepcionales y duraderos.
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto body-refined">
+                Nuestro enfoque integral garantiza resultados excepcionales, seguros y duraderos con el respaldo de la ciencia.
               </p>
             </div>
           </AnimatedSection>
@@ -194,13 +276,13 @@ export default function Metodo() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <AnimatedSection key={benefit.title} delay={index * 0.1}>
-                <Card className="bg-white text-center h-full hover:shadow-lg transition-shadow duration-300" data-testid={`benefit-${index}`}>
+                <Card className="bg-white/90 backdrop-blur-sm text-center h-full hover-lift transition-all duration-300 shadow-lg border border-gold-light/30" data-testid={`benefit-${index}`}>
                   <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-turquoise-light rounded-full flex items-center justify-center mx-auto mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-turquoise to-turquoise-medium rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                       <benefit.icon className="text-white text-2xl" />
                     </div>
-                    <h3 className="text-xl font-subtitle font-semibold mb-4">{benefit.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+                    <h3 className="text-xl title-luxury gold-accent-prominent font-semibold mb-4">{benefit.title}</h3>
+                    <p className="text-muted-foreground body-refined leading-relaxed">{benefit.description}</p>
                   </CardContent>
                 </Card>
               </AnimatedSection>
@@ -210,15 +292,18 @@ export default function Metodo() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-20 bg-white" data-testid="method-timeline">
+      <section className="py-20 bg-white/95 backdrop-blur-sm" data-testid="method-timeline">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-title gold-accent mb-6">
+              <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
+                Cronograma Detallado
+              </div>
+              <h2 className="text-4xl lg:text-6xl title-luxury gold-accent-prominent mb-6">
                 Tu Cronograma de Transformación
               </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Desde la primera consulta hasta los resultados finales
+              <p className="text-xl text-muted-foreground body-refined leading-relaxed">
+                Un viaje estructurado desde la primera consulta hasta los resultados definitivos y su mantenimiento
               </p>
             </div>
           </AnimatedSection>
@@ -281,20 +366,37 @@ export default function Metodo() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-beige" data-testid="method-cta">
+      <section className="py-20 bg-gradient-to-br from-pearl to-beige backdrop-blur-sm" data-testid="method-cta">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
-            <h2 className="text-4xl lg:text-5xl font-title gold-accent mb-6">
+            <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
+              Primera Consulta Gratuita
+            </div>
+            <h2 className="text-4xl lg:text-6xl title-luxury gold-accent-prominent mb-6">
               Comienza tu transformación hoy
             </h2>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              La primera consulta es gratuita e incluye tu diagnóstico completo y propuesta personalizada.
+            <p className="text-xl text-muted-foreground mb-4 body-refined leading-relaxed">
+              La primera consulta es completamente gratuita e incluye tu diagnóstico integral 360° y propuesta personalizada.
             </p>
+            <div className="flex justify-center items-center space-x-6 mb-8 text-sm text-turquoise">
+              <div className="flex items-center">
+                <Clock className="w-4 h-4 mr-2" />
+                <span>90 minutos</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="w-4 h-4 mr-2" />
+                <span>Sin compromiso</span>
+              </div>
+              <div className="flex items-center">
+                <Award className="w-4 h-4 mr-2" />
+                <span>Valorado en 150€</span>
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contacto">
                 <Button 
                   size="lg" 
-                  className="bg-turquoise text-white border-2 border-gold-light hover:bg-gold-light hover:text-gold-deep transition-all duration-300 px-8 py-4 text-lg"
+                  className="bg-turquoise text-white border-2 border-gold-light hover:bg-gold-light hover:text-gold-deep button-premium transition-all duration-300 px-8 py-4 text-lg"
                   data-testid="button-method-cta-contact"
                 >
                   Agenda tu consulta gratuita
