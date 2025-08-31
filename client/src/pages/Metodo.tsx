@@ -110,7 +110,8 @@ export default function Metodo() {
         }
       ],
       benefit: "tu transformación se mantiene viva, adaptada y evolucionando contigo.",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+      image: whiteFacialMask,
+      video: "/public-objects/goata de agua.mp4"
     },
   ];
 
