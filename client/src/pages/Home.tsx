@@ -96,6 +96,7 @@ export default function Home() {
             if (fallbackDiv) fallbackDiv.style.display = 'block';
           }}
         >
+          <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124" type="video/mp4" />
           <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4" type="video/mp4" />
           <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.webm" type="video/webm" />
           <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mov" type="video/quicktime" />
