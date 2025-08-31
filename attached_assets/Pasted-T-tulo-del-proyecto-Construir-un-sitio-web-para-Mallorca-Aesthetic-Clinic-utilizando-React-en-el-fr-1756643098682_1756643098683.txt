@@ -1,0 +1,81 @@
+Título del proyecto:
+Construir un sitio web para Mallorca Aesthetic Clinic utilizando React en el frontend y Supabase como backend para datos dinámicos.
+
+Objetivo y estilo:
+Queremos una web elegante y moderna que transmita el concepto “El Arte de Ganar Tiempo”. Usa una paleta sobria basada en tonos perla y beige con acentos en turquesa suave (HEX #008578); reserva el dorado solo para pequeños detalles. Emplea fuentes Cormorant Garamond para títulos, Orpheus Pro para subtítulos y Gotham Light para el cuerpo de texto. La navegación debe ser fluida, con animaciones suaves al hacer scroll.
+
+Estructura y rutas de la aplicación:
+
+Página de inicio (/)
+
+Hero con imagen o vídeo e hilo narrativo: incluye el eslogan “El Arte de Ganar Tiempo” y un botón “Reserva tu cita”.
+
+Sección sobre la doctora Liliana Ocampo y el concepto de well‑aging integral.
+
+Resumen de las cuatro fases del Método MAC con tarjetas informativas.
+
+Galería de testimonios en vídeo e imágenes before & after.
+
+Bloque de credibilidad (“18 años de experiencia, +10 000 pacientes”) y CTA.
+
+Mapa o miniatura con las ubicaciones y horario de las clínicas.
+
+Página “Método” (/metodo)
+
+Explicación detallada de las cuatro fases del Método MAC: Diagnóstico 360°, Plan Personalizado, Acción Integrada y Seguimiento Estratégico.
+
+Utiliza componentes separados para cada fase con iconos o ilustraciones.
+
+Añade un CTA para agendar consulta.
+
+Página “Tratamientos” (/tratamientos)
+
+Lista de tratamientos divididos en categorías (estética facial, corporal, cirugía, nutrición, well‑aging).
+
+Cada tratamiento debe ser un componente con descripción, beneficios y posibilidad de solicitar más información.
+
+Página “Nuestra historia” (/nosotros)
+
+Historia de la clínica, filosofía y valores.
+
+Presentación del equipo médico con fotos y especialidades.
+
+Blog (/blog)
+
+Muestra los artículos recuperados de Supabase (tabla posts) ordenados por fecha.
+
+Cada artículo tiene título, imagen, extracto y un enlace a su vista completa (/blog/:slug).
+
+Página de contacto (/contacto)
+
+Formulario con campos: nombre, edad, email, teléfono, tratamiento de interés, fecha y hora preferida.
+
+El formulario debe validar la entrada y al enviar, guardar los datos en Supabase (tabla contact_requests).
+
+Incluir botón para contactar por WhatsApp y mostrar direcciones y horarios de las sedes.
+
+Requisitos técnicos:
+
+Crear el proyecto con Create React App o Next.js. Organiza la UI en componentes reutilizables (Navbar, Footer, Card, Testimonial, etc.).
+
+Instalar e integrar @supabase/supabase-js para conectar con la base de datos Supabase. Configura tablas como contact_requests, posts, testimonials y locations.
+
+Las imágenes, vídeos y contenidos que se cargan desde Supabase deben mostrarse de forma dinámica en la web.
+
+Los formularios deben tener validación en tiempo real y gestionar el estado con React Hook Form o similar.
+
+Implementar enrutado con React Router (o la API de rutas de Next.js).
+
+Asegurar que el diseño sea responsive y accesible, con buenos contrastes y etiquetas ARIA.
+
+Extras opcionales:
+
+Añadir autenticación de usuario mediante Supabase Auth si se necesitan áreas privadas (por ejemplo, para pacientes o administradores).
+
+Implementar un panel de administración simple en React (o usar Supabase Dashboard) para gestionar posts, testimonios y citas.
+
+Incluir animaciones sutiles con Framer Motion para mejorar la experiencia.
+
+Tono y narrativa:
+
+Mantén un lenguaje aspiracional y cercano que refleje la idea de que cada tratamiento es una obra de arte personalizada. Los mensajes deben invitar al usuario a “reescribir su tiempo y vivir su esencia”, enfatizando la combinación de ciencia, estética y bienestar integral
