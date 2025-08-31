@@ -102,8 +102,9 @@ export default function Home() {
           preload="auto"
         />
         
-        {/* Pearl Overlay for luxury text contrast */}
-        <div className="absolute inset-0 video-overlay-pearl"></div>
+        {/* Enhanced overlays for better text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-transparent"></div>
+        <div className="absolute inset-x-0 top-0 h-[40%] bg-gradient-to-b from-pearl/40 to-transparent"></div>
       </div>
 
       {/* Hero Section */}
@@ -119,7 +120,8 @@ export default function Home() {
                   data-testid="hero-mac-logo"
                 />
               </div>
-              <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6">
+              <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6 relative">
+                <span className="absolute inset-0 bg-pearl/85 blur-xl -z-10 rounded-lg"></span>
                 Medicina estética<br />
                 avanzada con<br />
                 visión integral
@@ -131,7 +133,7 @@ export default function Home() {
                 <Link href="/contacto">
                   <Button 
                     size="lg" 
-                    className="cta-enhanced text-white hover:text-gold-deep px-8 py-3 text-base font-semibold rounded-none uppercase tracking-wider"
+                    className="cta-enhanced text-white hover:text-gold-deep px-12 py-6 text-lg font-semibold rounded-none uppercase tracking-wider shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 animate-pulse-subtle"
                     data-testid="button-hero-reserva"
                   >
                     Reserva tu cita
