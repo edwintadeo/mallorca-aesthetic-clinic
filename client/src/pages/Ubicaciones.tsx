@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 import { MapPin, Phone, Clock, Mail } from "lucide-react";
+import LazyImage from "@/components/UI/LazyImage";
 
 // Import location images from assets
 import spaImage1 from "@assets/vecteezy_beautiful-girl-in-spa-salon_27003157_1756656467761.jpg";
@@ -91,10 +92,12 @@ export default function Ubicaciones() {
               <AnimatedSection key={location.id} delay={index * 0.2}>
                 <Card className="overflow-hidden hover:shadow-xl transition-all duration-300" data-testid={`location-${index}`}>
                   <div className="relative">
-                    <img 
+                    <LazyImage 
                       src={location.imageUrl}
                       alt={location.name}
                       className="w-full h-64 object-cover"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-black/20"></div>
                   </div>

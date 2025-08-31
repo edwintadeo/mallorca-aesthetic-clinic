@@ -6,6 +6,11 @@ interface LazyImageProps {
   className?: string;
   placeholderClassName?: string;
   onLoad?: () => void;
+  srcSet?: string;
+  sizes?: string;
+  width?: number;
+  height?: number;
+  loading?: 'lazy' | 'eager';
 }
 
 export default function LazyImage({ 
@@ -13,7 +18,12 @@ export default function LazyImage({
   alt, 
   className = "", 
   placeholderClassName = "bg-gray-200 animate-pulse",
-  onLoad 
+  onLoad,
+  srcSet,
+  sizes,
+  width,
+  height,
+  loading = "lazy"
 }: LazyImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -51,12 +61,17 @@ export default function LazyImage({
         <img
           src={src}
           alt={alt}
+          srcSet={srcSet}
+          sizes={sizes}
+          width={width}
+          height={height}
           className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}
           onLoad={() => {
             setIsLoaded(true);
             onLoad?.();
           }}
-          loading="lazy"
+          loading={loading}
+          decoding="async"
         />
       )}
     </div>

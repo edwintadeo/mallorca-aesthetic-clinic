@@ -176,10 +176,12 @@ export default function Tratamientos() {
                 <AnimatedSection key={treatment.id} delay={index * 0.1}>
                   <Card className="group overflow-hidden bg-white/80 backdrop-blur-sm hover:shadow-xl hover-lift transition-all duration-300 h-full border border-gold-light/30" data-testid={`featured-treatment-${index}`}>
                     <div className="relative">
-                      <img 
+                      <LazyImage 
                         src={treatment.imageUrl}
                         alt={treatment.name}
                         className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        loading="lazy"
                       />
                       <Badge className="absolute top-4 left-4 bg-gold-light text-gold-deep">
                         Destacado

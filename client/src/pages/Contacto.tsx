@@ -224,6 +224,8 @@ export default function Contacto() {
                                 placeholder="Tu nombre completo" 
                                 {...field} 
                                 data-testid="input-name"
+                                aria-label="Nombre y apellidos"
+                                aria-required="true"
                               />
                             </FormControl>
                             <FormMessage />
@@ -244,6 +246,10 @@ export default function Contacto() {
                                 {...field}
                                 onChange={(e) => field.onChange(e.target.value ? parseInt(e.target.value) : undefined)}
                                 data-testid="input-age"
+                                aria-label="Edad"
+                                aria-required="true"
+                                min="18"
+                                max="120"
                               />
                             </FormControl>
                             <FormMessage />
