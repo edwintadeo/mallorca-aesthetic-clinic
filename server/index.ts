@@ -6,6 +6,23 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Cache control for static assets
+app.use((req, res, next) => {
+  // Set cache headers for static assets
+  if (req.path.match(/\.(js|css|ico|jpg|jpeg|png|gif|svg|woff|woff2|ttf|eot)$/)) {
+    res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+  } else if (req.path.match(/\.(html)$/)) {
+    res.setHeader('Cache-Control', 'no-cache');
+  }
+  
+  // Security headers
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'DENY');
+  res.setHeader('X-XSS-Protection', '1; mode=block');
+  
+  next();
+});
+
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;

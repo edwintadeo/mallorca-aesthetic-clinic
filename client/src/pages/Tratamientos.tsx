@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 import SkeletonCard from "@/components/UI/SkeletonCard";
+import LazyImage from "@/components/UI/LazyImage";
 import { Link } from "wouter";
 import { useState } from "react";
 
@@ -255,7 +256,7 @@ export default function Tratamientos() {
               {filteredTreatments.map((treatment: any, index: number) => (
                 <AnimatedSection key={treatment.id} delay={index * 0.1}>
                   <Card className="h-full bg-white/80 backdrop-blur-sm hover:shadow-xl hover-lift transition-all duration-300 border border-gold-light/30" data-testid={`treatment-${treatment.id}`}>
-                    <img 
+                    <LazyImage
                       src={treatment.imageUrl}
                       alt={treatment.name}
                       className="w-full h-48 object-cover rounded-t-lg"
