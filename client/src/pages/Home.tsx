@@ -381,16 +381,63 @@ export default function Home() {
       <section className="py-20 bg-white/90 backdrop-blur-sm relative z-[1]" data-testid="treatments-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="text-center mb-16">
-              <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
-                Nuestros Servicios
+            <div className="text-left max-w-4xl mb-16">
+              <div className="text-sm uppercase tracking-wider text-muted-foreground font-medium mb-6">
+                Nuestros tratamientos
               </div>
-              <h2 className="text-4xl lg:text-6xl font-title gold-accent mb-6">
-                Tratamientos
+              
+              <h2 className="text-4xl lg:text-6xl font-title text-foreground mb-8 leading-tight">
+                Tratamientos que combinan ciencia, estética y bienestar
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Tecnología de vanguardia y técnicas artesanales para resultados naturales excepcionales.
-              </p>
+              
+              <div className="space-y-8 mb-10">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  En MAC no ofrecemos servicios aislados, sino experiencias diseñadas con precisión médica y 
+                  belleza natural. Cada tratamiento es una pincelada en tu obra maestra personal.
+                </p>
+                
+                <div>
+                  <p className="text-lg text-foreground mb-6 font-medium">
+                    Algunos de nuestros tratamientos estrella:
+                  </p>
+                  
+                  <ul className="space-y-4 text-foreground/80">
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-turquoise rounded-full mt-2 mr-4 flex-shrink-0"></span>
+                      <div>
+                        <strong>Armonización facial natural</strong> (neuromoduladores y rellenos de última generación)
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-turquoise rounded-full mt-2 mr-4 flex-shrink-0"></span>
+                      <div>
+                        <strong>Bioestimulación regenerativa</strong> con factores de crecimiento
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-turquoise rounded-full mt-2 mr-4 flex-shrink-0"></span>
+                      <div>
+                        <strong>Protocolos de well-aging</strong> hormonal y nutricional
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-turquoise rounded-full mt-2 mr-4 flex-shrink-0"></span>
+                      <div>
+                        Terapias integradas de <strong>mindfulness, coaching emocional y suplementación</strong>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <Link href="/tratamientos">
+                <Button 
+                  className="bg-gold-light text-gold-deep hover:bg-gold-deep hover:text-white px-10 py-3 text-base font-medium rounded-none uppercase tracking-wider transition-all duration-300"
+                  data-testid="button-treatments-discover"
+                >
+                  Descubre Nuestros Tratamientos
+                </Button>
+              </Link>
             </div>
           </AnimatedSection>
 
