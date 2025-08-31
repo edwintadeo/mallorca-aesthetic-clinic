@@ -777,41 +777,29 @@ export default function Home() {
       <NewsletterSection />
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-black text-white relative z-[1]" data-testid="final-cta-section">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-white relative z-[1]" data-testid="final-cta-section">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="text-center mb-12">
-              <div className="text-sm uppercase tracking-wider text-white/70 font-medium mb-8">
-                'El arte de ganar tiempo'
+            <div className="text-center">
+              <div className="text-sm uppercase tracking-wider text-muted-foreground font-medium mb-8">
+                Comienza tu obra maestra
               </div>
               
-              <blockquote className="text-2xl lg:text-4xl font-title text-gold-light leading-tight mb-12">
-                "No se trata de cambiar quién eres, sino de revelar lo mejor que ya vive en ti. 
-                Cada tratamiento es una obra de arte hecha con ciencia, respeto y propósito."
-              </blockquote>
-            </div>
-            
-            <div className="mb-12">
-              <p className="text-base lg:text-lg text-white/90 uppercase tracking-wide mb-6 font-medium">
-                CON UNA TRAYECTORIA DE MÁS DE 18 AÑOS EN MEDICINA ESTÉTICA AVANZADA, LA DRA. LILIANA 
-                OCAMPO HA DESARROLLADO UN ENFOQUE ÚNICO QUE VA MÁS ALLÁ DE LO SUPERFICIAL.
+              <h2 className="text-4xl lg:text-6xl font-title text-foreground leading-tight mb-8">
+                Reescribe el tiempo. Vive tu esencia.
+              </h2>
+              
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-12">
+                Tu cuerpo, tu salud y tu belleza merecen un enfoque que respete quién eres y potencie lo mejor de ti.
               </p>
               
-              <p className="text-lg text-white/80 leading-relaxed max-w-4xl mx-auto">
-                Su experiencia clínica, junto con un equipo multidisciplinario de médicos, nutricionistas y terapeutas, 
-                ha permitido a miles de personas experimentar resultados visibles y sostenibles que honran su autenticidad.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <Link href="/nosotros">
+              <Link href="/contacto">
                 <Button 
-                  variant="outline"
                   size="lg" 
-                  className="border-2 border-white text-white hover:bg-white hover:text-black px-12 py-4 text-base font-medium rounded-none uppercase tracking-wider transition-all duration-300"
-                  data-testid="button-final-cta-team"
+                  className="bg-foreground text-white hover:bg-foreground/90 px-12 py-4 text-base font-medium rounded-none uppercase tracking-wider transition-all duration-300"
+                  data-testid="button-final-cta-contact"
                 >
-                  Ver el Equipo Médico
+                  Agenda tu Consulta Personalizada
                 </Button>
               </Link>
             </div>
