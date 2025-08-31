@@ -229,6 +229,78 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Pilares de la Clínica */}
+      <section className="py-20 bg-pearl/50 backdrop-blur-sm relative z-[1]" data-testid="pilares-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="text-center mb-16">
+              <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
+                Nuestros Fundamentos
+              </div>
+              <h2 className="text-4xl lg:text-6xl title-luxury gold-accent-prominent mb-6">
+                Pilares de MAC
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto body-refined">
+                Tres pilares fundamentales que definen nuestra filosofía y garantizan resultados excepcionales
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <AnimatedSection delay={0.1}>
+              <Card className="bg-white/80 backdrop-blur-sm hover:shadow-xl hover-lift transition-all duration-300 h-full border border-gold-light/30" data-testid="pilar-belleza">
+                <CardContent className="p-8 text-center">
+                  <div className="w-20 h-20 bg-gradient-to-br from-turquoise to-turquoise-medium rounded-full flex items-center justify-center mb-6 mx-auto">
+                    <Star className="text-white text-3xl fill-current" />
+                  </div>
+                  <h3 className="text-2xl title-luxury gold-accent-prominent mb-4">
+                    Belleza que Refleja tu Verdad
+                  </h3>
+                  <p className="text-muted-foreground body-refined leading-relaxed">
+                    No creamos belleza artificial, sino que revelamos y potenciamos tu autenticidad natural. 
+                    Cada tratamiento respeta tu esencia única mientras optimiza tu potencial estético.
+                  </p>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.2}>
+              <Card className="bg-white/80 backdrop-blur-sm hover:shadow-xl hover-lift transition-all duration-300 h-full border border-gold-light/30" data-testid="pilar-salud">
+                <CardContent className="p-8 text-center">
+                  <div className="w-20 h-20 bg-gradient-to-br from-gold-deep to-gold-light rounded-full flex items-center justify-center mb-6 mx-auto">
+                    <TrendingUp className="text-white text-3xl" />
+                  </div>
+                  <h3 className="text-2xl title-luxury gold-accent-prominent mb-4">
+                    Salud Integral como Base
+                  </h3>
+                  <p className="text-muted-foreground body-refined leading-relaxed">
+                    La verdadera belleza nace de la salud óptima. Nuestro enfoque holístico aborda factores internos, 
+                    hormonales y nutricionales para resultados duraderos y naturales.
+                  </p>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.3}>
+              <Card className="bg-white/80 backdrop-blur-sm hover:shadow-xl hover-lift transition-all duration-300 h-full border border-gold-light/30" data-testid="pilar-bienestar">
+                <CardContent className="p-8 text-center">
+                  <div className="w-20 h-20 bg-gradient-to-br from-turquoise-medium to-gold-champagne rounded-full flex items-center justify-center mb-6 mx-auto">
+                    <Search className="text-white text-3xl" />
+                  </div>
+                  <h3 className="text-2xl title-luxury gold-accent-prominent mb-4">
+                    Bienestar Emocional Sostenido
+                  </h3>
+                  <p className="text-muted-foreground body-refined leading-relaxed">
+                    Entendemos que la transformación física va acompañada de un crecimiento emocional. 
+                    Cuidamos tu bienestar mental como parte integral del proceso.
+                  </p>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* Method Section */}
       <section className="py-20 bg-transparent relative z-[1]" data-testid="method-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -334,173 +406,300 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 bg-transparent relative z-[1]" data-testid="testimonials-section">
+      {/* Testimonials & Before/After Section */}
+      <section className="py-20 bg-white/95 backdrop-blur-sm relative z-[1]" data-testid="testimonials-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
-              <div className="text-sm uppercase tracking-wider text-white font-medium mb-4 drop-shadow-lg">
-                Historias Reales
+              <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
+                Historias Reales de Transformación
               </div>
-              <h2 className="text-4xl lg:text-6xl font-title text-gold-light mb-6 drop-shadow-lg">
-                Testimonios
+              <h2 className="text-4xl lg:text-6xl title-luxury gold-accent-prominent mb-6">
+                Testimonios & Resultados
               </h2>
-              <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
-                Transformaciones auténticas de pacientes que han vivido la experiencia MAC.
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto body-refined">
+                Más de 10,000 pacientes han experimentado transformaciones auténticas con el Método MAC
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials && Array.isArray(testimonials) && testimonials.length > 0 ? (
-              testimonials.slice(0, 3).map((testimonial: any, index: number) => (
-                <AnimatedSection key={testimonial.id} delay={index * 0.1}>
-                  <Card className="bg-white shadow-lg h-full" data-testid={`testimonial-${index}`}>
-                    <CardContent className="p-8">
-                      <div className="flex items-center mb-6">
-                        <img 
-                          src={testimonial.imageUrl || "https://images.unsplash.com/photo-1494790108755-2616b612b589?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"}
-                          alt={testimonial.name}
-                          className="w-16 h-16 rounded-full object-cover mr-4"
-                        />
-                        <div>
-                          <h4 className="font-subtitle font-semibold">{testimonial.name}</h4>
-                          <div className="text-sm text-muted-foreground">{testimonial.treatment}</div>
+          {/* Testimonios en formato carrusel premium */}
+          <div className="grid lg:grid-cols-2 gap-12 mb-16">
+            <AnimatedSection delay={0.1}>
+              <div className="space-y-8">
+                <h3 className="text-2xl title-luxury text-center mb-8">Experiencias Reales</h3>
+                {testimonials && Array.isArray(testimonials) && testimonials.length > 0 ? (
+                  testimonials.slice(0, 2).map((testimonial: any, index: number) => (
+                    <Card key={testimonial.id} className="bg-white/80 backdrop-blur-sm shadow-lg hover-lift border border-gold-light/30" data-testid={`testimonial-featured-${index}`}>
+                      <CardContent className="p-8">
+                        <div className="flex items-start space-x-4 mb-6">
+                          <img 
+                            src={testimonial.imageUrl || perfectSkinPortrait}
+                            alt={testimonial.name}
+                            className="w-20 h-20 rounded-full object-cover border-2 border-gold-light"
+                          />
+                          <div className="flex-1">
+                            <h4 className="font-subtitle font-semibold text-lg">{testimonial.name}</h4>
+                            <div className="text-sm text-turquoise mb-2">{testimonial.treatment}</div>
+                            <div className="flex text-gold-light mb-2">
+                              {[...Array(testimonial.rating)].map((_, i) => (
+                                <Star key={i} className="w-4 h-4 fill-current" />
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                        <blockquote className="text-foreground/80 leading-relaxed italic text-lg border-l-4 border-turquoise pl-4">
+                          "{testimonial.comment}"
+                        </blockquote>
+                      </CardContent>
+                    </Card>
+                  ))
+                ) : (
+                  <div className="text-center py-8">
+                    <Card className="bg-white/80 backdrop-blur-sm shadow-lg">
+                      <CardContent className="p-8">
+                        <div className="flex items-start space-x-4 mb-6">
+                          <img 
+                            src={perfectSkinPortrait}
+                            alt="Carmen M."
+                            className="w-20 h-20 rounded-full object-cover border-2 border-gold-light"
+                          />
+                          <div className="flex-1">
+                            <h4 className="font-subtitle font-semibold text-lg">Carmen M.</h4>
+                            <div className="text-sm text-turquoise mb-2">Método MAC Completo</div>
+                            <div className="flex text-gold-light mb-2">
+                              {[...Array(5)].map((_, i) => (
+                                <Star key={i} className="w-4 h-4 fill-current" />
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                        <blockquote className="text-foreground/80 leading-relaxed italic text-lg border-l-4 border-turquoise pl-4">
+                          "En MAC no solo transformaron mi apariencia, sino que me devolvieron la confianza. El Método MAC es revolucionario: resultados naturales que perduran en el tiempo."
+                        </blockquote>
+                      </CardContent>
+                    </Card>
+                  </div>
+                )}
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.2}>
+              <div className="space-y-8">
+                <h3 className="text-2xl title-luxury text-center mb-8">Transformaciones Visibles</h3>
+                <div className="grid grid-cols-1 gap-6">
+                  <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover-lift border border-gold-light/30" data-testid="before-after-1">
+                    <CardContent className="p-6">
+                      <div className="grid grid-cols-2 gap-4 mb-4">
+                        <div className="text-center">
+                          <img 
+                            src={facialMaskTreatment}
+                            alt="Antes del tratamiento"
+                            className="w-full h-32 object-cover rounded-lg"
+                          />
+                          <p className="text-sm text-muted-foreground mt-2">Antes</p>
+                        </div>
+                        <div className="text-center">
+                          <img 
+                            src={perfectSkinPortrait}
+                            alt="Después del tratamiento"
+                            className="w-full h-32 object-cover rounded-lg"
+                          />
+                          <p className="text-sm text-turquoise mt-2 font-medium">Después - 90 días</p>
                         </div>
                       </div>
-                      <div className="mb-4">
-                        <div className="flex text-gold-light mb-2">
-                          {[...Array(testimonial.rating)].map((_, i) => (
-                            <Star key={i} className="w-4 h-4 fill-current" />
-                          ))}
-                        </div>
+                      <div className="text-center">
+                        <h4 className="font-subtitle font-semibold mb-1">Rejuvenecimiento Facial</h4>
+                        <p className="text-sm text-muted-foreground">Método MAC + Bioestimuladores</p>
                       </div>
-                      <p className="text-foreground/80 leading-relaxed italic">
-                        "{testimonial.comment}"
-                      </p>
                     </CardContent>
                   </Card>
-                </AnimatedSection>
-              ))
-            ) : (
-              // Fallback when no testimonials are loaded
-              <div className="col-span-full text-center py-12">
-                <p className="text-muted-foreground">Los testimonios se cargan desde la base de datos.</p>
+
+                  <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover-lift border border-gold-light/30" data-testid="before-after-2">
+                    <CardContent className="p-6">
+                      <div className="grid grid-cols-2 gap-4 mb-4">
+                        <div className="text-center">
+                          <img 
+                            src={whiteFacialMask}
+                            alt="Antes del tratamiento"
+                            className="w-full h-32 object-cover rounded-lg"
+                          />
+                          <p className="text-sm text-muted-foreground mt-2">Antes</p>
+                        </div>
+                        <div className="text-center">
+                          <img 
+                            src={spaDeviceTreatment}
+                            alt="Después del tratamiento"
+                            className="w-full h-32 object-cover rounded-lg"
+                          />
+                          <p className="text-sm text-turquoise mt-2 font-medium">Después - 90 días</p>
+                        </div>
+                      </div>
+                      <div className="text-center">
+                        <h4 className="font-subtitle font-semibold mb-1">Well-Aging Integral</h4>
+                        <p className="text-sm text-muted-foreground">Método MAC + Optimización Hormonal</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
               </div>
-            )}
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
-      {/* Locations Section */}
-      <section className="py-20 bg-transparent relative z-[1]" data-testid="locations-section">
+      {/* Mini-Mapa de Ubicaciones */}
+      <section className="py-20 bg-pearl/50 backdrop-blur-sm relative z-[1]" data-testid="locations-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
-              <div className="text-sm uppercase tracking-wider text-white font-medium mb-4 drop-shadow-lg">
-                Nuestras Sedes
+              <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
+                Nuestras Clínicas
               </div>
-              <h2 className="text-4xl lg:text-6xl font-title text-gold-light mb-6 drop-shadow-lg">
-                Ubicaciones
+              <h2 className="text-4xl lg:text-6xl title-luxury gold-accent-prominent mb-6">
+                Ubicaciones Premium
               </h2>
-              <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
-                Espacios diseñados para tu comodidad y bienestar en las mejores zonas de Mallorca.
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto body-refined">
+                Tres espacios exclusivos diseñados para ofrecerte la máxima comodidad y privacidad en Mallorca
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            {locations && Array.isArray(locations) && locations.length > 0 ? (
-              locations.map((location: any, index: number) => (
-                <AnimatedSection key={location.id} delay={index * 0.2}>
-                  <Card className="bg-white overflow-hidden shadow-lg" data-testid={`location-${index}`}>
-                    <img 
-                      src={location.imageUrl || (index === 0 ? 
-                        "https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=300" :
-                        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=300"
-                      )}
-                      alt={location.name}
-                      className="w-full h-48 object-cover"
-                    />
-                    <CardContent className="p-8">
-                      <h3 className="text-2xl font-title gold-accent font-semibold mb-4">{location.name}</h3>
-                      <div className="space-y-3 text-foreground/80">
-                        <div className="flex items-center">
-                          <i className="fas fa-map-marker-alt text-turquoise mr-3"></i>
-                          <span>{location.address}</span>
-                        </div>
-                        <div className="flex items-center">
-                          <i className="fas fa-clock text-turquoise mr-3"></i>
-                          <span>{location.hours}</span>
-                        </div>
-                        <div className="flex items-center">
-                          <i className="fas fa-phone text-turquoise mr-3"></i>
-                          <span>{location.phone}</span>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </AnimatedSection>
-              ))
-            ) : (
-              // Fallback locations
-              <>
-                <AnimatedSection>
-                  <Card className="bg-white overflow-hidden shadow-lg" data-testid="location-palma">
-                    <img 
-                      src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=300"
-                      alt="MAC Palma Centro"
-                      className="w-full h-48 object-cover"
-                    />
-                    <CardContent className="p-8">
-                      <h3 className="text-2xl font-title gold-accent font-semibold mb-4">MAC Palma Centro</h3>
-                      <div className="space-y-3 text-foreground/80">
-                        <div className="flex items-center">
-                          <i className="fas fa-map-marker-alt text-turquoise mr-3"></i>
-                          <span>Passeig del Born, 15, 07012 Palma</span>
-                        </div>
-                        <div className="flex items-center">
-                          <i className="fas fa-clock text-turquoise mr-3"></i>
-                          <span>Lun-Vie: 9:00-19:00 | Sáb: 9:00-14:00</span>
-                        </div>
-                        <div className="flex items-center">
-                          <i className="fas fa-phone text-turquoise mr-3"></i>
-                          <span>+34 971 123 456</span>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </AnimatedSection>
+          <div className="grid lg:grid-cols-3 gap-8 mb-12">
+            <AnimatedSection delay={0.1}>
+              <Card className="bg-white/90 backdrop-blur-sm shadow-lg hover-lift transition-all duration-300 h-full border border-gold-light/30" data-testid="location-palma">
+                <CardContent className="p-8">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-turquoise to-turquoise-medium rounded-full flex items-center justify-center mb-4 mx-auto">
+                      <TrendingUp className="text-white text-2xl" />
+                    </div>
+                    <h3 className="text-2xl title-luxury gold-accent-prominent mb-2">MAC Palma Centro</h3>
+                    <div className="text-sm text-turquoise uppercase tracking-wide mb-4">Sede Principal</div>
+                  </div>
+                  
+                  <div className="space-y-3 text-center">
+                    <div>
+                      <p className="font-medium text-foreground">Passeig del Born, 15</p>
+                      <p className="text-sm text-muted-foreground">Centre, 07012 Palma</p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-turquoise">+34 660 938 585</p>
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      <p>Lun - Vie: 10:00h - 18:00h</p>
+                      <p>Sáb - Dom: Cerrado</p>
+                    </div>
+                  </div>
 
-                <AnimatedSection delay={0.2}>
-                  <Card className="bg-white overflow-hidden shadow-lg" data-testid="location-portals">
-                    <img 
-                      src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=300"
-                      alt="MAC Puerto Portals"
-                      className="w-full h-48 object-cover"
-                    />
-                    <CardContent className="p-8">
-                      <h3 className="text-2xl font-title gold-accent font-semibold mb-4">MAC Puerto Portals</h3>
-                      <div className="space-y-3 text-foreground/80">
-                        <div className="flex items-center">
-                          <i className="fas fa-map-marker-alt text-turquoise mr-3"></i>
-                          <span>Local 45, Puerto Portals, 07181 Calvià</span>
-                        </div>
-                        <div className="flex items-center">
-                          <i className="fas fa-clock text-turquoise mr-3"></i>
-                          <span>Lun-Vie: 10:00-20:00 | Sáb: 10:00-15:00</span>
-                        </div>
-                        <div className="flex items-center">
-                          <i className="fas fa-phone text-turquoise mr-3"></i>
-                          <span>+34 971 654 321</span>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </AnimatedSection>
-              </>
-            )}
+                  <div className="mt-6 pt-6 border-t border-gold-light/30">
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Ubicación céntrica en el corazón histórico de Palma. Instalaciones de última generación.
+                    </p>
+                    <Link href="/ubicaciones">
+                      <Button className="w-full bg-turquoise hover:bg-turquoise-medium text-white button-premium" data-testid="button-location-palma">
+                        Ver detalles
+                      </Button>
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.2}>
+              <Card className="bg-white/90 backdrop-blur-sm shadow-lg hover-lift transition-all duration-300 h-full border border-gold-light/30" data-testid="location-cala-millor">
+                <CardContent className="p-8">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-gold-deep to-gold-light rounded-full flex items-center justify-center mb-4 mx-auto">
+                      <Search className="text-white text-2xl" />
+                    </div>
+                    <h3 className="text-2xl title-luxury gold-accent-prominent mb-2">MAC Cala Millor</h3>
+                    <div className="text-sm text-turquoise uppercase tracking-wide mb-4">Costa Este</div>
+                  </div>
+                  
+                  <div className="space-y-3 text-center">
+                    <div>
+                      <p className="font-medium text-foreground">Carrer Sol Naixent, 24</p>
+                      <p className="text-sm text-muted-foreground">Cala Millor</p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-turquoise">+34 638 617 650</p>
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      <p>Lun - Vie: 10:00h - 18:00h</p>
+                      <p>Sáb - Dom: Cerrado</p>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 pt-6 border-t border-gold-light/30">
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Clínica costera especializada en tratamientos de rejuvenecimiento corporal y facial.
+                    </p>
+                    <Link href="/ubicaciones">
+                      <Button className="w-full bg-turquoise hover:bg-turquoise-medium text-white button-premium" data-testid="button-location-cala-millor">
+                        Ver detalles
+                      </Button>
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.3}>
+              <Card className="bg-white/90 backdrop-blur-sm shadow-lg hover-lift transition-all duration-300 h-full border border-gold-light/30" data-testid="location-manacor">
+                <CardContent className="p-8">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-turquoise-medium to-gold-champagne rounded-full flex items-center justify-center mb-4 mx-auto">
+                      <Star className="text-white text-2xl fill-current" />
+                    </div>
+                    <h3 className="text-2xl title-luxury gold-accent-prominent mb-2">MAC Manacor</h3>
+                    <div className="text-sm text-turquoise uppercase tracking-wide mb-4">Rafa Nadal Club</div>
+                  </div>
+                  
+                  <div className="space-y-3 text-center">
+                    <div>
+                      <p className="font-medium text-foreground">Rafa Nadal Club</p>
+                      <p className="text-sm text-muted-foreground">Manacor</p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-turquoise">+34 619 392 675</p>
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      <p>Lun - Vie: 10:00h - 18:00h</p>
+                      <p>Sáb - Dom: Cerrado</p>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 pt-6 border-t border-gold-light/30">
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Entorno deportivo de élite. Programas de well-aging integrados con actividad física.
+                    </p>
+                    <Link href="/ubicaciones">
+                      <Button className="w-full bg-turquoise hover:bg-turquoise-medium text-white button-premium" data-testid="button-location-manacor">
+                        Ver detalles
+                      </Button>
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
           </div>
+
+          <AnimatedSection delay={0.4}>
+            <div className="text-center bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-gold-light/30">
+              <h3 className="text-2xl title-luxury gold-accent-prominent mb-4">Información General</h3>
+              <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div>
+                  <h4 className="font-semibold text-turquoise mb-2">Centralita General</h4>
+                  <p className="text-muted-foreground">+34 971 76 37 87</p>
+                  <p className="text-muted-foreground">+34 620 44 92 71</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-turquoise mb-2">Email General</h4>
+                  <p className="text-muted-foreground">mallorcaaestheticc@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
