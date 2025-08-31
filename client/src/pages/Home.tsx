@@ -85,22 +85,23 @@ export default function Home() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
           data-testid="video-background"
-          onLoadStart={() => console.log("Video started loading")}
-          onCanPlay={() => console.log("Video can play")}
+          onLoadStart={() => console.log("Video started loading from:", "/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4")}
+          onCanPlay={() => console.log("Video can play successfully")}
+          onLoadedData={() => console.log("Video data loaded")}
           onError={(e) => {
             console.error("Error loading background video:", e);
-            console.log("Trying alternative paths...");
+            console.log("Video source:", e.currentTarget.currentSrc);
+            console.log("Network state:", e.currentTarget.networkState);
+            console.log("Ready state:", e.currentTarget.readyState);
             // Si el video no carga, mostrar imagen de respaldo
             e.currentTarget.style.display = 'none';
             const fallbackDiv = e.currentTarget.nextElementSibling;
             if (fallbackDiv) fallbackDiv.style.display = 'block';
           }}
         >
-          <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124" type="video/mp4" />
           <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4" type="video/mp4" />
-          <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.webm" type="video/webm" />
-          <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mov" type="video/quicktime" />
-          <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.avi" type="video/avi" />
+          <source src="/public-objects/public/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4" type="video/mp4" />
+          <source src="/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4" type="video/mp4" />
         </video>
         
         {/* Imagen de respaldo si el video no carga */}
