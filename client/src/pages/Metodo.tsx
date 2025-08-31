@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import AnimatedSection from "@/components/UI/AnimatedSection";
+import { LazyVideo } from "@/components/UI/LazyVideo";
 import { Link } from "wouter";
 import { Search, ClipboardList, Wand2, TrendingUp, CheckCircle, Clock, Users, Award } from "lucide-react";
 
@@ -192,18 +193,14 @@ export default function Metodo() {
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                   <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
                     {(index === 0 || phase.video) ? (
-                      <video 
-                        className="rounded-2xl shadow-lg w-full h-auto object-cover hover-lift transition-all duration-300"
-                        autoPlay 
-                        muted 
-                        loop 
-                        playsInline
+                      <LazyVideo
+                        sources={[
+                          { src: index === 0 ? boldBrushVideo : phase.video, type: "video/mp4" }
+                        ]}
                         poster={phase.image}
-                        data-testid={`video-phase-${phase.number}`}
-                      >
-                        <source src={index === 0 ? boldBrushVideo : phase.video} type="video/mp4" />
-                        Tu navegador no soporta videos HTML5.
-                      </video>
+                        className="rounded-2xl shadow-lg w-full h-auto hover-lift transition-all duration-300"
+                        preload="metadata"
+                      />
                     ) : (
                       <img 
                         src={phase.image} 

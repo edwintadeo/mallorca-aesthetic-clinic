@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/UI/AnimatedSection";
+import { LazyVideo } from "@/components/UI/LazyVideo";
 import { Calendar, User, ArrowRight, Clock } from "lucide-react";
 
 // Import video for hero background
@@ -90,15 +91,14 @@ export default function Blog() {
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden" data-testid="blog-hero">
         {/* Video Background */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-20"
-        >
-          <source src={heroVideo} type="video/mp4" />
-        </video>
+        <LazyVideo
+          sources={[
+            { src: heroVideo, type: "video/mp4" }
+          ]}
+          className="absolute inset-0 w-full h-full opacity-20"
+          priority={true}
+          preload="auto"
+        />
         
         {/* Gradient Overlay */}
         <div className="absolute inset-0 hero-gradient"></div>

@@ -1,0 +1,132 @@
+Prompt — Auditoría Estética de Mallorca Aesthetic Clinic (solo evaluación)
+
+Rol
+Actúa como director/a de arte y brand guardian. Tu tarea es evaluar exclusivamente la estética del sitio de Mallorca Aesthetic Clinic (MAC) en Replit. No modifiques nada: solo analiza y emite un diagnóstico con recomendaciones.
+
+Contexto de marca
+
+Narrativa: “El Arte de Ganar Tiempo” (well-aging integral: ciencia + estética natural + bienestar emocional).
+
+Estilo: editorial, quiet luxury, cálido y clínico a la vez (nada estridente).
+
+Tipografías: Cormorant Garamond (títulos), Orpheus Pro (subtítulos), Gotham Light (cuerpo).
+
+Paleta: base perla/beige, acento turquesa #008578, dorado protagonista (elegante, nunca anaranjado).
+
+Hero: vídeo a pantalla completa con copy legible y CTA visible.
+
+Secciones clave: Inicio, Método (4 fases), Tratamientos, Nosotros/Equipo, Ubicaciones, Blog, Contacto.
+
+Alcance de la evaluación (solo estética)
+
+Color & materialidad
+
+Proporciones reales de uso (perla/beige vs. turquesa vs. dorado).
+
+Calidad del dorado (tonalidad, degradado/foil digital, no saturado).
+
+Coherencia cromática entre secciones y componentes.
+
+Tipografía
+
+Uso correcto de Cormorant/Orpheus/Gotham, escalas, interlineado, tracking.
+
+Consistencia de jerarquías (H1–H6, subtítulos, párrafos, captions).
+
+Imagen & vídeo
+
+Hero: legibilidad del copy sobre el vídeo (overlay, contraste, poster frame).
+
+Fotografía: luz natural, grading consistente, estética editorial; before/after ético y elegante.
+
+Coherencia de estilo entre galerías, cards y banners.
+
+Composición & espaciado
+
+Retícula (12 col / 4 col), ritmo vertical, respiración, balance visual.
+
+Micro-detalles de lujo: filetes finos, iconografía, numerales, uso del dorado.
+
+Consistencia & congruencia de marca
+
+Cada pantalla refuerza “El Arte de Ganar Tiempo”.
+
+No hay elementos “out of brand” (colores extra, tipografías ajenas, iconos dispares).
+
+Microanimaciones sutiles, significativas (sin ruido visual).
+
+Nota: Puedes mencionar accesibilidad solo en lo estético (p. ej., contraste y legibilidad del copy sobre fondos).
+
+Entregables (formato de salida)
+
+Veredicto breve: ¿la estética está Alineada / Parcial / No alineada con MAC? (1–2 frases).
+
+Scorecard estético (0–10 por cada eje)
+
+Color y materialidad
+
+Tipografía y jerarquías
+
+Imagen & vídeo
+
+Composición & espaciado
+
+Consistencia de marca
+
+Lujo percibido (quiet luxury)
+
+Legibilidad/contraste estético
+
+Hallazgos clave (máx. 10)
+
+Lista priorizada con qué se ve mal o fuera de marca y por qué (1–2 líneas cada punto).
+
+Plan de mejoras (arte) por prioridad
+
+Quick wins (1–2 semanas): ajustes rápidos (p. ej., overlay del hero al 20–35%, subir contraste de titulares, unificar dorado a #A57D24 con gradiente sutil).
+
+Iteración (3–4 semanas): armonizar grading fotográfico, normalizar escalas tipográficas, redefinir proporciones de color por sección.
+
+Dirección de arte avanzada: guías de set fotográfico, motion rules, sistema de iconos consistente.
+
+Guía puntual de estilo (mini brand tune-up)
+
+Color: proporción sugerida (Perla/Beige 40–55% · Dorado 20–30% · Turquesa 10–15% · Blanco/Negro según legibilidad) + ejemplos de combinaciones válidas.
+
+Tipografía: escala recomendada (p. ej., H1 48–64 / H2 36–44 / H3 28–32 / body 16–18), tracking e interlineado; usos correctos por nivel.
+
+Vídeo hero: duración, loop, overlay, poster frame, safe-area para copy/CTA.
+
+Fotografía: luz, temperatura, contraste, edición; do’s & don’ts (no filtros agresivos, no piel plástica).
+
+Dorado: tonos válidos (#A57D24/#CBA64C/#E5C77F), grosor de filetes (1–2 px), usos (títulos, numerales, marcos finos).
+
+Lista de desviaciones de estilo (precisa)
+
+Enumera dónde diverge el estilo (pantalla/sección/componente) y qué rompe la coherencia (color, tipografía, imagen, composición).
+
+Issue log (JSON) — artístico
+Devuélvelo como arreglo de objetos con: id, page, component, issue, impact (High/Med/Low), recommendation, success_criteria.
+
+Ejemplo:
+
+[
+  {
+    "id": "ART-001",
+    "page": "/",
+    "component": "Hero",
+    "issue": "Titular pierde legibilidad sobre planos claros del video",
+    "impact": "High",
+    "recommendation": "Overlay dinámico 25–35% + text-shadow sutil o bloque perla semitransparente",
+    "success_criteria": "Contraste AA y CTR del CTA +1 pp"
+  }
+]
+
+
+Restricciones
+
+No edites código ni activos.
+
+No toques Supabase ni configuración.
+
+Tu salida es solo evaluativa y accionable para el equipo.

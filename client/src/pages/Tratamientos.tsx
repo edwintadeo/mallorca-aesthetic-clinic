@@ -6,6 +6,7 @@ import AnimatedSection from "@/components/UI/AnimatedSection";
 import SkeletonCard from "@/components/UI/SkeletonCard";
 import LazyImage from "@/components/UI/LazyImage";
 import { TreatmentCardSkeleton } from "@/components/UI/SkeletonLoader";
+import { LazyVideo } from "@/components/UI/LazyVideo";
 import { Link } from "wouter";
 import { useState } from "react";
 
@@ -107,33 +108,16 @@ export default function Tratamientos() {
     <div className="font-body antialiased">
       {/* Video de fondo para toda la página */}
       <div className="fixed inset-0 w-full h-full z-[-1] overflow-hidden">
-        <video 
-          autoPlay
-          muted
-          loop
-          playsInline
+        <LazyVideo
+          sources={[
+            { src: "/public-objects/amanecer mallorca.mp4", type: "video/mp4" }
+          ]}
           poster={mascarillaVerde}
-          className="absolute inset-0 w-full h-full object-cover"
-          data-testid="video-background-tratamientos"
-          onError={(e) => {
-            console.error("Error loading background video:", e);
-            // Si el video no carga, mostrar imagen de respaldo
-            e.currentTarget.style.display = 'none';
-            const fallbackDiv = e.currentTarget.nextElementSibling;
-            if (fallbackDiv) (fallbackDiv as HTMLElement).style.display = 'block';
-          }}
-        >
-          <source src="/public-objects/amanecer mallorca.mp4" type="video/mp4" />
-        </video>
-        
-        {/* Imagen de respaldo si el video no carga */}
-        <div 
-          className="absolute inset-0 w-full h-full bg-cover bg-center"
-          style={{ 
-            backgroundImage: `url(${mascarillaVerde})`,
-            display: "none"
-          }}
-        ></div>
+          fallbackImage={mascarillaVerde}
+          className="absolute inset-0 w-full h-full"
+          priority={true}
+          preload="auto"
+        />
         
         {/* Overlay muy ligero para mantener visibilidad del vídeo */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/20"></div>

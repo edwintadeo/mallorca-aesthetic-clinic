@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import AnimatedSection from "@/components/UI/AnimatedSection";
+import { LazyVideo } from "@/components/UI/LazyVideo";
 import { Crown, Gift, Calendar, Star, Users, Sparkles, Heart, Shield } from "lucide-react";
 
 // Import video for hero background
@@ -107,15 +108,14 @@ export default function ClubMAC() {
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden" data-testid="club-mac-hero">
         {/* Video Background */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
-        >
-          <source src={heroVideo} type="video/mp4" />
-        </video>
+        <LazyVideo
+          sources={[
+            { src: heroVideo, type: "video/mp4" }
+          ]}
+          className="absolute inset-0 w-full h-full opacity-30"
+          priority={true}
+          preload="auto"
+        />
         
         {/* Gradient Overlay */}
         <div className="absolute inset-0 hero-gradient"></div>

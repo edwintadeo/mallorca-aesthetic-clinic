@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 import WhatsAppButton from "@/components/UI/WhatsAppButton";
 import NewsletterSection from "@/components/UI/NewsletterSection";
+import { LazyVideo } from "@/components/UI/LazyVideo";
 import { Search, ClipboardList, Wand2, TrendingUp, Star } from "lucide-react";
 
 // Import new images
@@ -90,35 +91,17 @@ export default function Home() {
     <div className="font-body antialiased">
       {/* Video de fondo para toda la landing page */}
       <div className="fixed inset-0 w-full h-full z-[-1] overflow-hidden">
-        <video 
-          autoPlay
-          muted
-          loop
-          playsInline
+        <LazyVideo
+          sources={[
+            { src: "/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4", type: "video/mp4" },
+            { src: "https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4", type: "video/mp4" }
+          ]}
           poster={heroBeautyModel}
-          className="absolute inset-0 w-full h-full object-cover"
-          data-testid="video-background"
-          onError={(e) => {
-            console.error("Error loading background video:", e);
-            // Si el video no carga, mostrar imagen de respaldo
-            e.currentTarget.style.display = 'none';
-            const fallbackDiv = e.currentTarget.nextElementSibling;
-            if (fallbackDiv) (fallbackDiv as HTMLElement).style.display = 'block';
-          }}
-        >
-          <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4" type="video/mp4" />
-          <source src="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4" type="video/mp4" />
-          <source src="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4" type="video/mp4" />
-        </video>
-        
-        {/* Imagen de respaldo si el video no carga */}
-        <div 
-          className="absolute inset-0 w-full h-full bg-cover bg-center"
-          style={{ 
-            backgroundImage: `url(${heroBeautyModel})`,
-            display: "none"
-          }}
-        ></div>
+          fallbackImage={heroBeautyModel}
+          className="absolute inset-0 w-full h-full"
+          priority={true}
+          preload="auto"
+        />
         
         {/* Overlay mejorado con gradiente para mejor legibilidad */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/50"></div>
