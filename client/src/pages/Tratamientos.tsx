@@ -123,45 +123,22 @@ export default function Tratamientos() {
 
       {/* Bold Brush Video Section */}
       <section className="py-0 bg-black relative overflow-hidden" data-testid="bold-brush-video">
-        <div className="relative w-full h-[80vh] min-h-[600px]">
+        <div className="relative w-full h-[60vh] min-h-[400px]">
           <video 
             className="w-full h-full object-cover"
             autoPlay 
             muted 
             loop 
             playsInline
-            poster="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
           >
             <source src="/public-objects/Bold Brush.mp4" type="video/mp4" />
-            Tu navegador no soporta videos HTML5.
           </video>
-          
-          {/* Overlay with content */}
-          <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-            <div className="text-center text-white max-w-5xl mx-auto px-4">
-              <AnimatedSection>
-                <h2 className="text-4xl lg:text-6xl font-title mb-6 text-gold-light">
-                  Bold Brush
-                </h2>
-                <p className="text-xl lg:text-2xl text-white/90 leading-relaxed mb-8">
-                  Tecnología revolucionaria para resultados naturales excepcionales. 
-                  Experimenta la precisión artística en cada tratamiento.
-                </p>
-                <Button 
-                  className="bg-turquoise text-white px-8 py-4 text-lg hover:bg-gold-light hover:text-gold-deep transition-all duration-300"
-                  data-testid="button-bold-brush-info"
-                >
-                  Conocer más sobre Bold Brush
-                </Button>
-              </AnimatedSection>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* ADN Convert Video Section */}
       <section className="py-0 bg-white relative overflow-hidden" data-testid="adn-convert-video">
-        <div className="relative w-full h-[70vh] min-h-[500px]">
+        <div className="relative w-full h-[60vh] min-h-[400px]">
           <video 
             className="w-full h-full object-cover"
             autoPlay 
@@ -170,29 +147,7 @@ export default function Tratamientos() {
             playsInline
           >
             <source src="/public-objects/ADN convert.mp4" type="video/mp4" />
-            Tu navegador no soporta videos HTML5.
           </video>
-          
-          {/* Overlay with content */}
-          <div className="absolute inset-0 bg-white/40 flex items-center justify-center">
-            <div className="text-center text-black max-w-5xl mx-auto px-4">
-              <AnimatedSection>
-                <h2 className="text-4xl lg:text-6xl font-title mb-6 text-gold-deep">
-                  ADN Convert
-                </h2>
-                <p className="text-xl lg:text-2xl text-black/80 leading-relaxed mb-8">
-                  Transformación celular avanzada que reprograma tu piel desde el interior. 
-                  La evolución de la medicina estética regenerativa.
-                </p>
-                <Button 
-                  className="bg-gold-deep text-white px-8 py-4 text-lg hover:bg-turquoise hover:text-white transition-all duration-300"
-                  data-testid="button-adn-convert-info"
-                >
-                  Descubrir ADN Convert
-                </Button>
-              </AnimatedSection>
-            </div>
-          </div>
         </div>
       </section>
 
