@@ -119,13 +119,13 @@ export default function Metodo() {
   return (
     <div className="pt-16 font-body antialiased">
       {/* Hero Section */}
-      <section className="py-20 hero-gradient" data-testid="metodo-hero">
+      <section className="py-20 hero-gradient gold-border-bottom" data-testid="metodo-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
               Metodología Exclusiva
             </div>
-            <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6">
+            <h1 className="text-5xl lg:text-7xl font-title gold-accent-prominent mb-6">
               Las Cuatro Fases del Método MAC
             </h1>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-4">
@@ -160,10 +160,10 @@ export default function Metodo() {
       </section>
 
       {/* Method Introduction */}
-      <section className="py-16 bg-white" data-testid="method-introduction">
+      <section className="py-16 section-pearl gold-border-bottom" data-testid="method-introduction">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <h2 className="text-4xl lg:text-5xl font-title text-foreground mb-8">
+            <h2 className="text-4xl lg:text-5xl font-subtitle gold-accent-prominent mb-8">
               El Método MAC
             </h2>
             
@@ -185,7 +185,7 @@ export default function Metodo() {
       </section>
 
       {/* Method Phases */}
-      <section className="py-20 bg-pearl/30" data-testid="method-phases">
+      <section className="py-20 section-beige gold-border-bottom" data-testid="method-phases">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {methodPhases.map((phase, index) => (
             <div key={phase.number} className={`mb-24 ${index === methodPhases.length - 1 ? 'mb-0' : ''}`}>
@@ -212,8 +212,8 @@ export default function Metodo() {
                   </div>
 
                   <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                    <div className="text-4xl font-title gold-accent font-bold mb-4">{phase.number}</div>
-                    <h2 className="text-3xl lg:text-4xl font-title text-foreground mb-4">{phase.title}</h2>
+                    <div className="gold-numeral mb-4">{phase.number}</div>
+                    <h2 className="text-3xl lg:text-4xl font-subtitle text-foreground mb-4">{phase.title}</h2>
                     
                     <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                       {phase.subtitle}

@@ -89,7 +89,7 @@ export default function Blog() {
   return (
     <div className="pt-16 font-body antialiased">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden" data-testid="blog-hero">
+      <section className="relative py-20 overflow-hidden gold-border-bottom" data-testid="blog-hero">
         {/* Video Background */}
         <LazyVideo
           sources={[
@@ -100,8 +100,8 @@ export default function Blog() {
           preload="auto"
         />
         
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 hero-gradient"></div>
+        {/* Pearl Overlay for luxury contrast */}
+        <div className="absolute inset-0 video-overlay-pearl"></div>
         
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -109,7 +109,7 @@ export default function Blog() {
             <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
               Educación y Bienestar
             </div>
-            <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6">
+            <h1 className="text-5xl lg:text-7xl font-title gold-accent-prominent mb-6">
               Blog MAC
             </h1>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
@@ -122,11 +122,11 @@ export default function Blog() {
 
       {/* Featured Post */}
       {displayFeatured && (
-        <section className="py-20 bg-white" data-testid="featured-post">
+        <section className="py-20 section-pearl gold-border-bottom" data-testid="featured-post">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection>
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-title gold-accent mb-4">Artículo Destacado</h2>
+                <h2 className="text-3xl font-subtitle gold-accent-prominent mb-4">Artículo Destacado</h2>
               </div>
             </AnimatedSection>
 
@@ -181,7 +181,7 @@ export default function Blog() {
       )}
 
       {/* Category Filter */}
-      <section className="py-8 bg-pearl" data-testid="category-filter">
+      <section className="py-8 section-beige" data-testid="category-filter">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="flex flex-wrap justify-center gap-4">
@@ -205,7 +205,7 @@ export default function Blog() {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-20 bg-white" data-testid="blog-posts">
+      <section className="py-20 bg-white gold-border-bottom" data-testid="blog-posts">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {isLoading ? (
             <div className="text-center py-12">
@@ -277,10 +277,10 @@ export default function Blog() {
       </section>
 
       {/* Newsletter Subscription */}
-      <section className="py-20 bg-beige" data-testid="newsletter-section">
+      <section className="py-20 section-pearl" data-testid="newsletter-section">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
-            <h2 className="text-4xl font-title gold-accent mb-6">
+            <h2 className="text-4xl font-subtitle gold-accent-prominent mb-6">
               Mantente Informado
             </h2>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">

@@ -103,12 +103,12 @@ export default function Home() {
           preload="auto"
         />
         
-        {/* Overlay mejorado con gradiente para mejor legibilidad */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/50"></div>
+        {/* Pearl Overlay for luxury text contrast */}
+        <div className="absolute inset-0 video-overlay-pearl"></div>
       </div>
 
       {/* Hero Section */}
-      <section className="pt-16 min-h-screen relative z-[1] flex items-center" data-testid="hero-section">
+      <section className="pt-16 min-h-screen relative z-[1] flex items-center gold-border-bottom" data-testid="hero-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
           <div className="text-center">
             <AnimatedSection>
@@ -120,12 +120,12 @@ export default function Home() {
                   data-testid="hero-mac-logo"
                 />
               </div>
-              <h1 className="text-5xl lg:text-7xl hero-main-title mb-6 text-white drop-shadow-lg">
+              <h1 className="text-5xl lg:text-7xl hero-main-title mb-6 text-white text-shadow-elegant">
                 <span className="gold-accent">Medicina estética</span><br />
                 <span className="gold-accent">avanzada con</span><br />
                 <span className="gold-accent">visión integral</span>
               </h1>
-              <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto drop-shadow-md leading-relaxed">
+              <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto text-shadow-elegant leading-relaxed">
                 Consigue una transformación que se siente y es visible en solo 90 días y revela tu auténtica belleza natural.
               </p>
               <div className="flex justify-center">
@@ -145,7 +145,7 @@ export default function Home() {
       </section>
 
       {/* Doctor Section */}
-      <section className="py-20 bg-white relative z-[1]" data-testid="doctor-section">
+      <section className="py-20 section-pearl relative z-[1] gold-border-bottom" data-testid="doctor-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
@@ -161,7 +161,7 @@ export default function Home() {
               <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
                 Directora Médica
               </div>
-              <h2 className="text-4xl lg:text-5xl font-title gold-accent mb-6">
+              <h2 className="text-4xl lg:text-5xl font-subtitle gold-accent-prominent mb-6">
                 Dra. Liliana Ocampo
               </h2>
               <h3 className="text-xl font-subtitle italic text-muted-foreground mb-8">
@@ -206,14 +206,14 @@ export default function Home() {
       </section>
 
       {/* Pilares de la Clínica */}
-      <section className="py-20 bg-pearl/90 relative z-[1]" data-testid="pilares-section">
+      <section className="py-20 section-beige relative z-[1] gold-border-bottom" data-testid="pilares-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
               <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
                 Nuestros Fundamentos
               </div>
-              <h2 className="text-4xl lg:text-6xl font-title gold-accent mb-6">
+              <h2 className="text-4xl lg:text-6xl font-subtitle gold-accent-prominent mb-6">
                 Pilares de MAC
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -224,12 +224,12 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <AnimatedSection delay={0.1}>
-              <Card className="bg-white/80 backdrop-blur-sm hover:shadow-xl hover-lift transition-all duration-300 h-full border border-gold-light/30" data-testid="pilar-belleza">
+              <Card className="luxury-card hover:shadow-xl hover-lift transition-all duration-300 h-full" data-testid="pilar-belleza">
                 <CardContent className="p-8 text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-turquoise to-turquoise-medium rounded-full flex items-center justify-center mb-6 mx-auto">
                     <Star className="text-white text-3xl fill-current" />
                   </div>
-                  <h3 className="text-2xl font-title gold-accent mb-4">
+                  <h3 className="text-2xl font-subtitle gold-accent-subtle mb-4">
                     Belleza que refleja tu verdad
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -240,12 +240,12 @@ export default function Home() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.2}>
-              <Card className="bg-white/80 backdrop-blur-sm hover:shadow-xl hover-lift transition-all duration-300 h-full border border-gold-light/30" data-testid="pilar-salud">
+              <Card className="luxury-card hover:shadow-xl hover-lift transition-all duration-300 h-full" data-testid="pilar-salud">
                 <CardContent className="p-8 text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-gold-deep to-gold-light rounded-full flex items-center justify-center mb-6 mx-auto">
                     <TrendingUp className="text-white text-3xl" />
                   </div>
-                  <h3 className="text-2xl font-title gold-accent mb-4">
+                  <h3 className="text-2xl font-subtitle gold-accent-subtle mb-4">
                     Salud integral como base del resultado
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -256,12 +256,12 @@ export default function Home() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.3}>
-              <Card className="bg-white/80 backdrop-blur-sm hover:shadow-xl hover-lift transition-all duration-300 h-full border border-gold-light/30" data-testid="pilar-bienestar">
+              <Card className="luxury-card hover:shadow-xl hover-lift transition-all duration-300 h-full" data-testid="pilar-bienestar">
                 <CardContent className="p-8 text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-turquoise-medium to-gold-champagne rounded-full flex items-center justify-center mb-6 mx-auto">
                     <Search className="text-white text-3xl" />
                   </div>
-                  <h3 className="text-2xl font-title gold-accent mb-4">
+                  <h3 className="text-2xl font-subtitle gold-accent-subtle mb-4">
                     Bienestar emocional sostenido
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -275,7 +275,7 @@ export default function Home() {
       </section>
 
       {/* Quote Section */}
-      <section className="py-20 bg-white relative z-[1]" data-testid="quote-section">
+      <section className="py-20 bg-white relative z-[1] gold-border-bottom" data-testid="quote-section">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center">
@@ -283,7 +283,7 @@ export default function Home() {
                 Una experiencia como una obra de arte
               </div>
               
-              <blockquote className="text-3xl lg:text-5xl font-title text-foreground leading-tight mb-12">
+              <blockquote className="text-3xl lg:text-5xl font-title gold-accent-prominent leading-tight mb-12">
                 "Cada tratamiento es como una pincelada maestra. No transformamos, revelamos tu luz."
               </blockquote>
               
@@ -310,17 +310,17 @@ export default function Home() {
       </section>
 
       {/* Method Section */}
-      <section className="py-20 bg-transparent relative z-[1]" data-testid="method-section">
+      <section className="py-20 bg-transparent relative z-[1] gold-border-bottom" data-testid="method-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
               <div className="text-sm uppercase tracking-wider text-white font-medium mb-4 drop-shadow-lg">
                 Metodología Exclusiva
               </div>
-              <h2 className="text-4xl lg:text-6xl font-title text-gold-light mb-6 drop-shadow-lg">
+              <h2 className="text-4xl lg:text-6xl font-subtitle gold-accent-prominent mb-6 text-shadow-elegant">
                 Método MAC
               </h2>
-              <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
+              <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed text-shadow-elegant">
                 Nuestro protocolo de cuatro fases garantiza resultados excepcionales 
                 mediante un enfoque científico y personalizado.
               </p>
@@ -335,8 +335,8 @@ export default function Home() {
                     <div className="w-16 h-16 bg-turquoise rounded-full flex items-center justify-center mb-6">
                       <phase.icon className="text-white text-2xl" />
                     </div>
-                    <div className="text-2xl font-title gold-accent font-semibold mb-2">{phase.number}</div>
-                    <h3 className="text-xl font-subtitle font-semibold mb-4">{phase.title}</h3>
+                    <div className="gold-numeral mb-2">{phase.number}</div>
+                    <h3 className="text-xl font-subtitle gold-accent-subtle font-semibold mb-4">{phase.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">
                       {phase.description}
                     </p>
@@ -363,7 +363,7 @@ export default function Home() {
       </section>
 
       {/* Treatments Section */}
-      <section className="py-20 bg-white relative z-[1]" data-testid="treatments-section">
+      <section className="py-20 section-pearl relative z-[1] gold-border-bottom" data-testid="treatments-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-left max-w-4xl mb-16">
@@ -371,7 +371,7 @@ export default function Home() {
                 Nuestros tratamientos
               </div>
               
-              <h2 className="text-4xl lg:text-6xl font-title text-foreground mb-8 leading-tight">
+              <h2 className="text-4xl lg:text-6xl font-subtitle gold-accent-prominent mb-8 leading-tight">
                 Tratamientos que combinan ciencia, estética y bienestar
               </h2>
               
@@ -462,7 +462,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials & Before/After Section */}
-      <section className="py-20 bg-white relative z-[1]" data-testid="testimonials-section">
+      <section className="py-20 section-beige relative z-[1] gold-border-bottom" data-testid="testimonials-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
@@ -482,10 +482,11 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
             <AnimatedSection delay={0.1}>
               <div className="space-y-8">
-                <h3 className="text-2xl title-luxury text-center mb-8">Experiencias Reales</h3>
+                <div className="luxury-divider mb-8"></div>
+                <h3 className="text-2xl font-subtitle gold-accent-subtle text-center mb-8">Experiencias Reales</h3>
                 {testimonials && Array.isArray(testimonials) && testimonials.length > 0 ? (
                   testimonials.slice(0, 2).map((testimonial: any, index: number) => (
-                    <Card key={testimonial.id} className="bg-white/80 backdrop-blur-sm shadow-lg hover-lift border border-gold-light/30" data-testid={`testimonial-featured-${index}`}>
+                    <Card key={testimonial.id} className="luxury-card shadow-lg hover-lift" data-testid={`testimonial-featured-${index}`}>
                       <CardContent className="p-8">
                         <div className="flex items-start space-x-4 mb-6">
                           <img 

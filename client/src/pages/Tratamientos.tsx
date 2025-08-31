@@ -129,7 +129,7 @@ export default function Tratamientos() {
             <div className="text-sm uppercase tracking-wider text-white font-bold mb-4 bg-black/30 inline-block px-6 py-2 rounded-full backdrop-blur-sm">
               Nuestros Servicios
             </div>
-            <h1 className="text-5xl lg:text-7xl font-title text-white mb-6" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
+            <h1 className="text-5xl lg:text-7xl font-title gold-accent-prominent mb-6 text-shadow-elegant">
               Tratamientos
             </h1>
             <p className="text-xl text-white max-w-4xl mx-auto leading-relaxed font-medium bg-black/25 backdrop-blur-sm p-6 rounded-lg" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.7)' }}>
@@ -143,11 +143,11 @@ export default function Tratamientos() {
 
       {/* Featured Treatments */}
       {featuredTreatments.length > 0 && (
-        <section className="py-20 bg-white/75 backdrop-blur-sm relative z-[1]" data-testid="featured-treatments">
+        <section className="py-20 section-pearl relative z-[1] gold-border-bottom" data-testid="featured-treatments">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection>
               <div className="text-center mb-16">
-                <h2 className="text-4xl lg:text-5xl font-title gold-accent mb-6">
+                <h2 className="text-4xl lg:text-5xl font-subtitle gold-accent-prominent mb-6">
                   Tratamientos Destacados
                 </h2>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -159,7 +159,7 @@ export default function Tratamientos() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredTreatments.slice(0, 3).map((treatment: any, index: number) => (
                 <AnimatedSection key={treatment.id} delay={index * 0.1}>
-                  <Card className="group overflow-hidden bg-white/80 backdrop-blur-sm hover:shadow-xl hover-lift transition-all duration-300 h-full border border-gold-light/30" data-testid={`featured-treatment-${index}`}>
+                  <Card className="group overflow-hidden luxury-card hover:shadow-xl hover-lift transition-all duration-300 h-full" data-testid={`featured-treatment-${index}`}>
                     <div className="relative">
                       <LazyImage 
                         src={treatment.imageUrl}
@@ -173,7 +173,7 @@ export default function Tratamientos() {
                       </Badge>
                     </div>
                     <CardContent className="p-6">
-                      <h3 className="text-xl font-subtitle font-semibold mb-3">{treatment.name}</h3>
+                      <h3 className="text-xl font-subtitle gold-accent-subtle font-semibold mb-3">{treatment.name}</h3>
                       <p className="text-muted-foreground mb-4 leading-relaxed">
                         {treatment.description}
                       </p>
@@ -230,7 +230,7 @@ export default function Tratamientos() {
       </section>
 
       {/* All Treatments */}
-      <section className="py-20 bg-white/75 backdrop-blur-sm relative z-[1]" data-testid="all-treatments">
+      <section className="py-20 section-beige relative z-[1] gold-border-bottom" data-testid="all-treatments">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {isLoading ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -242,7 +242,7 @@ export default function Tratamientos() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredTreatments.map((treatment: any, index: number) => (
                 <AnimatedSection key={treatment.id} delay={index * 0.1}>
-                  <Card className="h-full bg-white/80 backdrop-blur-sm hover:shadow-xl hover-lift transition-all duration-300 border border-gold-light/30" data-testid={`treatment-${treatment.id}`}>
+                  <Card className="h-full luxury-card hover:shadow-xl hover-lift transition-all duration-300" data-testid={`treatment-${treatment.id}`}>
                     <LazyImage
                       src={treatment.imageUrl}
                       alt={treatment.name}
@@ -250,7 +250,7 @@ export default function Tratamientos() {
                     />
                     <CardContent className="p-6">
                       <div className="flex items-center justify-between mb-3">
-                        <h3 className="text-xl font-subtitle font-semibold">{treatment.name}</h3>
+                        <h3 className="text-xl font-subtitle gold-accent-subtle font-semibold">{treatment.name}</h3>
                         {treatment.featured && (
                           <Badge className="bg-gold-light text-gold-deep">
                             Destacado
