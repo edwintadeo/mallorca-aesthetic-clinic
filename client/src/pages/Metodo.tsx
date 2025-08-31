@@ -277,33 +277,23 @@ export default function Metodo() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <h2 className="text-4xl lg:text-6xl font-title gold-accent mb-6">
-              Comienza tu transformación hoy
+              El Método MAC es más que estética
             </h2>
-            <p className="text-xl text-muted-foreground mb-4 leading-relaxed">
-              El Método MAC es más que estética, es arte y ciencia trabajando en armonía 
-              para revelar tu mejor versión. Agenda tu Diagnóstico 360° y descubre el poder de ganar tiempo.
+            <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
+              Es un método que honra tu biología, tu belleza natural y tu bienestar completo.
             </p>
-            <p className="text-lg text-muted-foreground/80 mb-8">
-              Primera consulta sin compromiso • Diagnóstico completo incluido
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+              Una forma nueva de vivir tu proceso estético: con precisión médica, propósito y arte.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <Link href="/contacto">
                 <Button 
                   size="lg" 
-                  className="bg-turquoise hover:bg-turquoise-medium text-white px-8 py-4 text-lg font-medium rounded-full hover:shadow-xl transition-all duration-300 hover-lift"
-                  data-testid="button-cta-agendar"
-                >
-                  Agenda tu Diagnóstico 360°
-                </Button>
-              </Link>
-              <Link href="/ubicaciones">
-                <Button 
                   variant="outline"
-                  size="lg" 
-                  className="border-2 border-gold-light text-foreground hover:bg-gold-light/10 px-8 py-4 text-lg font-medium rounded-full hover:shadow-xl transition-all duration-300"
-                  data-testid="button-cta-ubicaciones"
+                  className="border-2 border-white text-white hover:bg-white hover:text-foreground px-12 py-4 text-lg font-medium rounded-none uppercase tracking-wider transition-all duration-300 hover-lift"
+                  data-testid="button-cta-agenda-personalizada"
                 >
-                  Ver Ubicaciones
+                  Agenda tu Consulta Personalizada
                 </Button>
               </Link>
             </div>
