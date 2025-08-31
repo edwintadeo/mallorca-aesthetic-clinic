@@ -248,6 +248,11 @@ export class MemStorage implements IStorage {
     const contactRequest: ContactRequest = {
       ...insertContactRequest,
       id,
+      message: insertContactRequest.message || null,
+      age: insertContactRequest.age || null,
+      treatment: insertContactRequest.treatment || null,
+      preferredDate: insertContactRequest.preferredDate || null,
+      preferredTime: insertContactRequest.preferredTime || null,
       createdAt: new Date()
     };
     this.contactRequests.set(id, contactRequest);
@@ -270,6 +275,7 @@ export class MemStorage implements IStorage {
     const post: Post = {
       ...insertPost,
       id,
+      imageUrl: insertPost.imageUrl || null,
       publishedAt: insertPost.publishedAt || new Date(),
       createdAt: new Date()
     };
@@ -297,6 +303,7 @@ export class MemStorage implements IStorage {
     const testimonial: Testimonial = {
       ...insertTestimonial,
       id,
+      imageUrl: insertTestimonial.imageUrl || null,
       createdAt: new Date()
     };
     this.testimonials.set(id, testimonial);
@@ -316,7 +323,14 @@ export class MemStorage implements IStorage {
   // Treatment methods
   async createTreatment(insertTreatment: InsertTreatment): Promise<Treatment> {
     const id = randomUUID();
-    const treatment: Treatment = { ...insertTreatment, id };
+    const treatment: Treatment = {
+      ...insertTreatment,
+      id,
+      imageUrl: insertTreatment.imageUrl || null,
+      benefits: insertTreatment.benefits || null,
+      technology: insertTreatment.technology || null,
+      featured: insertTreatment.featured || null
+    };
     this.treatments.set(id, treatment);
     return treatment;
   }
@@ -332,7 +346,11 @@ export class MemStorage implements IStorage {
   // Location methods
   async createLocation(insertLocation: InsertLocation): Promise<Location> {
     const id = randomUUID();
-    const location: Location = { ...insertLocation, id };
+    const location: Location = {
+      ...insertLocation,
+      id,
+      imageUrl: insertLocation.imageUrl || null
+    };
     this.locations.set(id, location);
     return location;
   }

@@ -311,7 +311,7 @@ export default function Home() {
           </AnimatedSection>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials && testimonials.length > 0 ? (
+            {testimonials && Array.isArray(testimonials) && testimonials.length > 0 ? (
               testimonials.slice(0, 3).map((testimonial: any, index: number) => (
                 <AnimatedSection key={testimonial.id} delay={index * 0.1}>
                   <Card className="bg-white shadow-lg h-full" data-testid={`testimonial-${index}`}>
@@ -369,7 +369,7 @@ export default function Home() {
           </AnimatedSection>
 
           <div className="grid md:grid-cols-2 gap-12">
-            {locations && locations.length > 0 ? (
+            {locations && Array.isArray(locations) && locations.length > 0 ? (
               locations.map((location: any, index: number) => (
                 <AnimatedSection key={location.id} delay={index * 0.2}>
                   <Card className="bg-white overflow-hidden shadow-lg" data-testid={`location-${index}`}>

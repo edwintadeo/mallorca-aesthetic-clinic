@@ -60,7 +60,7 @@ export default function BlogPost() {
   };
 
   const displayPost = post || fallbackPost;
-  const relatedPostsFiltered = relatedPosts?.filter((p: any) => p.slug !== slug)?.slice(0, 3) || [];
+  const relatedPostsFiltered = Array.isArray(relatedPosts) ? relatedPosts.filter((p: any) => p.slug !== slug).slice(0, 3) : [];
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('es-ES', {
@@ -73,8 +73,8 @@ export default function BlogPost() {
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({
-        title: displayPost.title,
-        text: displayPost.excerpt,
+        title: displayPost?.title || 'Artículo MAC',
+        text: displayPost?.excerpt || 'Artículo del blog',
         url: window.location.href,
       });
     } else {
@@ -133,14 +133,14 @@ export default function BlogPost() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="flex items-center gap-4 mb-6">
-              {displayPost.category && (
+              {displayPost?.category && (
                 <Badge className="bg-turquoise text-white">{displayPost.category}</Badge>
               )}
               <div className="text-sm text-muted-foreground flex items-center gap-1">
                 <Calendar className="w-4 h-4" />
-                {formatDate(displayPost.publishedAt)}
+                {formatDate(displayPost?.publishedAt || new Date().toISOString())}
               </div>
-              {displayPost.readTime && (
+              {displayPost?.readTime && (
                 <div className="text-sm text-muted-foreground flex items-center gap-1">
                   <Clock className="w-4 h-4" />
                   {displayPost.readTime} lectura
@@ -149,15 +149,15 @@ export default function BlogPost() {
             </div>
             
             <h1 className="text-4xl lg:text-5xl font-title font-semibold mb-6 leading-tight">
-              {displayPost.title}
+              {displayPost?.title || 'Artículo'}
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              {displayPost.excerpt}
+              {displayPost?.excerpt || 'Descripción del artículo'}
             </p>
             
             <div className="flex items-center justify-between">
-              {displayPost.author && (
+              {displayPost?.author && (
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-turquoise rounded-full flex items-center justify-center">
                     <User className="w-5 h-5 text-white" />
@@ -189,8 +189,8 @@ export default function BlogPost() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection delay={0.2}>
             <img 
-              src={displayPost.imageUrl}
-              alt={displayPost.title}
+              src={displayPost?.imageUrl || 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600'}
+              alt={displayPost?.title || 'Artículo'}
               className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-lg"
               data-testid="img-article-featured"
             />
@@ -212,7 +212,7 @@ export default function BlogPost() {
                 prose-ul:my-6 prose-li:text-foreground/80
                 prose-blockquote:border-l-4 prose-blockquote:border-turquoise 
                 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-muted-foreground"
-              dangerouslySetInnerHTML={{ __html: displayPost.content }}
+              dangerouslySetInnerHTML={{ __html: displayPost?.content || '<p>Contenido del artículo no disponible.</p>' }}
               data-testid="article-body"
             />
           </AnimatedSection>

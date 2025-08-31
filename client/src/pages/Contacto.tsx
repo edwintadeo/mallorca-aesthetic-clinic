@@ -478,7 +478,7 @@ export default function Contacto() {
           </AnimatedSection>
 
           <div className="grid md:grid-cols-2 gap-12">
-            {displayLocations.map((location: any, index: number) => (
+            {Array.isArray(displayLocations) && displayLocations.map((location: any, index: number) => (
               <AnimatedSection key={location.id} delay={index * 0.2}>
                 <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300" data-testid={`location-${index}`}>
                   <img 

@@ -14,13 +14,13 @@ export default function Tratamientos() {
   });
 
   const categories = [
-    { id: "all", name: "Todos", count: treatments?.length || 0 },
-    { id: "facial", name: "Estética Facial", count: treatments?.filter((t: any) => t.category === "facial").length || 0 },
-    { id: "corporal", name: "Estética Corporal", count: treatments?.filter((t: any) => t.category === "corporal").length || 0 },
-    { id: "cirugia", name: "Cirugía Estética", count: treatments?.filter((t: any) => t.category === "cirugia").length || 0 },
-    { id: "nutricion", name: "Nutrición Integral", count: treatments?.filter((t: any) => t.category === "nutricion").length || 0 },
-    { id: "wellaging", name: "Well-Aging", count: treatments?.filter((t: any) => t.category === "wellaging").length || 0 },
-    { id: "laser", name: "Tecnología Láser", count: treatments?.filter((t: any) => t.category === "laser").length || 0 },
+    { id: "all", name: "Todos", count: Array.isArray(treatments) ? treatments.length : 0 },
+    { id: "facial", name: "Estética Facial", count: Array.isArray(treatments) ? treatments.filter((t: any) => t.category === "facial").length : 0 },
+    { id: "corporal", name: "Estética Corporal", count: Array.isArray(treatments) ? treatments.filter((t: any) => t.category === "corporal").length : 0 },
+    { id: "cirugia", name: "Cirugía Estética", count: Array.isArray(treatments) ? treatments.filter((t: any) => t.category === "cirugia").length : 0 },
+    { id: "nutricion", name: "Nutrición Integral", count: Array.isArray(treatments) ? treatments.filter((t: any) => t.category === "nutricion").length : 0 },
+    { id: "wellaging", name: "Well-Aging", count: Array.isArray(treatments) ? treatments.filter((t: any) => t.category === "wellaging").length : 0 },
+    { id: "laser", name: "Tecnología Láser", count: Array.isArray(treatments) ? treatments.filter((t: any) => t.category === "laser").length : 0 },
   ];
 
   const fallbackTreatments = [
@@ -86,7 +86,7 @@ export default function Tratamientos() {
     },
   ];
 
-  const displayTreatments = treatments || fallbackTreatments;
+  const displayTreatments = Array.isArray(treatments) ? treatments : fallbackTreatments;
   const filteredTreatments = selectedCategory === "all" 
     ? displayTreatments 
     : displayTreatments.filter((treatment: any) => treatment.category === selectedCategory);

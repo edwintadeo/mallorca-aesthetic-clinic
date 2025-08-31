@@ -12,14 +12,14 @@ export default function Blog() {
   });
 
   const categories = ["Todos", "Well-Aging", "Tecnología", "Nutrición", "Cuidados", "Novedades"];
-  const [selectedCategory, setSelectedCategory] = React.useState("Todos");
+  const [selectedCategory, setSelectedCategory] = useState("Todos");
 
-  const filteredPosts = posts?.filter((post: any) => 
+  const filteredPosts = Array.isArray(posts) ? posts.filter((post: any) => 
     selectedCategory === "Todos" || post.category === selectedCategory
-  ) || [];
+  ) : [];
 
-  const featuredPost = posts?.[0];
-  const regularPosts = posts?.slice(1) || [];
+  const featuredPost = Array.isArray(posts) && posts.length > 0 ? posts[0] : null;
+  const regularPosts = Array.isArray(posts) && posts.length > 1 ? posts.slice(1) : [];
 
   // Fallback posts for demonstration when no data is available
   const fallbackPosts = [
