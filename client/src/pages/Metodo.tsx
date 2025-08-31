@@ -111,7 +111,7 @@ export default function Metodo() {
       ],
       benefit: "tu transformación se mantiene viva, adaptada y evolucionando contigo.",
       image: whiteFacialMask,
-      video: "/public-objects/goata de agua.mp4"
+      video: boldBrushVideo
     },
   ];
 
