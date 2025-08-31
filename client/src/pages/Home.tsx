@@ -116,9 +116,8 @@ export default function Home() {
 
             <AnimatedSection delay={0.2}>
               <div className="relative rounded-2xl shadow-2xl overflow-hidden">
-                {/* Intentamos cargar el video primero */}
+                {/* Intentamos cargar el video con diferentes rutas posibles */}
                 <video 
-                  src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4"
                   autoPlay
                   muted
                   loop
@@ -135,6 +134,8 @@ export default function Home() {
                   }}
                 >
                   <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4" type="video/mp4" />
+                  <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.webm" type="video/webm" />
+                  <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mov" type="video/quicktime" />
                   Tu navegador no soporta videos HTML5.
                 </video>
                 
