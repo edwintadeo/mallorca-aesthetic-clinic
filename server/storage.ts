@@ -205,7 +205,7 @@ export class MemStorage implements IStorage {
         address: "Passeig del Born, 15, 07012 Palma",
         phone: "+34 971 123 456",
         hours: "Lun-Vie: 9:00-19:00 | Sáb: 9:00-14:00",
-        imageUrl: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=300"
+        imageUrl: "/api/location-image/1"
       },
       {
         id: randomUUID(),
@@ -213,7 +213,7 @@ export class MemStorage implements IStorage {
         address: "Local 45, Puerto Portals, 07181 Calvià",
         phone: "+34 971 654 321", 
         hours: "Lun-Vie: 10:00-20:00 | Sáb: 10:00-15:00",
-        imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=300"
+        imageUrl: "/api/location-image/2"
       }
     ];
 

@@ -4,6 +4,11 @@ import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 import { MapPin, Phone, Clock, Mail } from "lucide-react";
 
+// Import location images from assets
+import spaImage1 from "@assets/vecteezy_beautiful-girl-in-spa-salon_27003157_1756656467761.jpg";
+import spaImage2 from "@assets/vecteezy_woman-receiving-a-spa-treatment_2023009_1756656592945.jpg";
+import clinicImage from "@assets/vecteezy_beautiful-young-woman-applying-facial-moisturizing-mask-on_23695909_1756656467762.jpg";
+
 export default function Ubicaciones() {
   const { data: locations, isLoading } = useQuery({
     queryKey: ["/api/locations"],
@@ -26,7 +31,7 @@ export default function Ubicaciones() {
         sunday: "Cerrado"
       },
       services: ["Consultas médicas", "Tratamientos faciales", "Medicina regenerativa"],
-      imageUrl: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+      imageUrl: spaImage1
     },
     {
       id: "2", 
@@ -44,7 +49,7 @@ export default function Ubicaciones() {
         sunday: "Cerrado"
       },
       services: ["Cirugía estética", "Tratamientos láser", "Nutrición integral"],
-      imageUrl: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+      imageUrl: spaImage2
     }
   ];
 

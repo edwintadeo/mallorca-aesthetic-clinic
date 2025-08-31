@@ -156,6 +156,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Location Images
+  app.get("/api/location-image/:id", async (req, res) => {
+    const { id } = req.params;
+    // Map location IDs to actual image paths
+    const locationImages: Record<string, string> = {
+      "1": "/vecteezy_beautiful-girl-in-spa-salon_27003157_1756656467761.jpg",
+      "2": "/vecteezy_woman-receiving-a-spa-treatment_2023009_1756656592945.jpg"
+    };
+    
+    const imagePath = locationImages[id];
+    if (imagePath) {
+      res.redirect(`/public-objects${imagePath}`);
+    } else {
+      res.status(404).json({ message: "Image not found" });
+    }
+  });
+
   // Locations
   app.get("/api/locations", async (req, res) => {
     try {
