@@ -17,86 +17,96 @@ export default function Metodo() {
     {
       icon: Search,
       number: "01",
-      title: "Diagnóstico 360°",
-      description: "Evaluación integral que incluye análisis facial, corporal, historial médico y objetivos personales.",
-      details: [
-        "Análisis de estructura facial y asimetrías",
-        "Evaluación de calidad de piel y elasticidad",
-        "Historial médico y tratamientos previos",
-        "Definición de objetivos y expectativas",
-        "Estudio fotográfico profesional"
+      title: "Diagnóstico 360° - El Lienzo en Blanco",
+      subtitle: "No se puede crear una obra maestra sin entender primero el lienzo. Un diagnóstico completo es la base para un enfoque que respeta tu individualidad, con datos precisos que nos permiten diseñar tu plan con precisión artística.",
+      includes: [
+        {
+          title: "Mapeo facial y corporal 3D (VISIA 7 y VECTRA)",
+          description: "Revela arrugas, manchas y daño UV no visible al ojo humano."
+        },
+        {
+          title: "Análisis avanzado",
+          description: "Algoritmos basados en IA para evaluar tu salud integral."
+        },
+        {
+          title: "Evaluación de bienestar mental",
+          description: "Cuestionarios validados (DASS-21, SF-36) que cuantifican estrés, ansiedad y calidad de sueño."
+        }
       ],
-      duration: "60-90 minutos",
+      benefit: "máxima precisión desde el inicio y base sólida para un tratamiento realmente personalizado.",
       image: perfectSkinPortrait
     },
     {
       icon: ClipboardList,
       number: "02", 
-      title: "Plan Personalizado",
-      description: "Diseño de protocolo único adaptado a tu estilo de vida, presupuesto y cronograma.",
-      details: [
-        "Selección de tratamientos óptimos",
-        "Cronograma personalizado de sesiones",
-        "Integración con rutina diaria",
-        "Presupuesto detallado y opciones",
-        "Plan de cuidados en casa"
+      title: "Plan Personalizado - El Boceto Maestro",
+      subtitle: "Cada boceto maestro es único e irrepetible. Tu situación merece un enfoque tan individual como tu huella digital, respaldado por datos científicos.",
+      includes: [
+        {
+          title: "Análisis sanguíneo de precisión",
+          description: "Medimos marcadores de subclinical inflammation (PCR-us, IL-6), perfil hormonal completo y cortisol para evaluar estrés crónico."
+        },
+        {
+          title: "Evaluaciones funcionales",
+          description: "Test de esfuerzo cardiopulmonar, calorimetría indirecta y monitorización Holter para conocer tu capacidad real, en colaboración con aliados estratégicos."
+        },
+        {
+          title: "Estudio de nutrigenética",
+          description: "Identificamos tus necesidades nutricionales según tu perfil genético."
+        },
+        {
+          title: "Diseño de estrategia integral",
+          description: "Priorizamos y escalonamos objetivos para resultados visibles y sostenibles."
+        }
       ],
-      duration: "30 minutos",
+      benefit: "un plan tan exclusivo como tu ADN, creado para acompañar tu transformación de forma segura y efectiva.",
       image: facialMaskTreatment
     },
     {
       icon: Wand2,
       number: "03",
-      title: "Acción Integrada", 
-      description: "Ejecución de tratamientos con tecnología avanzada y seguimiento médico constante.",
-      details: [
-        "Tratamientos con equipos de última generación",
-        "Seguimiento médico en cada sesión",
-        "Ajustes según evolución",
-        "Protocolos de seguridad máxima",
-        "Resultados documentados fotográficamente"
+      title: "Acción Integrada - Las Pinceladas Precisas", 
+      subtitle: "Toda gran obra necesita pinceladas magistrales. Aquí fusionamos medicina estética, prevención y bienestar para dar vida a tu transformación integral.",
+      medicalProcedures: [
+        "Neuromoduladores (Botox®): Aplicación con microinyección para expresividad natural",
+        "Rellenos dérmicos: Ácido hialurónico de última generación para restauración volumétrica",
+        "Bioestimulación: PRGF autólogo para regeneración tisular avanzada",
+        "Tratamientos personalizados: Seleccionados según tus necesidades específicas"
       ],
-      duration: "Variable según tratamiento",
+      wellnessPrevention: [
+        "Suplementación dirigida: Ajustada a deficiencias específicas",
+        "Optimización hormonal biosimilar: Cuando sea necesario",
+        "Protocolos de equilibrio microbiónico: Para un sistema interno balanceado"
+      ],
+      integratedWellnessTechniques: [
+        "Mindfulness personalizado",
+        "Terapia de coherencia cardíaca", 
+        "Coaching nutricional adaptado a tu cronobiología"
+      ],
+      specializedCoordination: [
+        "Trabajo sincronizado con especialistas si tu caso lo requiere"
+      ],
+      benefit: "resultados visibles, naturales y sostenibles en tu cuerpo, mente y energía.",
       image: spaDeviceTreatment
     },
     {
       icon: TrendingUp,
       number: "04",
-      title: "Seguimiento Estratégico",
-      description: "Monitoreo continuo por 12 meses para optimizar y mantener resultados duraderos.",
-      details: [
-        "Revisiones mensuales programadas",
-        "Ajustes de tratamiento si necesario",
-        "Rutinas de mantenimiento personalizadas",
-        "Acceso prioritario a nuevas tecnologías",
-        "Garantía de satisfacción extendida"
+      title: "Seguimiento Estratégico - Preservando la Obra Maestra",
+      subtitle: "Toda obra maestra requiere una preservación continua. Con un seguimiento estratégico, el tiempo ganado se convierte en un activo permanente en tu vida.",
+      includes: [
+        {
+          title: "Sistema de evaluación progresiva",
+          description: "Valoraciones completas a los 30, 60 y 90 días, con reevaluaciones trimestrales y comparación de biomarcadores"
+        },
+        {
+          title: "Ajustes preventivos estratégicos",
+          description: "Adaptamos tu protocolo según cambios estacionales, eventos vitales y avances científicos relevantes"
+        }
       ],
-      duration: "12 meses",
+      benefit: "tu transformación se mantiene viva, adaptada y evolucionando contigo.",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
     },
-  ];
-
-  const benefits = [
-    {
-      icon: CheckCircle,
-      title: "Resultados Garantizados",
-      description: "Transformación visible en 90 días con seguimiento de 12 meses incluido."
-    },
-    {
-      icon: Users,
-      title: "Atención Personalizada",
-      description: "Cada plan se diseña específicamente para tus necesidades y estilo de vida."
-    },
-    {
-      icon: Award,
-      title: "Tecnología Avanzada",
-      description: "Equipos de última generación y técnicas innovadoras para resultados óptimos."
-    },
-    {
-      icon: Clock,
-      title: "Eficiencia Temporal",
-      description: "Optimización de tiempo con tratamientos integrados y cronogramas flexibles."
-    }
   ];
 
   return (
@@ -109,10 +119,10 @@ export default function Metodo() {
               Metodología Exclusiva
             </div>
             <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6">
-              Método MAC
+              Las Cuatro Fases del Método MAC
             </h1>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-4">
-              Un enfoque revolucionario de 4 fases que combina diagnóstico científico avanzado, planificación personalizada, 
+              Un enfoque revolucionario que combina diagnóstico científico avanzado, planificación personalizada, 
               ejecución experta y seguimiento estratégico para garantizar tu transformación integral.
             </p>
             <div className="flex justify-center items-center space-x-8 mb-8 text-sm text-turquoise">
@@ -126,290 +136,176 @@ export default function Metodo() {
               </div>
               <div className="flex items-center">
                 <Clock className="w-5 h-5 mr-2" />
-                <span>15 años experiencia</span>
+                <span>90 días transformación</span>
               </div>
             </div>
-            <div className="max-w-2xl mx-auto">
-              <img 
-                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500"
-                alt="Método MAC - El Arte de Ganar Tiempo"
-                className="rounded-2xl shadow-xl w-full"
-                data-testid="img-metodo-hero"
-              />
-            </div>
+            <Link href="/contacto">
+              <Button 
+                size="lg" 
+                className="bg-turquoise hover:bg-turquoise-medium text-white px-8 py-4 text-lg font-medium rounded-full hover:shadow-xl transition-all duration-300 hover-lift"
+                data-testid="button-cta-consulta"
+              >
+                Agenda tu Diagnóstico 360°
+              </Button>
+            </Link>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Fundamento Científico */}
-      <section className="py-20 bg-white/95 backdrop-blur-sm" data-testid="scientific-foundation">
+      {/* Method Phases */}
+      <section className="py-20 bg-pearl/30" data-testid="method-phases">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection>
-            <div className="text-center mb-16">
-              <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
-                Base Científica
-              </div>
-              <h2 className="text-4xl lg:text-6xl font-title gold-accent mb-6">
-                Fundamento del Método MAC
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Nuestro enfoque se basa en investigación científica avanzada y 15 años de experiencia clínica
-              </p>
-            </div>
-          </AnimatedSection>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <AnimatedSection delay={0.1}>
-              <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover-lift border border-gold-light/30 h-full">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-turquoise to-turquoise-medium rounded-full flex items-center justify-center mb-6 mx-auto">
-                    <Search className="text-white text-2xl" />
-                  </div>
-                  <h3 className="text-2xl font-subtitle gold-accent mb-4">Medicina Basada en Evidencia</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Cada protocolo se fundamenta en estudios clínicos publicados en revistas médicas internacionales de prestigio.
-                  </p>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.2}>
-              <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover-lift border border-gold-light/30 h-full">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-gold-deep to-gold-light rounded-full flex items-center justify-center mb-6 mx-auto">
-                    <Users className="text-white text-2xl" />
-                  </div>
-                  <h3 className="text-2xl font-subtitle gold-accent mb-4">Enfoque Multidisciplinario</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Integración de dermatología, medicina anti-aging, nutrición y psicología para resultados holísticos.
-                  </p>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.3}>
-              <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover-lift border border-gold-light/30 h-full">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-turquoise-medium to-gold-champagne rounded-full flex items-center justify-center mb-6 mx-auto">
-                    <TrendingUp className="text-white text-2xl" />
-                  </div>
-                  <h3 className="text-2xl font-subtitle gold-accent mb-4">Tecnología Avanzada</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Equipos de última generación certificados FDA y CE para máxima seguridad y eficacia comprobada.
-                  </p>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      {/* Method Phases Detail */}
-      <section className="py-20 bg-pearl/30 backdrop-blur-sm" data-testid="method-phases">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-20">
-            {methodPhases.map((phase, index) => (
-              <AnimatedSection key={phase.number} delay={index * 0.1}>
-                <div className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-                  <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                    <Card className="bg-white/90 backdrop-blur-sm shadow-lg border border-gold-light/30 p-8">
-                      <div className="flex items-center mb-6">
-                        <div className="w-20 h-20 bg-gradient-to-br from-turquoise to-turquoise-medium rounded-full flex items-center justify-center mr-6 shadow-lg">
-                          <phase.icon className="text-white text-3xl" />
-                        </div>
-                        <div className="text-4xl font-title gold-accent font-bold">{phase.number}</div>
-                      </div>
-                      
-                      <h2 className="text-3xl lg:text-4xl font-title text-foreground mb-4">{phase.title}</h2>
-                      <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                        {phase.description}
-                      </p>
-                    
-                    <div className="space-y-3 mb-6">
-                      {phase.details.map((detail, detailIndex) => (
-                        <div key={detailIndex} className="flex items-start">
-                          <CheckCircle className="w-5 h-5 text-turquoise mr-3 mt-0.5 flex-shrink-0" />
-                          <span className="text-foreground/80">{detail}</span>
-                        </div>
-                      ))}
-                    </div>
-                    
-                      <div className="flex items-center text-sm text-muted-foreground">
-                        <Clock className="w-4 h-4 mr-2" />
-                        <span>Duración: {phase.duration}</span>
-                      </div>
-                    </Card>
-                  </div>
-                  
-                  <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
+          {methodPhases.map((phase, index) => (
+            <div key={phase.number} className={`mb-24 ${index === methodPhases.length - 1 ? 'mb-0' : ''}`}>
+              <AnimatedSection delay={index * 0.1}>
+                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                  <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
                     <img 
-                      src={phase.image}
+                      src={phase.image} 
                       alt={phase.title}
-                      className="rounded-2xl shadow-lg w-full h-auto object-cover"
+                      className="rounded-2xl shadow-lg w-full h-auto object-cover hover-lift transition-all duration-300"
                       data-testid={`img-phase-${phase.number}`}
                     />
                   </div>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-pearl/50 backdrop-blur-sm" data-testid="method-benefits">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection>
-            <div className="text-center mb-16">
-              <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
-                Ventajas Exclusivas
-              </div>
-              <h2 className="text-4xl lg:text-6xl font-title gold-accent mb-6">
-                ¿Por qué elegir el Método MAC?
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Nuestro enfoque integral garantiza resultados excepcionales, seguros y duraderos con el respaldo de la ciencia.
-              </p>
-            </div>
-          </AnimatedSection>
+                  <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
+                    <div className="text-4xl font-title gold-accent font-bold mb-4">{phase.number}</div>
+                    <h2 className="text-3xl lg:text-4xl font-title text-foreground mb-4">{phase.title}</h2>
+                    
+                    <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                      {phase.subtitle}
+                    </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <AnimatedSection key={benefit.title} delay={index * 0.1}>
-                <Card className="bg-white/90 backdrop-blur-sm text-center h-full hover-lift transition-all duration-300 shadow-lg border border-gold-light/30" data-testid={`benefit-${index}`}>
-                  <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-gradient-to-br from-turquoise to-turquoise-medium rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                      <benefit.icon className="text-white text-2xl" />
+                    {/* Includes Section */}
+                    {phase.includes && (
+                      <div className="mb-6">
+                        <h4 className="text-lg font-subtitle font-semibold gold-accent mb-4">Incluye:</h4>
+                        <ul className="space-y-3">
+                          {phase.includes.map((item, idx) => (
+                            <li key={idx} className="flex items-start">
+                              <CheckCircle className="w-5 h-5 text-turquoise mr-3 mt-0.5 flex-shrink-0" />
+                              <div>
+                                <span className="font-medium text-foreground">{item.title}:</span>
+                                <span className="text-muted-foreground ml-1">{item.description}</span>
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* Medical Procedures for Phase 03 */}
+                    {phase.medicalProcedures && (
+                      <div className="mb-6">
+                        <h4 className="text-lg font-subtitle font-semibold gold-accent mb-4">Procedimientos médico-estéticos:</h4>
+                        <ul className="space-y-2">
+                          {phase.medicalProcedures.map((procedure, idx) => (
+                            <li key={idx} className="flex items-start">
+                              <CheckCircle className="w-4 h-4 text-turquoise mr-2 mt-0.5 flex-shrink-0" />
+                              <span className="text-muted-foreground">{procedure}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* Wellness Prevention for Phase 03 */}
+                    {phase.wellnessPrevention && (
+                      <div className="mb-6">
+                        <h4 className="text-lg font-subtitle font-semibold gold-accent mb-4">Bienestar y Medicina Preventiva:</h4>
+                        <ul className="space-y-2">
+                          {phase.wellnessPrevention.map((item, idx) => (
+                            <li key={idx} className="flex items-start">
+                              <CheckCircle className="w-4 h-4 text-turquoise mr-2 mt-0.5 flex-shrink-0" />
+                              <span className="text-muted-foreground">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* Integrated Wellness Techniques for Phase 03 */}
+                    {phase.integratedWellnessTechniques && (
+                      <div className="mb-6">
+                        <h4 className="text-lg font-subtitle font-semibold gold-accent mb-4">Técnicas de bienestar integrado:</h4>
+                        <ul className="space-y-2">
+                          {phase.integratedWellnessTechniques.map((technique, idx) => (
+                            <li key={idx} className="flex items-start">
+                              <CheckCircle className="w-4 h-4 text-turquoise mr-2 mt-0.5 flex-shrink-0" />
+                              <span className="text-muted-foreground">{technique}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* Specialized Coordination for Phase 03 */}
+                    {phase.specializedCoordination && (
+                      <div className="mb-6">
+                        <h4 className="text-lg font-subtitle font-semibold gold-accent mb-4">Coordinación especializada:</h4>
+                        <ul className="space-y-2">
+                          {phase.specializedCoordination.map((item, idx) => (
+                            <li key={idx} className="flex items-start">
+                              <CheckCircle className="w-4 h-4 text-turquoise mr-2 mt-0.5 flex-shrink-0" />
+                              <span className="text-muted-foreground">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* Benefit */}
+                    <div className="bg-turquoise/5 border-l-4 border-turquoise p-4 rounded-r-lg">
+                      <div className="flex items-start">
+                        <Award className="w-5 h-5 text-turquoise mr-3 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <span className="font-medium text-foreground">Beneficio: </span>
+                          <span className="text-muted-foreground">{phase.benefit}</span>
+                        </div>
+                      </div>
                     </div>
-                    <h3 className="text-xl font-subtitle font-semibold mb-4">{benefit.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline Section */}
-      <section className="py-20 bg-white/95 backdrop-blur-sm" data-testid="method-timeline">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection>
-            <div className="text-center mb-16">
-              <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
-                Cronograma Detallado
-              </div>
-              <h2 className="text-4xl lg:text-6xl font-title gold-accent mb-6">
-                Tu Cronograma de Transformación
-              </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Un viaje estructurado desde la primera consulta hasta los resultados definitivos y su mantenimiento
-              </p>
-            </div>
-          </AnimatedSection>
-
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-8 top-8 bottom-8 w-0.5 bg-turquoise"></div>
-            
-            <div className="space-y-8">
-              <AnimatedSection delay={0.1}>
-                <div className="relative flex items-start">
-                  <div className="w-16 h-16 bg-turquoise rounded-full flex items-center justify-center relative z-10">
-                    <span className="text-white font-bold">1</span>
-                  </div>
-                  <div className="ml-8 flex-1">
-                    <h3 className="text-xl font-subtitle font-semibold mb-2">Día 1 - Consulta Inicial</h3>
-                    <p className="text-muted-foreground">Diagnóstico completo y diseño de tu plan personalizado</p>
-                  </div>
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection delay={0.2}>
-                <div className="relative flex items-start">
-                  <div className="w-16 h-16 bg-turquoise rounded-full flex items-center justify-center relative z-10">
-                    <span className="text-white font-bold">30</span>
-                  </div>
-                  <div className="ml-8 flex-1">
-                    <h3 className="text-xl font-subtitle font-semibold mb-2">Día 30 - Primeros Resultados</h3>
-                    <p className="text-muted-foreground">Evaluación inicial y ajustes del protocolo</p>
-                  </div>
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection delay={0.3}>
-                <div className="relative flex items-start">
-                  <div className="w-16 h-16 bg-gold-light rounded-full flex items-center justify-center relative z-10">
-                    <span className="text-white font-bold">90</span>
-                  </div>
-                  <div className="ml-8 flex-1">
-                    <h3 className="text-xl font-subtitle font-semibold mb-2">Día 90 - Transformación Visible</h3>
-                    <p className="text-muted-foreground">Resultados significativos y documentación fotográfica</p>
-                  </div>
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection delay={0.4}>
-                <div className="relative flex items-start">
-                  <div className="w-16 h-16 bg-champagne rounded-full flex items-center justify-center relative z-10">
-                    <span className="text-white font-bold">365</span>
-                  </div>
-                  <div className="ml-8 flex-1">
-                    <h3 className="text-xl font-subtitle font-semibold mb-2">12 Meses - Mantenimiento Óptimo</h3>
-                    <p className="text-muted-foreground">Consolidación de resultados y plan de mantenimiento</p>
                   </div>
                 </div>
               </AnimatedSection>
             </div>
-          </div>
+          ))}
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-pearl to-beige backdrop-blur-sm" data-testid="method-cta">
+      {/* CTA Final */}
+      <section className="py-20 hero-gradient" data-testid="metodo-cta">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
-            <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
-              Primera Consulta Gratuita
-            </div>
             <h2 className="text-4xl lg:text-6xl font-title gold-accent mb-6">
               Comienza tu transformación hoy
             </h2>
             <p className="text-xl text-muted-foreground mb-4 leading-relaxed">
-              La primera consulta es completamente gratuita e incluye tu diagnóstico integral 360° y propuesta personalizada.
+              El Método MAC es más que estética, es arte y ciencia trabajando en armonía 
+              para revelar tu mejor versión. Agenda tu Diagnóstico 360° y descubre el poder de ganar tiempo.
             </p>
-            <div className="flex justify-center items-center space-x-6 mb-8 text-sm text-turquoise">
-              <div className="flex items-center">
-                <Clock className="w-4 h-4 mr-2" />
-                <span>90 minutos</span>
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="w-4 h-4 mr-2" />
-                <span>Sin compromiso</span>
-              </div>
-              <div className="flex items-center">
-                <Award className="w-4 h-4 mr-2" />
-                <span>Valorado en 150€</span>
-              </div>
-            </div>
+            <p className="text-lg text-muted-foreground/80 mb-8">
+              Primera consulta sin compromiso • Diagnóstico completo incluido
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contacto">
                 <Button 
                   size="lg" 
-                  className="bg-turquoise text-white border-2 border-gold-light hover:bg-gold-light hover:text-gold-deep button-premium transition-all duration-300 px-8 py-4 text-lg"
-                  data-testid="button-method-cta-contact"
+                  className="bg-turquoise hover:bg-turquoise-medium text-white px-8 py-4 text-lg font-medium rounded-full hover:shadow-xl transition-all duration-300 hover-lift"
+                  data-testid="button-cta-agendar"
                 >
-                  Agenda tu consulta gratuita
+                  Agenda tu Diagnóstico 360°
                 </Button>
               </Link>
-              <Button 
-                size="lg" 
-                className="bg-green-600 text-white hover:bg-green-700 transition-all duration-300 px-8 py-4 text-lg"
-                data-testid="button-method-cta-whatsapp"
-              >
-                <i className="fab fa-whatsapp mr-2"></i>
-                Consulta por WhatsApp
-              </Button>
+              <Link href="/ubicaciones">
+                <Button 
+                  variant="outline"
+                  size="lg" 
+                  className="border-2 border-gold-light text-foreground hover:bg-gold-light/10 px-8 py-4 text-lg font-medium rounded-full hover:shadow-xl transition-all duration-300"
+                  data-testid="button-cta-ubicaciones"
+                >
+                  Ver Ubicaciones
+                </Button>
+              </Link>
             </div>
           </AnimatedSection>
         </div>
