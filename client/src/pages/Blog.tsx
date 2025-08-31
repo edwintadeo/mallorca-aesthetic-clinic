@@ -109,7 +109,7 @@ export default function Blog() {
             <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
               Educación y Bienestar
             </div>
-            <h1 className="hero-main-title gold-accent-prominent mb-6">
+            <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6">
               Blog MAC
             </h1>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">

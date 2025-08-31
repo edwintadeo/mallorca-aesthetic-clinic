@@ -119,12 +119,12 @@ export default function Home() {
                   data-testid="hero-mac-logo"
                 />
               </div>
-              <h1 className="hero-main-title mb-6 text-white text-shadow-elegant">
-                <span className="gold-accent-prominent">Medicina estética</span><br />
-                <span className="gold-accent-prominent">avanzada con</span><br />
-                <span className="gold-accent-prominent">visión integral</span>
+              <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6">
+                Medicina estética<br />
+                avanzada con<br />
+                visión integral
               </h1>
-              <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto text-shadow-elegant leading-relaxed">
+              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
                 Consigue una transformación que se siente y es visible en solo 90 días y revela tu auténtica belleza natural.
               </p>
               <div className="flex justify-center">
@@ -160,7 +160,7 @@ export default function Home() {
               <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
                 Directora Médica
               </div>
-              <h2 className="text-4xl lg:text-5xl font-subtitle gold-accent-prominent mb-6">
+              <h2 className="text-4xl font-title gold-accent mb-6">
                 Dra. Liliana Ocampo
               </h2>
               <h3 className="text-xl font-subtitle italic text-muted-foreground mb-8">
@@ -212,7 +212,7 @@ export default function Home() {
               <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
                 Nuestros Fundamentos
               </div>
-              <h2 className="text-4xl lg:text-6xl font-subtitle gold-accent-prominent mb-6">
+              <h2 className="text-4xl font-title gold-accent mb-6">
                 Pilares de MAC
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">

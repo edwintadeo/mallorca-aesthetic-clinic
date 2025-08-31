@@ -127,7 +127,7 @@ export default function ClubMAC() {
             <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
               Membresía Exclusiva
             </div>
-            <h1 className="hero-main-title gold-accent-prominent mb-6">
+            <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6">
               Club MAC
             </h1>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
@@ -143,7 +143,7 @@ export default function ClubMAC() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-title gold-accent-prominent mb-6">
+              <h2 className="text-4xl font-title gold-accent mb-6">
                 Planes de Membresía
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -217,7 +217,7 @@ export default function ClubMAC() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-title gold-accent-prominent mb-6">
+              <h2 className="text-4xl font-title gold-accent mb-6">
                 Beneficios Exclusivos
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -252,7 +252,7 @@ export default function ClubMAC() {
         <div className="absolute inset-0 bg-gradient-to-r from-turquoise/20 to-gold-deep/20"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <AnimatedSection>
-            <h2 className="text-4xl lg:text-5xl font-title mb-6 gold-light">
+            <h2 className="text-4xl font-title gold-accent mb-6">
               ¿Listo para una experiencia única?
             </h2>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">

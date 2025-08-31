@@ -125,7 +125,7 @@ export default function Metodo() {
             <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
               Metodología Exclusiva
             </div>
-            <h1 className="hero-main-title gold-accent-prominent mb-6">
+            <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6">
               Las Cuatro Fases del Método MAC
             </h1>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-4">
@@ -319,7 +319,7 @@ export default function Metodo() {
       <section className="py-20 hero-gradient" data-testid="metodo-cta">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
-            <h2 className="text-4xl lg:text-6xl font-title gold-accent-prominent mb-6">
+            <h2 className="text-4xl font-title gold-accent mb-6">
               El Método MAC es más que estética
             </h2>
             <p className="text-xl text-muted-foreground mb-6 leading-relaxed">

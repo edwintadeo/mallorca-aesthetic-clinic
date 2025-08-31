@@ -187,7 +187,7 @@ export default function Contacto() {
             <div className="text-sm uppercase tracking-wider text-white/70 font-medium mb-4">
               Contacto
             </div>
-            <h1 className="hero-main-title gold-accent-prominent mb-6">
+            <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6">
               Empieza hoy el arte de ganar tiempo.
             </h1>
             <p className="text-lg text-white/90 max-w-3xl mx-auto leading-relaxed">
@@ -621,7 +621,7 @@ export default function Contacto() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-title gold-accent-prominent mb-6">
+              <h2 className="text-4xl font-title gold-accent mb-6">
                 Visítanos:
               </h2>
             </div>
