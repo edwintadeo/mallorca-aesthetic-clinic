@@ -29,6 +29,7 @@ export default function Navbar() {
     { href: "/ubicaciones", label: "Ubicaciones" },
     { href: "/blog", label: "Blog" },
     { href: "/contacto", label: "Contacto" },
+    { href: "/carrito", label: "Carrito" },
     { href: "/club", label: "Club MAC" },
   ];
 
