@@ -135,15 +135,26 @@ export default function Nosotros() {
       {/* Video Section - Tramuntana */}
       <section className="py-0 bg-black relative overflow-hidden" data-testid="tramuntana-video">
         <div className="relative w-full h-[70vh] min-h-[500px]">
-          {/* Video replaced with image fallback for deployment */}
-          <img 
-            src={facialMaskTreatment}
-            alt="Serra de Tramuntana"
+          <video 
             className="w-full h-full object-cover"
-            style={{
-              filter: 'contrast(0.9) brightness(1.1)'
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+            poster={facialMaskTreatment}
+            onError={(e) => {
+              console.error("Error loading video:", e);
+              // Si el video no carga, mostrar imagen de respaldo
+              e.currentTarget.style.display = 'none';
+              const fallbackDiv = document.createElement('div');
+              fallbackDiv.className = 'w-full h-full bg-cover bg-center';
+              fallbackDiv.style.backgroundImage = `url(${facialMaskTreatment})`;
+              e.currentTarget.parentElement?.appendChild(fallbackDiv);
             }}
-          />
+          >
+            <source src="/public-objects/tramuntana.mp4" type="video/mp4" />
+            Tu navegador no soporta videos HTML5.
+          </video>
           
           {/* Overlay with content */}
           <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
@@ -337,13 +348,17 @@ export default function Nosotros() {
 
       {/* Stats */}
       <section className="py-20 relative overflow-hidden" data-testid="stats-section">
-        {/* Background image fallback - video not available in deployment */}
+        {/* Background Video */}
         <div className="absolute inset-0">
-          <img 
-            src={spaTreatment}
-            alt="Clínica Interior"
+          <video 
             className="w-full h-full object-cover"
-          />
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+          >
+            <source src="/public-objects/clinica-interior.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-white/85"></div>
         </div>
         

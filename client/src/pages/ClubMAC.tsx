@@ -107,12 +107,14 @@ export default function ClubMAC() {
     <div className="pt-16 font-body antialiased">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden" data-testid="club-mac-hero">
-        {/* Background image fallback - video not available in deployment */}
-        <div 
-          className="absolute inset-0 w-full h-full opacity-30 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1559599101-f09722fb4948?w=1920&h=1080&fit=crop)'
-          }}
+        {/* Video Background */}
+        <LazyVideo
+          sources={[
+            { src: heroVideo, type: "video/mp4" }
+          ]}
+          className="absolute inset-0 w-full h-full opacity-30"
+          priority={true}
+          preload="auto"
         />
         
         {/* Gradient Overlay */}

@@ -166,14 +166,17 @@ export default function Contacto() {
     <div className="pt-16 font-body antialiased">
       {/* Hero Section */}
       <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden" data-testid="contacto-hero">
-        {/* Background image fallback - video not available in deployment */}
-        <div 
-          className="absolute inset-0 w-full h-full bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1583396203801-e93364e20e8b?w=1920&h=1080&fit=crop)',
-            filter: 'brightness(0.7)'
-          }}
-        />
+        {/* Background Video */}
+        <video 
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+        >
+          <source src="/public-objects/catedral mallorca.mp4" type="video/mp4" />
+          Tu navegador no soporta videos HTML5.
+        </video>
         
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/30"></div>

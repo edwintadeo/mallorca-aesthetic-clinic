@@ -192,8 +192,7 @@ export default function Metodo() {
               <AnimatedSection delay={index * 0.1}>
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                   <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                    {/* Videos disabled for deployment - using images instead */}
-                    {false ? (
+                    {(index === 0 || phase.video) ? (
                       <LazyVideo
                         sources={[
                           { src: index === 0 ? boldBrushVideo : phase.video, type: "video/mp4" }
