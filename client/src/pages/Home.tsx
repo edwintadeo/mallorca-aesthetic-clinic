@@ -135,35 +135,24 @@ export default function Home() {
                   data-testid="hero-mac-logo"
                 />
               </div>
-              <h1 className="text-5xl lg:text-7xl title-luxury mb-6 text-white drop-shadow-lg">
-                <span className="gold-accent-prominent">El Arte de</span><br />
-                <span className="text-white">Ganar Tiempo</span>
+              <h1 className="text-5xl lg:text-7xl font-title mb-6 text-white drop-shadow-lg">
+                <span className="gold-accent">Medicina estética</span><br />
+                <span className="gold-accent">avanzada con</span><br />
+                <span className="gold-accent">visión integral</span>
               </h1>
-              <h2 className="text-2xl lg:text-3xl subtitle-elegant text-white/90 mb-8 drop-shadow-md">
-                Donde el tiempo se convierte en arte y tu bienestar en una obra maestra
-              </h2>
-              <p className="text-lg text-white/80 mb-8 body-refined max-w-4xl mx-auto drop-shadow-md">
-                En un mundo obsesionado con detener el reloj, hemos descubierto algo extraordinario: el arte de convertir el tiempo en tu aliado. No se trata solo de lucir más joven, sino de experimentar una transformación integral donde la belleza auténtica emerge naturalmente desde el bienestar más profundo.
+              <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto drop-shadow-md leading-relaxed">
+                Consigue una transformación que se siente y es visible en solo 90 días y revela tu auténtica belleza natural.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <Link href="/contacto">
                   <Button 
                     size="lg" 
-                    className="bg-turquoise-medium/90 text-white border-2 border-gold-light hover:bg-gold-light hover:text-gold-deep button-premium px-8 py-4 text-lg backdrop-blur-sm"
+                    className="bg-gold-light text-foreground hover:bg-gold-champagne transition-all duration-300 px-8 py-3 text-base font-medium rounded-none uppercase tracking-wider"
                     data-testid="button-hero-reserva"
                   >
-                    Reserva tu consulta
+                    Reserva tu cita
                   </Button>
                 </Link>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-2 border-white/70 text-white hover:bg-white/20 hover:text-white transition-all duration-300 px-8 py-4 text-lg backdrop-blur-sm"
-                  data-testid="button-hero-whatsapp"
-                >
-                  <i className="fab fa-whatsapp mr-2"></i>
-                  WhatsApp
-                </Button>
               </div>
             </AnimatedSection>
           </div>
