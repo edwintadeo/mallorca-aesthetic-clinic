@@ -102,18 +102,50 @@ export default function Tratamientos() {
   const featuredTreatments = displayTreatments.filter((treatment: any) => treatment.featured);
 
   return (
-    <div className="pt-16 font-body antialiased">
+    <div className="font-body antialiased">
+      {/* Video de fondo para toda la página */}
+      <div className="fixed inset-0 w-full h-full z-[-1] overflow-hidden">
+        <video 
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          data-testid="video-background-tratamientos"
+          onError={(e) => {
+            console.error("Error loading background video:", e);
+            // Si el video no carga, mostrar imagen de respaldo
+            e.currentTarget.style.display = 'none';
+            const fallbackDiv = e.currentTarget.nextElementSibling;
+            if (fallbackDiv) fallbackDiv.style.display = 'block';
+          }}
+        >
+          <source src="/public-objects/amanecer mallorca.mp4" type="video/mp4" />
+        </video>
+        
+        {/* Imagen de respaldo si el video no carga */}
+        <div 
+          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          style={{ 
+            backgroundImage: `url(${spaTreatment})`,
+            display: "none"
+          }}
+        ></div>
+        
+        {/* Overlay para mejorar legibilidad del texto */}
+        <div className="absolute inset-0 bg-black/40"></div>
+      </div>
       {/* Hero Section */}
-      <section className="py-20 hero-gradient" data-testid="tratamientos-hero">
+      <section className="pt-20 pb-16 relative z-[1]" data-testid="tratamientos-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
-            <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
+            <div className="text-sm uppercase tracking-wider text-white/80 font-medium mb-4 drop-shadow-md">
               Nuestros Servicios
             </div>
-            <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6">
+            <h1 className="text-5xl lg:text-7xl font-title text-white mb-6 drop-shadow-lg">
               Tratamientos
             </h1>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
               Tecnología de vanguardia y técnicas artesanales para resultados naturales excepcionales. 
               Cada tratamiento se adapta a tus necesidades específicas dentro del Método MAC.
             </p>
@@ -121,39 +153,10 @@ export default function Tratamientos() {
         </div>
       </section>
 
-      {/* Bold Brush Video Section */}
-      <section className="py-0 bg-black relative overflow-hidden" data-testid="bold-brush-video">
-        <div className="relative w-full h-[60vh] min-h-[400px]">
-          <video 
-            className="w-full h-full object-cover"
-            autoPlay 
-            muted 
-            loop 
-            playsInline
-          >
-            <source src="/public-objects/Bold Brush.mp4" type="video/mp4" />
-          </video>
-        </div>
-      </section>
-
-      {/* Amanecer Mallorca Video Section */}
-      <section className="py-0 bg-white relative overflow-hidden" data-testid="amanecer-mallorca-video">
-        <div className="relative w-full h-[60vh] min-h-[400px]">
-          <video 
-            className="w-full h-full object-cover"
-            autoPlay 
-            muted 
-            loop 
-            playsInline
-          >
-            <source src="/public-objects/amanecer mallorca.mp4" type="video/mp4" />
-          </video>
-        </div>
-      </section>
 
       {/* Featured Treatments */}
       {featuredTreatments.length > 0 && (
-        <section className="py-20 bg-white" data-testid="featured-treatments">
+        <section className="py-20 bg-white/95 backdrop-blur-sm relative z-[1]" data-testid="featured-treatments">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection>
               <div className="text-center mb-16">
@@ -209,7 +212,7 @@ export default function Tratamientos() {
       )}
 
       {/* Category Filter */}
-      <section className="py-8 bg-pearl" data-testid="category-filter">
+      <section className="py-8 bg-white/90 backdrop-blur-sm relative z-[1]" data-testid="category-filter">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="flex flex-wrap justify-center gap-4">
@@ -238,7 +241,7 @@ export default function Tratamientos() {
       </section>
 
       {/* All Treatments */}
-      <section className="py-20 bg-white" data-testid="all-treatments">
+      <section className="py-20 bg-white/95 backdrop-blur-sm relative z-[1]" data-testid="all-treatments">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {isLoading ? (
             <div className="text-center py-12">
@@ -394,7 +397,7 @@ export default function Tratamientos() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white" data-testid="treatments-cta">
+      <section className="py-20 bg-white/95 backdrop-blur-sm relative z-[1]" data-testid="treatments-cta">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <h2 className="text-4xl lg:text-5xl font-title gold-accent mb-6">
