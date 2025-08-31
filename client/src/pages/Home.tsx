@@ -85,14 +85,8 @@ export default function Home() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
           data-testid="video-background"
-          onLoadStart={() => console.log("Video started loading from:", "/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4")}
-          onCanPlay={() => console.log("Video can play successfully")}
-          onLoadedData={() => console.log("Video data loaded")}
           onError={(e) => {
             console.error("Error loading background video:", e);
-            console.log("Video source:", e.currentTarget.currentSrc);
-            console.log("Network state:", e.currentTarget.networkState);
-            console.log("Ready state:", e.currentTarget.readyState);
             // Si el video no carga, mostrar imagen de respaldo
             e.currentTarget.style.display = 'none';
             const fallbackDiv = e.currentTarget.nextElementSibling;
