@@ -106,7 +106,7 @@ export default function Footer() {
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0 text-sm text-background/60">
             <Link href="/aviso-legal" className="hover:text-champagne transition-colors" data-testid="footer-link-legal">Aviso Legal</Link>
-            <Link href="/privacidad" className="hover:text-champagne transition-colors" data-testid="footer-link-privacy">Política de Privacidad</Link>
+            <Link href="/politica-privacidad" className="hover:text-champagne transition-colors" data-testid="footer-link-privacy">Política de Privacidad</Link>
             <Link href="/cookies" className="hover:text-champagne transition-colors" data-testid="footer-link-cookies">Cookies</Link>
             <Link href="/pagos" className="hover:text-champagne transition-colors" data-testid="footer-link-pagos">Pagos</Link>
           </div>

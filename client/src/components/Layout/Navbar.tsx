@@ -73,7 +73,7 @@ export default function Navbar() {
           <div className="flex items-center space-x-4">
             <Link href="/contacto">
               <Button 
-                className="bg-turquoise text-white border-2 border-gold-light hover:bg-gold-light hover:text-gold-deep transition-all duration-300 shadow-lg font-medium"
+                className="cta-enhanced text-white hover:text-gold-deep font-medium"
                 data-testid="button-cta-reserva"
               >
                 Reserva tu cita

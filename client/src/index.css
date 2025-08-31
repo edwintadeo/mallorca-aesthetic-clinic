@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap&family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.adobe.com/fonts/orpheus-pro');
 @import url('https://fonts.adobe.com/fonts/gotham');
 
@@ -201,6 +201,22 @@ html {
   
   .bg-turquoise {
     background-color: var(--turquoise-translucent);
+  }
+  
+  /* CTAs mejorados con backdrop blur para contraste sobre videos */
+  .cta-enhanced {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(0, 133, 120, 0.9) !important;
+    border: 2px solid rgba(203, 164, 76, 0.8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .cta-enhanced:hover {
+    background-color: rgba(203, 164, 76, 0.95) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
   }
   
   .bg-turquoise-solid {

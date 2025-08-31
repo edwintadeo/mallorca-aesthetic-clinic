@@ -455,7 +455,7 @@ export default function Contacto() {
                               
                               <FormLabel className="text-sm font-normal flex items-start space-x-3">
                                 <span>He leído y acepto la</span>
-                                <a href="#" className="text-turquoise hover:underline">
+                                <a href="/politica-privacidad" className="text-turquoise hover:underline" data-testid="link-privacy-policy">
                                   política de privacidad
                                 </a>
                               </FormLabel>
@@ -470,10 +470,17 @@ export default function Contacto() {
                       <Button 
                         type="submit" 
                         disabled={isSubmitting}
-                        className="flex-1 bg-turquoise text-white border-2 border-gold-light hover:bg-gold-light hover:text-gold-deep transition-all duration-300 py-3"
+                        className="flex-1 cta-enhanced text-white hover:text-gold-deep py-3 relative overflow-hidden"
                         data-testid="button-submit-form"
                       >
-                        {isSubmitting ? "Enviando..." : "ENVIAR"}
+                        {isSubmitting ? (
+                          <span className="flex items-center justify-center">
+                            <span className="animate-spin mr-2 h-4 w-4 border-2 border-white border-t-transparent rounded-full" />
+                            Enviando...
+                          </span>
+                        ) : (
+                          "ENVIAR"
+                        )}
                       </Button>
                       <a 
                         href={whatsappUrl}

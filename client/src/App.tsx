@@ -15,6 +15,7 @@ import BlogPost from "@/pages/BlogPost";
 import Contacto from "@/pages/Contacto";
 import Carrito from "@/pages/Carrito";
 import ClubMAC from "@/pages/ClubMAC";
+import PoliticaPrivacidad from "@/pages/PoliticaPrivacidad";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -33,6 +34,7 @@ function Router() {
           <Route path="/contacto" component={Contacto} />
           <Route path="/carrito" component={Carrito} />
           <Route path="/club" component={ClubMAC} />
+          <Route path="/politica-privacidad" component={PoliticaPrivacidad} />
           <Route component={NotFound} />
         </Switch>
       </main>

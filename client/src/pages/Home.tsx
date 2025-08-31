@@ -103,7 +103,7 @@ export default function Home() {
             // Si el video no carga, mostrar imagen de respaldo
             e.currentTarget.style.display = 'none';
             const fallbackDiv = e.currentTarget.nextElementSibling;
-            if (fallbackDiv) fallbackDiv.style.display = 'block';
+            if (fallbackDiv) (fallbackDiv as HTMLElement).style.display = 'block';
           }}
         >
           <source src="/public-objects/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4" type="video/mp4" />
@@ -149,7 +149,7 @@ export default function Home() {
                 <Link href="/contacto">
                   <Button 
                     size="lg" 
-                    className="bg-turquoise text-white border-2 border-gold-light hover:bg-gold-light hover:text-gold-deep transition-all duration-300 px-8 py-3 text-base font-semibold rounded-none uppercase tracking-wider shadow-xl"
+                    className="cta-enhanced text-white hover:text-gold-deep px-8 py-3 text-base font-semibold rounded-none uppercase tracking-wider"
                     data-testid="button-hero-reserva"
                   >
                     Reserva tu cita
