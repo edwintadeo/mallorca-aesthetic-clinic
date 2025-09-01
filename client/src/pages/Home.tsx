@@ -157,9 +157,12 @@ export default function Home() {
                   visión integral
                 </h1>
               </div>
-              <p className="text-xl text-white mb-8 max-w-2xl mx-auto leading-relaxed text-shadow-dark">
-                Consigue una transformación que se siente y es visible en solo 90 días y revela tu auténtica belleza natural.
-              </p>
+              <div className="relative inline-block mb-8">
+                <div className="absolute inset-0 bg-gradient-to-br from-gold-light/50 via-pearl/50 to-gold-champagne/50 backdrop-blur-md rounded-2xl border border-gold-light/30 shadow-2xl opacity-90"></div>
+                <p className="text-xl text-gold-deep relative z-10 px-8 py-6 max-w-2xl mx-auto leading-relaxed font-medium text-shadow-elegant">
+                  Consigue una transformación que se siente y es visible en solo 90 días y revela tu auténtica belleza natural.
+                </p>
+              </div>
               <div className="space-y-4">
                 <Button 
                   size="lg" 
