@@ -381,8 +381,10 @@ export default function Home() {
                 Nuestros tratamientos
               </div>
               
-              <h2 className="text-4xl lg:text-6xl font-subtitle gold-accent-prominent mb-8 leading-tight text-overlay-translucent">
-                Tratamientos que combinan ciencia, estética y bienestar
+              <h2 className="text-4xl lg:text-6xl font-subtitle gold-accent-prominent mb-8 leading-tight relative">
+                <span className="bg-white/80 px-6 py-4 rounded-xl border border-gold-light/30 shadow-lg backdrop-blur-sm inline-block">
+                  Tratamientos que combinan ciencia, estética y bienestar
+                </span>
               </h2>
               
               <div className="space-y-8 mb-10">
