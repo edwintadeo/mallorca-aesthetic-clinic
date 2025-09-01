@@ -13,6 +13,7 @@ import { Helmet } from "react-helmet-async";
 import { OptimizedVideo } from "@/components/UI/OptimizedVideo";
 import FloatingNavbar from "@/components/Layout/FloatingNavbar";
 import CinematicHero from "@/components/UI/CinematicHero";
+import InteractiveMethodTimeline from "@/components/UI/InteractiveMethodTimeline";
 
 // Import video configuration
 import { getVideoConfigComplete } from "@/config/videos";
@@ -291,64 +292,9 @@ export default function Home() {
       {/* Visual Separator */}
       <div className="section-separator"></div>
 
-      {/* Method Section */}
-      <section id="method-section" className="py-20 bg-transparent relative z-[1] gold-border-bottom" data-testid="method-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection>
-            <div className="text-center mb-16">
-              <div className="text-sm uppercase tracking-wider text-white font-medium mb-4 drop-shadow-lg">
-                Metodología Exclusiva
-              </div>
-              <h2 className="text-4xl lg:text-6xl font-subtitle text-gold-deep mb-6 text-shadow-elegant">
-                Método MAC
-              </h2>
-              <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed text-shadow-elegant">
-                Nuestro protocolo de cuatro fases garantiza resultados excepcionales 
-                mediante un enfoque científico y personalizado.
-              </p>
-            </div>
-          </AnimatedSection>
-
-          {/* Step Progress Indicator */}
-          <div className="flex justify-center mb-12">
-            <div className="step-indicator" data-step="4">
-              Proceso de 4 fases
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {methodPhases.map((phase, index) => (
-              <AnimatedSection key={phase.number} delay={index * 0.1}>
-                <Card className="card-contrast-enhanced hover:shadow-xl transition-all duration-300 h-full" data-testid={`method-phase-${phase.number}`}>
-                  <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-turquoise rounded-full flex items-center justify-center mb-6">
-                      <phase.icon className="text-white text-2xl" />
-                    </div>
-                    <div className="gold-numeral mb-2">{phase.number}</div>
-                    <h3 className="text-xl font-subtitle text-gold-deep font-semibold mb-4">{phase.title}</h3>
-                    <p className="text-dark-neutral leading-relaxed">
-                      {phase.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
-            ))}
-          </div>
-
-          <AnimatedSection delay={0.4}>
-            <div className="text-center mt-12">
-              <Link href="/metodo">
-                <Button 
-                  size="lg" 
-                  className="btn-turquoise-enhanced btn-enhanced px-8 py-4 text-lg"
-                  data-testid="button-method-learn-more"
-                >
-                  Descubre el Método MAC
-                </Button>
-              </Link>
-            </div>
-          </AnimatedSection>
-        </div>
+      {/* Interactive Method Timeline */}
+      <section id="method-section" className="relative z-[1]" data-testid="method-section">
+        <InteractiveMethodTimeline />
       </section>
 
       {/* Treatments Section */}
