@@ -143,9 +143,9 @@ export default function Home() {
                 <span className="text-xs uppercase tracking-[0.3em] text-gold-deep font-light">Excelencia Médica</span>
                 <div className="w-20 h-[1px] bg-gradient-to-l from-transparent to-gold-light"></div>
               </div>
-              <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6 relative">
-                <span className="absolute inset-0 bg-white/95 blur-xl -z-10 rounded-lg scale-110"></span>
-                <span className="relative z-10 drop-shadow-lg">
+              <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6 relative inline-block">
+                <span className="absolute inset-0 bg-white/30 backdrop-blur-md -z-10 rounded-2xl -m-4"></span>
+                <span className="relative z-10 px-6 py-4 block">
                   Medicina estética<br />
                   avanzada con<br />
                   visión integral
