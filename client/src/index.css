@@ -7,17 +7,31 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Focus states for accessibility */
+/* Focus states for accessibility - Premium MAC styling */
 *:focus-visible {
-  outline: 3px solid hsl(45, 55%, 41%);
-  outline-offset: 2px;
-  border-radius: 4px;
-  transition: outline 200ms ease-out;
+  outline: 2px solid var(--gold-deep);
+  outline-offset: 3px;
+  border-radius: 6px;
+  transition: all 300ms ease-out;
+  box-shadow: 0 0 0 4px hsla(42, 64%, 35%, 0.15), 
+              0 4px 12px hsla(42, 64%, 35%, 0.25);
 }
 
 button:focus-visible,
 a:focus-visible {
-  box-shadow: 0 0 0 4px hsla(45, 55%, 41%, 0.25);
+  outline: 2px solid var(--gold-light);
+  box-shadow: 0 0 0 3px hsla(42, 50%, 45%, 0.2),
+              0 0 20px hsla(42, 50%, 45%, 0.15),
+              0 4px 16px hsla(0, 0%, 0%, 0.1);
+  transform: translateY(-1px);
+}
+
+.cta-enhanced:focus-visible {
+  outline: 2px solid var(--champagne);
+  box-shadow: 0 0 0 4px hsla(42, 57%, 60%, 0.3),
+              0 0 30px hsla(42, 57%, 60%, 0.2),
+              0 6px 20px hsla(0, 0%, 0%, 0.15);
+  transform: translateY(-2px) scale(1.02);
 }
 
 /* Animation for subtle pulse */
@@ -34,6 +48,16 @@ a:focus-visible {
 
 .animate-pulse-subtle {
   animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+/* Premium shimmer animation for skeletons */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 @tailwind base;

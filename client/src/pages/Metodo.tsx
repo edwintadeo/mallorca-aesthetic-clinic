@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import AnimatedSection from "@/components/UI/AnimatedSection";
+import Breadcrumb from "@/components/UI/Breadcrumb";
 // Videos removed for deployment stability
 import { Link } from "wouter";
 import { Search, ClipboardList, Wand2, TrendingUp, CheckCircle, Clock, Users, Award } from "lucide-react";
@@ -17,6 +18,10 @@ import whiteFacialMask from "@assets/mascarilla perla_1756671424839.jpg";
 import boldBrushVideo from "@assets/Bold Brush Strokes_simple_compose_01k40ny60dfpka9sghp6zqaakq_1756669574524.mp4";
 
 export default function Metodo() {
+  const breadcrumbItems = [
+    { title: "Método MAC", current: true }
+  ];
+
   const methodPhases = [
     {
       icon: Search,
@@ -123,31 +128,36 @@ export default function Metodo() {
     <div className="pt-16 font-body antialiased">
       {/* Hero Section */}
       <section className="py-20 hero-gradient gold-border-bottom" data-testid="metodo-hero">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
-              Metodología Exclusiva
+            <div className="mb-8">
+              <Breadcrumb items={breadcrumbItems} className="justify-center" />
             </div>
-            <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6 relative">
-              <span className="absolute inset-0 bg-pearl/85 blur-xl -z-10 rounded-lg"></span>
-              Las Cuatro Fases del Método MAC
-            </h1>
-            <p className="text-xl text-medium-neutral max-w-4xl mx-auto leading-relaxed mb-4 text-overlay-translucent">
-              Un enfoque revolucionario que combina diagnóstico científico avanzado, planificación personalizada, 
-              ejecución experta y seguimiento estratégico para garantizar tu transformación integral.
-            </p>
-            <div className="flex justify-center items-center space-x-8 mb-8 text-sm text-turquoise">
-              <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 mr-2" />
-                <span>Más de 10,000 pacientes</span>
+            <div className="text-center">
+              <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
+                Metodología Exclusiva
               </div>
-              <div className="flex items-center">
-                <Award className="w-5 h-5 mr-2" />
-                <span>97% satisfacción</span>
-              </div>
-              <div className="flex items-center">
-                <Clock className="w-5 h-5 mr-2" />
-                <span>90 días transformación</span>
+              <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6 relative">
+                <span className="absolute inset-0 bg-pearl/85 blur-xl -z-10 rounded-lg"></span>
+                Las Cuatro Fases del Método MAC
+              </h1>
+              <p className="text-xl text-medium-neutral max-w-4xl mx-auto leading-relaxed mb-4 text-overlay-translucent">
+                Un enfoque revolucionario que combina diagnóstico científico avanzado, planificación personalizada, 
+                ejecución experta y seguimiento estratégico para garantizar tu transformación integral.
+              </p>
+              <div className="flex justify-center items-center space-x-8 mb-8 text-sm text-turquoise">
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 mr-2" />
+                  <span>Más de 10,000 pacientes</span>
+                </div>
+                <div className="flex items-center">
+                  <Clock className="w-5 h-5 mr-2" />
+                  <span>Resultados en 90 días</span>
+                </div>
+                <div className="flex items-center">
+                  <Award className="w-5 h-5 mr-2" />
+                  <span>15 años de experiencia</span>
+                </div>
               </div>
             </div>
             <Link href="/contacto">

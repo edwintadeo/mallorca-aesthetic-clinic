@@ -2,7 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { z } from "zod";
 import { storage } from "./storage";
-import { insertContactRequestSchema, insertPostSchema, insertTestimonialSchema, insertTreatmentSchema, insertLocationSchema } from "@shared/schema";
+import { insertContactRequestSchema, insertQuickBookingSchema, insertPostSchema, insertTestimonialSchema, insertTreatmentSchema, insertLocationSchema } from "@shared/schema";
 import { ObjectStorageService } from "./objectStorage";
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -56,6 +56,32 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json(contactRequests);
     } catch (error) {
       console.error("Error fetching contact requests:", error);
+      res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
+  // Quick Bookings
+  app.post("/api/quick-booking", async (req, res) => {
+    try {
+      const validatedData = insertQuickBookingSchema.parse(req.body);
+      const quickBooking = await storage.createQuickBooking(validatedData);
+      res.status(201).json(quickBooking);
+    } catch (error) {
+      console.error("Error creating quick booking:", error);
+      if (error instanceof z.ZodError) {
+        res.status(400).json({ message: "Invalid request data", errors: error.errors });
+      } else {
+        res.status(500).json({ message: "Internal server error" });
+      }
+    }
+  });
+
+  app.get("/api/quick-bookings", async (req, res) => {
+    try {
+      const quickBookings = await storage.getAllQuickBookings();
+      res.json(quickBookings);
+    } catch (error) {
+      console.error("Error fetching quick bookings:", error);
       res.status(500).json({ message: "Internal server error" });
     }
   });

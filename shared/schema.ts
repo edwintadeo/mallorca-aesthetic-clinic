@@ -63,12 +63,27 @@ export const locations = pgTable("locations", {
   imageUrl: text("image_url"),
 });
 
+export const quickBookings = pgTable("quick_bookings", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  name: text("name").notNull(),
+  email: text("email").notNull(),
+  phone: text("phone").notNull(),
+  preferredTime: text("preferred_time"),
+  message: text("message"),
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
 export const insertUserSchema = createInsertSchema(users).pick({
   username: true,
   password: true,
 });
 
 export const insertContactRequestSchema = createInsertSchema(contactRequests).omit({
+  id: true,
+  createdAt: true,
+});
+
+export const insertQuickBookingSchema = createInsertSchema(quickBookings).omit({
   id: true,
   createdAt: true,
 });
@@ -91,10 +106,13 @@ export const insertLocationSchema = createInsertSchema(locations).omit({
   id: true,
 });
 
-export type InsertUser = z.infer<typeof insertUserSchema>;
+// Types
 export type User = typeof users.$inferSelect;
+export type InsertUser = z.infer<typeof insertUserSchema>;
 export type ContactRequest = typeof contactRequests.$inferSelect;
 export type InsertContactRequest = z.infer<typeof insertContactRequestSchema>;
+export type QuickBooking = typeof quickBookings.$inferSelect;
+export type InsertQuickBooking = z.infer<typeof insertQuickBookingSchema>;
 export type Post = typeof posts.$inferSelect;
 export type InsertPost = z.infer<typeof insertPostSchema>;
 export type Testimonial = typeof testimonials.$inferSelect;

@@ -10,7 +10,9 @@ import {
   type Treatment,
   type InsertTreatment,
   type Location,
-  type InsertLocation
+  type InsertLocation,
+  type QuickBooking,
+  type InsertQuickBooking
 } from "@shared/schema";
 import { randomUUID } from "crypto";
 
@@ -24,6 +26,11 @@ export interface IStorage {
   createContactRequest(contactRequest: InsertContactRequest): Promise<ContactRequest>;
   getAllContactRequests(): Promise<ContactRequest[]>;
   getContactRequestById(id: string): Promise<ContactRequest | undefined>;
+  
+  // Quick Bookings
+  createQuickBooking(quickBooking: InsertQuickBooking): Promise<QuickBooking>;
+  getAllQuickBookings(): Promise<QuickBooking[]>;
+  getQuickBookingById(id: string): Promise<QuickBooking | undefined>;
   
   // Posts
   createPost(post: InsertPost): Promise<Post>;
@@ -50,6 +57,7 @@ export interface IStorage {
 export class MemStorage implements IStorage {
   private users: Map<string, User>;
   private contactRequests: Map<string, ContactRequest>;
+  private quickBookings: Map<string, QuickBooking>;
   private posts: Map<string, Post>;
   private testimonials: Map<string, Testimonial>;
   private treatments: Map<string, Treatment>;
@@ -58,6 +66,7 @@ export class MemStorage implements IStorage {
   constructor() {
     this.users = new Map();
     this.contactRequests = new Map();
+    this.quickBookings = new Map();
     this.posts = new Map();
     this.testimonials = new Map();
     this.treatments = new Map();
@@ -267,6 +276,30 @@ export class MemStorage implements IStorage {
 
   async getContactRequestById(id: string): Promise<ContactRequest | undefined> {
     return this.contactRequests.get(id);
+  }
+
+  // Quick Booking methods
+  async createQuickBooking(insertQuickBooking: InsertQuickBooking): Promise<QuickBooking> {
+    const id = randomUUID();
+    const quickBooking: QuickBooking = {
+      ...insertQuickBooking,
+      id,
+      preferredTime: insertQuickBooking.preferredTime || null,
+      message: insertQuickBooking.message || null,
+      createdAt: new Date()
+    };
+    this.quickBookings.set(id, quickBooking);
+    return quickBooking;
+  }
+
+  async getAllQuickBookings(): Promise<QuickBooking[]> {
+    return Array.from(this.quickBookings.values()).sort(
+      (a, b) => (b.createdAt?.getTime() || 0) - (a.createdAt?.getTime() || 0)
+    );
+  }
+
+  async getQuickBookingById(id: string): Promise<QuickBooking | undefined> {
+    return this.quickBookings.get(id);
   }
 
   // Post methods

@@ -7,7 +7,7 @@ interface SkeletonProps {
 }
 
 export function Skeleton({ className, variant = "text", count = 1 }: SkeletonProps) {
-  const baseClasses = "animate-pulse bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 bg-[length:200%_100%]";
+  const baseClasses = "animate-pulse bg-gradient-to-r from-pearl/30 via-gold-light/15 to-pearl/30 bg-[length:200%_100%] animate-[shimmer_2s_ease-in-out_infinite]";
   
   const variants = {
     text: "h-4 rounded-md",
@@ -31,7 +31,7 @@ export function Skeleton({ className, variant = "text", count = 1 }: SkeletonPro
 
 export function TreatmentCardSkeleton() {
   return (
-    <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+    <div className="bg-pearl/20 rounded-xl overflow-hidden shadow-lg border border-gold-light/10">
       <Skeleton variant="image" className="h-48" />
       <div className="p-6 space-y-3">
         <Skeleton className="h-6 w-3/4" />
@@ -47,7 +47,7 @@ export function TreatmentCardSkeleton() {
 
 export function TestimonialSkeleton() {
   return (
-    <div className="bg-white rounded-xl p-6 shadow-md">
+    <div className="bg-pearl/20 rounded-xl p-6 shadow-md border border-gold-light/10">
       <div className="flex items-center gap-4 mb-4">
         <Skeleton className="h-12 w-12 rounded-full" />
         <div className="flex-1">
@@ -63,7 +63,7 @@ export function TestimonialSkeleton() {
 
 export function BlogCardSkeleton() {
   return (
-    <article className="bg-white rounded-xl overflow-hidden shadow-lg">
+    <article className="bg-pearl/20 rounded-xl overflow-hidden shadow-lg border border-gold-light/10">
       <Skeleton variant="image" className="h-56" />
       <div className="p-6 space-y-3">
         <Skeleton className="h-4 w-24" />

@@ -6,6 +6,7 @@ import AnimatedSection from "@/components/UI/AnimatedSection";
 import SkeletonCard from "@/components/UI/SkeletonCard";
 import LazyImage from "@/components/UI/LazyImage";
 import { TreatmentCardSkeleton } from "@/components/UI/SkeletonLoader";
+import Breadcrumb from "@/components/UI/Breadcrumb";
 // Videos removed for deployment stability
 import { Link } from "wouter";
 import { useState } from "react";
@@ -19,6 +20,10 @@ import ojoMujerVerde from "@assets/ojo mujer verde_1756671431969.jpg";
 
 export default function Tratamientos() {
   const [selectedCategory, setSelectedCategory] = useState("all");
+  
+  const breadcrumbItems = [
+    { title: "Tratamientos", current: true }
+  ];
 
   const { data: treatments, isLoading } = useQuery({
     queryKey: ["/api/treatments"],
@@ -119,18 +124,23 @@ export default function Tratamientos() {
       </div>
       {/* Hero Section */}
       <section className="pt-20 pb-16 relative z-[1]" data-testid="tratamientos-hero">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="text-sm uppercase tracking-wider text-white font-bold mb-4 bg-black/30 inline-block px-6 py-2 rounded-full backdrop-blur-sm">
-              Nuestros Servicios
+            <div className="mb-8 flex justify-center">
+              <Breadcrumb items={breadcrumbItems} />
             </div>
-            <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6">
-              Tratamientos
-            </h1>
-            <p className="text-xl text-white max-w-4xl mx-auto leading-relaxed font-medium bg-black/25 backdrop-blur-sm p-6 rounded-lg" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.7)' }}>
-              Tecnología de vanguardia y técnicas artesanales para resultados naturales excepcionales. 
-              Cada tratamiento se adapta a tus necesidades específicas dentro del Método MAC.
-            </p>
+            <div className="text-center">
+              <div className="text-sm uppercase tracking-wider text-white font-bold mb-4 bg-black/30 inline-block px-6 py-2 rounded-full backdrop-blur-sm">
+                Nuestros Servicios
+              </div>
+              <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6">
+                Tratamientos
+              </h1>
+              <p className="text-xl text-white max-w-4xl mx-auto leading-relaxed font-medium bg-black/25 backdrop-blur-sm p-6 rounded-lg" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.7)' }}>
+                Tecnología de vanguardia y técnicas artesanales para resultados naturales excepcionales. 
+                Cada tratamiento se adapta a tus necesidades específicas dentro del Método MAC.
+              </p>
+            </div>
           </AnimatedSection>
         </div>
       </section>

@@ -13,6 +13,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import AnimatedSection from "@/components/UI/AnimatedSection";
+import Breadcrumb from "@/components/UI/Breadcrumb";
 // Videos removed for deployment stability
 // Videos removed for deployment stability
 import { MapPin, Phone, Mail, Clock, UserCheck, Heart, Microscope, Shield, CheckCircle, AlertCircle } from "lucide-react";
@@ -35,6 +36,10 @@ export default function Contacto() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
   const queryClient = useQueryClient();
+  
+  const breadcrumbItems = [
+    { title: "Contacto", current: true }
+  ];
 
   const { data: locations } = useQuery({
     queryKey: ["/api/locations"],
@@ -178,17 +183,22 @@ export default function Contacto() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/30"></div>
         
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="text-sm uppercase tracking-wider text-white/70 font-medium mb-4">
-              Contacto
+            <div className="mb-8 flex justify-center">
+              <Breadcrumb items={breadcrumbItems} />
             </div>
-            <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6">
-              Empieza hoy el arte de ganar tiempo.
-            </h1>
-            <p className="text-lg text-white/90 max-w-3xl mx-auto leading-relaxed">
-              Haz tu consulta, cuéntanos tu historia y descubre cómo podemos ayudarte a revelar tu mejor versión.
-            </p>
+            <div className="text-center">
+              <div className="text-sm uppercase tracking-wider text-white/70 font-medium mb-4">
+                Contacto
+              </div>
+              <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6">
+                Empieza hoy el arte de ganar tiempo.
+              </h1>
+              <p className="text-lg text-white/90 max-w-3xl mx-auto leading-relaxed">
+                Haz tu consulta, cuéntanos tu historia y descubre cómo podemos ayudarte a revelar tu mejor versión.
+              </p>
+            </div>
           </AnimatedSection>
         </div>
       </section>

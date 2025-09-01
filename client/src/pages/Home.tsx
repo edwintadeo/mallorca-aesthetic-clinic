@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -5,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 import WhatsAppButton from "@/components/UI/WhatsAppButton";
 import NewsletterSection from "@/components/UI/NewsletterSection";
+import QuickBookingModal from "@/components/UI/QuickBookingModal";
 import { SkeletonTestimonial } from "@/components/UI/Skeleton";
 import { Search, ClipboardList, Wand2, TrendingUp, Star } from "lucide-react";
 
@@ -20,6 +22,8 @@ import wellAgingWoman from "@assets/mujer joven ropa deportiva_1756669322157.jpg
 import macLogoBlack from "@assets/mac-logo@2x_1756658468399.png";
 
 export default function Home() {
+  const [isQuickBookingOpen, setIsQuickBookingOpen] = useState(false);
+
   const { data: testimonials, isLoading: testimonialsLoading } = useQuery({
     queryKey: ["/api/testimonials"],
   });
@@ -146,8 +150,8 @@ export default function Home() {
                 <div className="w-20 h-[1px] bg-gradient-to-l from-transparent to-gold-light"></div>
               </div>
               <div className="relative inline-block">
-                <div className="absolute inset-0 bg-white/30 backdrop-blur-sm rounded-2xl"></div>
-                <h1 className="text-5xl lg:text-7xl font-title gold-accent relative z-10 px-8 py-6">
+                <div className="absolute inset-0 bg-gradient-to-br from-white/35 via-pearl/30 to-white/25 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl"></div>
+                <h1 className="text-5xl lg:text-7xl font-title gold-accent relative z-10 px-8 py-6 text-shadow-elegant">
                   Medicina estética<br />
                   avanzada con<br />
                   visión integral
@@ -157,16 +161,15 @@ export default function Home() {
                 Consigue una transformación que se siente y es visible en solo 90 días y revela tu auténtica belleza natural.
               </p>
               <div className="space-y-4">
-                <Link href="/contacto">
-                  <Button 
-                    size="lg" 
-                    className="cta-enhanced text-white hover:text-white px-14 py-6 text-lg font-medium rounded-lg uppercase tracking-wider shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-500 relative overflow-hidden group bg-turquoise hover:bg-turquoise-medium border-2 border-gold-light/30"
-                    data-testid="button-hero-reserva"
-                  >
-                    <span className="absolute inset-0 bg-gradient-to-r from-gold-light/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-                    <span className="relative z-10">Reserva tu Consulta Personalizada</span>
-                  </Button>
-                </Link>
+                <Button 
+                  size="lg" 
+                  onClick={() => setIsQuickBookingOpen(true)}
+                  className="cta-enhanced text-white hover:text-white px-14 py-6 text-lg font-medium rounded-lg uppercase tracking-wider shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-500 relative overflow-hidden group bg-turquoise hover:bg-turquoise-medium border-2 border-gold-light/30"
+                  data-testid="button-hero-reserva"
+                >
+                  <span className="absolute inset-0 bg-gradient-to-r from-gold-light/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+                  <span className="relative z-10">Reserva tu Consulta Personalizada</span>
+                </Button>
                 <p className="text-xs text-white/90 font-light italic tracking-wide text-shadow-light">
                   Atención exclusiva por cita previa
                 </p>
@@ -859,6 +862,12 @@ export default function Home() {
 
       {/* WhatsApp Button */}
       <WhatsAppButton />
+      
+      {/* Quick Booking Modal */}
+      <QuickBookingModal 
+        isOpen={isQuickBookingOpen} 
+        onClose={() => setIsQuickBookingOpen(false)} 
+      />
     </div>
   );
 }
