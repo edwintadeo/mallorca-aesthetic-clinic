@@ -4,11 +4,9 @@ import { Card, CardContent } from "@/components/UI/card";
 import { Button } from "@/components/UI/button";
 import { Badge } from "@/components/UI/badge";
 import AnimatedSection from "@/components/UI/AnimatedSection";
-import { LazyVideo } from "@/components/UI/LazyVideo";
+import { OptimizedVideo } from "@/components/UI/OptimizedVideo";
 import { Crown, Gift, Calendar, Star, Users, Sparkles, Heart, Shield } from "lucide-react";
-
-// Import video for hero background
-import heroVideo from "@assets/primed_cotton_canvas_1756676868691.mp4";
+import { getVideoConfigComplete } from "@/config/videos";
 
 export default function ClubMAC() {
   const [selectedPlan, setSelectedPlan] = useState("premium");
@@ -113,13 +111,17 @@ export default function ClubMAC() {
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden" data-testid="club-mac-hero">
         {/* Video Background */}
-        <LazyVideo
-          sources={[
-            { src: heroVideo, type: "video/mp4" }
-          ]}
+        <OptimizedVideo
+          src={getVideoConfigComplete('background', 'clubMAC')?.primary || ''}
+          fallbackSrc={getVideoConfigComplete('background', 'clubMAC')?.fallback || ''}
+          poster={getVideoConfigComplete('background', 'clubMAC')?.poster || ''}
           className="absolute inset-0 w-full h-full opacity-30"
           priority={true}
           preload="auto"
+          autoPlay
+          loop
+          muted
+          playsInline
         />
         
         {/* Gradient Overlay */}

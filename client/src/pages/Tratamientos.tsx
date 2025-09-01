@@ -7,10 +7,11 @@ import SkeletonCard from "@/components/UI/SkeletonCard";
 import LazyImage from "@/components/UI/LazyImage";
 import { TreatmentCardSkeleton } from "@/components/UI/SkeletonLoader";
 import Breadcrumb from "@/components/UI/Breadcrumb";
-// Videos removed for deployment stability
+import { OptimizedVideo } from "@/components/UI/OptimizedVideo";
 import { Link } from "wouter";
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { getVideoConfigComplete } from "@/config/videos";
 
 // Import treatment images - New authentic MAC photos
 import masajeTurquesa from "@assets/masal toalla turquesa grande_1756671403149.jpg";
@@ -118,10 +119,17 @@ export default function Tratamientos() {
       </Helmet>
       {/* Video de fondo para toda la página */}
       <div className="fixed inset-0 w-full h-full z-[-1] overflow-hidden">
-        <img 
-          src={mascarillaVerde} 
-          alt="Tratamientos MAC" 
+        <OptimizedVideo
+          src={getVideoConfigComplete('treatments', 'laser')?.primary || ''}
+          fallbackSrc={getVideoConfigComplete('treatments', 'laser')?.fallback || ''}
+          poster={getVideoConfigComplete('treatments', 'laser')?.poster || mascarillaVerde}
           className="absolute inset-0 w-full h-full object-cover"
+          priority={true}
+          preload="auto"
+          autoPlay
+          loop
+          muted
+          playsInline
         />
         
         {/* Overlay muy ligero para mantener visibilidad del vídeo */}

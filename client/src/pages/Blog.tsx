@@ -5,14 +5,12 @@ import { Card, CardContent } from "@/components/UI/card";
 import { Badge } from "@/components/UI/badge";
 import { Button } from "@/components/UI/button";
 import AnimatedSection from "@/components/UI/AnimatedSection";
-import { LazyVideo } from "@/components/UI/LazyVideo";
+import { OptimizedVideo } from "@/components/UI/OptimizedVideo";
 import LazyImage from "@/components/UI/LazyImage";
 import { Skeleton } from "@/components/UI/Skeleton";
 import { Calendar, User, ArrowRight, Clock } from "lucide-react";
 import { Helmet } from "react-helmet-async";
-
-// Import video for hero background
-import heroVideo from "@assets/ADN convert_1756676832992.mp4";
+import { getVideoConfigComplete } from "@/config/videos";
 
 export default function Blog() {
   const { data: posts, isLoading, error } = useQuery({
@@ -101,13 +99,17 @@ export default function Blog() {
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden gold-border-bottom" data-testid="blog-hero">
         {/* Video Background */}
-        <LazyVideo
-          sources={[
-            { src: heroVideo, type: "video/mp4" }
-          ]}
+        <OptimizedVideo
+          src={getVideoConfigComplete('background', 'blog')?.primary || ''}
+          fallbackSrc={getVideoConfigComplete('background', 'blog')?.fallback || ''}
+          poster={getVideoConfigComplete('background', 'blog')?.poster || ''}
           className="absolute inset-0 w-full h-full opacity-20"
           priority={true}
           preload="auto"
+          autoPlay
+          loop
+          muted
+          playsInline
         />
         
         {/* Pearl Overlay for luxury contrast */}
