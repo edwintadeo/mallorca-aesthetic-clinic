@@ -11,7 +11,8 @@ import { SkeletonTestimonial } from "@/components/UI/Skeleton";
 import { Search, ClipboardList, Wand2, TrendingUp, Star } from "lucide-react";
 
 // Import video and images
-import backgroundVideo from "@assets/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124_1756709450734.mp4";
+// Import video asset using require for better production compatibility
+const backgroundVideoUrl = "/attached_assets/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124_1756709450734.mp4";
 import heroBeautyModel from "@assets/ojo mujer verde_1756671431969.jpg";
 import spaTreatment from "@assets/masal toalla turquesa grande_1756671403149.jpg";
 import facialMaskTreatment from "@assets/mascarilla verde_1756671415152.jpg";
@@ -112,37 +113,27 @@ export default function Home() {
       </div>
       
       {/* Video de fondo para toda la landing page */}
-      <div className="fixed inset-0 w-full h-full z-[-1] overflow-hidden">
+      <div className="fixed inset-0 w-full h-full -z-10 overflow-hidden">
         <video
           autoPlay
           loop
           muted
           playsInline
-          preload="metadata"
-          className="absolute inset-0 w-full h-full object-cover"
+          preload="auto"
+          className="w-full h-full object-cover"
+          style={{ minWidth: '100%', minHeight: '100%' }}
+          onLoadStart={() => console.log('Video loading started')}
+          onCanPlay={() => console.log('Video can play')}
           onError={(e) => {
             console.error('Video loading error:', e);
-            // Fallback to background image if video fails
-            e.currentTarget.style.display = 'none';
           }}
         >
-          <source src={backgroundVideo} type="video/mp4" />
-          <source src="/attached_assets/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124_1756709450734.mp4" type="video/mp4" />
-          Tu navegador no soporta el elemento de video.
+          <source src={backgroundVideoUrl} type="video/mp4" />
         </video>
         
-        {/* Fallback background image if video fails */}
-        <div 
-          className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080")',
-            zIndex: -1
-          }}
-        ></div>
-        
         {/* Enhanced overlays for better text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-transparent"></div>
-        <div className="absolute inset-x-0 top-0 h-[40%] bg-gradient-to-b from-pearl/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-transparent pointer-events-none"></div>
+        <div className="absolute inset-x-0 top-0 h-[40%] bg-gradient-to-b from-pearl/40 to-transparent pointer-events-none"></div>
       </div>
 
       {/* Hero Section */}
