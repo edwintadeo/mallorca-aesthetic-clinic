@@ -110,7 +110,8 @@ export default function Tratamientos() {
       <div className="fixed inset-0 w-full h-full z-[-1] overflow-hidden">
         <LazyVideo
           sources={[
-            { src: "/public-objects/amanecer mallorca.mp4", type: "video/mp4" }
+            { src: "/public-objects/amanecer mallorca.mp4", type: "video/mp4" },
+            { src: "https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/amanecer mallorca.mp4", type: "video/mp4" }
           ]}
           poster={mascarillaVerde}
           fallbackImage={mascarillaVerde}

@@ -153,6 +153,7 @@ export default function Nosotros() {
             }}
           >
             <source src="/public-objects/tramuntana.mp4" type="video/mp4" />
+            <source src="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/tramuntana.mp4" type="video/mp4" />
             Tu navegador no soporta videos HTML5.
           </video>
           
@@ -358,6 +359,7 @@ export default function Nosotros() {
             playsInline
           >
             <source src="/public-objects/clinica-interior.mp4" type="video/mp4" />
+            <source src="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/clinica-interior.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-white/85"></div>
         </div>
@@ -481,6 +483,7 @@ export default function Nosotros() {
             playsInline
           >
             <source src="/public-objects/tratamiento-premium.mp4" type="video/mp4" />
+            <source src="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/tratamiento-premium.mp4" type="video/mp4" />
           </video>
           
           {/* Overlay with content */}

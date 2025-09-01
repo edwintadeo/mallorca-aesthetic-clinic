@@ -65,7 +65,8 @@ export default function Metodo() {
       ],
       benefit: "un plan tan exclusivo como tu ADN, creado para acompañar tu transformación de forma segura y efectiva.",
       image: facialMaskTreatment,
-      video: "/public-objects/gotas perfumista.mp4"
+      video: "/public-objects/gotas perfumista.mp4",
+      videoFallback: "https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/gotas perfumista.mp4"
     },
     {
       icon: Wand2,
@@ -93,7 +94,8 @@ export default function Metodo() {
       ],
       benefit: "resultados visibles, naturales y sostenibles en tu cuerpo, mente y energía.",
       image: spaDeviceTreatment,
-      video: "/public-objects/maestro perfumero.mp4"
+      video: "/public-objects/maestro perfumero.mp4",
+      videoFallback: "https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/maestro perfumero.mp4"
     },
     {
       icon: TrendingUp,

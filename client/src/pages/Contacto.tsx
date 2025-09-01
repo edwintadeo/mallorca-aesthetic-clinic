@@ -175,6 +175,7 @@ export default function Contacto() {
           playsInline
         >
           <source src="/public-objects/catedral mallorca.mp4" type="video/mp4" />
+          <source src="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/catedral mallorca.mp4" type="video/mp4" />
           Tu navegador no soporta videos HTML5.
         </video>
         
