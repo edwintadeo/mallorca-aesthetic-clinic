@@ -16,6 +16,7 @@ import CinematicHero from "@/components/UI/CinematicHero";
 import InteractiveMethodTimeline from "@/components/UI/InteractiveMethodTimeline";
 import VerifiedTestimonialsSection from "@/components/UI/VerifiedTestimonialsSection";
 import BeforeAfterSlider from "@/components/UI/BeforeAfterSlider";
+import PremiumFooter from "@/components/Layout/PremiumFooter";
 
 // Import video configuration
 import { getVideoConfigComplete } from "@/config/videos";
@@ -452,39 +453,39 @@ export default function Home() {
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-turquoise/10 rounded-full flex items-center justify-center flex-shrink-0">
                       <span className="text-turquoise font-bold text-lg">1</span>
-                    </div>
+                            </div>
                     <div>
                       <h4 className="font-subtitle font-semibold text-lg mb-2">Evaluación Inicial</h4>
                       <p className="text-foreground/80 leading-relaxed">
                         Análisis completo de la piel y evaluación de necesidades específicas.
                       </p>
-                    </div>
-                  </div>
+                          </div>
+                        </div>
                   
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-turquoise/10 rounded-full flex items-center justify-center flex-shrink-0">
                       <span className="text-turquoise font-bold text-lg">2</span>
-                    </div>
+                            </div>
                     <div>
                       <h4 className="font-subtitle font-semibold text-lg mb-2">Protocolo Personalizado</h4>
                       <p className="text-foreground/80 leading-relaxed">
                         Diseño de tratamiento adaptado a cada paciente y sus objetivos.
                       </p>
-                    </div>
+                        </div>
                   </div>
                   
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-turquoise/10 rounded-full flex items-center justify-center flex-shrink-0">
                       <span className="text-turquoise font-bold text-lg">3</span>
-                    </div>
+                        </div>
                     <div>
                       <h4 className="font-subtitle font-semibold text-lg mb-2">Seguimiento Continuo</h4>
                       <p className="text-foreground/80 leading-relaxed">
                         Monitoreo del progreso y ajustes del protocolo según resultados.
                       </p>
-                    </div>
-                  </div>
-                </div>
+                        </div>
+                      </div>
+                      </div>
                 
                 <div className="mt-8 p-6 bg-gradient-to-r from-turquoise/5 to-gold-deep/5 rounded-xl border border-turquoise/20">
                   <h4 className="font-subtitle font-semibold text-lg mb-3 text-gold-deep">
@@ -503,11 +504,11 @@ export default function Home() {
                       <span className="w-2 h-2 bg-turquoise rounded-full mr-2"></span>
                       Seguimiento de 12 meses
                     </span>
-                  </div>
+                      </div>
+                </div>
                 </div>
               </div>
-            </div>
-          </AnimatedSection>
+            </AnimatedSection>
         </div>
       </section>
 
@@ -702,6 +703,9 @@ export default function Home() {
 
       {/* WhatsApp Button */}
       <WhatsAppButton />
+      
+      {/* Premium Footer */}
+      <PremiumFooter />
       
       {/* Quick Booking Modal */}
       <QuickBookingModal 
