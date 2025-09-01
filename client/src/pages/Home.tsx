@@ -143,14 +143,14 @@ export default function Home() {
                 <span className="text-xs uppercase tracking-[0.3em] text-gold-deep font-light">Excelencia Médica</span>
                 <div className="w-20 h-[1px] bg-gradient-to-l from-transparent to-gold-light"></div>
               </div>
-              <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6 relative inline-block">
-                <span className="absolute inset-0 bg-white/30 backdrop-blur-md -z-10 rounded-2xl -m-4"></span>
-                <span className="relative z-10 px-6 py-4 block">
+              <div className="relative inline-block">
+                <div className="absolute inset-0 bg-white/30 backdrop-blur-sm rounded-2xl"></div>
+                <h1 className="text-5xl lg:text-7xl font-title gold-accent relative z-10 px-8 py-6">
                   Medicina estética<br />
                   avanzada con<br />
                   visión integral
-                </span>
-              </h1>
+                </h1>
+              </div>
               <p className="text-xl text-white mb-8 max-w-2xl mx-auto leading-relaxed text-shadow-dark">
                 Consigue una transformación que se siente y es visible en solo 90 días y revela tu auténtica belleza natural.
               </p>
