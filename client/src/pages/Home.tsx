@@ -114,9 +114,14 @@ export default function Home() {
           loop
           muted
           playsInline
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
+          onError={(e) => console.error("Error loading video:", e)}
+          onLoadStart={() => console.log("Video started loading")}
+          onCanPlay={() => console.log("Video can play")}
         >
           <source src={backgroundVideo} type="video/mp4" />
+          <source src="/attached_assets/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124_1756709450734.mp4" type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
         
