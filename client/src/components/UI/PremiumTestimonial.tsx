@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Play, Star, Calendar, MapPin, Award } from 'lucide-react';
 import VerificationBadge from './VerificationBadge';
 import { OptimizedVideo } from './OptimizedVideo';
+import LuxuryHoverCard from './LuxuryHoverCard';
+import ScrollAnimations from './ScrollAnimations';
 
 interface PremiumTestimonialProps {
   testimonial: {
@@ -54,7 +56,14 @@ export default function PremiumTestimonial({ testimonial, className = '' }: Prem
   };
 
   return (
-    <div className={`premium-testimonial ${className}`}>
+    <ScrollAnimations animation="fadeIn" delay={100}>
+      <LuxuryHoverCard 
+        className={`premium-testimonial ${className}`}
+        shimmerOnHover={true}
+        particlesOnHover={true}
+        particlesIntensity="low"
+        particlesColor="gold"
+      >
       {/* Verification Badges */}
       <div className="testimonial-badges">
         {testimonial.verification.verified && (
@@ -201,6 +210,7 @@ export default function PremiumTestimonial({ testimonial, className = '' }: Prem
           </div>
         </div>
       )}
-    </div>
+      </LuxuryHoverCard>
+    </ScrollAnimations>
   );
 }

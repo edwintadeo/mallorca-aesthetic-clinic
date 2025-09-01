@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight, RotateCcw } from 'lucide-react';
+import ScrollAnimations from './ScrollAnimations';
+import MorphingButton from './MorphingButton';
 
 interface BeforeAfterSliderProps {
   beforeImage: string;
@@ -93,7 +95,8 @@ export default function BeforeAfterSlider({
   }, [isDragging, handleMouseMove, handleMouseUp, handleTouchMove, handleTouchEnd]);
 
   return (
-    <div className={`before-after-slider ${className}`}>
+    <ScrollAnimations animation="scaleIn" delay={200}>
+      <div className={`before-after-slider ${className}`}>
       {/* Treatment Information */}
       {(treatment || timeframe || doctor) && (
         <div className="slider-header">
@@ -165,32 +168,35 @@ export default function BeforeAfterSlider({
 
       {/* Controls */}
       <div className="slider-controls">
-        <button
-          className="control-button"
+        <MorphingButton
+          variant="secondary"
+          size="sm"
           onClick={() => animateToPosition(0)}
-          aria-label="Mostrar solo imagen antes"
+          className="control-button"
         >
           <ChevronLeft className="control-icon" />
           <span>Antes</span>
-        </button>
+        </MorphingButton>
 
-        <button
-          className="control-button reset-button"
+        <MorphingButton
+          variant="luxury"
+          size="sm"
           onClick={resetSlider}
-          aria-label="Resetear slider"
+          className="control-button reset-button"
         >
           <RotateCcw className="control-icon" />
           <span>Comparar</span>
-        </button>
+        </MorphingButton>
 
-        <button
-          className="control-button"
+        <MorphingButton
+          variant="secondary"
+          size="sm"
           onClick={() => animateToPosition(100)}
-          aria-label="Mostrar solo imagen después"
+          className="control-button"
         >
           <span>Después</span>
           <ChevronRight className="control-icon" />
-        </button>
+        </MorphingButton>
       </div>
 
       {/* Quick Navigation Dots */}
@@ -204,6 +210,7 @@ export default function BeforeAfterSlider({
           />
         ))}
       </div>
-    </div>
+      </div>
+    </ScrollAnimations>
   );
 }
