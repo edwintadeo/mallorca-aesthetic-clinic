@@ -5,11 +5,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 import WhatsAppButton from "@/components/UI/WhatsAppButton";
 import NewsletterSection from "@/components/UI/NewsletterSection";
-// Videos removed for deployment stability
 import { SkeletonTestimonial } from "@/components/UI/Skeleton";
 import { Search, ClipboardList, Wand2, TrendingUp, Star } from "lucide-react";
 
-// Import new images
+// Import video and images
+import backgroundVideo from "@assets/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124_1756709450734.mp4";
 import heroBeautyModel from "@assets/ojo mujer verde_1756671431969.jpg";
 import spaTreatment from "@assets/masal toalla turquesa grande_1756671403149.jpg";
 import facialMaskTreatment from "@assets/mascarilla verde_1756671415152.jpg";
@@ -109,11 +109,16 @@ export default function Home() {
       
       {/* Video de fondo para toda la landing page */}
       <div className="fixed inset-0 w-full h-full z-[-1] overflow-hidden">
-        <img
-          src={heroBeautyModel}
-          alt="Medicina estética avanzada"
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="absolute inset-0 w-full h-full object-cover"
-        />
+        >
+          <source src={backgroundVideo} type="video/mp4" />
+          Tu navegador no soporta el elemento de video.
+        </video>
         
         {/* Enhanced overlays for better text contrast */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-transparent"></div>
