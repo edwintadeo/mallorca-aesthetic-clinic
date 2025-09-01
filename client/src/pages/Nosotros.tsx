@@ -136,18 +136,11 @@ export default function Nosotros() {
       {/* Video Section - Tramuntana */}
       <section className="py-0 bg-black relative overflow-hidden" data-testid="tramuntana-video">
         <div className="relative w-full h-[70vh] min-h-[500px]">
-          <VideoPlayer
-            src="/public-objects/tramuntana.mp4"
-            fallbackSrc="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/tramuntana.mp4"
+          <img 
+            src={facialMaskTreatment} 
+            alt="Serra de Tramuntana - Inspiración natural"
             className="w-full h-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster={facialMaskTreatment}
-          >
-            Tu navegador no soporta videos HTML5.
-          </VideoPlayer>
+          />
           
           {/* Overlay with content */}
           <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
@@ -343,14 +336,10 @@ export default function Nosotros() {
       <section className="py-20 relative overflow-hidden" data-testid="stats-section">
         {/* Background Video */}
         <div className="absolute inset-0">
-          <VideoPlayer
-            src="/public-objects/clinica-interior.mp4"
-            fallbackSrc="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/clinica-interior.mp4"
+          <img 
+            src={perfectSkinPortrait} 
+            alt="Interior de clínica MAC"
             className="w-full h-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
           />
           <div className="absolute inset-0 bg-white/85"></div>
         </div>
@@ -466,14 +455,10 @@ export default function Nosotros() {
       {/* Closing Video Section */}
       <section className="py-0 bg-black relative overflow-hidden" data-testid="closing-video">
         <div className="relative w-full h-[60vh] min-h-[400px]">
-          <VideoPlayer
-            src="/public-objects/tratamiento-premium.mp4"
-            fallbackSrc="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/tratamiento-premium.mp4"
+          <img 
+            src={facialMaskTreatment} 
+            alt="Tratamiento premium MAC"
             className="w-full h-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
           />
           
           {/* Overlay with content */}
