@@ -137,11 +137,11 @@ export default function Metodo() {
               <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
                 Metodología Exclusiva
               </div>
-              <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6 relative">
+              <h1 className="text-5xl lg:text-7xl font-cormorant text-gold-deep mb-6 relative">
                 <span className="absolute inset-0 bg-pearl/85 blur-xl -z-10 rounded-lg"></span>
                 Las Cuatro Fases del Método MAC
               </h1>
-              <p className="text-xl text-medium-neutral max-w-4xl mx-auto leading-relaxed mb-4 text-overlay-translucent">
+              <p className="text-xl text-gold-deep max-w-4xl mx-auto leading-relaxed mb-4">
                 Un enfoque revolucionario que combina diagnóstico científico avanzado, planificación personalizada, 
                 ejecución experta y seguimiento estratégico para garantizar tu transformación integral.
               </p>
@@ -177,20 +177,20 @@ export default function Metodo() {
       <section className="py-16 section-pearl gold-border-bottom" data-testid="method-introduction">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <h2 className="text-4xl lg:text-5xl font-subtitle gold-accent-prominent mb-8">
+            <h2 className="text-4xl lg:text-5xl font-cormorant text-gold-deep mb-8">
               El Método MAC
             </h2>
             
-            <div className="space-y-6 text-lg text-dark-neutral leading-relaxed">
+            <div className="space-y-6 text-lg text-gold-deep leading-relaxed">
               <p>
                 Entendemos que ganar tiempo es un arte que no consiste en detener el reloj, sino en{" "}
-                <strong className="text-foreground">transformar el envejecimiento en una vivencia holística</strong>, donde la salud es el punto de 
+                <strong className="text-gold-deep">transformar el envejecimiento en una vivencia holística</strong>, donde la salud es el punto de 
                 partida para una belleza auténtica.
               </p>
               
               <p>
                 En consecuencia, en MAC, cada intervención se concibe como una{" "}
-                <strong className="text-foreground">obra de arte personalizada</strong>, uniendo salud integral, bienestar y estética natural para honrar la 
+                <strong className="text-gold-deep">obra de arte personalizada</strong>, uniendo salud integral, bienestar y estética natural para honrar la 
                 singularidad de cada persona.
               </p>
             </div>
@@ -215,24 +215,24 @@ export default function Metodo() {
                   </div>
 
                   <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                    <div className="text-6xl lg:text-8xl font-title gold-accent-prominent mb-4 leading-none">{phase.number}</div>
-                    <h2 className="text-3xl lg:text-4xl font-subtitle gold-accent-prominent mb-4">{phase.title}</h2>
+                    <div className="text-6xl lg:text-8xl font-cormorant text-gold-deep mb-4 leading-none">{phase.number}</div>
+                    <h2 className="text-3xl lg:text-4xl font-cormorant text-gold-deep mb-4">{phase.title}</h2>
                     
-                    <p className="text-lg text-dark-neutral mb-6 leading-relaxed">
+                    <p className="text-lg text-gold-deep mb-6 leading-relaxed">
                       {phase.subtitle}
                     </p>
 
                     {/* Includes Section */}
                     {phase.includes && (
                       <div className="mb-6">
-                        <h4 className="text-lg font-subtitle font-semibold gold-accent mb-4">Incluye:</h4>
+                        <h4 className="text-lg font-cormorant font-semibold text-gold-deep mb-4">Incluye:</h4>
                         <ul className="space-y-3">
                           {phase.includes.map((item, idx) => (
                             <li key={idx} className="flex items-start">
                               <CheckCircle className="w-5 h-5 text-turquoise mr-3 mt-0.5 flex-shrink-0" />
                               <div>
-                                <span className="font-medium text-foreground">{item.title}:</span>
-                                <span className="text-muted-foreground ml-1">{item.description}</span>
+                                <span className="font-medium text-gold-deep">{item.title}:</span>
+                                <span className="text-gold-deep/80 ml-1">{item.description}</span>
                               </div>
                             </li>
                           ))}
@@ -243,12 +243,12 @@ export default function Metodo() {
                     {/* Medical Procedures for Phase 03 */}
                     {phase.medicalProcedures && (
                       <div className="mb-6">
-                        <h4 className="text-lg font-subtitle font-semibold gold-accent mb-4">Procedimientos médico-estéticos:</h4>
+                        <h4 className="text-lg font-cormorant font-semibold text-gold-deep mb-4">Procedimientos médico-estéticos:</h4>
                         <ul className="space-y-2">
                           {phase.medicalProcedures.map((procedure, idx) => (
                             <li key={idx} className="flex items-start">
                               <CheckCircle className="w-4 h-4 text-turquoise mr-2 mt-0.5 flex-shrink-0" />
-                              <span className="text-muted-foreground">{procedure}</span>
+                              <span className="text-gold-deep/80">{procedure}</span>
                             </li>
                           ))}
                         </ul>
@@ -258,7 +258,7 @@ export default function Metodo() {
                     {/* Wellness Prevention for Phase 03 */}
                     {phase.wellnessPrevention && (
                       <div className="mb-6">
-                        <h4 className="text-lg font-subtitle font-semibold gold-accent mb-4">Bienestar y Medicina Preventiva:</h4>
+                        <h4 className="text-lg font-cormorant font-semibold text-gold-deep mb-4">Bienestar y Medicina Preventiva:</h4>
                         <ul className="space-y-2">
                           {phase.wellnessPrevention.map((item, idx) => (
                             <li key={idx} className="flex items-start">
@@ -273,7 +273,7 @@ export default function Metodo() {
                     {/* Integrated Wellness Techniques for Phase 03 */}
                     {phase.integratedWellnessTechniques && (
                       <div className="mb-6">
-                        <h4 className="text-lg font-subtitle font-semibold gold-accent mb-4">Técnicas de bienestar integrado:</h4>
+                        <h4 className="text-lg font-cormorant font-semibold text-gold-deep mb-4">Técnicas de bienestar integrado:</h4>
                         <ul className="space-y-2">
                           {phase.integratedWellnessTechniques.map((technique, idx) => (
                             <li key={idx} className="flex items-start">
@@ -288,7 +288,7 @@ export default function Metodo() {
                     {/* Specialized Coordination for Phase 03 */}
                     {phase.specializedCoordination && (
                       <div className="mb-6">
-                        <h4 className="text-lg font-subtitle font-semibold gold-accent mb-4">Coordinación especializada:</h4>
+                        <h4 className="text-lg font-cormorant font-semibold text-gold-deep mb-4">Coordinación especializada:</h4>
                         <ul className="space-y-2">
                           {phase.specializedCoordination.map((item, idx) => (
                             <li key={idx} className="flex items-start">
@@ -305,8 +305,8 @@ export default function Metodo() {
                       <div className="flex items-start">
                         <Award className="w-5 h-5 text-turquoise mr-3 mt-0.5 flex-shrink-0" />
                         <div>
-                          <span className="font-medium text-foreground">Beneficio: </span>
-                          <span className="text-muted-foreground">{phase.benefit}</span>
+                          <span className="font-medium text-gold-deep">Beneficio: </span>
+                          <span className="text-gold-deep/80">{phase.benefit}</span>
                         </div>
                       </div>
                     </div>
@@ -322,13 +322,13 @@ export default function Metodo() {
       <section className="py-20 hero-gradient" data-testid="metodo-cta">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
-            <h2 className="text-4xl font-title gold-accent mb-6">
+            <h2 className="text-4xl font-cormorant text-gold-deep mb-6">
               El Método MAC es más que estética
             </h2>
-            <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
+            <p className="text-xl text-gold-deep mb-6 leading-relaxed">
               Es un método que honra tu biología, tu belleza natural y tu bienestar completo.
             </p>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-lg text-gold-deep mb-8 leading-relaxed">
               Una forma nueva de vivir tu proceso estético: con precisión médica, propósito y arte.
             </p>
             <div className="flex justify-center">
@@ -336,7 +336,7 @@ export default function Metodo() {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-foreground px-12 py-4 text-lg font-medium rounded-none uppercase tracking-wider transition-all duration-300 hover-lift"
+                  className="border-2 border-gold-deep text-gold-deep hover:bg-gold-deep hover:text-white px-12 py-4 text-lg font-cormorant rounded-none uppercase tracking-wider transition-all duration-300 hover-lift"
                   data-testid="button-cta-agenda-personalizada"
                 >
                   Agenda tu Consulta Personalizada
