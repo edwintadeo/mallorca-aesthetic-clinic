@@ -81,13 +81,13 @@ export function getVideoConfig(category: keyof typeof videoConfig, subcategory: 
     return null;
   }
 
-  const videoConfig = categoryConfig[subcategory as keyof typeof categoryConfig];
-  if (!videoConfig) {
+  const videoConfigItem = categoryConfig[subcategory as keyof typeof categoryConfig];
+  if (!videoConfigItem) {
     console.warn(`Video subcategory '${subcategory}' not found in category '${category}'`);
     return null;
   }
 
-  return videoConfig;
+  return videoConfigItem;
 }
 
 // Función para obtener solo la URL principal del video
