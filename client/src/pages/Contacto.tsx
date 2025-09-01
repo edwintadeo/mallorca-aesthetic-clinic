@@ -170,7 +170,7 @@ export default function Contacto() {
         {/* Background Video */}
         <VideoPlayer
           src="/public-objects/catedral mallorca.mp4"
-          fallbackSrc="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/catedral mallorca.mp4"
+          fallbackSrc="https://storage.googleapis.com/repl-default-bucket-7025bdc8-314d-4958-be9d-e3e05182b3f5/public/catedral mallorca.mp4"
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
           muted
