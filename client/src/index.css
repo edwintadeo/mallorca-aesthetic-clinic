@@ -5131,3 +5131,188 @@ a:focus-visible {
     transform: none !important;
   }
 }
+
+/* ===== LUXURY MOBILE OPTIMIZATIONS ===== */
+
+/* Touch-friendly interactions */
+@media (max-width: 768px) {
+  /* Larger touch targets */
+  .luxury-btn {
+    min-height: 48px;
+    min-width: 48px;
+  }
+  
+  .luxury-card {
+    padding: 1.5rem;
+  }
+  
+  /* Improved spacing for mobile */
+  .section-spacing {
+    padding: 2rem 0;
+  }
+  
+  .section-spacing-large {
+    padding: 3rem 0;
+  }
+  
+  /* Mobile typography adjustments */
+  .text-luxury-h1 {
+    font-size: 2.5rem; /* 40px */
+    line-height: 1.2;
+  }
+  
+  .text-luxury-h2 {
+    font-size: 1.75rem; /* 28px */
+    line-height: 1.3;
+  }
+  
+  /* Mobile navigation improvements */
+  .luxury-floating-navbar {
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+    transform: none;
+  }
+  
+  /* Mobile hero adjustments */
+  .hero-video {
+    object-position: center center;
+  }
+  
+  /* Mobile slider improvements */
+  .before-after-slider input[type="range"] {
+    height: 48px;
+  }
+  
+  .before-after-slider input[type="range"]::-webkit-slider-thumb {
+    height: 24px;
+    width: 24px;
+  }
+  
+  .before-after-slider input[type="range"]::-moz-range-thumb {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+/* Touch gestures support */
+.touch-gesture {
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Swipe indicators */
+.swipe-indicator {
+  position: relative;
+}
+
+.swipe-indicator::after {
+  content: '← Desliza →';
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  color: rgba(165, 125, 36, 0.6);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Mobile-specific luxury effects */
+@media (max-width: 768px) {
+  .luxury-card:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+  
+  .luxury-btn:hover {
+    transform: translateY(-1px);
+  }
+  
+  .luxury-image:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* High DPI display optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .luxury-card {
+    border-width: 0.5px;
+  }
+  
+  .luxury-floating-navbar {
+    border-width: 0.5px;
+  }
+}
+
+/* Landscape mobile optimizations */
+@media (max-width: 768px) and (orientation: landscape) {
+  .text-luxury-h1 {
+    font-size: 2rem;
+  }
+  
+  .section-spacing {
+    padding: 1.5rem 0;
+  }
+  
+  .section-spacing-large {
+    padding: 2rem 0;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 375px) {
+  .text-luxury-h1 {
+    font-size: 2rem; /* 32px */
+  }
+  
+  .text-luxury-h2 {
+    font-size: 1.5rem; /* 24px */
+  }
+  
+  .luxury-card {
+    padding: 1rem;
+  }
+  
+  .section-spacing {
+    padding: 1.5rem 0;
+  }
+  
+  .section-spacing-large {
+    padding: 2rem 0;
+  }
+}
+
+/* Accessibility improvements for mobile */
+@media (max-width: 768px) {
+  /* Larger focus indicators */
+  .luxury-focus:focus::after {
+    border-width: 3px;
+    inset: -3px;
+  }
+  
+  /* Improved contrast for mobile */
+  .text-gold-deep {
+    color: #8B6914; /* Darker gold for better contrast */
+  }
+  
+  .text-gold-light {
+    color: #B8941F; /* Darker light gold */
+  }
+  
+  /* Better button contrast */
+  .luxury-btn {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .luxury-btn:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+}

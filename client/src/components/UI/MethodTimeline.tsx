@@ -199,9 +199,10 @@ export default function MethodTimeline({ phases = defaultPhases }: MethodTimelin
                 viewport={{ once: true }}
               >
                 <motion.div
-                  className="relative rounded-2xl border border-black/10 bg-white p-6 shadow-lg cursor-pointer transition-all duration-300 hover:shadow-xl"
-                  whileHover={{ y: -6 }}
+                  className="relative luxury-card rounded-2xl border border-black/10 bg-white p-6 shadow-lg cursor-pointer overflow-hidden"
+                  whileHover={{ y: -8, scale: 1.02 }}
                   onClick={() => setActivePhase(isActive ? null : phase.id)}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
                 >
                   {/* Número de fase */}
                   <div className="text-5xl font-serif text-[#A57D24] mb-4">
@@ -230,7 +231,7 @@ export default function MethodTimeline({ phases = defaultPhases }: MethodTimelin
                   </div>
 
                   {/* Botón de detalles */}
-                  <button className="text-sm tracking-widest underline underline-offset-4 text-[#A57D24] hover:text-[#008578] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#A57D24] focus:ring-offset-2 rounded-sm px-1 py-1">
+                  <button className="text-sm tracking-widest underline underline-offset-4 text-[#A57D24] hover:text-[#008578] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#A57D24] focus:ring-offset-2 rounded-sm px-1 py-1 luxury-focus">
                     Ver detalles
                     <ChevronRight className="inline h-3 w-3 ml-1" />
                   </button>
@@ -319,7 +320,7 @@ export default function MethodTimeline({ phases = defaultPhases }: MethodTimelin
           </p>
           <motion.a
             href="#contacto"
-            className="inline-flex items-center rounded-full bg-[#008578] px-8 py-3 text-white font-medium transition-all duration-300 hover:bg-[#006b5f] focus:outline-none focus:ring-2 focus:ring-[#008578] focus:ring-offset-2"
+            className="inline-flex items-center luxury-btn rounded-full bg-[#008578] px-8 py-3 text-white font-luxury-cta transition-all duration-300 hover:bg-[#006b5f] focus:outline-none focus:ring-2 focus:ring-[#008578] focus:ring-offset-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

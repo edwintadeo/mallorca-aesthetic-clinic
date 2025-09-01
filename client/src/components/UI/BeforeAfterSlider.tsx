@@ -118,7 +118,7 @@ export default function BeforeAfterSlider({
 
   return (
     <motion.div
-      className={`before-after-slider ${className}`}
+      className={`before-after-slider luxury-card ${className}`}
       initial={{ opacity: 0, scale: 0.95 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6 }}
@@ -127,7 +127,7 @@ export default function BeforeAfterSlider({
       <div className="relative aspect-[16/10] overflow-hidden rounded-2xl shadow-lg">
         {/* Skeleton loader */}
         {!isLoaded && (
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 animate-pulse rounded-2xl" />
+          <div className="absolute inset-0 luxury-skeleton rounded-2xl" />
         )}
 
         {/* Contenedor principal */}
@@ -172,27 +172,27 @@ export default function BeforeAfterSlider({
             />
           </div>
 
-          {/* Línea divisoria */}
+          {/* Línea divisoria luxury */}
           <div
-            className="absolute top-0 bottom-0 w-0.5 bg-white/70 pointer-events-none z-10"
+            className="absolute top-0 bottom-0 w-0.5 bg-gradient-to-b from-white/80 via-white to-white/80 pointer-events-none z-10 shadow-lg"
             style={{ left: `${sliderPosition}%` }}
           >
-            {/* Círculo en la línea */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center">
-              <div className="w-2 h-2 bg-[#008578] rounded-full" />
+            {/* Círculo luxury en la línea */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-luxury flex items-center justify-center border-2 border-gold-deep/20">
+              <div className="w-3 h-3 bg-gradient-to-br from-[#008578] to-[#006b5f] rounded-full" />
             </div>
           </div>
 
-          {/* Etiquetas */}
-          <div className="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm font-medium">
+          {/* Etiquetas luxury */}
+          <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-luxury-cta border border-white/20">
             ANTES
           </div>
-          <div className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm font-medium">
+          <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-luxury-cta border border-white/20">
             DESPUÉS
           </div>
 
-          {/* Indicador de porcentaje */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-sm font-medium">
+          {/* Indicador de porcentaje luxury */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-luxury-cta border border-white/20">
             {Math.round(sliderPosition)}% DESPUÉS
           </div>
         </div>
@@ -214,32 +214,32 @@ export default function BeforeAfterSlider({
         </div>
       </div>
 
-      {/* Información del tratamiento */}
+      {/* Información del tratamiento luxury */}
       {(treatment || duration || doctor) && (
         <motion.div
-          className="mt-4 p-4 bg-white/80 backdrop-blur-sm rounded-xl border border-gray-200"
+          className="mt-6 p-6 bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 luxury-card"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.2 }}
           viewport={{ once: true }}
         >
           {treatment && (
-            <h3 className="text-lg font-serif text-[#A57D24] mb-2">
+            <h3 className="text-xl font-luxury-serif text-gold-deep mb-3">
               {treatment}
             </h3>
           )}
-          <div className="flex flex-wrap gap-4 text-sm text-gray-600">
+          <div className="flex flex-wrap gap-6 text-sm text-gray-600">
             {duration && (
-              <span className="flex items-center">
-                <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+              <span className="flex items-center font-luxury-sans">
+                <svg className="w-4 h-4 mr-2 text-gold-deep" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
                 </svg>
                 {duration}
               </span>
             )}
             {doctor && (
-              <span className="flex items-center">
-                <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+              <span className="flex items-center font-luxury-sans">
+                <svg className="w-4 h-4 mr-2 text-gold-deep" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                 </svg>
                 {doctor}
@@ -249,9 +249,9 @@ export default function BeforeAfterSlider({
         </motion.div>
       )}
 
-      {/* Instrucciones de uso */}
+      {/* Instrucciones de uso luxury */}
       <motion.div
-        className="mt-2 text-center text-xs text-gray-500"
+        className="mt-3 text-center text-xs text-gray-500 font-luxury-sans"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.4, delay: 0.4 }}
