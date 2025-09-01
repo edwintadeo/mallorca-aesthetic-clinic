@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import AnimatedSection from "@/components/UI/AnimatedSection";
+import { VideoPlayer } from "@/components/UI/VideoPlayer";
 import { Award, Users, Heart, Microscope, Shield, Clock } from "lucide-react";
 
 // Import team images
@@ -135,27 +136,18 @@ export default function Nosotros() {
       {/* Video Section - Tramuntana */}
       <section className="py-0 bg-black relative overflow-hidden" data-testid="tramuntana-video">
         <div className="relative w-full h-[70vh] min-h-[500px]">
-          <video 
+          <VideoPlayer
+            src="/public-objects/tramuntana.mp4"
+            fallbackSrc="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/tramuntana.mp4"
             className="w-full h-full object-cover"
-            autoPlay 
-            muted 
-            loop 
+            autoPlay
+            muted
+            loop
             playsInline
             poster={facialMaskTreatment}
-            onError={(e) => {
-              console.error("Error loading video:", e);
-              // Si el video no carga, mostrar imagen de respaldo
-              e.currentTarget.style.display = 'none';
-              const fallbackDiv = document.createElement('div');
-              fallbackDiv.className = 'w-full h-full bg-cover bg-center';
-              fallbackDiv.style.backgroundImage = `url(${facialMaskTreatment})`;
-              e.currentTarget.parentElement?.appendChild(fallbackDiv);
-            }}
           >
-            <source src="/public-objects/tramuntana.mp4" type="video/mp4" />
-            <source src="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/tramuntana.mp4" type="video/mp4" />
             Tu navegador no soporta videos HTML5.
-          </video>
+          </VideoPlayer>
           
           {/* Overlay with content */}
           <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
@@ -351,16 +343,15 @@ export default function Nosotros() {
       <section className="py-20 relative overflow-hidden" data-testid="stats-section">
         {/* Background Video */}
         <div className="absolute inset-0">
-          <video 
+          <VideoPlayer
+            src="/public-objects/clinica-interior.mp4"
+            fallbackSrc="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/clinica-interior.mp4"
             className="w-full h-full object-cover"
-            autoPlay 
-            muted 
-            loop 
+            autoPlay
+            muted
+            loop
             playsInline
-          >
-            <source src="/public-objects/clinica-interior.mp4" type="video/mp4" />
-            <source src="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/clinica-interior.mp4" type="video/mp4" />
-          </video>
+          />
           <div className="absolute inset-0 bg-white/85"></div>
         </div>
         
@@ -475,16 +466,15 @@ export default function Nosotros() {
       {/* Closing Video Section */}
       <section className="py-0 bg-black relative overflow-hidden" data-testid="closing-video">
         <div className="relative w-full h-[60vh] min-h-[400px]">
-          <video 
+          <VideoPlayer
+            src="/public-objects/tratamiento-premium.mp4"
+            fallbackSrc="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/tratamiento-premium.mp4"
             className="w-full h-full object-cover"
-            autoPlay 
-            muted 
-            loop 
+            autoPlay
+            muted
+            loop
             playsInline
-          >
-            <source src="/public-objects/tratamiento-premium.mp4" type="video/mp4" />
-            <source src="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/tratamiento-premium.mp4" type="video/mp4" />
-          </video>
+          />
           
           {/* Overlay with content */}
           <div className="absolute inset-0 bg-black/40 flex items-center justify-center">

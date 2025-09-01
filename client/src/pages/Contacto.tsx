@@ -14,6 +14,7 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 import { LazyVideo } from "@/components/UI/LazyVideo";
+import { VideoPlayer } from "@/components/UI/VideoPlayer";
 import { MapPin, Phone, Mail, Clock, UserCheck, Heart, Microscope, Shield, CheckCircle, AlertCircle } from "lucide-react";
 
 const contactFormSchema = z.object({
@@ -167,17 +168,17 @@ export default function Contacto() {
       {/* Hero Section */}
       <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden" data-testid="contacto-hero">
         {/* Background Video */}
-        <video 
+        <VideoPlayer
+          src="/public-objects/catedral mallorca.mp4"
+          fallbackSrc="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/catedral mallorca.mp4"
           className="absolute inset-0 w-full h-full object-cover"
-          autoPlay 
-          muted 
-          loop 
+          autoPlay
+          muted
+          loop
           playsInline
         >
-          <source src="/public-objects/catedral mallorca.mp4" type="video/mp4" />
-          <source src="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/catedral mallorca.mp4" type="video/mp4" />
           Tu navegador no soporta videos HTML5.
-        </video>
+        </VideoPlayer>
         
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/30"></div>
@@ -533,15 +534,7 @@ export default function Contacto() {
                             </span>
                             <div className="absolute inset-0 bg-turquoise-light animate-pulse" />
                             <div 
-                              className="absolute bottom-0 left-0 h-1 bg-turquoise animate-[loading_2s_ease-in-out_infinite]"
-                              style={{
-                                animation: "loading 2s ease-in-out infinite",
-                                "@keyframes loading": {
-                                  "0%": { width: "0%" },
-                                  "50%": { width: "100%" },
-                                  "100%": { width: "0%" }
-                                }
-                              }}
+                              className="absolute bottom-0 left-0 h-1 bg-turquoise animate-pulse"
                             />
                           </>
                         ) : (
