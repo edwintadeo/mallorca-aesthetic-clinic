@@ -94,18 +94,30 @@ export function LazyVideo({
     return () => observer.disconnect();
   }, [autoPlay, isInView]);
 
+  const [currentSourceIndex, setCurrentSourceIndex] = useState(0);
+  const [showFallback, setShowFallback] = useState(false);
+
   const handleError = () => {
-    setHasError(true);
-    setIsLoading(false);
-    onError?.();
+    console.log(`Video source ${currentSourceIndex + 1}/${sources.length} failed: ${sources[currentSourceIndex]?.src}`);
+    
+    if (currentSourceIndex < sources.length - 1) {
+      setCurrentSourceIndex(prev => prev + 1);
+      setIsLoading(true); // Reset loading state for next source
+    } else {
+      console.log('All video sources failed, showing fallback image');
+      setHasError(true);
+      setIsLoading(false);
+      setShowFallback(true);
+      onError?.();
+    }
   };
 
   const handleLoadedData = () => {
     setIsLoading(false);
   };
 
-  // Si hay error, mostrar imagen de respaldo
-  if (hasError && fallbackImage) {
+  // Si hay error o se muestra fallback, mostrar imagen de respaldo
+  if (showFallback && fallbackImage) {
     return (
       <div
         ref={containerRef}
@@ -136,7 +148,7 @@ export function LazyVideo({
       )}
 
       {/* Video element - solo renderizar cuando esté en vista */}
-      {isInView && !hasError && (
+      {isInView && !showFallback && (
         <video
           ref={videoRef}
           className={cn("w-full h-full object-cover", isLoading && "opacity-0")}
@@ -149,10 +161,9 @@ export function LazyVideo({
           onError={handleError}
           onLoadedData={handleLoadedData}
           data-testid="lazy-video"
+          key={currentSourceIndex} // Force re-render when source changes
         >
-          {sources.map((source, index) => (
-            <source key={index} src={source.src} type={source.type} />
-          ))}
+          <source src={sources[currentSourceIndex]?.src} type={sources[currentSourceIndex]?.type} />
           Tu navegador no soporta videos HTML5.
         </video>
       )}
