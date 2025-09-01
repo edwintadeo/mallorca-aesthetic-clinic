@@ -185,13 +185,13 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                   <div className="text-left">
                     <div className="text-4xl lg:text-5xl font-title gold-accent-prominent text-shadow-dark mb-4">Más de 18 años de</div>
-                    <p className="text-lg text-white/90 leading-relaxed text-shadow-light">
+                    <p className="text-lg text-gray-800 font-medium leading-relaxed bg-white/85 px-4 py-2 rounded-lg border border-gold-light/30">
                       experiencia clínica en medicina estética avanzada y bienestar integral
                     </p>
                   </div>
                   <div className="text-left">
                     <div className="text-4xl lg:text-5xl font-title gold-accent-prominent text-shadow-dark mb-4">+10.000 pacientes</div>
-                    <p className="text-lg text-white/90 leading-relaxed text-shadow-light">
+                    <p className="text-lg text-gray-800 font-medium leading-relaxed bg-white/85 px-4 py-2 rounded-lg border border-gold-light/30">
                       transformados con resultados visibles y sostenibles
                     </p>
                   </div>
