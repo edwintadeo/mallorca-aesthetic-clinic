@@ -408,22 +408,25 @@ export default function Home() {
       <section className="py-20 section-pearl relative z-[1] gold-border-bottom" data-testid="treatments-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="text-left max-w-4xl mb-16">
-              <div className="text-sm uppercase tracking-wider text-dark-neutral font-medium mb-6">
-                Nuestros tratamientos
+            <div className="text-center mb-16">
+              <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
+                NUESTROS TRATAMIENTOS
               </div>
               
-              <h2 className="text-4xl lg:text-6xl font-subtitle gold-accent-prominent mb-8 leading-tight relative">
-                <span className="bg-white/80 px-6 py-4 rounded-xl border border-gold-light/30 shadow-lg backdrop-blur-sm inline-block">
-                  Tratamientos que combinan ciencia, estética y bienestar
-                </span>
+              <h2 className="text-4xl lg:text-6xl font-title gold-accent-prominent mb-6">
+                Tratamientos de Excelencia
               </h2>
               
+              <p className="text-xl text-dark-neutral max-w-3xl mx-auto leading-relaxed">
+                En MAC no ofrecemos servicios aislados, sino experiencias diseñadas con precisión médica y 
+                belleza natural. Cada tratamiento es una pincelada en tu obra maestra personal.
+              </p>
+            </div>
+          </AnimatedSection>
+          
+          <AnimatedSection delay={0.2}>
+            <div className="mb-12">
               <div className="space-y-8 mb-10">
-                <p className="text-lg text-dark-neutral leading-relaxed">
-                  En MAC no ofrecemos servicios aislados, sino experiencias diseñadas con precisión médica y 
-                  belleza natural. Cada tratamiento es una pincelada en tu obra maestra personal.
-                </p>
                 
                 <div>
                   <p className="text-lg text-foreground mb-6 font-medium">
