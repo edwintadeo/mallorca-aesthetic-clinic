@@ -10,10 +10,10 @@ import QuickBookingModal from "@/components/UI/QuickBookingModal";
 import { SkeletonTestimonial } from "@/components/UI/Skeleton";
 import { Search, ClipboardList, Wand2, TrendingUp, Star } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { OptimizedVideo } from "@/components/UI/OptimizedVideo";
 
-// Import video and images
-// Import video asset using require for better production compatibility
-const backgroundVideoUrl = "/attached_assets/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124_1756709450734.mp4";
+// Import video configuration
+import { getVideoConfigComplete } from "@/config/videos";
 import heroBeautyModel from "@assets/ojo mujer verde_1756671431969.jpg";
 import spaTreatment from "@assets/masal toalla turquesa grande_1756671403149.jpg";
 import facialMaskTreatment from "@assets/mascarilla verde_1756671415152.jpg";
@@ -134,24 +134,20 @@ export default function Home() {
         ></div>
         
         {/* Video background */}
-        <video
+        <OptimizedVideo
+          src={getVideoConfigComplete('background', 'home')?.primary || ''}
+          fallbackSrc={getVideoConfigComplete('background', 'home')?.fallback || ''}
+          poster={getVideoConfigComplete('background', 'home')?.poster || heroBeautyModel}
           autoPlay
           loop
           muted
           playsInline
           preload="auto"
+          priority={true}
           className="w-full h-full object-cover relative z-[-1]"
-          style={{ minWidth: '100%', minHeight: '100%' }}
-          onLoadStart={() => console.log('Video loading started')}
-          onCanPlay={() => console.log('Video can play')}
-          onError={(e) => {
-            console.error('Video loading error:', e);
-            // Hide video on error so fallback image shows
-            e.currentTarget.style.display = 'none';
-          }}
-        >
-          <source src={backgroundVideoUrl} type="video/mp4" />
-        </video>
+          onError={() => console.log('Background video failed to load')}
+          onLoad={() => console.log('Background video loaded successfully')}
+        />
         
         {/* Enhanced overlays for better text contrast */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-transparent pointer-events-none"></div>
