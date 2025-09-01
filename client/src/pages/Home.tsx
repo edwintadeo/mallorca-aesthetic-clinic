@@ -670,7 +670,7 @@ export default function Home() {
               <h2 className="text-4xl lg:text-6xl title-luxury gold-accent-prominent mb-6">
                 Ubicaciones Premium
               </h2>
-              <p className="text-xl text-dark-neutral max-w-3xl mx-auto body-refined">
+              <p className="text-xl text-white max-w-3xl mx-auto body-refined text-shadow-dark">
                 Tres espacios exclusivos diseñados para ofrecerte la máxima comodidad y privacidad en Mallorca
               </p>
             </div>
