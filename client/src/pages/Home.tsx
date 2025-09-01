@@ -122,7 +122,7 @@ export default function Home() {
                 avanzada con<br />
                 visión integral
               </h1>
-              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-xl text-white mb-8 max-w-2xl mx-auto leading-relaxed text-shadow-dark">
                 Consigue una transformación que se siente y es visible en solo 90 días y revela tu auténtica belleza natural.
               </p>
               <div className="flex justify-center">
@@ -161,11 +161,11 @@ export default function Home() {
               <h2 className="text-4xl font-title gold-accent mb-6">
                 Dra. Liliana Ocampo
               </h2>
-              <h3 className="text-xl font-subtitle italic text-muted-foreground mb-8">
+              <h3 className="text-xl font-subtitle italic text-dark-neutral mb-8">
                 Pionera en Well-Aging Integral
               </h3>
 
-              <div className="space-y-6 text-foreground/80 leading-relaxed">
+              <div className="space-y-6 text-dark-neutral leading-relaxed">
                 <p>
                   Con más de 18 años de experiencia en medicina estética, la Dra. Liliana Ocampo ha desarrollado 
                   el revolucionario Método MAC: "El Arte de Ganar Tiempo", fusionando la precisión de la medicina estética avanzada con un enfoque tridimensional del bienestar.
@@ -279,7 +279,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center">
-              <div className="text-sm uppercase tracking-wider text-muted-foreground font-medium mb-8">
+              <div className="text-sm uppercase tracking-wider text-dark-neutral font-medium mb-8">
                 Una experiencia como una obra de arte
               </div>
               
@@ -288,7 +288,7 @@ export default function Home() {
               </blockquote>
               
               <div className="max-w-3xl mx-auto mb-8">
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-lg text-dark-neutral leading-relaxed">
                   En MAC no creemos en moldes. Diseñamos contigo tu protocolo ideal, como quien pinta un 
                   cuadro único, respetando tu biología, tu historia y tu ritmo.
                 </p>
@@ -377,7 +377,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-left max-w-4xl mb-16">
-              <div className="text-sm uppercase tracking-wider text-muted-foreground font-medium mb-6">
+              <div className="text-sm uppercase tracking-wider text-dark-neutral font-medium mb-6">
                 Nuestros tratamientos
               </div>
               
@@ -386,7 +386,7 @@ export default function Home() {
               </h2>
               
               <div className="space-y-8 mb-10">
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-lg text-dark-neutral leading-relaxed">
                   En MAC no ofrecemos servicios aislados, sino experiencias diseñadas con precisión médica y 
                   belleza natural. Cada tratamiento es una pincelada en tu obra maestra personal.
                 </p>
@@ -562,7 +562,7 @@ export default function Home() {
               <div className="space-y-8">
                 <h3 className="text-2xl title-luxury text-center mb-8">Transformaciones Visibles</h3>
                 <div className="grid grid-cols-1 gap-6">
-                  <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover-lift border border-gold-light/30" data-testid="before-after-1">
+                  <Card className="bg-white shadow-lg hover-lift border border-gold-light/30" data-testid="before-after-1">
                     <CardContent className="p-6">
                       <div className="grid grid-cols-2 gap-4 mb-4">
                         <div className="text-center">
@@ -571,7 +571,7 @@ export default function Home() {
                             alt="Antes del tratamiento"
                             className="w-full h-32 object-cover rounded-lg"
                           />
-                          <p className="text-sm text-muted-foreground mt-2">Antes</p>
+                          <p className="text-sm text-dark-neutral mt-2">Antes</p>
                         </div>
                         <div className="text-center">
                           <img 
@@ -584,12 +584,12 @@ export default function Home() {
                       </div>
                       <div className="text-center">
                         <h4 className="font-subtitle font-semibold mb-1">Rejuvenecimiento Facial</h4>
-                        <p className="text-sm text-muted-foreground">Método MAC + Bioestimuladores</p>
+                        <p className="text-sm text-dark-neutral">Método MAC + Bioestimuladores</p>
                       </div>
                     </CardContent>
                   </Card>
 
-                  <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover-lift border border-gold-light/30" data-testid="before-after-2">
+                  <Card className="bg-white shadow-lg hover-lift border border-gold-light/30" data-testid="before-after-2">
                     <CardContent className="p-6">
                       <div className="grid grid-cols-2 gap-4 mb-4">
                         <div className="text-center">
@@ -598,7 +598,7 @@ export default function Home() {
                             alt="Antes del tratamiento"
                             className="w-full h-32 object-cover rounded-lg"
                           />
-                          <p className="text-sm text-muted-foreground mt-2">Antes</p>
+                          <p className="text-sm text-dark-neutral mt-2">Antes</p>
                         </div>
                         <div className="text-center">
                           <img 
@@ -611,7 +611,7 @@ export default function Home() {
                       </div>
                       <div className="text-center">
                         <h4 className="font-subtitle font-semibold mb-1">Well-Aging Integral</h4>
-                        <p className="text-sm text-muted-foreground">Método MAC + Optimización Hormonal</p>
+                        <p className="text-sm text-dark-neutral">Método MAC + Optimización Hormonal</p>
                       </div>
                     </CardContent>
                   </Card>
@@ -633,7 +633,7 @@ export default function Home() {
               <h2 className="text-4xl lg:text-6xl title-luxury gold-accent-prominent mb-6">
                 Ubicaciones Premium
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto body-refined">
+              <p className="text-xl text-dark-neutral max-w-3xl mx-auto body-refined">
                 Tres espacios exclusivos diseñados para ofrecerte la máxima comodidad y privacidad en Mallorca
               </p>
             </div>
@@ -641,7 +641,7 @@ export default function Home() {
 
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
             <AnimatedSection delay={0.1}>
-              <Card className="bg-white/90 backdrop-blur-sm shadow-lg hover-lift transition-all duration-300 h-full border border-gold-light/30" data-testid="location-palma">
+              <Card className="bg-white shadow-lg hover-lift transition-all duration-300 h-full border border-gold-light/30" data-testid="location-palma">
                 <CardContent className="p-8">
                   <div className="text-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-turquoise to-turquoise-medium rounded-full flex items-center justify-center mb-4 mx-auto">
@@ -654,19 +654,19 @@ export default function Home() {
                   <div className="space-y-3 text-center">
                     <div>
                       <p className="font-medium text-foreground">Passeig del Born, 15</p>
-                      <p className="text-sm text-muted-foreground">Centre, 07012 Palma</p>
+                      <p className="text-sm text-dark-neutral">Centre, 07012 Palma</p>
                     </div>
                     <div>
                       <p className="font-medium text-turquoise">+34 660 938 585</p>
                     </div>
-                    <div className="text-sm text-muted-foreground">
+                    <div className="text-sm text-dark-neutral">
                       <p>Lun - Vie: 10:00h - 18:00h</p>
                       <p>Sáb - Dom: Cerrado</p>
                     </div>
                   </div>
 
                   <div className="mt-6 pt-6 border-t border-gold-light/30">
-                    <p className="text-sm text-muted-foreground mb-4">
+                    <p className="text-sm text-dark-neutral mb-4">
                       Ubicación céntrica en el corazón histórico de Palma. Instalaciones de última generación.
                     </p>
                     <Link href="/ubicaciones">
@@ -680,7 +680,7 @@ export default function Home() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.2}>
-              <Card className="bg-white/90 backdrop-blur-sm shadow-lg hover-lift transition-all duration-300 h-full border border-gold-light/30" data-testid="location-cala-millor">
+              <Card className="bg-white shadow-lg hover-lift transition-all duration-300 h-full border border-gold-light/30" data-testid="location-cala-millor">
                 <CardContent className="p-8">
                   <div className="text-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-gold-deep to-gold-light rounded-full flex items-center justify-center mb-4 mx-auto">
@@ -693,19 +693,19 @@ export default function Home() {
                   <div className="space-y-3 text-center">
                     <div>
                       <p className="font-medium text-foreground">Carrer Sol Naixent, 24</p>
-                      <p className="text-sm text-muted-foreground">Cala Millor</p>
+                      <p className="text-sm text-dark-neutral">Cala Millor</p>
                     </div>
                     <div>
                       <p className="font-medium text-turquoise">+34 638 617 650</p>
                     </div>
-                    <div className="text-sm text-muted-foreground">
+                    <div className="text-sm text-dark-neutral">
                       <p>Lun - Vie: 10:00h - 18:00h</p>
                       <p>Sáb - Dom: Cerrado</p>
                     </div>
                   </div>
 
                   <div className="mt-6 pt-6 border-t border-gold-light/30">
-                    <p className="text-sm text-muted-foreground mb-4">
+                    <p className="text-sm text-dark-neutral mb-4">
                       Clínica costera especializada en tratamientos de rejuvenecimiento corporal y facial.
                     </p>
                     <Link href="/ubicaciones">
@@ -719,7 +719,7 @@ export default function Home() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.3}>
-              <Card className="bg-white/90 backdrop-blur-sm shadow-lg hover-lift transition-all duration-300 h-full border border-gold-light/30" data-testid="location-manacor">
+              <Card className="bg-white shadow-lg hover-lift transition-all duration-300 h-full border border-gold-light/30" data-testid="location-manacor">
                 <CardContent className="p-8">
                   <div className="text-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-turquoise-medium to-gold-champagne rounded-full flex items-center justify-center mb-4 mx-auto">
@@ -732,19 +732,19 @@ export default function Home() {
                   <div className="space-y-3 text-center">
                     <div>
                       <p className="font-medium text-foreground">Rafa Nadal Club</p>
-                      <p className="text-sm text-muted-foreground">Manacor</p>
+                      <p className="text-sm text-dark-neutral">Manacor</p>
                     </div>
                     <div>
                       <p className="font-medium text-turquoise">+34 619 392 675</p>
                     </div>
-                    <div className="text-sm text-muted-foreground">
+                    <div className="text-sm text-dark-neutral">
                       <p>Lun - Vie: 10:00h - 18:00h</p>
                       <p>Sáb - Dom: Cerrado</p>
                     </div>
                   </div>
 
                   <div className="mt-6 pt-6 border-t border-gold-light/30">
-                    <p className="text-sm text-muted-foreground mb-4">
+                    <p className="text-sm text-dark-neutral mb-4">
                       Entorno deportivo de élite. Programas de well-aging integrados con actividad física.
                     </p>
                     <Link href="/ubicaciones">
@@ -764,12 +764,12 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                 <div>
                   <h4 className="font-semibold text-turquoise mb-2">Centralita General</h4>
-                  <p className="text-muted-foreground">+34 971 76 37 87</p>
-                  <p className="text-muted-foreground">+34 620 44 92 71</p>
+                  <p className="text-dark-neutral">+34 971 76 37 87</p>
+                  <p className="text-dark-neutral">+34 620 44 92 71</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-turquoise mb-2">Email General</h4>
-                  <p className="text-muted-foreground">mallorcaaestheticc@gmail.com</p>
+                  <p className="text-dark-neutral">mallorcaaestheticc@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -785,7 +785,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center">
-              <div className="text-sm uppercase tracking-wider text-muted-foreground font-medium mb-8">
+              <div className="text-sm uppercase tracking-wider text-dark-neutral font-medium mb-8">
                 Comienza tu obra maestra
               </div>
               
@@ -793,7 +793,7 @@ export default function Home() {
                 Reescribe el tiempo. Vive tu esencia.
               </h2>
               
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-12">
+              <p className="text-lg text-dark-neutral leading-relaxed max-w-2xl mx-auto mb-12">
                 Tu cuerpo, tu salud y tu belleza merecen un enfoque que respete quién eres y potencie lo mejor de ti.
               </p>
               
