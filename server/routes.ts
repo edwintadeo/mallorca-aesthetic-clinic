@@ -9,16 +9,28 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Public Objects Endpoint
   app.get("/public-objects/:filePath(*)", async (req, res) => {
     const filePath = req.params.filePath;
+    console.log(`[Object Storage] Requesting file: ${filePath}`);
+    
     const objectStorageService = new ObjectStorageService();
     try {
+      console.log(`[Object Storage] Search paths: ${JSON.stringify(objectStorageService.getPublicObjectSearchPaths())}`);
+      
       const file = await objectStorageService.searchPublicObject(filePath);
       if (!file) {
+        console.log(`[Object Storage] File not found: ${filePath}`);
         return res.status(404).json({ error: "File not found" });
       }
+      
+      console.log(`[Object Storage] File found, downloading: ${filePath}`);
       objectStorageService.downloadObject(file, res);
     } catch (error) {
-      console.error("Error searching for public object:", error);
-      return res.status(500).json({ error: "Internal server error" });
+      console.error(`[Object Storage] Error for file ${filePath}:`, error);
+      console.error(`[Object Storage] Error stack:`, (error as Error).stack);
+      return res.status(500).json({ 
+        error: "Internal server error", 
+        message: (error as Error).message,
+        filePath: filePath 
+      });
     }
   });
 
