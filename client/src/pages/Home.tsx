@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/UI/button";
+import { Card, CardContent } from "@/components/UI/card";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 import WhatsAppButton from "@/components/UI/WhatsAppButton";
 import NewsletterSection from "@/components/UI/NewsletterSection";
 import QuickBookingModal from "@/components/UI/QuickBookingModal";
 import { SkeletonTestimonial } from "@/components/UI/Skeleton";
 import { Search, ClipboardList, Wand2, TrendingUp, Star } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 // Import video and images
 // Import video asset using require for better production compatibility
@@ -95,6 +96,15 @@ export default function Home() {
 
   return (
     <div className="font-body antialiased">
+      <Helmet>
+        <title>Mallorca Aesthetic Clinic | Medicina estética avanzada con visión integral</title>
+        <meta
+          name="description"
+          content="Clínica de medicina estética avanzada en Mallorca. Transformación visible en 90 días con el Método MAC. Consultas en Palma, Cala Millor y Manacor."
+        />
+        <meta property="og:title" content="Mallorca Aesthetic Clinic - El Arte de Ganar Tiempo" />
+        <meta property="og:description" content="Medicina estética integral con seguimiento de 12 meses. Dra. Liliana Ocampo, 18+ años de experiencia." />
+      </Helmet>
       {/* Scroll Progress Indicator */}
       <div className="fixed top-0 left-0 right-0 h-1 bg-gray-200 z-50">
         <div 

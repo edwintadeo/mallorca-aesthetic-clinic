@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
+import { Button } from "@/components/UI/button";
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/UI/sheet";
 import { Menu, X, ChevronRight, Search } from "lucide-react";
 import SearchModal from "@/components/UI/SearchModal";
 import macLogo from "@assets/logo mallorca aesthetic_1756658404427.png";

@@ -8,6 +8,11 @@ import path from "path";
 import fs from "fs";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Health
+  app.get("/health", (_req, res) => {
+    res.status(200).json({ status: "ok", ts: new Date().toISOString() });
+  });
+
   // Serve video assets with correct MIME type
   app.get("/attached_assets/*.mp4", (req, res) => {
     const filePath = path.join(process.cwd(), req.path);

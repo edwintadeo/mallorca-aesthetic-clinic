@@ -3,13 +3,13 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Button } from "@/components/UI/button";
+import { Card, CardContent } from "@/components/UI/card";
+import { Input } from "@/components/UI/input";
+import { Textarea } from "@/components/UI/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/UI/select";
+import { Checkbox } from "@/components/UI/checkbox";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/UI/form";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import AnimatedSection from "@/components/UI/AnimatedSection";
@@ -17,6 +17,7 @@ import Breadcrumb from "@/components/UI/Breadcrumb";
 // Videos removed for deployment stability
 // Videos removed for deployment stability
 import { MapPin, Phone, Mail, Clock, UserCheck, Heart, Microscope, Shield, CheckCircle, AlertCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "El nombre debe tener al menos 2 caracteres").max(100, "El nombre es demasiado largo"),
@@ -170,6 +171,10 @@ export default function Contacto() {
 
   return (
     <div className="pt-16 font-body antialiased">
+      <Helmet>
+        <title>Contacto | Mallorca Aesthetic Clinic</title>
+        <meta name="description" content="Reserva tu consulta personalizada o contáctanos en nuestras clínicas de Palma, Cala Millor y Manacor." />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden" data-testid="contacto-hero">
         {/* Background Video */}

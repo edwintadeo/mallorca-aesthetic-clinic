@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: 
+
+# Disallow internal pages
+Disallow: /carrito
+
+# Sitemap (update domain if needed)
+Sitemap: https://mac-mallorca.com/sitemap.xml

@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/UI/button";
+import { Card, CardContent } from "@/components/UI/card";
+import { Badge } from "@/components/UI/badge";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 import SkeletonCard from "@/components/UI/SkeletonCard";
 import LazyImage from "@/components/UI/LazyImage";
@@ -10,6 +10,7 @@ import Breadcrumb from "@/components/UI/Breadcrumb";
 // Videos removed for deployment stability
 import { Link } from "wouter";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 // Import treatment images - New authentic MAC photos
 import masajeTurquesa from "@assets/masal toalla turquesa grande_1756671403149.jpg";
@@ -111,6 +112,10 @@ export default function Tratamientos() {
 
   return (
     <div className="font-body antialiased">
+      <Helmet>
+        <title>Tratamientos | Mallorca Aesthetic Clinic</title>
+        <meta name="description" content="Tecnología de vanguardia y técnicas artesanales para resultados naturales excepcionales. Descubre nuestros tratamientos personalizados." />
+      </Helmet>
       {/* Video de fondo para toda la página */}
       <div className="fixed inset-0 w-full h-full z-[-1] overflow-hidden">
         <img 

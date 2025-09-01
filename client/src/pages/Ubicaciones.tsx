@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Helmet } from "react-helmet-async";
+import { Card, CardContent } from "@/components/UI/card";
+import { Button } from "@/components/UI/button";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 import { MapPin, Phone, Clock, Mail } from "lucide-react";
 import LazyImage from "@/components/UI/LazyImage";
@@ -66,6 +67,10 @@ export default function Ubicaciones() {
 
   return (
     <div className="pt-16 font-body antialiased">
+      <Helmet>
+        <title>Ubicaciones | Mallorca Aesthetic Clinic</title>
+        <meta name="description" content="Consulta nuestras clínicas en Palma, Cala Millor y Manacor con horarios y vías de contacto." />
+      </Helmet>
       {/* Hero Section */}
       <section className="py-20 hero-gradient" data-testid="ubicaciones-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

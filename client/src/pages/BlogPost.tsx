@@ -1,10 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import { useRoute, Link } from "wouter";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/UI/button";
+import { Card, CardContent } from "@/components/UI/card";
+import { Badge } from "@/components/UI/badge";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 import { Calendar, Clock, ArrowLeft, Share2, User, ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export default function BlogPost() {
   const [match, params] = useRoute("/blog/:slug");
@@ -112,6 +113,13 @@ export default function BlogPost() {
 
   return (
     <div className="pt-16 font-body antialiased">
+      <Helmet>
+        <title>{displayPost?.title ? `${displayPost.title} | Blog MAC` : 'Artículo | Blog MAC'}</title>
+        <meta name="description" content={displayPost?.excerpt || 'Artículo del blog de MAC'} />
+        {displayPost?.imageUrl && <meta property="og:image" content={displayPost.imageUrl} />}
+        <meta property="og:title" content={displayPost?.title || 'Artículo | Blog MAC'} />
+        <meta property="og:description" content={displayPost?.excerpt || 'Artículo del blog de MAC'} />
+      </Helmet>
       {/* Back Navigation */}
       <section className="py-8 bg-pearl" data-testid="back-navigation">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

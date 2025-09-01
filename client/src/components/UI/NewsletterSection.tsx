@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "@/components/UI/button";
+import { Input } from "@/components/UI/input";
 import { Mail, Star, Heart } from "lucide-react";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 

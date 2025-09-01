@@ -1,8 +1,14 @@
 import AnimatedSection from "@/components/UI/AnimatedSection";
+import { Helmet } from "react-helmet-async";
 
 export default function PoliticaPrivacidad() {
   return (
     <div className="pt-20 pb-16 min-h-screen bg-white">
+      <Helmet>
+        <title>Política de Privacidad | Mallorca Aesthetic Clinic</title>
+        <meta name="robots" content="noindex,follow" />
+        <meta name="description" content="Política de privacidad y tratamiento de datos personales de Mallorca Aesthetic Clinic." />
+      </Helmet>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <h1 className="text-4xl lg:text-5xl font-title text-center mb-8" data-testid="text-page-title">

@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { Helmet } from "react-helmet-async";
+import { Card, CardContent } from "@/components/UI/card";
+import { Button } from "@/components/UI/button";
+import { Badge } from "@/components/UI/badge";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 import { LazyVideo } from "@/components/UI/LazyVideo";
 import { Crown, Gift, Calendar, Star, Users, Sparkles, Heart, Shield } from "lucide-react";
@@ -105,6 +106,10 @@ export default function ClubMAC() {
 
   return (
     <div className="pt-16 font-body antialiased">
+      <Helmet>
+        <title>Club MAC | Beneficios exclusivos y seguimiento</title>
+        <meta name="description" content="Únete al Club MAC para disfrutar de beneficios exclusivos, seguimiento personalizado y experiencias premium." />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden" data-testid="club-mac-hero">
         {/* Video Background */}

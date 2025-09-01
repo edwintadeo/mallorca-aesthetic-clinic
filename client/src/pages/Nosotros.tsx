@@ -1,9 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/UI/card";
+import { Badge } from "@/components/UI/badge";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 // Videos removed for deployment stability
 import { Award, Users, Heart, Microscope, Shield, Clock } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 // Import team images
 import perfectSkinPortrait from "@assets/perfect-skin-portrait.jpg";
@@ -115,6 +116,10 @@ export default function Nosotros() {
 
   return (
     <div className="pt-16 font-body antialiased">
+      <Helmet>
+        <title>Nosotros | Mallorca Aesthetic Clinic</title>
+        <meta name="description" content="Más de 18 años dedicados al arte de ganar tiempo con un enfoque integral en medicina estética y bienestar." />
+      </Helmet>
       {/* Hero Section */}
       <section className="py-20 hero-gradient" data-testid="nosotros-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

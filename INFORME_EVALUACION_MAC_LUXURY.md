@@ -189,7 +189,7 @@ El sitio muestra elementos prometedores de diseño premium pero requiere refinam
 - **Clinique La Prairie (Suiza):** Estándar oro en presentación digital
 - **Dr. Barbara Sturm (Alemania):** Perfecta integración marca-medicina
 - **111 Harley St. (Londres):** Excelencia en credibilidad médica
-- **Institut Esthederm (París):** Elegancia francesa aplicada
+-Elegancia francesa aplicada
 
 ### Elementos a emular:
 - Sistema de navegación de Clinique La Prairie

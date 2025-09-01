@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Separator } from "@/components/ui/separator";
+import { Helmet } from "react-helmet-async";
+import { Button } from "@/components/UI/button";
+import { Card, CardContent } from "@/components/UI/card";
+import { Input } from "@/components/UI/input";
+import { Separator } from "@/components/UI/separator";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 import { Minus, Plus, Trash2, ShoppingBag, CreditCard, MapPin } from "lucide-react";
 
@@ -81,6 +82,11 @@ export default function Carrito() {
 
   return (
     <div className="pt-16 font-body antialiased min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Carrito | Mallorca Aesthetic Clinic</title>
+        <meta name="robots" content="noindex,nofollow" />
+        <meta name="description" content="Resumen de tus servicios y tratamientos seleccionados." />
+      </Helmet>
       {/* Hero Section */}
       <section className="py-12 bg-white" data-testid="carrito-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

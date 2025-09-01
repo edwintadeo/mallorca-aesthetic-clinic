@@ -1,10 +1,11 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/UI/button";
+import { Card, CardContent } from "@/components/UI/card";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 import Breadcrumb from "@/components/UI/Breadcrumb";
 // Videos removed for deployment stability
 import { Link } from "wouter";
 import { Search, ClipboardList, Wand2, TrendingUp, CheckCircle, Clock, Users, Award } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 // Import method images
 import perfectSkinPortrait from "@assets/perfect-skin-portrait.jpg";
@@ -126,6 +127,10 @@ export default function Metodo() {
 
   return (
     <div className="pt-16 font-body antialiased">
+      <Helmet>
+        <title>Método MAC | Enfoque integral de well-aging</title>
+        <meta name="description" content="Diagnóstico 360°, plan personalizado, acción integrada y seguimiento estratégico para resultados naturales y sostenibles." />
+      </Helmet>
       {/* Hero Section */}
       <section className="py-20 hero-gradient gold-border-bottom" data-testid="metodo-hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

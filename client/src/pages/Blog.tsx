@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/UI/card";
+import { Badge } from "@/components/UI/badge";
+import { Button } from "@/components/UI/button";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 import { LazyVideo } from "@/components/UI/LazyVideo";
 import LazyImage from "@/components/UI/LazyImage";
 import { Skeleton } from "@/components/UI/Skeleton";
 import { Calendar, User, ArrowRight, Clock } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 // Import video for hero background
 import heroVideo from "@assets/ADN convert_1756676832992.mp4";
@@ -90,6 +91,13 @@ export default function Blog() {
 
   return (
     <div className="pt-16 font-body antialiased">
+      <Helmet>
+        <title>Blog MAC | Medicina estética, bienestar y well-aging</title>
+        <meta
+          name="description"
+          content="Artículos especializados sobre medicina estética, bienestar y well-aging escritos por nuestros expertos de MAC."
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden gold-border-bottom" data-testid="blog-hero">
         {/* Video Background */}

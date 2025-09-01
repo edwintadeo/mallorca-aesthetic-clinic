@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/UI/dialog";
+import { Input } from "@/components/UI/input";
+import { Badge } from "@/components/UI/badge";
+import { Button } from "@/components/UI/button";
 import { Link } from "wouter";
 import { Search, X, ArrowRight, Sparkles, TrendingUp, Clock } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
