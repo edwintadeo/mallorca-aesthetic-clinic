@@ -114,18 +114,30 @@ export default function Home() {
       
       {/* Video de fondo para toda la landing page */}
       <div className="fixed inset-0 w-full h-full -z-10 overflow-hidden">
+        {/* Fallback background image */}
+        <div 
+          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${heroBeautyModel})`,
+            zIndex: -2
+          }}
+        ></div>
+        
+        {/* Video background */}
         <video
           autoPlay
           loop
           muted
           playsInline
           preload="auto"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover relative z-[-1]"
           style={{ minWidth: '100%', minHeight: '100%' }}
           onLoadStart={() => console.log('Video loading started')}
           onCanPlay={() => console.log('Video can play')}
           onError={(e) => {
             console.error('Video loading error:', e);
+            // Hide video on error so fallback image shows
+            e.currentTarget.style.display = 'none';
           }}
         >
           <source src={backgroundVideoUrl} type="video/mp4" />
