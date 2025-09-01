@@ -15,6 +15,7 @@ import FloatingNavbar from "@/components/Layout/FloatingNavbar";
 import CinematicHero from "@/components/UI/CinematicHero";
 import InteractiveMethodTimeline from "@/components/UI/InteractiveMethodTimeline";
 import VerifiedTestimonialsSection from "@/components/UI/VerifiedTestimonialsSection";
+import BeforeAfterSlider from "@/components/UI/BeforeAfterSlider";
 
 // Import video configuration
 import { getVideoConfigComplete } from "@/config/videos";
@@ -408,6 +409,106 @@ export default function Home() {
       {/* Verified Testimonials Section */}
       <section className="relative z-[1]" data-testid="testimonials-section">
         <VerifiedTestimonialsSection />
+      </section>
+
+      {/* Before/After Slider Section */}
+      <section className="py-20 bg-white relative z-[1]" data-testid="before-after-section">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="text-center mb-16">
+              <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
+                Transformaciones Visibles
+              </div>
+              <h2 className="text-4xl lg:text-5xl title-luxury text-gold-deep mb-6">
+                Resultados Reales
+              </h2>
+              <p className="text-xl text-dark-neutral max-w-3xl mx-auto body-refined">
+                Descubre las transformaciones auténticas de nuestros pacientes. 
+                Arrastra el slider para comparar antes y después.
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection delay={0.2}>
+            <div className="grid lg:grid-cols-2 gap-12">
+              <BeforeAfterSlider
+                beforeImage={facialMaskTreatment}
+                afterImage={perfectSkinPortrait}
+                beforeLabel="Antes"
+                afterLabel="Después"
+                treatment="Rejuvenecimiento Facial Integral"
+                timeframe="90 días"
+                doctor="Liliana Ocampo"
+                className="shadow-2xl"
+              />
+              
+              <div className="space-y-8">
+                <div className="luxury-divider mb-8"></div>
+                <h3 className="text-2xl font-subtitle text-gold-deep text-center mb-8">
+                  Metodología Documentada
+                </h3>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-turquoise/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-turquoise font-bold text-lg">1</span>
+                    </div>
+                    <div>
+                      <h4 className="font-subtitle font-semibold text-lg mb-2">Evaluación Inicial</h4>
+                      <p className="text-foreground/80 leading-relaxed">
+                        Análisis completo de la piel y evaluación de necesidades específicas.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-turquoise/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-turquoise font-bold text-lg">2</span>
+                    </div>
+                    <div>
+                      <h4 className="font-subtitle font-semibold text-lg mb-2">Protocolo Personalizado</h4>
+                      <p className="text-foreground/80 leading-relaxed">
+                        Diseño de tratamiento adaptado a cada paciente y sus objetivos.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-turquoise/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-turquoise font-bold text-lg">3</span>
+                    </div>
+                    <div>
+                      <h4 className="font-subtitle font-semibold text-lg mb-2">Seguimiento Continuo</h4>
+                      <p className="text-foreground/80 leading-relaxed">
+                        Monitoreo del progreso y ajustes del protocolo según resultados.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-8 p-6 bg-gradient-to-r from-turquoise/5 to-gold-deep/5 rounded-xl border border-turquoise/20">
+                  <h4 className="font-subtitle font-semibold text-lg mb-3 text-gold-deep">
+                    Resultados Garantizados
+                  </h4>
+                  <p className="text-foreground/80 leading-relaxed mb-4">
+                    Nuestro compromiso es ofrecer resultados visibles y duraderos. 
+                    Cada tratamiento está respaldado por nuestra garantía de satisfacción.
+                  </p>
+                  <div className="flex items-center space-x-4 text-sm text-turquoise">
+                    <span className="flex items-center">
+                      <span className="w-2 h-2 bg-turquoise rounded-full mr-2"></span>
+                      Resultados en 90 días
+                    </span>
+                    <span className="flex items-center">
+                      <span className="w-2 h-2 bg-turquoise rounded-full mr-2"></span>
+                      Seguimiento de 12 meses
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
       </section>
 
       {/* Mini-Mapa de Ubicaciones */}
