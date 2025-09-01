@@ -17,6 +17,9 @@ import InteractiveMethodTimeline from "@/components/UI/InteractiveMethodTimeline
 import VerifiedTestimonialsSection from "@/components/UI/VerifiedTestimonialsSection";
 import BeforeAfterSlider from "@/components/UI/BeforeAfterSlider";
 import PremiumFooter from "@/components/Layout/PremiumFooter";
+import FloatingActionButtons from "@/components/UI/FloatingActionButtons";
+import LuxuryMobileMenu from "@/components/UI/LuxuryMobileMenu";
+import MobileOptimizations from "@/components/UI/MobileOptimizations";
 
 // Import video configuration
 import { getVideoConfigComplete } from "@/config/videos";
@@ -31,6 +34,7 @@ import macLogoBlack from "@assets/mac-logo@2x_1756658468399.png";
 
 export default function Home() {
   const [isQuickBookingOpen, setIsQuickBookingOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const { data: testimonials, isLoading: testimonialsLoading } = useQuery({
     queryKey: ["/api/testimonials"],
@@ -101,18 +105,19 @@ export default function Home() {
   ];
 
   return (
-    <div className="font-body antialiased">
-      <Helmet>
-        <title>Mallorca Aesthetic Clinic | Medicina estética avanzada con visión integral</title>
-        <meta
-          name="description"
-          content="Clínica de medicina estética avanzada en Mallorca. Transformación visible en 90 días con el Método MAC. Consultas en Palma, Cala Millor y Manacor."
-        />
-        <meta property="og:title" content="Mallorca Aesthetic Clinic - El Arte de Ganar Tiempo" />
-        <meta property="og:description" content="Medicina estética integral con seguimiento de 12 meses. Dra. Liliana Ocampo, 18+ años de experiencia." />
-      </Helmet>
-      
-      {/* Floating Navigation */}
+    <MobileOptimizations>
+      <div className="font-body antialiased">
+        <Helmet>
+          <title>Mallorca Aesthetic Clinic | Medicina estética avanzada con visión integral</title>
+          <meta
+            name="description"
+            content="Clínica de medicina estética avanzada en Mallorca. Transformación visible en 90 días con el Método MAC. Consultas en Palma, Cala Millor y Manacor."
+          />
+          <meta property="og:title" content="Mallorca Aesthetic Clinic - El Arte de Ganar Tiempo" />
+          <meta property="og:description" content="Medicina estética integral con seguimiento de 12 meses. Dra. Liliana Ocampo, 18+ años de experiencia." />
+        </Helmet>
+        
+        {/* Floating Navigation */}
       <FloatingNavbar />
       
       {/* Cinematic Hero Section */}
@@ -505,7 +510,7 @@ export default function Home() {
                       Seguimiento de 12 meses
                     </span>
                       </div>
-                </div>
+                      </div>
                 </div>
               </div>
             </AnimatedSection>
@@ -707,11 +712,21 @@ export default function Home() {
       {/* Premium Footer */}
       <PremiumFooter />
       
+      {/* Floating Action Buttons */}
+      <FloatingActionButtons />
+      
+      {/* Luxury Mobile Menu */}
+      <LuxuryMobileMenu 
+        isOpen={isMobileMenuOpen} 
+        onClose={() => setIsMobileMenuOpen(false)} 
+      />
+      
       {/* Quick Booking Modal */}
       <QuickBookingModal 
         isOpen={isQuickBookingOpen} 
         onClose={() => setIsQuickBookingOpen(false)} 
       />
-    </div>
+      </div>
+    </MobileOptimizations>
   );
 }
