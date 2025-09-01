@@ -14,6 +14,7 @@ import { OptimizedVideo } from "@/components/UI/OptimizedVideo";
 import FloatingNavbar from "@/components/Layout/FloatingNavbar";
 import CinematicHero from "@/components/UI/CinematicHero";
 import InteractiveMethodTimeline from "@/components/UI/InteractiveMethodTimeline";
+import VerifiedTestimonialsSection from "@/components/UI/VerifiedTestimonialsSection";
 
 // Import video configuration
 import { getVideoConfigComplete } from "@/config/videos";
@@ -404,152 +405,9 @@ export default function Home() {
       {/* Visual Separator */}
       <div className="section-separator"></div>
 
-      {/* Testimonials & Before/After Section */}
-      <section className="py-20 section-beige relative z-[1] gold-border-bottom" data-testid="testimonials-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection>
-            <div className="text-center mb-16">
-              <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
-                Historias Reales de Transformación
-              </div>
-              <h2 className="text-4xl lg:text-6xl title-luxury text-gold-deep mb-6">
-                Testimonios & Resultados
-              </h2>
-              <p className="text-xl text-dark-neutral max-w-3xl mx-auto body-refined">
-                Más de 10,000 pacientes han experimentado transformaciones auténticas con el Método MAC
-              </p>
-            </div>
-          </AnimatedSection>
-
-          {/* Testimonios en formato carrusel premium */}
-          <div className="grid lg:grid-cols-2 gap-12 mb-16">
-            <AnimatedSection delay={0.1}>
-              <div className="space-y-8">
-                <div className="luxury-divider mb-8"></div>
-                <h3 className="text-2xl font-subtitle text-gold-deep text-center mb-8">Experiencias Reales</h3>
-                {testimonialsLoading ? (
-                  <>
-                    <SkeletonTestimonial />
-                    <SkeletonTestimonial />
-                  </>
-                ) : testimonials && Array.isArray(testimonials) && testimonials.length > 0 ? (
-                  testimonials.slice(0, 2).map((testimonial: any, index: number) => (
-                    <Card key={testimonial.id} className="luxury-card shadow-lg hover-lift" data-testid={`testimonial-featured-${index}`}>
-                      <CardContent className="p-8">
-                        <div className="flex items-start space-x-4 mb-6">
-                          <img 
-                            src={testimonial.imageUrl || perfectSkinPortrait}
-                            alt={testimonial.name}
-                            className="w-20 h-20 rounded-full object-cover border-2 border-gold-light"
-                          />
-                          <div className="flex-1">
-                            <h4 className="font-subtitle font-semibold text-lg">{testimonial.name}</h4>
-                            <div className="text-sm text-turquoise mb-2">{testimonial.treatment}</div>
-                            <div className="flex text-gold-light mb-2">
-                              {[...Array(testimonial.rating)].map((_, i) => (
-                                <Star key={i} className="w-4 h-4 fill-current" />
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                        <blockquote className="text-foreground/80 leading-relaxed italic text-lg border-l-4 border-turquoise pl-4">
-                          "{testimonial.comment}"
-                        </blockquote>
-                      </CardContent>
-                    </Card>
-                  ))
-                ) : (
-                  <div className="text-center py-8">
-                    <Card className="bg-white/80 backdrop-blur-sm shadow-lg">
-                      <CardContent className="p-8">
-                        <div className="flex items-start space-x-4 mb-6">
-                          <img 
-                            src={perfectSkinPortrait}
-                            alt="Carmen M."
-                            className="w-20 h-20 rounded-full object-cover border-2 border-gold-light"
-                          />
-                          <div className="flex-1">
-                            <h4 className="font-subtitle font-semibold text-lg">Carmen M.</h4>
-                            <div className="text-sm text-turquoise mb-2">Método MAC Completo</div>
-                            <div className="flex text-gold-light mb-2">
-                              {[...Array(5)].map((_, i) => (
-                                <Star key={i} className="w-4 h-4 fill-current" />
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                        <blockquote className="text-foreground/80 leading-relaxed italic text-lg border-l-4 border-turquoise pl-4">
-                          "En MAC no solo transformaron mi apariencia, sino que me devolvieron la confianza. El Método MAC es revolucionario: resultados naturales que perduran en el tiempo."
-                        </blockquote>
-                      </CardContent>
-                    </Card>
-                  </div>
-                )}
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.2}>
-              <div className="space-y-8">
-                <h3 className="text-2xl title-luxury text-center mb-8">Transformaciones Visibles</h3>
-                <div className="grid grid-cols-1 gap-6">
-                  <Card className="bg-white shadow-lg hover-lift border border-gold-light/30" data-testid="before-after-1">
-                    <CardContent className="p-6">
-                      <div className="grid grid-cols-2 gap-4 mb-4">
-                        <div className="text-center">
-                          <img 
-                            src={facialMaskTreatment}
-                            alt="Antes del tratamiento"
-                            className="w-full h-32 object-cover rounded-lg"
-                          />
-                          <p className="text-sm text-dark-neutral mt-2">Antes</p>
-                        </div>
-                        <div className="text-center">
-                          <img 
-                            src={perfectSkinPortrait}
-                            alt="Después del tratamiento"
-                            className="w-full h-32 object-cover rounded-lg"
-                          />
-                          <p className="text-sm text-turquoise mt-2 font-medium">Después - 90 días</p>
-                        </div>
-                      </div>
-                      <div className="text-center">
-                        <h4 className="font-subtitle font-semibold mb-1">Rejuvenecimiento Facial</h4>
-                        <p className="text-sm text-dark-neutral">Método MAC + Bioestimuladores</p>
-                      </div>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="bg-white shadow-lg hover-lift border border-gold-light/30" data-testid="before-after-2">
-                    <CardContent className="p-6">
-                      <div className="grid grid-cols-2 gap-4 mb-4">
-                        <div className="text-center">
-                          <img 
-                            src={whiteFacialMask}
-                            alt="Antes del tratamiento"
-                            className="w-full h-32 object-cover rounded-lg"
-                          />
-                          <p className="text-sm text-dark-neutral mt-2">Antes</p>
-                        </div>
-                        <div className="text-center">
-                          <img 
-                            src={spaDeviceTreatment}
-                            alt="Después del tratamiento"
-                            className="w-full h-32 object-cover rounded-lg"
-                          />
-                          <p className="text-sm text-turquoise mt-2 font-medium">Después - 90 días</p>
-                        </div>
-                      </div>
-                      <div className="text-center">
-                        <h4 className="font-subtitle font-semibold mb-1">Well-Aging Integral</h4>
-                        <p className="text-sm text-dark-neutral">Método MAC + Optimización Hormonal</p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
+      {/* Verified Testimonials Section */}
+      <section className="relative z-[1]" data-testid="testimonials-section">
+        <VerifiedTestimonialsSection />
       </section>
 
       {/* Mini-Mapa de Ubicaciones */}
