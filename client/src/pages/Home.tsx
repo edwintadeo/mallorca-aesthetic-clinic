@@ -151,7 +151,7 @@ export default function Home() {
               </div>
               <div className="relative inline-block">
                 <div className="absolute inset-0 bg-gradient-to-br from-white/35 via-pearl/30 to-white/25 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl"></div>
-                <h1 className="text-5xl lg:text-7xl font-title gold-accent relative z-10 px-8 py-6 text-shadow-elegant">
+                <h1 className="text-5xl lg:text-7xl font-title text-gold-deep relative z-10 px-8 py-6 text-shadow-elegant">
                   Medicina estética<br />
                   avanzada con<br />
                   visión integral
