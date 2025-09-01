@@ -169,8 +169,8 @@ export default function Contacto() {
       <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden" data-testid="contacto-hero">
         {/* Background Video */}
         <img 
-          src={spa} 
-          alt="MAC Clinic" 
+          src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080" 
+          alt="MAC Clinic Interior" 
           className="absolute inset-0 w-full h-full object-cover"
         />
         
