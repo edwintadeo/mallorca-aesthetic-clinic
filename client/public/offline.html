@@ -1,25 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sin conexión · Mallorca Aesthetic Clinic</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sin conexión - MAC Clinic</title>
     <style>
-      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif; margin: 0; background:#f7f7f8; color:#222; }
-      .wrap { max-width: 640px; margin: 10vh auto; background: #fff; border-radius: 12px; box-shadow: 0 6px 24px rgba(0,0,0,.06); padding: 28px; }
-      h1 { font-size: 1.25rem; margin: 0 0 8px; }
-      p { margin: 6px 0; line-height: 1.45; color: #444; }
-      .hint { font-size: 0.9rem; color:#666; margin-top: 12px; }
-      .btn { display:inline-block; margin-top:14px; padding:10px 14px; background:#0ea5a2; color:#fff; text-decoration:none; border-radius:8px; }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #A57D24, #D4AF37);
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .container {
+            max-width: 500px;
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .logo {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
     </style>
-  </head>
-  <body>
-    <div class="wrap">
-      <h1>Estás sin conexión</h1>
-      <p>No hemos podido cargar la página. Revisa tu conexión a internet.</p>
-      <p class="hint">Cuando vuelvas a estar en línea, intenta recargar la página.</p>
-      <a class="btn" href="/">Volver al inicio</a>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">MAC</div>
+        <h1>Sin conexión</h1>
+        <p>No hay conexión a internet. Por favor, verifica tu conexión y vuelve a intentar.</p>
+        <button onclick="window.location.reload()" style="background: white; color: #A57D24; border: none; padding: 1rem 2rem; border-radius: 25px; font-size: 1rem; cursor: pointer;">
+            Reintentar
+        </button>
     </div>
-  </body>
-  </html>
-
+</body>
+</html>
