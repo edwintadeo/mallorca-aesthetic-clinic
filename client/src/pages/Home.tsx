@@ -1,6 +1,10 @@
-import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import FloatingNavbar from "../components/Layout/FloatingNavbar";
+import Hero from "../components/UI/Hero";
+import PremiumNavbar from "../components/Layout/PremiumNavbar";
+import MethodTimeline from "../components/UI/MethodTimeline";
+import BeforeAfterSlider from "../components/UI/BeforeAfterSlider";
+import LocationCards from "../components/UI/LocationCards";
+import PremiumFooter from "../components/Layout/PremiumFooter";
 
 export default function Home() {
   return (
@@ -15,180 +19,126 @@ export default function Home() {
         <meta property="og:description" content="Medicina estética integral con seguimiento de 12 meses. Dra. Liliana Ocampo, 18+ años de experiencia." />
       </Helmet>
 
-      {/* Floating Navigation */}
-      <FloatingNavbar />
+      {/* Premium Navigation */}
+      <PremiumNavbar />
 
-      {/* Hero Section Simplificada */}
-      <section className="relative h-[100vh] overflow-hidden bg-gradient-to-b from-pearl to-white">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-transparent" />
-        
-        <div className="relative z-10 mx-auto max-w-4xl px-6 pt-[20vh] text-center">
-          <h1 className="text-4xl md:text-6xl font-serif leading-tight text-white drop-shadow-lg">
-            El Arte de Ganar Tiempo
-          </h1>
-          <p className="mt-6 text-xl text-white/90 max-w-2xl mx-auto">
-            Medicina estética avanzada con visión integral. Transformación visible en 90 días.
-          </p>
-          <a
-            href="/contacto"
-            className="mt-8 inline-flex rounded-full bg-turquoise px-8 py-3 text-white hover:bg-turquoise/90 transition-colors"
-          >
-            Reserva tu Consulta Personalizada
-          </a>
-        </div>
+      {/* Hero Section with Video */}
+      <Hero
+        title="El Arte de Ganar Tiempo"
+        subtitle="Medicina estética integral con seguimiento de 12 meses. Transformación visible en 90 días con el Método MAC."
+        ctaText="Reserva tu Consulta Privada"
+        ctaLink="#contacto"
+        videoSrc="/attached_assets/amanecer mallorca_1756709416796.mp4"
+        posterSrc="/attached_assets/perfect-skin-portrait.jpg"
+        fallbackSrc="/attached_assets/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124_1756709450734.mp4"
+      />
+
+      {/* Method Timeline Section */}
+      <section id="metodo" className="section-spacing">
+        <MethodTimeline />
       </section>
 
-      {/* Método MAC Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Testimonials with Before/After */}
+      <section id="testimonios" className="section-spacing bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-serif text-gold-deep mb-6">
-              Método MAC
+            <h2 className="text-4xl md:text-5xl font-serif text-[#A57D24] mb-4">
+              Resultados Reales
             </h2>
-            <p className="text-xl text-dark-neutral max-w-3xl mx-auto">
-              Nuestro protocolo de cuatro fases garantiza resultados excepcionales 
-              mediante un enfoque científico y personalizado.
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Descubre las transformaciones auténticas de nuestros pacientes con el Método MAC
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                number: "01",
-                title: "Diagnóstico 360°",
-                description: "Mapeo facial y corporal 3D, análisis avanzado con IA y evaluación integral."
-              },
-              {
-                number: "02",
-                title: "Plan Personalizado",
-                description: "Análisis sanguíneo de precisión y estudio de nutrigenética personalizada."
-              },
-              {
-                number: "03",
-                title: "Acción Integrada",
-                description: "Fusión de medicina estética, preventiva y técnicas de bienestar integrado."
-              },
-              {
-                number: "04",
-                title: "Seguimiento Estratégico",
-                description: "Sistema de evaluación progresiva y ajustes preventivos estratégicos."
-              }
-            ].map((phase) => (
-              <div
-                key={phase.number}
-                className="text-center p-6 rounded-2xl border border-gold-light/20 hover:shadow-lg transition-shadow"
-              >
-                <div className="text-5xl font-serif text-gold-deep mb-4">
-                  {phase.number}
-                </div>
-                <h3 className="text-xl font-semibold text-dark-neutral mb-3">
-                  {phase.title}
-                </h3>
-                <p className="text-dark-neutral/80">
-                  {phase.description}
-                </p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <BeforeAfterSlider
+              beforeImage="/attached_assets/image_1756654672314.png"
+              afterImage="/attached_assets/image_1756654707673.png"
+              treatment="Rejuvenecimiento Facial Integral"
+              duration="3 sesiones • 90 días"
+              doctor="Dra. Liliana Ocampo"
+            />
+            
+            <BeforeAfterSlider
+              beforeImage="/attached_assets/mascarilla verde_1756671415152.jpg"
+              afterImage="/attached_assets/perfect-skin-portrait.jpg"
+              treatment="Tratamiento Corporal"
+              duration="6 sesiones • 120 días"
+              doctor="Dra. Liliana Ocampo"
+            />
           </div>
-        </div>
-      </section>
 
-      {/* Testimonios Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-pearl">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-serif text-gold-deep mb-6">
-              Testimonios & Resultados
-            </h2>
-            <p className="text-xl text-dark-neutral max-w-3xl mx-auto">
+          <div className="mt-12 text-center">
+            <p className="text-gray-600 mb-6">
               Más de 10,000 pacientes han experimentado transformaciones auténticas con el Método MAC
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Carmen M.",
-                location: "Palma de Mallorca",
-                comment: "En MAC no solo transformaron mi apariencia, sino que me devolvieron la confianza. El Método MAC es revolucionario.",
-                treatment: "Método MAC Completo"
-              },
-              {
-                name: "Isabel R.",
-                location: "Cala Millor",
-                comment: "Después de 3 meses con el Método MAC, me siento 10 años más joven. No es solo estética, es bienestar integral.",
-                treatment: "Well-Aging Integral"
-              },
-              {
-                name: "María S.",
-                location: "Manacor",
-                comment: "El enfoque integral de MAC es único. No solo mejoraron mi piel, sino que me enseñaron a cuidarme mejor.",
-                treatment: "Rejuvenecimiento Facial"
-              }
-            ].map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-2xl shadow-lg border border-gold-light/20"
-              >
-                <div className="flex text-gold-light mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i}>★</span>
-                  ))}
-                </div>
-                <blockquote className="text-dark-neutral mb-4 italic">
-                  "{testimonial.comment}"
-                </blockquote>
-                <div className="text-sm">
-                  <div className="font-semibold text-gold-deep">{testimonial.name}</div>
-                  <div className="text-dark-neutral/70">{testimonial.location}</div>
-                  <div className="text-turquoise text-xs mt-1">{testimonial.treatment}</div>
-                </div>
-              </div>
-            ))}
+            <a
+              href="#contacto"
+              className="inline-flex items-center rounded-full bg-[#008578] px-8 py-3 text-white font-medium transition-all duration-300 hover:bg-[#006b5f] focus:outline-none focus:ring-2 focus:ring-[#008578] focus:ring-offset-2"
+            >
+              Ver Más Resultados
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Footer Simple */}
-      <footer className="bg-dark-neutral text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-gold-light">MAC Mallorca</h3>
-              <p className="text-white/80 mb-4">
-                El arte de ganar tiempo a través de la medicina estética integral.
-              </p>
+      {/* Location Cards Section */}
+      <section id="ubicaciones" className="section-spacing">
+        <LocationCards />
+      </section>
+
+      {/* Contact Section */}
+      <section id="contacto" className="section-spacing bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-4xl md:text-5xl font-serif text-[#A57D24] mb-4">
+            Comienza tu Transformación
+          </h2>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Reserva tu consulta de diagnóstico 360° y descubre cómo el Método MAC puede transformar tu apariencia
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-200">
+              <h3 className="text-xl font-serif text-[#A57D24] mb-2">Consulta Inicial</h3>
+              <p className="text-gray-600 text-sm">Evaluación completa y plan personalizado</p>
             </div>
-            <div>
-              <h4 className="font-semibold mb-4">Navegación</h4>
-              <ul className="space-y-2 text-white/80">
-                <li><a href="/" className="hover:text-gold-light transition-colors">Inicio</a></li>
-                <li><a href="/metodo" className="hover:text-gold-light transition-colors">Método MAC</a></li>
-                <li><a href="/tratamientos" className="hover:text-gold-light transition-colors">Tratamientos</a></li>
-                <li><a href="/contacto" className="hover:text-gold-light transition-colors">Contacto</a></li>
-              </ul>
+            <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-200">
+              <h3 className="text-xl font-serif text-[#A57D24] mb-2">Seguimiento 12 Meses</h3>
+              <p className="text-gray-600 text-sm">Acompañamiento continuo garantizado</p>
             </div>
-            <div>
-              <h4 className="font-semibold mb-4">Contacto</h4>
-              <div className="space-y-2 text-white/80">
-                <div>Palma de Mallorca</div>
-                <div>+34 971 76 37 87</div>
-                <div>concierge@mac.clinic</div>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Horarios</h4>
-              <div className="space-y-2 text-white/80">
-                <div>Lun-Vie: 10:00-20:00</div>
-                <div>Sábado: 10:00-14:00</div>
-              </div>
+            <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-200">
+              <h3 className="text-xl font-serif text-[#A57D24] mb-2">Resultados Garantizados</h3>
+              <p className="text-gray-600 text-sm">Transformación visible en 90 días</p>
             </div>
           </div>
-          <div className="border-t border-white/20 mt-12 pt-8 text-center text-white/60">
-            © 2025 MAC Mallorca Aesthetic Clinic. Todos los derechos reservados.
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+34900123456"
+              className="inline-flex items-center rounded-full bg-[#008578] px-8 py-3 text-white font-medium transition-all duration-300 hover:bg-[#006b5f] focus:outline-none focus:ring-2 focus:ring-[#008578] focus:ring-offset-2"
+            >
+              <svg className="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+              Llamar Ahora
+            </a>
+            <a
+              href="https://wa.me/34900123456"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-full border border-[#008578] px-8 py-3 text-[#008578] font-medium transition-all duration-300 hover:bg-[#008578] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#008578] focus:ring-offset-2"
+            >
+              <svg className="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+              </svg>
+              WhatsApp
+            </a>
           </div>
         </div>
-      </footer>
+      </section>
+
+      {/* Premium Footer */}
+      <PremiumFooter />
     </div>
   );
 }
