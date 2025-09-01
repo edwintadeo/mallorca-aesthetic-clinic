@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
+const asset = (p: string) => new URL(`@assets/${p}` as unknown as string, import.meta.url).toString();
 import { useQuery } from '@tanstack/react-query';
 import PremiumTestimonial from './PremiumTestimonial';
 import { SkeletonTestimonial } from './Skeleton';
 
 export default function VerifiedTestimonialsSection() {
   const [selectedTestimonial, setSelectedTestimonial] = useState<string | null>(null);
+  const [activeFilter, setActiveFilter] = useState<'all' | 'premium' | 'documented' | 'verified'>('all');
 
   const { data: testimonials, isLoading } = useQuery({
     queryKey: ['/api/testimonials'],
@@ -21,11 +23,11 @@ export default function VerifiedTestimonialsSection() {
       doctor: 'Liliana Ocampo',
       rating: 5,
       comment: 'En MAC no solo transformaron mi apariencia, sino que me devolvieron la confianza. El Método MAC es revolucionario: resultados naturales que perduran en el tiempo. La Dra. Ocampo es una profesional excepcional.',
-      imageUrl: '/attached_assets/perfect-skin-portrait.jpg',
-      videoUrl: '/attached_assets/valoración personalizada_1756709877077.mp4',
+      imageUrl: asset('perfect-skin-portrait.jpg'),
+      videoUrl: asset('valoración personalizada_1756709877077.mp4'),
       beforeAfterImages: {
-        before: '/attached_assets/mascarilla verde_1756671415152.jpg',
-        after: '/attached_assets/perfect-skin-portrait.jpg'
+        before: asset('mascarilla verde_1756671415152.jpg'),
+        after: asset('perfect-skin-portrait.jpg')
       },
       verification: {
         verified: true,
@@ -52,11 +54,11 @@ export default function VerifiedTestimonialsSection() {
       doctor: 'Liliana Ocampo',
       rating: 5,
       comment: 'Después de 3 meses con el Método MAC, me siento 10 años más joven. No es solo estética, es bienestar integral. La Dra. Ocampo entiende que la belleza viene de dentro.',
-      imageUrl: '/attached_assets/mujer joven ropa deportiva_1756669322157.jpg',
-      videoUrl: '/attached_assets/amanecer mallorca_1756709416796.mp4',
+      imageUrl: asset('mujer joven ropa deportiva_1756669322157.jpg'),
+      videoUrl: asset('amanecer mallorca_1756709416796.mp4'),
       beforeAfterImages: {
-        before: '/attached_assets/mascarilla perla_1756671424839.jpg',
-        after: '/attached_assets/mujer joven ropa deportiva_1756669322157.jpg'
+        before: asset('mascarilla perla_1756671424839.jpg'),
+        after: asset('mujer joven ropa deportiva_1756669322157.jpg')
       },
       verification: {
         verified: true,
@@ -83,7 +85,7 @@ export default function VerifiedTestimonialsSection() {
       doctor: 'Liliana Ocampo',
       rating: 5,
       comment: 'El enfoque integral de MAC es único. No solo mejoraron mi piel, sino que me enseñaron a cuidarme mejor. Los resultados son naturales y duraderos.',
-      imageUrl: '/attached_assets/ojo mujer verde_1756671431969.jpg',
+      imageUrl: asset('ojo mujer verde_1756671431969.jpg'),
       verification: {
         verified: true,
         documented: true,

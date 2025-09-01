@@ -6,6 +6,7 @@ import Breadcrumb from "@/components/UI/Breadcrumb";
 import { Link } from "wouter";
 import { Search, ClipboardList, Wand2, TrendingUp, CheckCircle, Clock, Users, Award } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+const asset = (p: string) => new URL(`@assets/${p}` as unknown as string, import.meta.url).toString();
 
 // Import method images
 import perfectSkinPortrait from "@assets/perfect-skin-portrait.jpg";
@@ -71,8 +72,8 @@ export default function Metodo() {
       ],
       benefit: "un plan tan exclusivo como tu ADN, creado para acompañar tu transformación de forma segura y efectiva.",
       image: facialMaskTreatment,
-      video: "/public-objects/gotas perfumista.mp4",
-      videoFallback: "https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/gotas perfumista.mp4"
+      video: asset('gotas perfumista_1756709394477.mp4'),
+      videoFallback: asset('mascarilla perla_1756671424839.jpg')
     },
     {
       icon: Wand2,
@@ -100,8 +101,8 @@ export default function Metodo() {
       ],
       benefit: "resultados visibles, naturales y sostenibles en tu cuerpo, mente y energía.",
       image: spaDeviceTreatment,
-      video: "/public-objects/maestro perfumero.mp4",
-      videoFallback: "https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/maestro perfumero.mp4"
+      video: asset('primed_cotton_canvas_1756676868691.mp4'),
+      videoFallback: asset('perfect-skin-portrait.jpg')
     },
     {
       icon: TrendingUp,
@@ -120,8 +121,8 @@ export default function Metodo() {
       ],
       benefit: "tu transformación se mantiene viva, adaptada y evolucionando contigo.",
       image: whiteFacialMask,
-      video: "/public-objects/valoración personalizada.mp4",
-      videoFallback: "https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/valoración personalizada.mp4"
+      video: asset('valoración personalizada_1756709877077.mp4'),
+      videoFallback: asset('perfect-skin-portrait.jpg')
     },
   ];
 

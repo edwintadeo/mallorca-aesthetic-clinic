@@ -13,30 +13,83 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.status(200).json({ status: "ok", ts: new Date().toISOString() });
   });
 
+  // Helper: resolve attached asset path (handles URL-encoded names and different base paths)
+  function resolveAttachedAsset(requestPath: string): string | null {
+    try {
+      const decodedPath = decodeURIComponent(requestPath);
+      // Ensure we only serve within attached_assets
+      const rel = decodedPath.startsWith("/attached_assets/")
+        ? decodedPath
+        : `/attached_assets/${decodedPath.replace(/^\/?attached_assets\/?/, "")}`;
+
+      const candidates = [
+        // Project CWD (dev)
+        path.join(process.cwd(), rel),
+        // Adjacent to dist (prod)
+        path.resolve(import.meta.dirname, "..", rel.replace(/^\//, "")),
+      ];
+
+      for (const p of candidates) {
+        if (fs.existsSync(p)) return p;
+      }
+      return null;
+    } catch {
+      return null;
+    }
+  }
+
+  // Helper: basic content-type by extension
+  function contentTypeFor(filePath: string): string | undefined {
+    const ext = path.extname(filePath).toLowerCase();
+    switch (ext) {
+      case ".mp4": return "video/mp4";
+      case ".webm": return "video/webm";
+      case ".jpg":
+      case ".jpeg": return "image/jpeg";
+      case ".png": return "image/png";
+      case ".gif": return "image/gif";
+      case ".webp": return "image/webp";
+      case ".svg": return "image/svg+xml";
+      default: return undefined;
+    }
+  }
+
+  // Serve any attached_assets file (images/videos) with correct headers
+  app.get("/attached_assets/*", (req, res) => {
+    const abs = resolveAttachedAsset(req.path);
+    if (!abs) {
+      return res.status(404).send("Asset not found");
+    }
+    const type = contentTypeFor(abs);
+    if (type) {
+      res.setHeader("Content-Type", type);
+    }
+    if (type?.startsWith("video/")) {
+      res.setHeader("Accept-Ranges", "bytes");
+    }
+    return res.sendFile(abs);
+  });
+
   // Serve video assets with correct MIME type
   app.get("/attached_assets/*.mp4", (req, res) => {
-    const filePath = path.join(process.cwd(), req.path);
-    
-    if (fs.existsSync(filePath)) {
+    const filePath = resolveAttachedAsset(req.path);
+    if (filePath) {
       res.setHeader('Content-Type', 'video/mp4');
       res.setHeader('Accept-Ranges', 'bytes');
-      res.sendFile(filePath);
-    } else {
-      res.status(404).send('Video not found');
+      return res.sendFile(filePath);
     }
+    res.status(404).send('Video not found');
   });
 
   // Serve other video formats
   app.get("/attached_assets/*.webm", (req, res) => {
-    const filePath = path.join(process.cwd(), req.path);
-    
-    if (fs.existsSync(filePath)) {
+    const filePath = resolveAttachedAsset(req.path);
+    if (filePath) {
       res.setHeader('Content-Type', 'video/webm');
       res.setHeader('Accept-Ranges', 'bytes');
-      res.sendFile(filePath);
-    } else {
-      res.status(404).send('Video not found');
+      return res.sendFile(filePath);
     }
+    res.status(404).send('Video not found');
   });
 
   // Public Objects Endpoint
