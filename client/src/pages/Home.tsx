@@ -199,7 +199,7 @@ export default function Home() {
               <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
                 Directora Médica
               </div>
-              <h2 className="text-4xl font-title gold-accent mb-6">
+              <h2 className="text-4xl font-title text-gold-deep mb-6">
                 Dra. Liliana Ocampo
               </h2>
               <h3 className="text-xl font-subtitle italic text-dark-neutral mb-8">
@@ -220,7 +220,7 @@ export default function Home() {
               </div>
 
               <div className="mt-12 text-center max-w-4xl mx-auto">
-                <h3 className="text-3xl lg:text-4xl font-title gold-accent mb-8">
+                <h3 className="text-3xl lg:text-4xl font-title text-gold-deep mb-8">
                   Confianza respaldada por evidencia y excelencia
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -260,7 +260,7 @@ export default function Home() {
               <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
                 Nuestros Fundamentos
               </div>
-              <h2 className="text-4xl font-title gold-accent-prominent mb-6">
+              <h2 className="text-4xl font-title text-gold-deep mb-6">
                 Pilares de MAC
               </h2>
               <p className="text-xl text-dark-neutral max-w-3xl mx-auto">
@@ -276,7 +276,7 @@ export default function Home() {
                   <div className="w-20 h-20 bg-gradient-to-br from-turquoise to-turquoise-medium rounded-full flex items-center justify-center mb-6 mx-auto">
                     <Star className="text-white text-3xl fill-current" />
                   </div>
-                  <h3 className="text-2xl font-subtitle gold-accent-prominent mb-4">
+                  <h3 className="text-2xl font-subtitle text-gold-deep mb-4">
                     Belleza que refleja tu verdad
                   </h3>
                   <p className="text-dark-neutral leading-relaxed">
@@ -292,7 +292,7 @@ export default function Home() {
                   <div className="w-20 h-20 bg-gradient-to-br from-gold-deep to-gold-light rounded-full flex items-center justify-center mb-6 mx-auto">
                     <TrendingUp className="text-white text-3xl" />
                   </div>
-                  <h3 className="text-2xl font-subtitle gold-accent-prominent mb-4">
+                  <h3 className="text-2xl font-subtitle text-gold-deep mb-4">
                     Salud integral como base del resultado
                   </h3>
                   <p className="text-dark-neutral leading-relaxed">
@@ -308,7 +308,7 @@ export default function Home() {
                   <div className="w-20 h-20 bg-gradient-to-br from-turquoise-medium to-gold-champagne rounded-full flex items-center justify-center mb-6 mx-auto">
                     <Search className="text-white text-3xl" />
                   </div>
-                  <h3 className="text-2xl font-subtitle gold-accent-prominent mb-4">
+                  <h3 className="text-2xl font-subtitle text-gold-deep mb-4">
                     Bienestar emocional sostenido
                   </h3>
                   <p className="text-dark-neutral leading-relaxed">
@@ -330,7 +330,7 @@ export default function Home() {
                 Una experiencia como una obra de arte
               </div>
               
-              <blockquote className="text-3xl lg:text-5xl font-title gold-accent-prominent leading-tight mb-12">
+              <blockquote className="text-3xl lg:text-5xl font-title text-gold-deep leading-tight mb-12">
                 "Cada tratamiento es como una pincelada maestra. No transformamos, revelamos tu luz."
               </blockquote>
               
@@ -367,7 +367,7 @@ export default function Home() {
               <div className="text-sm uppercase tracking-wider text-white font-medium mb-4 drop-shadow-lg">
                 Metodología Exclusiva
               </div>
-              <h2 className="text-4xl lg:text-6xl font-subtitle gold-accent-prominent mb-6 text-shadow-elegant">
+              <h2 className="text-4xl lg:text-6xl font-subtitle text-gold-deep mb-6 text-shadow-elegant">
                 Método MAC
               </h2>
               <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed text-shadow-elegant">
@@ -393,7 +393,7 @@ export default function Home() {
                       <phase.icon className="text-white text-2xl" />
                     </div>
                     <div className="gold-numeral mb-2">{phase.number}</div>
-                    <h3 className="text-xl font-subtitle gold-accent-prominent font-semibold mb-4">{phase.title}</h3>
+                    <h3 className="text-xl font-subtitle text-gold-deep font-semibold mb-4">{phase.title}</h3>
                     <p className="text-dark-neutral leading-relaxed">
                       {phase.description}
                     </p>
@@ -428,7 +428,7 @@ export default function Home() {
                 NUESTROS TRATAMIENTOS
               </div>
               
-              <h2 className="text-4xl lg:text-6xl font-title gold-accent-prominent mb-6">
+              <h2 className="text-4xl lg:text-6xl font-title text-gold-deep mb-6">
                 Tratamientos de Excelencia
               </h2>
               
@@ -534,7 +534,7 @@ export default function Home() {
               <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
                 Historias Reales de Transformación
               </div>
-              <h2 className="text-4xl lg:text-6xl title-luxury gold-accent-prominent mb-6">
+              <h2 className="text-4xl lg:text-6xl title-luxury text-gold-deep mb-6">
                 Testimonios & Resultados
               </h2>
               <p className="text-xl text-dark-neutral max-w-3xl mx-auto body-refined">
@@ -548,7 +548,7 @@ export default function Home() {
             <AnimatedSection delay={0.1}>
               <div className="space-y-8">
                 <div className="luxury-divider mb-8"></div>
-                <h3 className="text-2xl font-subtitle gold-accent-prominent text-center mb-8">Experiencias Reales</h3>
+                <h3 className="text-2xl font-subtitle text-gold-deep text-center mb-8">Experiencias Reales</h3>
                 {testimonialsLoading ? (
                   <>
                     <SkeletonTestimonial />
@@ -682,7 +682,7 @@ export default function Home() {
               <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
                 Nuestras Clínicas
               </div>
-              <h2 className="text-4xl lg:text-6xl title-luxury gold-accent-prominent mb-6">
+              <h2 className="text-4xl lg:text-6xl title-luxury text-gold-deep mb-6">
                 Ubicaciones Premium
               </h2>
               <p className="text-xl text-white max-w-3xl mx-auto body-refined text-shadow-dark">
@@ -699,7 +699,7 @@ export default function Home() {
                     <div className="w-16 h-16 bg-gradient-to-br from-turquoise to-turquoise-medium rounded-full flex items-center justify-center mb-4 mx-auto">
                       <TrendingUp className="text-white text-2xl" />
                     </div>
-                    <h3 className="text-2xl title-luxury gold-accent-prominent mb-2">MAC Palma Centro</h3>
+                    <h3 className="text-2xl title-luxury text-gold-deep mb-2">MAC Palma Centro</h3>
                     <div className="text-sm text-turquoise uppercase tracking-wide mb-4">Sede Principal</div>
                   </div>
                   
@@ -738,7 +738,7 @@ export default function Home() {
                     <div className="w-16 h-16 bg-gradient-to-br from-gold-deep to-gold-light rounded-full flex items-center justify-center mb-4 mx-auto">
                       <Search className="text-white text-2xl" />
                     </div>
-                    <h3 className="text-2xl title-luxury gold-accent-prominent mb-2">MAC Cala Millor</h3>
+                    <h3 className="text-2xl title-luxury text-gold-deep mb-2">MAC Cala Millor</h3>
                     <div className="text-sm text-turquoise uppercase tracking-wide mb-4">Costa Este</div>
                   </div>
                   
@@ -777,7 +777,7 @@ export default function Home() {
                     <div className="w-16 h-16 bg-gradient-to-br from-turquoise-medium to-gold-champagne rounded-full flex items-center justify-center mb-4 mx-auto">
                       <Star className="text-white text-2xl fill-current" />
                     </div>
-                    <h3 className="text-2xl title-luxury gold-accent-prominent mb-2">MAC Manacor</h3>
+                    <h3 className="text-2xl title-luxury text-gold-deep mb-2">MAC Manacor</h3>
                     <div className="text-sm text-turquoise uppercase tracking-wide mb-4">Rafa Nadal Club</div>
                   </div>
                   
@@ -812,7 +812,7 @@ export default function Home() {
 
           <AnimatedSection delay={0.4}>
             <div className="text-center bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-gold-light/30">
-              <h3 className="text-2xl title-luxury gold-accent-prominent mb-4">Información General</h3>
+              <h3 className="text-2xl title-luxury text-gold-deep mb-4">Información General</h3>
               <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                 <div>
                   <h4 className="font-semibold text-turquoise mb-2">Centralita General</h4>
