@@ -6,11 +6,7 @@ const DYNAMIC_CACHE = 'mac-clinic-dynamic-v1';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
-  '/manifest.json',
-  '/favicon.ico',
-  // Add critical CSS and JS files
-  '/assets/index.css',
-  '/assets/index.js'
+  '/offline.html',
 ];
 
 // Install event - cache static assets
