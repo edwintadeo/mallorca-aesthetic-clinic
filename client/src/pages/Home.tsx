@@ -42,13 +42,17 @@ export default function Home() {
         <CinematicHero onQuickBookingOpen={() => setIsQuickBookingOpen(true)} />
 
         {/* Interactive Method Timeline */}
-        <InteractiveMethodTimeline />
+        <section className="section-spacing bg-gradient-to-b from-pearl to-white">
+          <InteractiveMethodTimeline />
+      </section>
 
         {/* Verified Testimonials Section */}
-        <VerifiedTestimonialsSection />
+        <section className="section-spacing bg-white">
+          <VerifiedTestimonialsSection />
+      </section>
 
         {/* Before/After Results Section */}
-        <section className="py-20 bg-white">
+        <section className="section-spacing bg-gradient-to-b from-white to-pearl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl title-luxury text-gold-deep mb-6">
@@ -65,6 +69,24 @@ export default function Home() {
                 afterImage="/attached_assets/image_1756654707673.png"
                 treatment="Rejuvenecimiento Facial Integral"
                 duration="3 sesiones • 90 días"
+                doctor="Dra. Liliana Ocampo"
+              />
+            </div>
+            
+            {/* Additional Results */}
+            <div className="grid md:grid-cols-2 gap-8 mt-12">
+              <BeforeAfterSlider
+                beforeImage="/attached_assets/image_1756654672314.png"
+                afterImage="/attached_assets/image_1756654707673.png"
+                treatment="Tratamiento Corporal"
+                duration="6 sesiones • 120 días"
+                doctor="Dra. Liliana Ocampo"
+              />
+              <BeforeAfterSlider
+                beforeImage="/attached_assets/image_1756654672314.png"
+                afterImage="/attached_assets/image_1756654707673.png"
+                treatment="Well-Aging Integral"
+                duration="4 sesiones • 100 días"
                 doctor="Dra. Liliana Ocampo"
               />
             </div>

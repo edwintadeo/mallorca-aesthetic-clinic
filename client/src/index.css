@@ -4517,6 +4517,43 @@ a:focus-visible {
     }
   }
   
+  /* IMPROVED CONTRAST AND SPACING */
+  
+  /* Better text contrast */
+  .text-gold-deep {
+    color: #8B6914 !important; /* Darker gold for better contrast */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-gold-light {
+    color: #B8860B !important; /* Darker light gold */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-dark-neutral {
+    color: #2A2A2A !important; /* Darker neutral for better readability */
+  }
+  
+  /* Reduced section spacing */
+  .section-spacing {
+    padding: 3rem 0 !important; /* Reduced from 4-5rem */
+  }
+  
+  .section-spacing-large {
+    padding: 4rem 0 !important; /* Reduced from 5-6rem */
+  }
+  
+  /* Better contrast for light backgrounds */
+  .bg-pearl .text-gold-deep,
+  .bg-white .text-gold-deep {
+    color: #6B4C00 !important; /* Much darker gold */
+  }
+  
+  .bg-pearl .text-gold-light,
+  .bg-white .text-gold-light {
+    color: #8B6914 !important; /* Darker light gold */
+  }
+  
   /* Mobile-optimized text sizes and accessibility */
   @media (max-width: 768px) {
     .text-overlay-light,

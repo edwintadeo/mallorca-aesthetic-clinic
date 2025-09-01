@@ -4,7 +4,6 @@ import PremiumTestimonial from './PremiumTestimonial';
 import { SkeletonTestimonial } from './Skeleton';
 
 export default function VerifiedTestimonialsSection() {
-  const [activeFilter, setActiveFilter] = useState<string>('all');
   const [selectedTestimonial, setSelectedTestimonial] = useState<string | null>(null);
 
   const { data: testimonials, isLoading } = useQuery({
