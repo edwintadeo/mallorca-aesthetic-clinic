@@ -118,13 +118,27 @@ export default function Home() {
           loop
           muted
           playsInline
-          preload="auto"
+          preload="metadata"
           className="absolute inset-0 w-full h-full object-cover"
+          onError={(e) => {
+            console.error('Video loading error:', e);
+            // Fallback to background image if video fails
+            e.currentTarget.style.display = 'none';
+          }}
         >
           <source src={backgroundVideo} type="video/mp4" />
           <source src="/attached_assets/vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124_1756709450734.mp4" type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
+        
+        {/* Fallback background image if video fails */}
+        <div 
+          className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url("https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080")',
+            zIndex: -1
+          }}
+        ></div>
         
         {/* Enhanced overlays for better text contrast */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-transparent"></div>

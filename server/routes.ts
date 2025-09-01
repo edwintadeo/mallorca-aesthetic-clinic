@@ -4,8 +4,36 @@ import { z } from "zod";
 import { storage } from "./storage";
 import { insertContactRequestSchema, insertQuickBookingSchema, insertPostSchema, insertTestimonialSchema, insertTreatmentSchema, insertLocationSchema } from "@shared/schema";
 import { ObjectStorageService } from "./objectStorage";
+import path from "path";
+import fs from "fs";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Serve video assets with correct MIME type
+  app.get("/attached_assets/*.mp4", (req, res) => {
+    const filePath = path.join(process.cwd(), req.path);
+    
+    if (fs.existsSync(filePath)) {
+      res.setHeader('Content-Type', 'video/mp4');
+      res.setHeader('Accept-Ranges', 'bytes');
+      res.sendFile(filePath);
+    } else {
+      res.status(404).send('Video not found');
+    }
+  });
+
+  // Serve other video formats
+  app.get("/attached_assets/*.webm", (req, res) => {
+    const filePath = path.join(process.cwd(), req.path);
+    
+    if (fs.existsSync(filePath)) {
+      res.setHeader('Content-Type', 'video/webm');
+      res.setHeader('Accept-Ranges', 'bytes');
+      res.sendFile(filePath);
+    } else {
+      res.status(404).send('Video not found');
+    }
+  });
+
   // Public Objects Endpoint
   app.get("/public-objects/:filePath(*)", async (req, res) => {
     const filePath = req.params.filePath;

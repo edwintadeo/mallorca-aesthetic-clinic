@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: false }));
 // Cache control for static assets
 app.use((req, res, next) => {
   // Set cache headers for static assets
-  if (req.path.match(/\.(js|css|ico|jpg|jpeg|png|gif|svg|woff|woff2|ttf|eot)$/)) {
+  if (req.path.match(/\.(js|css|ico|jpg|jpeg|png|gif|svg|woff|woff2|ttf|eot|mp4|webm|avi|mov)$/)) {
     res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
   } else if (req.path.match(/\.(html)$/)) {
     res.setHeader('Cache-Control', 'no-cache');
