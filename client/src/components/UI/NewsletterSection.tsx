@@ -32,7 +32,7 @@ export default function NewsletterSection() {
             Club MAC Exclusivo
           </h2>
           
-          <p className="text-xl text-muted-foreground mb-8 body-refined max-w-3xl mx-auto">
+          <p className="text-xl text-white mb-8 body-refined max-w-3xl mx-auto text-shadow-dark">
             Únete a nuestra comunidad premium y recibe contenido exclusivo sobre medicina estética, well-aging, 
             eventos especiales y acceso anticipado a nuevos tratamientos del Método MAC.
           </p>
@@ -69,7 +69,7 @@ export default function NewsletterSection() {
                   <Heart className="w-12 h-12 mx-auto fill-current" />
                 </div>
                 <h3 className="text-2xl title-luxury text-gold-deep mb-2">¡Bienvenido al Club MAC!</h3>
-                <p className="text-muted-foreground">
+                <p className="text-dark-neutral">
                   Pronto recibirás contenido exclusivo y acceso prioritario a nuestros tratamientos.
                 </p>
               </div>
@@ -82,21 +82,21 @@ export default function NewsletterSection() {
                 <Mail className="w-8 h-8 mx-auto" />
               </div>
               <h4 className="font-semibold text-gold-deep mb-1">Contenido Exclusivo</h4>
-              <p className="text-sm text-muted-foreground">Artículos y tips de medicina estética</p>
+              <p className="text-sm text-white text-shadow-light">Artículos y tips de medicina estética</p>
             </div>
             <div className="text-center">
               <div className="text-turquoise mb-2">
                 <Star className="w-8 h-8 mx-auto" />
               </div>
               <h4 className="font-semibold text-gold-deep mb-1">Eventos VIP</h4>
-              <p className="text-sm text-muted-foreground">Acceso prioritario a masterclasses</p>
+              <p className="text-sm text-white text-shadow-light">Acceso prioritario a masterclasses</p>
             </div>
             <div className="text-center">
               <div className="text-turquoise mb-2">
                 <Heart className="w-8 h-8 mx-auto" />
               </div>
               <h4 className="font-semibold text-gold-deep mb-1">Ofertas Especiales</h4>
-              <p className="text-sm text-muted-foreground">Descuentos exclusivos en tratamientos</p>
+              <p className="text-sm text-white text-shadow-light">Descuentos exclusivos en tratamientos</p>
             </div>
           </div>
         </AnimatedSection>
