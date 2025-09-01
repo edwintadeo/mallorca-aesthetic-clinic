@@ -1,7 +1,8 @@
 // Configuración centralizada de videos para la aplicación
 // Rutas optimizadas y fallbacks para mejor experiencia de usuario
 
-export const videoConfig = {
+// Configuración de videos
+const videoConfig = {
   // Videos de fondo principales
   background: {
     home: {
@@ -74,8 +75,8 @@ export const videoConfig = {
 };
 
 // Función helper para obtener configuración de video
-export function getVideoConfig(category: keyof typeof videoConfig, subcategory: string) {
-  const categoryConfig = videoConfig[category];
+function getVideoConfig(category: string, subcategory: string) {
+  const categoryConfig = videoConfig[category as keyof typeof videoConfig];
   if (!categoryConfig) {
     console.warn(`Video category '${category}' not found`);
     return null;
@@ -91,12 +92,15 @@ export function getVideoConfig(category: keyof typeof videoConfig, subcategory: 
 }
 
 // Función para obtener solo la URL principal del video
-export function getVideoUrl(category: keyof typeof videoConfig, subcategory: string) {
+export function getVideoUrl(category: string, subcategory: string) {
   const config = getVideoConfig(category, subcategory);
   return config?.primary || null;
 }
 
 // Función para obtener configuración completa del video
-export function getVideoConfigComplete(category: keyof typeof videoConfig, subcategory: string) {
+export function getVideoConfigComplete(category: string, subcategory: string) {
   return getVideoConfig(category, subcategory);
 }
+
+// Exportar la configuración
+export { videoConfig };
