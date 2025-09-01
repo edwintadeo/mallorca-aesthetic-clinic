@@ -66,7 +66,7 @@ self.addEventListener('fetch', (event) => {
               return networkResponse;
             }
 
-            // Clone the response
+            // Clone the response before caching
             const responseToCache = networkResponse.clone();
 
             caches.open(STATIC_CACHE)

@@ -16,7 +16,9 @@ export default function ServiceWorkerManager({
   const [updateAvailable, setUpdateAvailable] = useState(false);
 
   useEffect(() => {
-    // Register service worker
+    // Temporarily disable service worker to avoid errors
+    // TODO: Re-enable once service worker is fully tested
+    /*
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
@@ -39,6 +41,7 @@ export default function ServiceWorkerManager({
           console.warn('Service Worker registration failed:', error);
         });
     }
+    */
 
     // Listen for online/offline status
     const handleOnline = () => {
