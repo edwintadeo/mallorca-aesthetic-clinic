@@ -133,10 +133,10 @@ export default function Home() {
                   data-testid="hero-mac-logo"
                 />
               </div>
-              <div className="mb-4 flex justify-center gap-2">
-                <span className="bg-turquoise/90 text-white px-4 py-1 rounded-full text-sm font-bold">TOP RATED</span>
-                <span className="bg-gold-deep/90 text-white px-4 py-1 rounded-full text-sm font-bold">15+ AÑOS</span>
-                <span className="bg-white/90 text-turquoise px-4 py-1 rounded-full text-sm font-bold">+500 PACIENTES</span>
+              <div className="mb-6 flex justify-center items-center gap-4">
+                <div className="w-20 h-[1px] bg-gradient-to-r from-transparent to-gold-light"></div>
+                <span className="text-xs uppercase tracking-[0.3em] text-gold-deep font-light">Excelencia Médica</span>
+                <div className="w-20 h-[1px] bg-gradient-to-l from-transparent to-gold-light"></div>
               </div>
               <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6 relative">
                 <span className="absolute inset-0 bg-pearl/85 blur-xl -z-10 rounded-lg"></span>
@@ -151,15 +151,15 @@ export default function Home() {
                 <Link href="/contacto">
                   <Button 
                     size="lg" 
-                    className="cta-enhanced text-white hover:text-gold-deep px-16 py-7 text-xl font-bold rounded-full uppercase tracking-wider shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 relative overflow-hidden group"
+                    className="cta-enhanced text-white hover:text-white px-14 py-6 text-lg font-medium rounded-lg uppercase tracking-wider shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-500 relative overflow-hidden group bg-turquoise hover:bg-turquoise-medium border-2 border-gold-light/30"
                     data-testid="button-hero-reserva"
                   >
-                    <span className="absolute inset-0 bg-gradient-to-r from-gold-light to-gold-deep opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                    <span className="relative z-10">RESERVA TU CONSULTA AHORA</span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-gold-light/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+                    <span className="relative z-10">Reserva tu Consulta Personalizada</span>
                   </Button>
                 </Link>
-                <p className="text-sm text-white font-semibold bg-red-600/90 px-4 py-2 rounded-full inline-block animate-pulse">
-                  ⚡ Solo 3 plazas disponibles esta semana
+                <p className="text-xs text-white/90 font-light italic tracking-wide text-shadow-light">
+                  Atención exclusiva por cita previa
                 </p>
               </div>
             </AnimatedSection>
