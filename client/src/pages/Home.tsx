@@ -12,6 +12,7 @@ import { Search, ClipboardList, Wand2, TrendingUp, Star } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { OptimizedVideo } from "@/components/UI/OptimizedVideo";
 import FloatingNavbar from "@/components/Layout/FloatingNavbar";
+import CinematicHero from "@/components/UI/CinematicHero";
 
 // Import video configuration
 import { getVideoConfigComplete } from "@/config/videos";
@@ -109,105 +110,9 @@ export default function Home() {
       
       {/* Floating Navigation */}
       <FloatingNavbar />
-      {/* Scroll Progress Indicator */}
-      <div className="fixed top-0 left-0 right-0 h-1 bg-gray-200 z-50">
-        <div 
-          className="h-full bg-gradient-to-r from-turquoise to-gold-deep transition-all duration-300"
-          style={{width: '10%'}}
-        ></div>
-      </div>
       
-      {/* Floating Navigation Dots */}
-      <div className="fixed right-8 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col gap-4">
-        <button className="w-3 h-3 rounded-full bg-turquoise hover:scale-150 transition-all duration-300" title="Inicio"></button>
-        <button className="w-3 h-3 rounded-full bg-gray-300 hover:bg-turquoise hover:scale-150 transition-all duration-300" title="Método"></button>
-        <button className="w-3 h-3 rounded-full bg-gray-300 hover:bg-turquoise hover:scale-150 transition-all duration-300" title="Tratamientos"></button>
-        <button className="w-3 h-3 rounded-full bg-gray-300 hover:bg-turquoise hover:scale-150 transition-all duration-300" title="Testimonios"></button>
-        <button className="w-3 h-3 rounded-full bg-gray-300 hover:bg-turquoise hover:scale-150 transition-all duration-300" title="Contacto"></button>
-      </div>
-      
-      {/* Video de fondo para toda la landing page */}
-      <div className="fixed inset-0 w-full h-full -z-10 overflow-hidden">
-        {/* Fallback background image */}
-        <div 
-          className="absolute inset-0 w-full h-full bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${heroBeautyModel})`,
-            zIndex: -2
-          }}
-        ></div>
-        
-        {/* Video background */}
-        <OptimizedVideo
-          src={getVideoConfigComplete('background', 'home')?.primary || ''}
-          fallbackSrc={getVideoConfigComplete('background', 'home')?.fallback || ''}
-          poster={getVideoConfigComplete('background', 'home')?.poster || heroBeautyModel}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          priority={true}
-          className="w-full h-full object-cover relative z-[-1]"
-          onError={() => console.log('Background video failed to load')}
-          onLoad={() => console.log('Background video loaded successfully')}
-        />
-        
-        {/* Enhanced overlays for better text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-transparent pointer-events-none"></div>
-        <div className="absolute inset-x-0 top-0 h-[40%] bg-gradient-to-b from-pearl/40 to-transparent pointer-events-none"></div>
-      </div>
-
-      {/* Hero Section */}
-      <section className="pt-24 min-h-screen relative z-[1] flex items-center gold-border-bottom" data-testid="hero-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
-          <div className="text-center">
-            <AnimatedSection>
-              <div className="flex justify-center mb-8">
-                <img 
-                  src={macLogoBlack} 
-                  alt="Mallorca Aesthetic Clinic" 
-                  className="h-16 lg:h-20 w-auto hover-lift opacity-90"
-                  data-testid="hero-mac-logo"
-                />
-              </div>
-              <div className="mb-6 flex justify-center items-center gap-4">
-                <div className="w-20 h-[1px] bg-gradient-to-r from-transparent to-gold-light"></div>
-                <span className="text-xs uppercase tracking-[0.3em] text-gold-deep font-light">Excelencia Médica</span>
-                <div className="w-20 h-[1px] bg-gradient-to-l from-transparent to-gold-light"></div>
-              </div>
-              <div className="relative inline-block">
-                <div className="absolute inset-0 bg-gradient-to-br from-gold-light/50 via-pearl/50 to-gold-champagne/50 backdrop-blur-md rounded-2xl border border-gold-light/30 shadow-2xl opacity-90"></div>
-                <h1 className="text-5xl lg:text-7xl font-title text-gold-deep relative z-10 px-8 py-6 text-shadow-elegant">
-                  Medicina estética<br />
-                  avanzada con<br />
-                  visión integral
-                </h1>
-              </div>
-              <div className="relative inline-block mb-8">
-                <div className="absolute inset-0 bg-gradient-to-br from-gold-light/50 via-pearl/50 to-gold-champagne/50 backdrop-blur-md rounded-2xl border border-gold-light/30 shadow-2xl opacity-90"></div>
-                <p className="text-xl text-gold-deep relative z-10 px-8 py-6 max-w-2xl mx-auto leading-relaxed font-medium text-shadow-elegant">
-                  Consigue una transformación que se siente y es visible en solo 90 días y revela tu auténtica belleza natural.
-                </p>
-              </div>
-              <div className="space-y-4">
-                <Button 
-                  size="lg" 
-                  onClick={() => setIsQuickBookingOpen(true)}
-                  className="cta-enhanced text-white hover:text-white px-14 py-6 text-lg font-medium rounded-lg uppercase tracking-wider shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-500 relative overflow-hidden group bg-turquoise hover:bg-turquoise-medium border-2 border-gold-light/30"
-                  data-testid="button-hero-reserva"
-                >
-                  <span className="absolute inset-0 bg-gradient-to-r from-gold-light/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-                  <span className="relative z-10">Reserva tu Consulta Personalizada</span>
-                </Button>
-                <p className="text-xs text-white/90 font-light italic tracking-wide text-shadow-light">
-                  Atención exclusiva por cita previa
-                </p>
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
+      {/* Cinematic Hero Section */}
+      <CinematicHero onQuickBookingOpen={() => setIsQuickBookingOpen(true)} />
 
       {/* Doctor Section */}
       <section className="py-20 section-warm-pearl relative z-[1] gold-border-bottom" data-testid="doctor-section">
@@ -387,7 +292,7 @@ export default function Home() {
       <div className="section-separator"></div>
 
       {/* Method Section */}
-      <section className="py-20 bg-transparent relative z-[1] gold-border-bottom" data-testid="method-section">
+      <section id="method-section" className="py-20 bg-transparent relative z-[1] gold-border-bottom" data-testid="method-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
