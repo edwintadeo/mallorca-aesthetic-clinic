@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import AnimatedSection from "@/components/UI/AnimatedSection";
-import { VideoPlayer } from "@/components/UI/VideoPlayer";
+// Videos removed for deployment stability
 import { Award, Users, Heart, Microscope, Shield, Clock } from "lucide-react";
 
 // Import team images

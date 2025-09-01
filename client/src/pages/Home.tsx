@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import AnimatedSection from "@/components/UI/AnimatedSection";
 import WhatsAppButton from "@/components/UI/WhatsAppButton";
 import NewsletterSection from "@/components/UI/NewsletterSection";
-import { LazyVideo } from "@/components/UI/LazyVideo";
+// Videos removed for deployment stability
 import { SkeletonTestimonial } from "@/components/UI/Skeleton";
 import { Search, ClipboardList, Wand2, TrendingUp, Star } from "lucide-react";
 

@@ -13,8 +13,8 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import AnimatedSection from "@/components/UI/AnimatedSection";
-import { LazyVideo } from "@/components/UI/LazyVideo";
-import { VideoPlayer } from "@/components/UI/VideoPlayer";
+// Videos removed for deployment stability
+// Videos removed for deployment stability
 import { MapPin, Phone, Mail, Clock, UserCheck, Heart, Microscope, Shield, CheckCircle, AlertCircle } from "lucide-react";
 
 const contactFormSchema = z.object({

@@ -6,7 +6,7 @@ import AnimatedSection from "@/components/UI/AnimatedSection";
 import SkeletonCard from "@/components/UI/SkeletonCard";
 import LazyImage from "@/components/UI/LazyImage";
 import { TreatmentCardSkeleton } from "@/components/UI/SkeletonLoader";
-import { LazyVideo } from "@/components/UI/LazyVideo";
+// Videos removed for deployment stability
 import { Link } from "wouter";
 import { useState } from "react";
 

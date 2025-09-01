@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import AnimatedSection from "@/components/UI/AnimatedSection";
-import { LazyVideo } from "@/components/UI/LazyVideo";
+// Videos removed for deployment stability
 import { Link } from "wouter";
 import { Search, ClipboardList, Wand2, TrendingUp, CheckCircle, Clock, Users, Award } from "lucide-react";
 
