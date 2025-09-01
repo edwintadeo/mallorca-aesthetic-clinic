@@ -132,7 +132,7 @@ export default function Metodo() {
               <span className="absolute inset-0 bg-pearl/85 blur-xl -z-10 rounded-lg"></span>
               Las Cuatro Fases del Método MAC
             </h1>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-4">
+            <p className="text-xl text-medium-neutral max-w-4xl mx-auto leading-relaxed mb-4 text-overlay-translucent">
               Un enfoque revolucionario que combina diagnóstico científico avanzado, planificación personalizada, 
               ejecución experta y seguimiento estratégico para garantizar tu transformación integral.
             </p>
@@ -153,7 +153,7 @@ export default function Metodo() {
             <Link href="/contacto">
               <Button 
                 size="lg" 
-                className="bg-turquoise hover:bg-turquoise-medium text-white px-8 py-4 text-lg font-medium rounded-full hover:shadow-xl transition-all duration-300 hover-lift"
+                className="btn-turquoise-enhanced btn-enhanced px-8 py-4 text-lg font-medium rounded-full"
                 data-testid="button-cta-consulta"
               >
                 Agenda tu Diagnóstico 360°
@@ -171,7 +171,7 @@ export default function Metodo() {
               El Método MAC
             </h2>
             
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <div className="space-y-6 text-lg text-dark-neutral leading-relaxed">
               <p>
                 Entendemos que ganar tiempo es un arte que no consiste en detener el reloj, sino en{" "}
                 <strong className="text-foreground">transformar el envejecimiento en una vivencia holística</strong>, donde la salud es el punto de 
@@ -205,10 +205,10 @@ export default function Metodo() {
                   </div>
 
                   <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                    <div className="text-6xl lg:text-8xl font-title gold-accent mb-4 leading-none opacity-90">{phase.number}</div>
-                    <h2 className="text-3xl lg:text-4xl font-subtitle gold-accent mb-4">{phase.title}</h2>
+                    <div className="text-6xl lg:text-8xl font-title gold-accent-prominent mb-4 leading-none">{phase.number}</div>
+                    <h2 className="text-3xl lg:text-4xl font-subtitle gold-accent-prominent mb-4">{phase.title}</h2>
                     
-                    <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                    <p className="text-lg text-dark-neutral mb-6 leading-relaxed">
                       {phase.subtitle}
                     </p>
 

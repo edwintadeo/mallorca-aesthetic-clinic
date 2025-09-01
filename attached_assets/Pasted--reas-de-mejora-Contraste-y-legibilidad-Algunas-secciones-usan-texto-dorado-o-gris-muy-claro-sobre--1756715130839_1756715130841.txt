@@ -1,0 +1,39 @@
+Áreas de mejora
+
+Contraste y legibilidad
+Algunas secciones usan texto dorado o gris muy claro sobre fondos beige que dificulta la lectura, especialmente los subtítulos y las descripciones de los pilares y del método. Por ejemplo, en la sección de credibilidad la cifra “+10 000 pacientes” y el texto explicativo tienen poco contraste
+clinic-site-edwintadeo.replit.app
+. Se sugiere aumentar el contraste mediante:
+
+usar un tono de dorado más oscuro o turquesa para los títulos largos, y aplicar colores neutros más oscuros para los textos descriptivos;
+
+añadir sombras suaves o fondos translúcidos en las cajas de texto sobre imágenes para mejorar la visibilidad (especialmente en la sección “Método MAC” y el vídeo).
+
+Claridad en la narrativa
+Aunque hay un hilo conductual, el usuario puede perderse entre secciones muy largas con mucho espacio vacío o fondos similares. Sería útil:
+
+introducir divisores visuales o cambios de color más marcados entre secciones;
+
+incluir pequeños encabezados o numeraciones que indiquen al usuario en qué parte del recorrido se encuentra (por ejemplo, un contador de pasos en la explicación del método).
+
+Optimización del vídeo e imágenes
+El uso del vídeo de fondo ayuda a transmitir exclusividad, pero puede afectar el rendimiento en dispositivos móviles. Asegurarse de implementar:
+
+un poster estático de alta calidad como fallback y un overlay de color para mejorar la legibilidad del texto;
+
+compresión adecuada para acortar los tiempos de carga y controles para pausar el vídeo si es necesario.
+
+Microinteracciones y feedback
+
+Los botones “Descubre cómo”, “Descubre el método” y “Ver detalles” podrían tener un estado hover más evidente (cambio de color o sombra) para mejorar la interacción.
+
+Considerar un indicador visual de progreso en el formulario de reserva (cuando se implemente) para evitar que el usuario se sienta perdido.
+
+Accesibilidad y UX móvil
+
+Revisar que todas las fuentes se mantengan legibles en tamaños de pantalla pequeños. El texto dorado en secciones como “Testimonios & Resultados” o “Pilares de MAC” puede ser difícil de leer en móviles.
+
+Verificar que los elementos táctiles (botones y tarjetas) tengan suficiente espacio para ser pulsados sin dificultad.
+
+Coherencia cromática
+La paleta se mantiene fiel a lo acordado, con predominio de beige y perla, toques de dorado y el verde turquesa en los CTAs. Aun así, algunas variaciones de dorado parecen muy pálidas frente al beige, reduciendo su percepción de lujo. Considerar unificar el tono dorado a uno solo (por ejemplo, #A57D24) y reservarlo para títulos y números clave, mientras que el texto secundario utilice gris oscuro o turquesa.

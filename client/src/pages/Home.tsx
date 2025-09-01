@@ -184,14 +184,14 @@ export default function Home() {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                   <div className="text-left">
-                    <div className="text-4xl lg:text-5xl font-title gold-accent mb-4">Más de 18 años de</div>
-                    <p className="text-lg text-white/90 leading-relaxed">
+                    <div className="text-4xl lg:text-5xl font-title gold-accent-prominent text-shadow-dark mb-4">Más de 18 años de</div>
+                    <p className="text-lg text-white/90 leading-relaxed text-shadow-light">
                       experiencia clínica en medicina estética avanzada y bienestar integral
                     </p>
                   </div>
                   <div className="text-left">
-                    <div className="text-4xl lg:text-5xl font-title gold-accent mb-4">+10.000 pacientes</div>
-                    <p className="text-lg text-white/90 leading-relaxed">
+                    <div className="text-4xl lg:text-5xl font-title gold-accent-prominent text-shadow-dark mb-4">+10.000 pacientes</div>
+                    <p className="text-lg text-white/90 leading-relaxed text-shadow-light">
                       transformados con resultados visibles y sostenibles
                     </p>
                   </div>
@@ -202,6 +202,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Visual Separator */}
+      <div className="section-separator"></div>
+
       {/* Pilares de la Clínica */}
       <section className="py-20 section-soft-beige relative z-[1] gold-border-bottom" data-testid="pilares-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -210,10 +213,10 @@ export default function Home() {
               <div className="text-sm uppercase tracking-wider text-turquoise font-medium mb-4">
                 Nuestros Fundamentos
               </div>
-              <h2 className="text-4xl font-title gold-accent mb-6">
+              <h2 className="text-4xl font-title gold-accent-prominent mb-6">
                 Pilares de MAC
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-xl text-dark-neutral max-w-3xl mx-auto">
                 Tres pilares fundamentales que definen nuestra filosofía y garantizan resultados excepcionales
               </p>
             </div>
@@ -226,10 +229,10 @@ export default function Home() {
                   <div className="w-20 h-20 bg-gradient-to-br from-turquoise to-turquoise-medium rounded-full flex items-center justify-center mb-6 mx-auto">
                     <Star className="text-white text-3xl fill-current" />
                   </div>
-                  <h3 className="text-2xl font-subtitle gold-accent-subtle mb-4">
+                  <h3 className="text-2xl font-subtitle gold-accent-prominent mb-4">
                     Belleza que refleja tu verdad
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-dark-neutral leading-relaxed">
                     Armonización estética natural diseñada con tecnologías 3D, IA, genómica y biomarcadores de precisión.
                   </p>
                 </CardContent>
@@ -242,10 +245,10 @@ export default function Home() {
                   <div className="w-20 h-20 bg-gradient-to-br from-gold-deep to-gold-light rounded-full flex items-center justify-center mb-6 mx-auto">
                     <TrendingUp className="text-white text-3xl" />
                   </div>
-                  <h3 className="text-2xl font-subtitle gold-accent-subtle mb-4">
+                  <h3 className="text-2xl font-subtitle gold-accent-prominent mb-4">
                     Salud integral como base del resultado
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-dark-neutral leading-relaxed">
                     Análisis médico profundo (cardiología, endocrinología, nutrigenética) que activa tu energía y longevidad.
                   </p>
                 </CardContent>
@@ -258,10 +261,10 @@ export default function Home() {
                   <div className="w-20 h-20 bg-gradient-to-br from-turquoise-medium to-gold-champagne rounded-full flex items-center justify-center mb-6 mx-auto">
                     <Search className="text-white text-3xl" />
                   </div>
-                  <h3 className="text-2xl font-subtitle gold-accent-subtle mb-4">
+                  <h3 className="text-2xl font-subtitle gold-accent-prominent mb-4">
                     Bienestar emocional sostenido
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-dark-neutral leading-relaxed">
                     Métodos de mindfulness y coaching emocional integrados que transforman tu autocuidado en amor propio.
                   </p>
                 </CardContent>
@@ -306,6 +309,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Visual Separator */}
+      <div className="section-separator"></div>
+
       {/* Method Section */}
       <section className="py-20 bg-transparent relative z-[1] gold-border-bottom" data-testid="method-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -324,17 +330,24 @@ export default function Home() {
             </div>
           </AnimatedSection>
 
+          {/* Step Progress Indicator */}
+          <div className="flex justify-center mb-12">
+            <div className="step-indicator" data-step="4">
+              Proceso de 4 fases
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {methodPhases.map((phase, index) => (
               <AnimatedSection key={phase.number} delay={index * 0.1}>
-                <Card className="bg-white hover:shadow-xl transition-all duration-300 h-full" data-testid={`method-phase-${phase.number}`}>
+                <Card className="card-contrast-enhanced hover:shadow-xl transition-all duration-300 h-full" data-testid={`method-phase-${phase.number}`}>
                   <CardContent className="p-8">
                     <div className="w-16 h-16 bg-turquoise rounded-full flex items-center justify-center mb-6">
                       <phase.icon className="text-white text-2xl" />
                     </div>
                     <div className="gold-numeral mb-2">{phase.number}</div>
-                    <h3 className="text-xl font-subtitle gold-accent-subtle font-semibold mb-4">{phase.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <h3 className="text-xl font-subtitle gold-accent-prominent font-semibold mb-4">{phase.title}</h3>
+                    <p className="text-dark-neutral leading-relaxed">
                       {phase.description}
                     </p>
                   </CardContent>
@@ -348,7 +361,7 @@ export default function Home() {
               <Link href="/metodo">
                 <Button 
                   size="lg" 
-                  className="bg-turquoise text-white border-2 border-gold-light hover:bg-gold-light hover:text-gold-deep transition-all duration-300 px-8 py-4 text-lg"
+                  className="btn-turquoise-enhanced btn-enhanced px-8 py-4 text-lg"
                   data-testid="button-method-learn-more"
                 >
                   Descubre el Método MAC
@@ -368,7 +381,7 @@ export default function Home() {
                 Nuestros tratamientos
               </div>
               
-              <h2 className="text-4xl lg:text-6xl font-subtitle gold-accent-prominent mb-8 leading-tight">
+              <h2 className="text-4xl lg:text-6xl font-subtitle gold-accent-prominent mb-8 leading-tight text-overlay-translucent">
                 Tratamientos que combinan ciencia, estética y bienestar
               </h2>
               
@@ -447,7 +460,7 @@ export default function Home() {
               <Link href="/tratamientos">
                 <Button 
                   size="lg" 
-                  className="bg-turquoise text-white border-2 border-gold-light hover:bg-gold-light hover:text-gold-deep transition-all duration-300 px-8 py-4 text-lg"
+                  className="btn-turquoise-enhanced btn-enhanced px-8 py-4 text-lg"
                   data-testid="button-treatments-view-all"
                 >
                   Ver todos los tratamientos
@@ -457,6 +470,9 @@ export default function Home() {
           </AnimatedSection>
         </div>
       </section>
+
+      {/* Visual Separator */}
+      <div className="section-separator"></div>
 
       {/* Testimonials & Before/After Section */}
       <section className="py-20 section-beige relative z-[1] gold-border-bottom" data-testid="testimonials-section">
@@ -469,7 +485,7 @@ export default function Home() {
               <h2 className="text-4xl lg:text-6xl title-luxury gold-accent-prominent mb-6">
                 Testimonios & Resultados
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto body-refined">
+              <p className="text-xl text-dark-neutral max-w-3xl mx-auto body-refined">
                 Más de 10,000 pacientes han experimentado transformaciones auténticas con el Método MAC
               </p>
             </div>
@@ -480,7 +496,7 @@ export default function Home() {
             <AnimatedSection delay={0.1}>
               <div className="space-y-8">
                 <div className="luxury-divider mb-8"></div>
-                <h3 className="text-2xl font-subtitle gold-accent-subtle text-center mb-8">Experiencias Reales</h3>
+                <h3 className="text-2xl font-subtitle gold-accent-prominent text-center mb-8">Experiencias Reales</h3>
                 {testimonialsLoading ? (
                   <>
                     <SkeletonTestimonial />
