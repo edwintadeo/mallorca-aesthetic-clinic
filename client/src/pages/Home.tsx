@@ -20,6 +20,9 @@ import PremiumFooter from "@/components/Layout/PremiumFooter";
 import FloatingActionButtons from "@/components/UI/FloatingActionButtons";
 import LuxuryMobileMenu from "@/components/UI/LuxuryMobileMenu";
 import MobileOptimizations from "@/components/UI/MobileOptimizations";
+import PerformanceMonitor from "@/components/UI/PerformanceMonitor";
+import ServiceWorkerManager from "@/components/UI/ServiceWorkerManager";
+import CriticalCSS from "@/components/UI/CriticalCSS";
 
 // Import video configuration
 import { getVideoConfigComplete } from "@/config/videos";
@@ -106,7 +109,7 @@ export default function Home() {
 
   return (
     <MobileOptimizations>
-      <div className="font-body antialiased">
+      <div className="font-body antialiased performance-optimized">
         <Helmet>
           <title>Mallorca Aesthetic Clinic | Medicina estética avanzada con visión integral</title>
           <meta
@@ -116,6 +119,11 @@ export default function Home() {
           <meta property="og:title" content="Mallorca Aesthetic Clinic - El Arte de Ganar Tiempo" />
           <meta property="og:description" content="Medicina estética integral con seguimiento de 12 meses. Dra. Liliana Ocampo, 18+ años de experiencia." />
         </Helmet>
+        
+        {/* Performance Components */}
+        <CriticalCSS />
+        <PerformanceMonitor />
+        <ServiceWorkerManager />
         
         {/* Floating Navigation */}
       <FloatingNavbar />
