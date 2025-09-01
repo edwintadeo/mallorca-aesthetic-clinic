@@ -196,24 +196,12 @@ export default function Metodo() {
               <AnimatedSection delay={index * 0.1}>
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                   <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                    {(index === 0 || phase.video) ? (
-                      <LazyVideo
-                        sources={[
-                          { src: index === 0 ? "/public-objects/ADN convert.mp4" : (phase.video || ""), type: "video/mp4" },
-                          { src: index === 0 ? "https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/ADN convert.mp4" : (phase.videoFallback || ""), type: "video/mp4" }
-                        ]}
-                        poster={phase.image}
-                        className="rounded-2xl shadow-lg w-full h-auto hover-lift transition-all duration-300"
-                        preload="metadata"
-                      />
-                    ) : (
-                      <img 
-                        src={phase.image} 
-                        alt={phase.title}
-                        className="rounded-2xl shadow-lg w-full h-auto object-cover hover-lift transition-all duration-300"
-                        data-testid={`img-phase-${phase.number}`}
-                      />
-                    )}
+                    <img 
+                      src={phase.image} 
+                      alt={phase.title}
+                      className="rounded-2xl shadow-lg w-full h-auto object-cover hover-lift transition-all duration-300"
+                      data-testid={`img-phase-${phase.number}`}
+                    />
                   </div>
 
                   <div className={index % 2 === 1 ? 'lg:order-1' : ''}>

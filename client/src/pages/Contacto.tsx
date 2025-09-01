@@ -168,17 +168,11 @@ export default function Contacto() {
       {/* Hero Section */}
       <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden" data-testid="contacto-hero">
         {/* Background Video */}
-        <VideoPlayer
-          src="/public-objects/catedral mallorca.mp4"
-          fallbackSrc="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/catedral mallorca.mp4"
+        <img 
+          src={spa} 
+          alt="MAC Clinic" 
           className="absolute inset-0 w-full h-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
-          Tu navegador no soporta videos HTML5.
-        </VideoPlayer>
+        />
         
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/30"></div>
