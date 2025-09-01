@@ -1,0 +1,15 @@
+Understand this error
+/public-objects/valoraci%C3%B3n%20personalizada.mp4:1  Failed to load resource: the server responded with a status of 404 ()Understand this error
+/public-objects/maestro%20perfumero.mp4:1  Failed to load resource: the server responded with a status of 404 ()Understand this error
+/public-objects/gotas%20perfumista.mp4:1  Failed to load resource: the server responded with a status of 404 ()Understand this error
+/public-objects/ADN%20convert.mp4:1  Failed to load resource: the server responded with a status of 404 ()Understand this error
+/public-objects/amanecer%20mallorca.mp4:1  Failed to load resource: the server responded with a status of 404 ()Understand this error
+/public-objects/clinica-interior.mp4:1  Failed to load resource: the server responded with a status of 404 ()Understand this error
+/public-objects/tratamiento-premium.mp4:1  Failed to load resource: the server responded with a status of 404 ()Understand this error
+/public-objects/tramuntana.mp4:1  Failed to load resource: the server responded with a status of 404 ()Understand this error
+/public-objects/vecteezy_woman-receiving-a-spa-treatment_2023009_1756656592945.jpg:1  Failed to load resource: the server responded with a status of 404 ()Understand this error
+/public-objects/vecteezy_beautiful-girl-in-spa-salon_27003157_1756656467761.jpg:1  Failed to load resource: the server responded with a status of 404 ()Understand this error
+/public-objects/vecteezy_beautiful-girl-in-spa-salon_27003157_1756656467761.jpg:1  Failed to load resource: the server responded with a status of 404 ()Understand this error
+/public-objects/vecteezy_woman-receiving-a-spa-treatment_2023009_1756656592945.jpg:1  Failed to load resource: the server responded with a status of 404 ()Understand this error
+/public-objects/catedral%20mallorca.mp4:1  Failed to load resource: the server responded with a status of 404 ()Understand this error
+vecteezy_seagull-and-boats-on-a-turquoise-sea_1627124.mp4:1  Failed to load resource: the ser
