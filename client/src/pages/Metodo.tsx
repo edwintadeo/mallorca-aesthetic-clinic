@@ -66,7 +66,7 @@ export default function Metodo() {
       benefit: "un plan tan exclusivo como tu ADN, creado para acompañar tu transformación de forma segura y efectiva.",
       image: facialMaskTreatment,
       video: "/public-objects/gotas perfumista.mp4",
-      videoFallback: "https://storage.googleapis.com/repl-default-bucket-7025bdc8-314d-4958-be9d-e3e05182b3f5/public/gotas perfumista.mp4"
+      videoFallback: "https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/gotas perfumista.mp4"
     },
     {
       icon: Wand2,
@@ -95,7 +95,7 @@ export default function Metodo() {
       benefit: "resultados visibles, naturales y sostenibles en tu cuerpo, mente y energía.",
       image: spaDeviceTreatment,
       video: "/public-objects/maestro perfumero.mp4",
-      videoFallback: "https://storage.googleapis.com/repl-default-bucket-7025bdc8-314d-4958-be9d-e3e05182b3f5/public/maestro perfumero.mp4"
+      videoFallback: "https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/maestro perfumero.mp4"
     },
     {
       icon: TrendingUp,
@@ -200,7 +200,7 @@ export default function Metodo() {
                       <LazyVideo
                         sources={[
                           { src: index === 0 ? "/public-objects/ADN convert.mp4" : (phase.video || ""), type: "video/mp4" },
-                          { src: index === 0 ? "https://storage.googleapis.com/repl-default-bucket-7025bdc8-314d-4958-be9d-e3e05182b3f5/public/ADN convert.mp4" : (phase.videoFallback || ""), type: "video/mp4" }
+                          { src: index === 0 ? "https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/ADN convert.mp4" : (phase.videoFallback || ""), type: "video/mp4" }
                         ]}
                         poster={phase.image}
                         className="rounded-2xl shadow-lg w-full h-auto hover-lift transition-all duration-300"

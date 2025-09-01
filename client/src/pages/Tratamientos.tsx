@@ -111,7 +111,7 @@ export default function Tratamientos() {
         <LazyVideo
           sources={[
             { src: "/public-objects/amanecer mallorca.mp4", type: "video/mp4" },
-            { src: "https://storage.googleapis.com/repl-default-bucket-7025bdc8-314d-4958-be9d-e3e05182b3f5/public/amanecer mallorca.mp4", type: "video/mp4" }
+            { src: "https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/amanecer mallorca.mp4", type: "video/mp4" }
           ]}
           poster={mascarillaVerde}
           fallbackImage={mascarillaVerde}

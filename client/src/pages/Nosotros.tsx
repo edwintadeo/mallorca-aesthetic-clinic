@@ -138,7 +138,7 @@ export default function Nosotros() {
         <div className="relative w-full h-[70vh] min-h-[500px]">
           <VideoPlayer
             src="/public-objects/tramuntana.mp4"
-            fallbackSrc="https://storage.googleapis.com/repl-default-bucket-7025bdc8-314d-4958-be9d-e3e05182b3f5/public/tramuntana.mp4"
+            fallbackSrc="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/tramuntana.mp4"
             className="w-full h-full object-cover"
             autoPlay
             muted
@@ -345,7 +345,7 @@ export default function Nosotros() {
         <div className="absolute inset-0">
           <VideoPlayer
             src="/public-objects/clinica-interior.mp4"
-            fallbackSrc="https://storage.googleapis.com/repl-default-bucket-7025bdc8-314d-4958-be9d-e3e05182b3f5/public/clinica-interior.mp4"
+            fallbackSrc="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/clinica-interior.mp4"
             className="w-full h-full object-cover"
             autoPlay
             muted
@@ -468,7 +468,7 @@ export default function Nosotros() {
         <div className="relative w-full h-[60vh] min-h-[400px]">
           <VideoPlayer
             src="/public-objects/tratamiento-premium.mp4"
-            fallbackSrc="https://storage.googleapis.com/repl-default-bucket-7025bdc8-314d-4958-be9d-e3e05182b3f5/public/tratamiento-premium.mp4"
+            fallbackSrc="https://storage.googleapis.com/replit-objstore-f50a230b-c239-4fc1-a433-4d78a626a011/public/tratamiento-premium.mp4"
             className="w-full h-full object-cover"
             autoPlay
             muted
