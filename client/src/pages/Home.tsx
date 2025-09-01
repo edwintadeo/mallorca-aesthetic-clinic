@@ -144,10 +144,12 @@ export default function Home() {
                 <div className="w-20 h-[1px] bg-gradient-to-l from-transparent to-gold-light"></div>
               </div>
               <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6 relative">
-                <span className="absolute inset-0 bg-pearl/85 blur-xl -z-10 rounded-lg"></span>
-                Medicina estética<br />
-                avanzada con<br />
-                visión integral
+                <span className="absolute inset-0 bg-white/95 blur-xl -z-10 rounded-lg scale-110"></span>
+                <span className="relative z-10 drop-shadow-lg">
+                  Medicina estética<br />
+                  avanzada con<br />
+                  visión integral
+                </span>
               </h1>
               <p className="text-xl text-white mb-8 max-w-2xl mx-auto leading-relaxed text-shadow-dark">
                 Consigue una transformación que se siente y es visible en solo 90 días y revela tu auténtica belleza natural.
