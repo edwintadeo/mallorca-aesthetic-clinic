@@ -1,6 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap&family=Inter:wght@300;400;500;600;700&display=swap');
+/* LUXURY TYPOGRAPHY SYSTEM - MAC Premium */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 @import url('https://fonts.adobe.com/fonts/orpheus-pro');
 @import url('https://fonts.adobe.com/fonts/gotham');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* Smooth scroll behavior */
 html {
@@ -168,22 +170,36 @@ a:focus-visible {
 }
 
 @layer utilities {
+  /* LUXURY FONT UTILITY CLASSES */
   .font-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
-    letter-spacing: -0.02em;
+    font-family: 'Orpheus Pro', 'Cormorant Garamond', serif;
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    color: var(--gold-deep);
   }
   
   .font-subtitle {
-    font-family: 'Orpheus Pro', serif;
-    font-weight: 400;
-    letter-spacing: -0.01em;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: -0.02em;
+    color: var(--text-dark);
   }
   
   .font-body {
     font-family: 'Gotham', 'Gotham Light', sans-serif;
     font-weight: 300;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.02em;
+    line-height: 1.8;
+    color: var(--text-medium);
+  }
+  
+  .font-cta {
+    font-family: 'Gotham', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
   }
   
   .text-pearl {
@@ -198,43 +214,56 @@ a:focus-visible {
     color: var(--turquoise);
   }
   
-  /* Premium Typography Styles - Refined Scale */
+  /* LUXURY TYPOGRAPHY HIERARCHY - MAC Premium System */
+  
+  /* H1 - TÍTULOS PRINCIPALES - Orpheus Pro Light */
   h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-family: 'Orpheus Pro', 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(3rem, 6vw, 4.5rem);
     letter-spacing: -0.03em;
     line-height: 1.1;
+    color: var(--gold-deep);
   }
   
+  /* H2 - SUBTÍTULOS - Cormorant Garamond Light Italic */
   h2 {
-    font-family: 'Orpheus Pro', 'Cormorant Garamond', serif;
-    font-weight: 400;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(2.25rem, 4.5vw, 2.625rem);
     letter-spacing: -0.02em;
     line-height: 1.2;
+    color: var(--text-dark);
   }
   
+  /* H3 - TÍTULOS SECUNDARIOS - Orpheus Pro */
   h3 {
     font-family: 'Orpheus Pro', 'Cormorant Garamond', serif;
     font-weight: 400;
-    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-size: clamp(1.75rem, 3.5vw, 2rem);
     letter-spacing: -0.01em;
     line-height: 1.3;
+    color: var(--gold-deep);
   }
   
+  /* H4, H5, H6 - TÍTULOS TERCIARIOS */
   h4, h5, h6 {
     font-family: 'Orpheus Pro', 'Cormorant Garamond', serif;
     font-weight: 400;
     letter-spacing: -0.01em;
     line-height: 1.3;
+    color: var(--text-dark);
   }
   
+  /* BODY - TEXTO DESCRIPTIVO - Gotham Light */
   p, span, div {
     font-family: 'Gotham', 'Gotham Light', sans-serif;
     font-weight: 300;
-    letter-spacing: 0.01em;
-    line-height: 1.6;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    line-height: 1.8;
+    color: var(--text-medium);
   }
   
   .premium-text {
@@ -250,11 +279,39 @@ a:focus-visible {
     line-height: 1.7;
   }
   
+  /* CTA - LLAMADAS A ACCIÓN - Gotham Book */
   button, .btn {
     font-family: 'Gotham', sans-serif;
-    font-weight: 500;
-    letter-spacing: 0.05em;
+    font-weight: 400;
+    font-size: 0.875rem;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
+    color: var(--turquoise);
+  }
+  
+  /* Luxury Button Variants */
+  .btn-luxury-primary {
+    font-family: 'Gotham', sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: white;
+    background: var(--turquoise);
+    border: 2px solid var(--gold-light);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .btn-luxury-secondary {
+    font-family: 'Gotham', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    background: transparent;
+    border: 2px solid var(--gold-deep);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   /* Tipografía - Escalas finales optimizadas */
@@ -810,6 +867,135 @@ a:focus-visible {
     border-color: rgba(165, 125, 36, 0.3);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
     transform: translateY(-4px);
+  }
+  
+  /* LUXURY FLOATING NAVIGATION */
+  .floating-nav {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 80rem;
+    height: 5rem;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(165, 125, 36, 0.2);
+    border-radius: 1.5rem;
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      0 2px 8px rgba(165, 125, 36, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 50;
+  }
+  
+  .floating-nav.scrolled {
+    height: 3.75rem;
+    top: 0.5rem;
+    background: rgba(255, 255, 255, 0.85);
+    border-color: rgba(165, 125, 36, 0.3);
+    box-shadow: 
+      0 12px 40px rgba(0, 0, 0, 0.15),
+      0 4px 12px rgba(165, 125, 36, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+  
+  .floating-nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 2rem;
+  }
+  
+  .floating-nav-logo {
+    height: 3rem;
+    transition: all 0.4s ease;
+  }
+  
+  .floating-nav.scrolled .floating-nav-logo {
+    height: 2.5rem;
+  }
+  
+  .floating-nav-menu {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  .floating-nav-item {
+    position: relative;
+    font-family: 'Gotham', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+  }
+  
+  .floating-nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold-deep);
+    transition: width 0.4s ease;
+  }
+  
+  .floating-nav-item:hover {
+    color: var(--gold-deep);
+  }
+  
+  .floating-nav-item:hover::after {
+    width: 100%;
+  }
+  
+  .floating-nav-cta {
+    position: relative;
+    padding: 0.75rem 1.5rem;
+    background: var(--turquoise);
+    color: white;
+    border: 2px solid var(--gold-light);
+    border-radius: 2rem;
+    font-family: 'Gotham', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+  }
+  
+  .floating-nav-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+  }
+  
+  .floating-nav-cta:hover {
+    background: hsl(168, 100%, 22%);
+    border-color: var(--gold-deep);
+    transform: translateY(-2px);
+    box-shadow: 
+      0 8px 25px rgba(0, 133, 120, 0.4),
+      0 0 0 3px rgba(165, 125, 36, 0.2);
+  }
+  
+  .floating-nav-cta:hover::before {
+    left: 100%;
   }
   
   /* Mobile-optimized text sizes and accessibility */

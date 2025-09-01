@@ -11,6 +11,7 @@ import { SkeletonTestimonial } from "@/components/UI/Skeleton";
 import { Search, ClipboardList, Wand2, TrendingUp, Star } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { OptimizedVideo } from "@/components/UI/OptimizedVideo";
+import FloatingNavbar from "@/components/Layout/FloatingNavbar";
 
 // Import video configuration
 import { getVideoConfigComplete } from "@/config/videos";
@@ -105,6 +106,9 @@ export default function Home() {
         <meta property="og:title" content="Mallorca Aesthetic Clinic - El Arte de Ganar Tiempo" />
         <meta property="og:description" content="Medicina estética integral con seguimiento de 12 meses. Dra. Liliana Ocampo, 18+ años de experiencia." />
       </Helmet>
+      
+      {/* Floating Navigation */}
+      <FloatingNavbar />
       {/* Scroll Progress Indicator */}
       <div className="fixed top-0 left-0 right-0 h-1 bg-gray-200 z-50">
         <div 
@@ -155,7 +159,7 @@ export default function Home() {
       </div>
 
       {/* Hero Section */}
-      <section className="pt-16 min-h-screen relative z-[1] flex items-center gold-border-bottom" data-testid="hero-section">
+      <section className="pt-24 min-h-screen relative z-[1] flex items-center gold-border-bottom" data-testid="hero-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
           <div className="text-center">
             <AnimatedSection>
