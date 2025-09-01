@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { Link } from 'wouter';
+import { useState, useEffect } from 'react';
 import { 
   MapPin, 
   Phone, 
@@ -12,11 +11,6 @@ import {
   ArrowUp,
   Heart
 } from 'lucide-react';
-import VIPNewsletter from '@/components/UI/VIPNewsletter';
-import MedicalCredentials from '@/components/UI/MedicalCredentials';
-import ScrollAnimations from '@/components/UI/ScrollAnimations';
-import LuxuryHoverCard from '@/components/UI/LuxuryHoverCard';
-import macLogo from '@assets/logo mallorca aesthetic_1756658404427.png';
 
 export default function PremiumFooter() {
   const [isBackToTopVisible, setIsBackToTopVisible] = useState(false);
@@ -25,190 +19,135 @@ export default function PremiumFooter() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleScroll = () => {
-    setIsBackToTopVisible(window.scrollY > 300);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsBackToTopVisible(window.scrollY > 300);
+    };
 
-  useState(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  });
-
-  const navigationSections = [
-    {
-      title: 'Clínica',
-      links: [
-        { href: '/nosotros', label: 'Sobre Nosotros' },
-        { href: '/metodo', label: 'Método MAC' },
-        { href: '/instalaciones', label: 'Instalaciones' },
-        { href: '/equipo', label: 'Nuestro Equipo' }
-      ]
-    },
-    {
-      title: 'Tratamientos',
-      links: [
-        { href: '/tratamientos/facial', label: 'Facial' },
-        { href: '/tratamientos/corporal', label: 'Corporal' },
-        { href: '/tratamientos/cirugia', label: 'Cirugía' },
-        { href: '/tratamientos/well-aging', label: 'Well-Aging' }
-      ]
-    },
-    {
-      title: 'Pacientes',
-      links: [
-        { href: '/portal-cliente', label: 'Portal Cliente' },
-        { href: '/testimonios', label: 'Testimonios' },
-        { href: '/faq', label: 'FAQ' },
-        { href: '/financiacion', label: 'Financiación' }
-      ]
-    },
-    {
-      title: 'Legal',
-      links: [
-        { href: '/privacidad', label: 'Privacidad' },
-        { href: '/terminos', label: 'Términos' },
-        { href: '/cookies', label: 'Cookies' },
-        { href: '/aviso-legal', label: 'Aviso Legal' }
-      ]
-    }
-  ];
-
-  const socialLinks = [
-    { href: 'https://instagram.com/macmallorca', icon: Instagram, label: 'Instagram' },
-    { href: 'https://facebook.com/macmallorca', icon: Facebook, label: 'Facebook' },
-    { href: 'https://linkedin.com/company/macmallorca', icon: Linkedin, label: 'LinkedIn' },
-    { href: 'https://youtube.com/macmallorca', icon: Youtube, label: 'YouTube' }
-  ];
+  }, []);
 
   return (
-    <footer className="premium-footer">
+    <footer className="bg-gradient-to-b from-gray-50 to-white border-t border-gray-200">
       {/* Main Footer Content */}
-      <div className="footer-main">
-        <div className="footer-container">
-          {/* Newsletter Section */}
-          <ScrollAnimations animation="fadeIn" delay={100}>
-            <div className="footer-newsletter">
-              <VIPNewsletter />
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Brand Section */}
+          <div className="lg:col-span-1">
+            <div className="mb-6">
+              <img 
+                src="/attached_assets/logo mallorca aesthetic_1756658404427.png" 
+                alt="MAC Mallorca Aesthetic Clinic" 
+                className="h-12 mb-4"
+              />
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Medicina estética avanzada con visión integral. Transformación visible en 90 días con el Método MAC.
+              </p>
             </div>
-          </ScrollAnimations>
-
-          {/* Navigation Sections */}
-          <div className="footer-navigation">
-            {navigationSections.map((section, index) => (
-              <ScrollAnimations key={section.title} animation="slideUp" delay={200 + index * 100}>
-                <div className="nav-section">
-                  <h4 className="nav-title">{section.title}</h4>
-                  <ul className="nav-links">
-                    {section.links.map((link) => (
-                      <li key={link.href}>
-                        <Link href={link.href} className="nav-link">
-                          {link.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </ScrollAnimations>
-            ))}
+            
+            {/* Social Links */}
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 hover:text-[#008578] transition-colors duration-200">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-[#008578] transition-colors duration-200">
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-[#008578] transition-colors duration-200">
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-[#008578] transition-colors duration-200">
+                <Youtube className="h-5 w-5" />
+              </a>
+            </div>
           </div>
 
-          {/* Contact Information */}
-          <ScrollAnimations animation="fadeIn" delay={600}>
-            <div className="footer-contact">
-              <div className="contact-header">
-                <img src={macLogo} alt="MAC Mallorca" className="footer-logo" />
-                <h3 className="contact-title">Mallorca Aesthetic Clinic</h3>
-                <p className="contact-subtitle">
-                  Excelencia en medicina estética y bienestar integral
-                </p>
+          {/* Clínica Section */}
+          <div>
+            <h3 className="text-lg font-serif text-[#A57D24] mb-4">Clínica</h3>
+            <ul className="space-y-3 text-sm">
+              <li><a href="#metodo" className="text-gray-600 hover:text-[#008578] transition-colors duration-200">Método MAC</a></li>
+              <li><a href="#tratamientos" className="text-gray-600 hover:text-[#008578] transition-colors duration-200">Tratamientos</a></li>
+              <li><a href="#nosotros" className="text-gray-600 hover:text-[#008578] transition-colors duration-200">Sobre Nosotros</a></li>
+              <li><a href="#ubicaciones" className="text-gray-600 hover:text-[#008578] transition-colors duration-200">Ubicaciones</a></li>
+            </ul>
+          </div>
+
+          {/* Tratamientos Section */}
+          <div>
+            <h3 className="text-lg font-serif text-[#A57D24] mb-4">Tratamientos</h3>
+            <ul className="space-y-3 text-sm">
+              <li><a href="#" className="text-gray-600 hover:text-[#008578] transition-colors duration-200">Facial</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-[#008578] transition-colors duration-200">Corporal</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-[#008578] transition-colors duration-200">Cirugía</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-[#008578] transition-colors duration-200">Well-Aging</a></li>
+            </ul>
+          </div>
+
+          {/* Contact Section */}
+          <div>
+            <h3 className="text-lg font-serif text-[#A57D24] mb-4">Contacto</h3>
+            <div className="space-y-3 text-sm">
+              <div className="flex items-start space-x-2">
+                <MapPin className="h-4 w-4 text-gray-500 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-600">Palma de Mallorca</span>
               </div>
-
-              <div className="contact-info">
-                <div className="contact-item">
-                  <MapPin className="contact-icon" />
-                  <div className="contact-details">
-                    <span className="contact-label">Ubicación</span>
-                    <span className="contact-value">Palma de Mallorca, Islas Baleares</span>
-                  </div>
-                </div>
-
-                <div className="contact-item">
-                  <Phone className="contact-icon" />
-                  <div className="contact-details">
-                    <span className="contact-label">Teléfono</span>
-                    <span className="contact-value">+34 900 XXX XXX</span>
-                  </div>
-                </div>
-
-                <div className="contact-item">
-                  <Mail className="contact-icon" />
-                  <div className="contact-details">
-                    <span className="contact-label">Email</span>
-                    <span className="contact-value">concierge@mac.clinic</span>
-                  </div>
-                </div>
-
-                <div className="contact-item">
-                  <Clock className="contact-icon" />
-                  <div className="contact-details">
-                    <span className="contact-label">Horarios</span>
-                    <span className="contact-value">Lun-Vie: 10:00-20:00</span>
-                    <span className="contact-value">Sábado: 10:00-14:00</span>
-                  </div>
-                </div>
+              <div className="flex items-center space-x-2">
+                <Phone className="h-4 w-4 text-gray-500 flex-shrink-0" />
+                <a href="tel:+34900123456" className="text-gray-600 hover:text-[#008578] transition-colors duration-200">
+                  +34 900 XXX XXX
+                </a>
               </div>
-
-              {/* Social Links */}
-              <div className="social-links">
-                {socialLinks.map((social) => (
-                  <LuxuryHoverCard key={social.label} className="social-link-wrapper">
-                    <a
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="social-link"
-                      aria-label={social.label}
-                    >
-                      <social.icon className="social-icon" />
-                    </a>
-                  </LuxuryHoverCard>
-                ))}
+              <div className="flex items-center space-x-2">
+                <Mail className="h-4 w-4 text-gray-500 flex-shrink-0" />
+                <a href="mailto:concierge@mac.clinic" className="text-gray-600 hover:text-[#008578] transition-colors duration-200">
+                  concierge@mac.clinic
+                </a>
+              </div>
+              <div className="flex items-start space-x-2">
+                <Clock className="h-4 w-4 text-gray-500 mt-0.5 flex-shrink-0" />
+                <div className="text-gray-600">
+                  <div>Lun-Vie: 10:00-20:00</div>
+                  <div>Sábado: 10:00-14:00</div>
+                </div>
               </div>
             </div>
-          </ScrollAnimations>
+          </div>
+        </div>
+
+        {/* Newsletter Section */}
+        <div className="mt-12 pt-8 border-t border-gray-200">
+          <div className="max-w-md">
+            <h3 className="text-lg font-serif text-[#A57D24] mb-2">Newsletter VIP</h3>
+            <p className="text-sm text-gray-600 mb-4">
+              Recibe contenido exclusivo y ofertas especiales
+            </p>
+            <div className="flex space-x-2">
+              <input
+                type="email"
+                placeholder="Tu email"
+                className="flex-1 px-4 py-2 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-[#008578] focus:border-transparent"
+              />
+              <button className="px-6 py-2 bg-[#008578] text-white rounded-full text-sm font-medium hover:bg-[#006b5f] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#008578] focus:ring-offset-2">
+                Suscribir
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Medical Credentials Section */}
-      <div className="footer-credentials">
-        <div className="footer-container">
-          <MedicalCredentials />
-        </div>
-      </div>
-
-      {/* Footer Bottom */}
-      <div className="footer-bottom">
-        <div className="footer-container">
-          <div className="footer-bottom-content">
-            <div className="copyright">
-              <p>
-                © 2025 MAC Mallorca Aesthetic Clinic. Todos los derechos reservados.
-              </p>
-              <p className="made-with-love">
-                Hecho con <Heart className="heart-icon" /> en Mallorca
-              </p>
+      {/* Bottom Bar */}
+      <div className="bg-gray-900 text-white py-6">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-sm text-gray-400">
+              © 2025 MAC Mallorca Aesthetic Clinic. Todos los derechos reservados.
             </div>
-
-            <div className="footer-badges">
-              <div className="badge">
-                <span className="badge-text">Certificado Médico</span>
-              </div>
-              <div className="badge">
-                <span className="badge-text">ISO 9001</span>
-              </div>
-              <div className="badge">
-                <span className="badge-text">GDPR Compliant</span>
-              </div>
+            <div className="flex items-center space-x-6 text-sm">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">Privacidad</a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">Términos</a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">Cookies</a>
             </div>
           </div>
         </div>
@@ -216,15 +155,13 @@ export default function PremiumFooter() {
 
       {/* Back to Top Button */}
       {isBackToTopVisible && (
-        <LuxuryHoverCard className="back-to-top-wrapper">
-          <button
-            onClick={scrollToTop}
-            className="back-to-top"
-            aria-label="Volver arriba"
-          >
-            <ArrowUp className="back-to-top-icon" />
-          </button>
-        </LuxuryHoverCard>
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 bg-[#008578] text-white p-3 rounded-full shadow-lg hover:bg-[#006b5f] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#008578] focus:ring-offset-2 z-50"
+          aria-label="Volver arriba"
+        >
+          <ArrowUp className="h-5 w-5" />
+        </button>
       )}
     </footer>
   );

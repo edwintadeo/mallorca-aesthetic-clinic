@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
-import Hero from "../components/UI/Hero";
-import PremiumNavbar from "../components/Layout/PremiumNavbar";
+import LuxuryCinematicHero from "../components/UI/LuxuryCinematicHero";
+import LuxuryFloatingNavbar from "../components/Layout/LuxuryFloatingNavbar";
 import MethodTimeline from "../components/UI/MethodTimeline";
 import BeforeAfterSlider from "../components/UI/BeforeAfterSlider";
 import LocationCards from "../components/UI/LocationCards";
@@ -19,11 +19,11 @@ export default function Home() {
         <meta property="og:description" content="Medicina estética integral con seguimiento de 12 meses. Dra. Liliana Ocampo, 18+ años de experiencia." />
       </Helmet>
 
-      {/* Premium Navigation */}
-      <PremiumNavbar />
+      {/* Luxury Floating Navigation */}
+      <LuxuryFloatingNavbar />
 
-      {/* Hero Section with Video */}
-      <Hero
+      {/* Luxury Cinematic Hero */}
+      <LuxuryCinematicHero
         title="El Arte de Ganar Tiempo"
         subtitle="Medicina estética integral con seguimiento de 12 meses. Transformación visible en 90 días con el Método MAC."
         ctaText="Reserva tu Consulta Privada"
