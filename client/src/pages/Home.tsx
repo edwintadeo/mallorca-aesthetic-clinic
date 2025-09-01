@@ -90,6 +90,23 @@ export default function Home() {
 
   return (
     <div className="font-body antialiased">
+      {/* Scroll Progress Indicator */}
+      <div className="fixed top-0 left-0 right-0 h-1 bg-gray-200 z-50">
+        <div 
+          className="h-full bg-gradient-to-r from-turquoise to-gold-deep transition-all duration-300"
+          style={{width: '10%'}}
+        ></div>
+      </div>
+      
+      {/* Floating Navigation Dots */}
+      <div className="fixed right-8 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col gap-4">
+        <button className="w-3 h-3 rounded-full bg-turquoise hover:scale-150 transition-all duration-300" title="Inicio"></button>
+        <button className="w-3 h-3 rounded-full bg-gray-300 hover:bg-turquoise hover:scale-150 transition-all duration-300" title="Método"></button>
+        <button className="w-3 h-3 rounded-full bg-gray-300 hover:bg-turquoise hover:scale-150 transition-all duration-300" title="Tratamientos"></button>
+        <button className="w-3 h-3 rounded-full bg-gray-300 hover:bg-turquoise hover:scale-150 transition-all duration-300" title="Testimonios"></button>
+        <button className="w-3 h-3 rounded-full bg-gray-300 hover:bg-turquoise hover:scale-150 transition-all duration-300" title="Contacto"></button>
+      </div>
+      
       {/* Video de fondo para toda la landing page */}
       <div className="fixed inset-0 w-full h-full z-[-1] overflow-hidden">
         <img
@@ -116,6 +133,11 @@ export default function Home() {
                   data-testid="hero-mac-logo"
                 />
               </div>
+              <div className="mb-4 flex justify-center gap-2">
+                <span className="bg-turquoise/90 text-white px-4 py-1 rounded-full text-sm font-bold">TOP RATED</span>
+                <span className="bg-gold-deep/90 text-white px-4 py-1 rounded-full text-sm font-bold">15+ AÑOS</span>
+                <span className="bg-white/90 text-turquoise px-4 py-1 rounded-full text-sm font-bold">+500 PACIENTES</span>
+              </div>
               <h1 className="text-5xl lg:text-7xl font-title gold-accent mb-6 relative">
                 <span className="absolute inset-0 bg-pearl/85 blur-xl -z-10 rounded-lg"></span>
                 Medicina estética<br />
@@ -125,16 +147,20 @@ export default function Home() {
               <p className="text-xl text-white mb-8 max-w-2xl mx-auto leading-relaxed text-shadow-dark">
                 Consigue una transformación que se siente y es visible en solo 90 días y revela tu auténtica belleza natural.
               </p>
-              <div className="flex justify-center">
+              <div className="space-y-4">
                 <Link href="/contacto">
                   <Button 
                     size="lg" 
-                    className="cta-enhanced text-white hover:text-gold-deep px-12 py-6 text-lg font-semibold rounded-none uppercase tracking-wider shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 animate-pulse-subtle"
+                    className="cta-enhanced text-white hover:text-gold-deep px-16 py-7 text-xl font-bold rounded-full uppercase tracking-wider shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 relative overflow-hidden group"
                     data-testid="button-hero-reserva"
                   >
-                    Reserva tu cita
+                    <span className="absolute inset-0 bg-gradient-to-r from-gold-light to-gold-deep opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <span className="relative z-10">RESERVA TU CONSULTA AHORA</span>
                   </Button>
                 </Link>
+                <p className="text-sm text-white font-semibold bg-red-600/90 px-4 py-2 rounded-full inline-block animate-pulse">
+                  ⚡ Solo 3 plazas disponibles esta semana
+                </p>
               </div>
             </AnimatedSection>
           </div>
@@ -183,16 +209,22 @@ export default function Home() {
                   Confianza respaldada por evidencia y excelencia
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                  <div className="text-left">
-                    <div className="text-4xl lg:text-5xl font-title gold-accent-prominent text-shadow-dark mb-4">Más de 18 años de</div>
-                    <p className="text-lg text-gray-800 font-medium leading-relaxed bg-white/85 px-4 py-2 rounded-lg border border-gold-light/30">
-                      experiencia clínica en medicina estética avanzada y bienestar integral
+                  <div className="text-left bg-white rounded-2xl p-6 shadow-xl border-2 border-turquoise/20 hover:border-turquoise/40 transition-all duration-300 transform hover:-translate-y-1">
+                    <div className="text-5xl lg:text-6xl font-bold text-turquoise mb-2">18+</div>
+                    <p className="text-lg text-gray-800 font-semibold">
+                      Años de Experiencia
+                    </p>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Medicina estética avanzada
                     </p>
                   </div>
-                  <div className="text-left">
-                    <div className="text-4xl lg:text-5xl font-title gold-accent-prominent text-shadow-dark mb-4">+10.000 pacientes</div>
-                    <p className="text-lg text-gray-800 font-medium leading-relaxed bg-white/85 px-4 py-2 rounded-lg border border-gold-light/30">
-                      transformados con resultados visibles y sostenibles
+                  <div className="text-left bg-white rounded-2xl p-6 shadow-xl border-2 border-gold-deep/20 hover:border-gold-deep/40 transition-all duration-300 transform hover:-translate-y-1">
+                    <div className="text-5xl lg:text-6xl font-bold text-gold-deep mb-2">10K+</div>
+                    <p className="text-lg text-gray-800 font-semibold">
+                      Pacientes Satisfechos
+                    </p>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Resultados comprobados
                     </p>
                   </div>
                 </div>
