@@ -1,0 +1,63 @@
+name: Longevity Radar daily digest
+
+on:
+  schedule:
+    # 05:00 UTC → 07:00 Europe/Madrid en verano (CEST), 06:00 en invierno (CET).
+    # Si quieres asegurar 07:00 local todo el año, usa dos crons (05:00 CEST, 06:00 CET)
+    # o mueve la lógica horaria al job.
+    - cron: '0 5 * * 1-5'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: longevity-radar
+  cancel-in-progress: false
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: claude/longevity-radar-digest-m85PJ
+          fetch-depth: 1
+          persist-credentials: true
+
+      - name: Git identity
+        run: |
+          git config user.name  "longevity-radar-bot"
+          git config user.email "longevity-radar-bot@users.noreply.github.com"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Run digest agent
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RESEND_API_KEY:    ${{ secrets.RESEND_API_KEY }}
+          RADAR_EMAIL_TO:    ${{ secrets.RADAR_EMAIL_TO }}
+          RADAR_EMAIL_FROM:  ${{ secrets.RADAR_EMAIL_FROM }}
+          TZ: Europe/Madrid
+        run: |
+          PROMPT="$(cat .github/longevity-radar/prompt.md)"
+          claude -p "$PROMPT" \
+            --model claude-opus-4-7 \
+            --dangerously-skip-permissions \
+            --output-format text
+
+      - name: Push digest commit
+        run: |
+          if git log origin/claude/longevity-radar-digest-m85PJ..HEAD --oneline | grep -q .; then
+            git push origin claude/longevity-radar-digest-m85PJ
+          else
+            echo "No new commits — nothing to push."
+          fi
